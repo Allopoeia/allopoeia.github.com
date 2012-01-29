@@ -41,8 +41,9 @@ div.content {
 #top_bar {
 	display: block;
 	margin: auto;
-	height: 30px;
 	background-color: #13161a;
+	padding-top: 8px;
+	padding-bottom: 8px;
 }
 
 #top_bar>nav {
@@ -57,7 +58,6 @@ div.content {
 
 #top_bar>nav>ul>li {
 	float: left;
-	margin-top: 4px;
 	margin-left: 24px;
 }
 
