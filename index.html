@@ -1,0 +1,17 @@
+---
+layout: default
+article-class: index
+---
+
+<ul id="posts">
+	{% for post in site.posts %}
+	<li>
+		<a href="{{ post.url }}">{{ post.title | xml_escape }}</a>
+		<span>
+			<time pubdate datetime="{{ post.date | date_to_xmlschema }}">
+				{{ post.pubdate | date: "%d %B %Y" }}
+			</time>
+		</span>
+	</li>
+	{% endfor %}
+</ul>

@@ -1,0 +1,18 @@
+
+server: true
+safe: true
+auto: true
+
+markdown: maruku
+pygments: true
+
+exclude: ["README.md", "CNAME", ".gitignore"]
+
+## Site configuration
+meta:
+  title: Allopoeia
+  url: http://allopoeia.komiga.com
+  feedburner: allopoeia
+
+permalink: /:categories/:year/:month/:day/:title/
+
