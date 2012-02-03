@@ -1,14 +1,26 @@
+
 html, body {
-	font-family: serif, verdana, arial;
+	font-family: sans-serif, verdana, arial;
 	font-size: 18px;
 	background-color: #2a2f33;
 	color: #d2d6dc;
+	height: 100%;
+	margin: 0;
+	padding: 0;
 }
 
-div.content {
+#top_container {
+	min-height: 100%;
+	margin: 0px 20px 0px 20px;
+}
+
+#top_align_center {
 	max-width: 960px;
 	height: 100%;
-	margin: auto;
+	margin: 0px auto 0px auto;
+	padding-top: 20px;
+	padding-bottom: 200px; /* top_footer.height+80px */
+	overflow: auto;
 }
 
 /* Stylers */
@@ -18,7 +30,7 @@ div.content {
 }
 
 /* Header */
-#top_header {
+/*#top_header {
 	margin-right: 20px;
 	margin-left: 20px;
 }
@@ -35,19 +47,18 @@ div.content {
 
 #top_header a:visited {
 	color: #666670;
-}
+}*/
 
 /* Menu */
 #top_bar {
 	display: block;
 	margin: auto;
 	background-color: #13161a;
-	padding-top: 8px;
-	padding-bottom: 8px;
+	padding: 8px 12px 8px 12px;
 }
 
 #top_bar>nav {
-	font: 18px monospace;
+	font: 18px monospace, sans-serif, verdana, arial;
 }
 
 #top_bar>nav>ul {
@@ -58,7 +69,7 @@ div.content {
 
 #top_bar>nav>ul>li {
 	float: left;
-	margin-left: 24px;
+	margin: 0 12px 0 12px;
 }
 
 #top_bar>nav>ul>li>a {
@@ -76,13 +87,62 @@ div.content {
 	text-decoration: none;
 }
 
-/* Content */
+/* Footer */
+#top_footer {
+	position: relative;
+	height: 120px;
+	margin: -141px 0 0 0;
+	display: block;
+	clear: both;
+	/*bottom: 20px;*/
+	padding: 20px 40px 0px 40px;
+	background-color: #0d1012;
+	border-top: 1px #2D2D2D solid;
+}
+
+/* Article */
 #article_container {
 	display: block;
 	line-height: 1.3em;
-	font-family: Georgia, serif, verdana, arial;
-	font-size: 20px;
 	margin-right: 20px;
 	margin-left: 20px;
+}
+
+#article_container.article {
+	font-family: Georgia, serif, verdana, arial;
+	font-size: 20px;
+}
+
+/* Article header */
+#article_header {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#article_header .separator {
+	width: 100%;
+	font: italic 16px monospace;
+	border-bottom: 1px #45484a solid;
+	display: block;
+}
+
+#article_header .separator>.pubdate {
+	float: right;
+	display: block;
+}
+
+#article_header h1, h2 {
+	margin: 6px 0 6px 0;
+}
+
+#article_header h1 {
+	font-size: 140%;
+}
+
+#article_header h2 {
+	font-size: 100%;
+}
+
+#article_header hr {
 }
 

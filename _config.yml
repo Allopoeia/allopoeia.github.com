@@ -6,13 +6,13 @@ auto: true
 markdown: maruku
 pygments: true
 
-exclude: ["README.md", "CNAME", ".gitignore"]
+exclude: ["README.md", "CNAME", ".gitignore", "scripts"]
 
 ## Site configuration
 meta:
   title: Allopoeia
   url: http://allopoeia.komiga.com
-  feedburner: allopoeia
+  feedburner:
 
 permalink: /:categories/:year/:month/:day/:title/
 
