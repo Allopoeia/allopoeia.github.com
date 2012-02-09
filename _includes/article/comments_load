@@ -1,0 +1,16 @@
+{% if page.enable-comments and site.meta.disqus_shortname %}
+<script type="text/javascript">
+{% unless site.safe %}
+	var disqus_developer=1;
+{% endunless %}
+	var disqus_shortname="{{ site.meta.disqus_shortname }}";
+	var disqus_identifier="{{ site.meta.perma-url }}{{ page.url }}";
+	var disqus_title="{{ page.title }}";
+
+	(function() {
+		var dsq=document.createElement("script"); dsq.type="text/javascript"; dsq.async=true;
+		dsq.src="http://"+disqus_shortname+".disqus.com/embed.js";
+		(document.getElementsByTagName("head")[0] || document.getElementsByTagName("body")[0]).appendChild(dsq);
+	})();
+</script>
+{% endif %}

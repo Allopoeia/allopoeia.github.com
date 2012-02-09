@@ -1,17 +1,31 @@
 ---
-layout: default
-article-class: index
----
+layout: generic
+nav-active: root
 
-<ul id="posts">
-	{% for post in site.posts %}
-	<li>
-		<a href="{{ post.url }}">{{ post.title | xml_escape }}</a>
-		<span>
-			<time pubdate datetime="{{ post.pubdate | date_to_xmlschema }}">
-				{{ post.pubdate | date: "%d %B %Y" }}
-			</time>
-		</span>
-	</li>
-	{% endfor %}
+title: Allopoeia
+---
+<p>Welcome! <a href="{{ site.nav-items.about.url }}">Allopoeia</a> is a lonely open-authorship journal/blag for anything and everything. <span title="won't you please">Check out</span> our <a href="{{ site.nav-items.authors.url }}">authors</a>, <a href="{{ site.nav-items.about.url }}#contact">write to us</a>, or peruse our <a href="{{ site.nav-items.archive.url }}">archive</a>.</p>
+
+<h2 id="recent-articles" class="separator">Recent articles<a class="para-ref" href="#recent-articles"></a></h2>
+{% capture _post_count %}{{ site.posts | size }}{% endcapture %}
+{% if _post_count != "0" %}
+<ul class="article_list">
+{% for post in site.posts limit:10 %}
+<li>
+<div class="div-relative">
+	<div class="right above">
+		<time pubdate datetime="{{ post.date | date_to_xmlschema }}">
+			<span title="{% if post.last-modified > post.date %}Last updated {{ post.last-modified | date: '%d %B %Y' }}{% endif %}">{{ post.date | date: "%d %B %Y" }}</span>
+		</time>
+	</div>
+	<a href="{{ post.url }}">{{ post.title | xml_escape }}</a>
+	<span class="above">by <a href="{{ site.authors[post.author].about-url }}">{{ post.author }}</a></span>
+	<a href="{{ post.url }}" title="{% for cat in post.categories %}{{ cat | capitalize }}{% if forloop.last == false %} &raquo; {% endif %}{% endfor %} &rArr; {{ post.title }}"><span class="fill-span"></span></a>
+</div>
+</li>
+{% endfor %}
 </ul>
+{% else %}
+<p><em>No recent articles!</em></p>
+{% endif %}
+{% assign _post_count = null %}

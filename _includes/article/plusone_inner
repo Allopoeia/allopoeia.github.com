@@ -1,0 +1,5 @@
+{% unless page.disable-inner-plusone %}
+{% comment %}<!-- For some reason assigns aren't in the scope of included pages; capture, however, works perfectly -->{% endcomment %}
+{% capture _plusone_url %}{{ site.meta.perma-url }}{{ page.url }}{% endcapture %}
+{% include common/plusone_element %}
+{% endunless %}

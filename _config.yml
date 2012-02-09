@@ -1,6 +1,6 @@
 
 server: true
-safe: true
+safe: false
 auto: true
 
 markdown: maruku
@@ -9,10 +9,64 @@ pygments: true
 exclude: ["README.md", "CNAME", ".gitignore", "scripts"]
 
 ## Site configuration
-meta:
-  title: Allopoeia
-  url: http://allopoeia.komiga.com
-  feedburner:
 
-permalink: /:categories/:year/:month/:day/:title/
+url: http://allopoeia.komiga.com
+meta:
+  perma-url: http://allopoeia.komiga.com
+  title: Allopoeia
+  run-years: "2012"
+  feedburner:
+  disqus_shortname: komiga
+  analytics_id: "UA-6565507-3"
+  analytics_domain_name:
+
+permalink: /:categories/:year/:month/:title.html
+
+## Static content
+
+nav-items: {
+  root: {text: "Allopoeia", url: "/"},
+  archive: {text: "Archive", url: "/archive.html"},
+  authors: {text: "Authors", url: "/authors.html"},
+  authoring: {text: "Authoring", url: "/authoring.html"},
+  about: {text: "About", url: "/about.html"}
+}
+
+service-refs: {
+  twitter: {class: twitter, text: "Twitter", base-url: "http://twitter.com/"},
+  github : {class: github , text: "GitHub" , base-url: "https://github.com/"}
+}
+
+authors: {
+  plash: {
+    about-url: "/authors.html#plash",
+    preferred-copyright: "cc_by-nc-sa-3.0",
+    services: [
+      {ref: github , slug: "komiga"},
+      {ref: twitter, slug: "komiga"}
+    ]
+  }
+}
+
+##
+## Replacement fields:
+##    %about-author% - the author's about-url
+##    %year-range% - the article's modification years
+##    %author% - the author's moniker
+##
+copyright-notice-type-default: "preferred"
+copyright-notices: {
+  "simple": {
+    url: "%about-author%",
+    pre-text: "&copy; %year-range% ",
+    url-text: "%author%",
+    post-text: ""
+  },
+  "cc_by-nc-sa-3.0": {
+    url: "http://creativecommons.org/licenses/by-nc-sa/3.0/",
+    pre-text: "&copy; %year-range% %author%, under license ",
+    url-text: "Creative Commons BY-NC-SA 3.0",
+    post-text: ""
+  }
+}
 

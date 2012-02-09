@@ -1,27 +1,29 @@
 ---
-layout: nil
+layout: null
 ---
-
 <?xml version="1.0" encoding="utf-8"?>
-<!-- <?xml-stylesheet type="text/css" href="/css/feed.css"?> -->
-
 <feed xmlns="http://www.w3.org/2005/Atom">
 
 <title>Allopoeia</title>
-<link href="http://allopoeia.komiga.com/atom.xml" rel="self"/>
-<link href="http://allopoeia.komiga.com/"/>
+<link href="{{ site.url }}{{ page.url }}" rel="self"/>
+<link href="{{ site.url }}/"/>
 <updated>{{ site.time | date_to_xmlschema }}</updated>
-<id>http://allopoeia.komiga.com/</id>
+<id>{{ site.url }}/</id>
 
 {% for post in site.posts %}
 <entry>
 	<title>{{ post.title }}</title>
-	<link href="http://allopoeia.komiga.com{{ post.url }}"/>
-	<updated>{{ post.last-modified | date_to_xmlschema }}</updated>
+	<link href="{{ site.url }}{{ post.url }}"/>
+	{% if post.last-modified %}
+		{% assign _date_updated = post.last-modified %}
+	{% else %}
+		{% assign _date_updated = post.date %}
+	{% endif %}
+	<updated>{{ _date_updated | date_to_xmlschema }}</updated>
 	<author>
 		<name>{{ post.author }}</name>
 	</author>
-	<id>http://allopoeia.komiga.com{{ post.id }}</id>
+	<id>{{ site.url }}{{ post.id }}</id>
 	<content type="html">
 {{ post.content | xml_escape }}
 	</content>
@@ -29,3 +31,4 @@ layout: nil
 {% endfor %}
 
 </feed>
+{% assign _date_updated = null %}

@@ -1,25 +1,56 @@
 ---
 layout: default
 article-class: article
+article-styles: article-font-fancy
+nav-active: null
+
+#disable-inner-plusone: false
+#enable-comments: false
+#copyright-notice-type: site.copyright-notice-type-default
+#last-modified: null
 ---
 <header id="article_header">
-	<h1>{{ page.title }}</h1>
-{% if page.subtitle %}
-	<h2>{{ page.subtitle }}</h2>
-{% endif %}
-	<div class="separator">
-		<span class="pubdate">Published <time pubdate datetime="{{ page.pubdate | date_to_xmlschema }}">{{ page.pubdate | date: "%d %B %Y" }}</time></span>
-		<br clear="left" />
+	<hgroup>
+		<h1>{% if page.h-title %}{{ page.h-title }}{% else %}{{ page.title }}{% endif %}</h1>
+	{% if page.subtitle %}
+		<h5 style="font-weight: normal;">{% if page.h-subtitle %}{{ page.h-subtitle }}{% else %}{{ page.subtitle }}{% endif %}</h5>
+	{% endif %}
+	</hgroup>
+	<div id="header" class="separator sep_header">
+		<span>by <a href="/authors.html#{{ page.author | cgi_escape }}">{{ page.author }}</a></span>
+		<span class="pubdate" title="{% if page.last-modified > page.date %}Last updated {{ page.last-modified | date: '%d %B %Y' }}{% endif %}"><time pubdate datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%d %B %Y" }}</time></span>
+		<br style="clear: left;" />
 	</div>
 </header>
 
 {{ content }}
 
+<!-- <h5 id="copyright-notice" class="separator sep_copyright-notice">Copyright</h5> -->
+<div id="copyright-notice" class="inner-copyright-notice generic-center">
+<small>
+	{% include article/copyright_notice %}
+</small>
+</div>
+<div id="plusone-inner" class="generic-center">
+	{% include article/plusone_inner %}
+</div>
+
+<h5 id="comments" class="separator sep_comments">Comments<a class="para-ref" href="#comments"></a></h5>
+<div id="article_comments" class="article-font-sans">
+	{% include article/comments_content %}
+</div>
+
+{% comment %}
+<!--
 <footer id="article_footer">
 	<p>Categories:</p>
 	<ul>
-		{% for category in page.categories %}
+	{% for category in page.categories %}
 		<li>{{ category }}</li>
-		{% endfor %}
+	{% endfor %}
 	</ul>
 </footer>
+-->
+{% endcomment %}
+
+{% include article/comments_load %}
