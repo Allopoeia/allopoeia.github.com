@@ -5,30 +5,42 @@ layout: null
 <feed xmlns="http://www.w3.org/2005/Atom">
 
 <title>Allopoeia</title>
-<link href="{{ site.url }}{{ page.url }}" rel="self"/>
-<link href="{{ site.url }}/"/>
+<link href="{{ site.url }}{{ page.url }}" rel="self" />
+<link href="{{ site.url }}/" />
 <updated>{{ site.time | date_to_xmlschema }}</updated>
 <id>{{ site.url }}/</id>
+<author>
+	<name>Allopoeia</name>
+	<uri>{{ site.url }}{{ site.nav-items.authors.url }}</uri>
+</author>
 
 {% for post in site.posts %}
+{% assign _data = post %}
 <entry>
+	<link href="{{ site.url }}{{ post.url }}" />
+	<id>{{ site.url }}{{ post.url }}</id>
+
+	{% for cat in post.categories %}
+		<category term="{{ cat }}" label="{{ cat | capitalize }}"/>
+	{% endfor %}
+
 	<title>{{ post.title }}</title>
-	<link href="{{ site.url }}{{ post.url }}"/>
-	{% if post.last-modified %}
-		{% assign _date_updated = post.last-modified %}
-	{% else %}
-		{% assign _date_updated = post.date %}
-	{% endif %}
-	<updated>{{ _date_updated | date_to_xmlschema }}</updated>
+{% if post.subtitle %}<subtitle>{{ post.subtitle }}</subtitle>{% endif %}
+
+	<rights type="html"><![CDATA[{% include article/copyright_notice %}]]></rights>
+
+	<updated>{% if post.last-modified %}{{ post.last-modified | date_to_xmlschema }}{% else %}{{ post.date | date_to_xmlschema }}{% endif %}</updated>
 	<author>
 		<name>{{ post.author }}</name>
+		{% capture _author %}{{ post.author }}{% endcapture %}
+		<uri>{% include common/fetch_author_about-url_absolute %}</uri>
 	</author>
-	<id>{{ site.url }}{{ post.id }}</id>
-	<content type="html">
-{{ post.content | xml_escape }}
-	</content>
+
+	<content type="html"><![CDATA[
+{{ post.content }}
+	]]></content>
 </entry>
 {% endfor %}
 
 </feed>
-{% assign _date_updated = null %}
+{% assign _temp = null %}{% assign _date_updated = null %}{% assign _post_id = null %}

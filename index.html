@@ -11,18 +11,33 @@ title: Allopoeia
 {% if _post_count != "0" %}
 <ul class="article_list">
 {% for post in site.posts limit:10 %}
+{% capture __raw %}
+
+{% assign _category_list = post.categories %}
+{% assign _author = post.author %}
 <li>
 <div class="div-relative">
 	<div class="right above">
 		<time pubdate datetime="{{ post.date | date_to_xmlschema }}">
-			<span title="{% if post.last-modified > post.date %}Last updated {{ post.last-modified | date: '%d %B %Y' }}{% endif %}">{{ post.date | date: "%d %B %Y" }}</span>
+			<span title="{% if post.last-modified > post.date %}Last updated {{ post.last-modified | date: '%d %B %Y' }}{% endif %}">
+				{{ post.date | date: "%d %B %Y" }}
+			</span>
 		</time>
 	</div>
-	<a href="{{ post.url }}">{{ post.title | xml_escape }}</a>
-	<span class="above">by <a href="{{ site.authors[post.author].about-url }}">{{ post.author }}</a></span>
-	<a href="{{ post.url }}" title="{% for cat in post.categories %}{{ cat | capitalize }}{% if forloop.last == false %} &raquo; {% endif %}{% endfor %} &rArr; {{ post.title }}"><span class="fill-span"></span></a>
+	{% assign _fcl_limit = 1 %}
+	{% include common/fancify_category_list %} &rArr; <a href="{{ post.url }}">
+		{% if post.h-title %}
+			{{ post.h-title }}
+		{% else %}
+			{{ post.title }}
+		{% endif %}
+	</a>
+	<span class="above"> by <a href="{% include common/fetch_author_about-url %}">{{ post.author }}</a></span>
+	<a href="{{ post.url }}" title="{% assign _category_list = post.categories %}{% include common/fancify_category_list %} &rArr; {{ post.title }}"><span class="fill-span"></span></a>
 </div>
 </li>
+
+{% endcapture %}{{ __raw | strip_newlines | replace: '	', '' }}{% assign __raw = null %}
 {% endfor %}
 </ul>
 {% else %}

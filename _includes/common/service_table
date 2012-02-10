@@ -1,7 +1,0 @@
-<table class="services"><tr>
-{% for service in _service_list %}
-	{% assign _ref = site.service-refs[service.ref] %}
-	<td><a class="clicky {{ _ref.class }}" href="{{ _ref.base-url }}{{ service.slug }}">{{ _ref.text }}</a></td>
-{% endfor %}
-</tr></table>
-{% assign _ref = null %}

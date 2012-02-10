@@ -1,0 +1,13 @@
+{% capture __fcl__raw %}
+{% unless _category_list %}
+	{% assign _category_list = page.categories %}
+{% endunless %}
+{% unless _fcl_limit %}
+	{% assign _fcl_limit = 38 %}
+{% endunless %}
+
+{% for cat in _category_list limit:_fcl_limit %}
+	{{ cat | capitalize }}
+	{% if forloop.last == false %} &raquo; {% endif %}
+{% endfor %}
+{% endcapture %}{{ __fcl__raw | strip_newlines | replace: '	', '' }}{% assign __fcl__raw = null %}{% assign _fcl_limit = null %}{% assign _category_list = null %}

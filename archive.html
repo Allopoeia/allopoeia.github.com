@@ -4,14 +4,16 @@ nav-active: archive
 
 title: Archive
 ---
-<p>Here be the dusty archives. Please quietly peruse our collection, and don't forget to turn off the lights as you leave.</p>
+<p>Here be the dusty archives. Please peruse our collection quietly, and don't forget to turn off the lights as you leave.</p>
 
 {% for post in site.posts %}
 
+{% capture __temp %}
 {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
 {% capture this_month %}{{ post.date | date: "%B" }}{% endcapture %}
 {% capture next_year %}{{ post.previous.date | date: "%Y" }}{% endcapture %}
 {% capture next_month %}{{ post.previous.date | date: "%B" }}{% endcapture %}
+{% endcapture %}{% assign __temp = null %}
 
 {% if forloop.first %}
 	<h2 id="{{ this_year }}" class="separator">{{ this_year }}<a class="para-ref" href="#{{ this_year }}"></a></h2>
@@ -19,22 +21,22 @@ title: Archive
 	<ul>
 {% endif %}
 
-{% if post.last-modified > post.date %}
-	{% assign _post_modded = true %}
-{% else %}
-	{% assign _post_modded = false %}
-{% endif %}
-
+{% capture __raw %}
+{% assign _category_list = post.categories %}
 <li>
 	<span>
-	{% if _post_modded %}<span title="Last updated {{ post.last-modified | date: '%d %B %Y' }}">{% endif %}
-		{{ post.date | date: "%d %B %Y" }}
-	{% if _post_modded %}</span>{% endif %}
-		&diams; {% for cat in post.categories %}{{ cat | capitalize }}{% if forloop.last == false %} &raquo; {% endif %}{% endfor %} &rArr;
+		<span title="{% if post.last-modified > post.date %}Last updated {{ post.last-modified | date: '%d %B %Y' }}{% endif %}">
+			{{ post.date | date: "%d %B %Y" }} &diams;
+		</span> {% include common/fancify_category_list %} &rArr; <a href="{{ post.url }}">
+		{% if post.h-title %}
+			{{ post.h-title }}
+		{% else %}
+			{{ post.title }}
+		{% endif %}
+		</a> by <a href="{% assign _author = post.author %}{% include common/fetch_author_about-url %}">{{ post.author }}</a>
 	</span>
-	<a href="{{ post.url }}">{{ post.title | xml_escape }}</a>
-	<span>by <a href="{{ site.authors[post.author].about-url }}">{{ post.author }}</a></span>
 </li>
+{% endcapture %}{{ __raw | strip_newlines | replace: '	', '' }}{% assign __raw = null %}
 
 {% if forloop.last %}
 	</ul>

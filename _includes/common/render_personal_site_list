@@ -1,0 +1,7 @@
+<div class="personal-site-list {{ _extra_classes }}">
+{% for _data in _site_list %}
+	{% assign _tpl = site.personal-site-types[_data.type] %}
+	<a class="clicky {{ _tpl.class }}" title="{{ _tpl.title }}" href="{{ _tpl.base-url }}{{ _data.slug }}"></a>
+{% endfor %}
+</div>
+{% assign _tpl = null %}{% assign _site_list = null %}{% assign _extra_classes = null %}

@@ -6,7 +6,7 @@ auto: true
 markdown: maruku
 pygments: true
 
-exclude: ["README.md", "CNAME", ".gitignore", "scripts"]
+exclude: ["README.md", "CNAME", ".gitignore", "scripts", "debug"]
 
 ## Site configuration
 
@@ -15,10 +15,13 @@ meta:
   perma-url: http://allopoeia.komiga.com
   title: Allopoeia
   run-years: "2012"
-  feedburner:
+  meta-desc: "Allopoeia is an open-authorship journal/blag for everything and anything."
+  meta-image: http://lh5.googleusercontent.com/-yp12thUC9-E/TzSje2KZIyI/AAAAAAAAAKU/wJx3xHNd5lw/s128/allopoeia-logo.png
+  feedburner_id: Allopoeia
+  flattr_slug: "/thing/493250/Allopoeia"
   disqus_shortname: komiga
   analytics_id: "UA-6565507-3"
-  analytics_domain_name:
+  analytics_domain_name: null
 
 permalink: /:categories/:year/:month/:title.html
 
@@ -32,18 +35,23 @@ nav-items: {
   about: {text: "About", url: "/about.html"}
 }
 
-service-refs: {
-  twitter: {class: twitter, text: "Twitter", base-url: "http://twitter.com/"},
-  github : {class: github , text: "GitHub" , base-url: "https://github.com/"}
+personal-site-types: {
+  website: {class: home, text: "Web site", title: "Web site", base-url: "http://"},
+  twitter: {class: twitter, text: "Twitter", title: "Twitter", base-url: "http://twitter.com/"},
+  github : {class: github , text: "GitHub" , title: "GitHub", base-url: "https://github.com/"},
+  flattr: {class: flattr, text: "Flattr", title: "Flattr", base-url: "http://flattr.com/profile/"}
 }
 
 authors: {
   plash: {
     about-url: "/authors.html#plash",
+    about-relative: true,
     preferred-copyright: "cc_by-nc-sa-3.0",
-    services: [
-      {ref: github , slug: "komiga"},
-      {ref: twitter, slug: "komiga"}
+    personal-sites: [
+      {type: website, slug: "komiga.com"},
+      {type: github , slug: "komiga"},
+      {type: twitter, slug: "komiga"},
+      {type: flattr , slug: "komiga"}
     ]
   }
 }

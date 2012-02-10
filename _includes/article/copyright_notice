@@ -1,33 +1,48 @@
+{% capture __raw %}
 {% assign _notice = null %}
 {% assign _type = null %}
 
-{% assign _seltype = page.copyright-notice-type %}
-{% unless _seltype %}{%assign _seltype = site.copyright-notice-type-default %}{% endunless %}
+{% unless _data %}
+	{% assign _data = page %}
+{% endunless %}
+
+{% assign _seltype = _data.copyright-notice-type %}
+{% unless _seltype %}
+	{% assign _seltype = site.copyright-notice-type-default %}
+{% endunless %}
+
 {% case _seltype %}
 {% when "preferred" %}
-	{% assign _type = site.authors[page.author].preferred-copyright %}
+	{% assign _type = site.authors[_data.author].preferred-copyright %}
 	{% assign _notice = site.copyright-notices[_type] %}
 	{% unless _notice %}
 		{% comment %}<!-- Drop to personal copyright if preferred is unset or doesn't exist -->{% endcomment%}
-		{% assign _notice = site.authors[page.author].personal-copyright %}
+		{% assign _notice = site.authors[_data.author].personal-copyright %}
 	{% endunless %}
 {% when "personal" %}
-	{% assign _notice = site.authors[page.author].personal-copyright %}
+	{% assign _notice = site.authors[_data.author].personal-copyright %}
 {% else %}
-	{% assign _notice = site.copyright-notices[page.copyright-notice-type] %}
+	{% assign _notice = site.copyright-notices[_data.copyright-notice-type] %}
 {% endcase %}
 
 {% unless _notice %}
 	{% assign _notice = site.copyright-notices["simple"] %}
 {% endunless %}
 
-{% capture _page_year_start %}{{ page.date | date: '%Y' }}{% endcapture %}
-{% capture _page_year_end %}{{ page.last-modified | date: '%Y' }}{% endcapture %}
+{% capture _page_year_start %}{{ _data.date | date: '%Y' }}{% endcapture %}
+{% capture _page_year_end %}{{ _data.last-modified | date: '%Y' }}{% endcapture %}
 {% capture _page_year_range %}{{ _page_year_start }}{% if _page_year_start != _page_year_end %}&mdash;{{ _page_year_end }}{% endif %}{% endcapture %}
 
 {% capture _raw_content %}
-	<span>{{ _notice.pre-text }}{% if _notice.url %}<a href="{{ _notice.url }}">{{ _notice.url-text }}</a>{% else %}{{ _notice.url-text }}{% endif %}{{ _notice.post-text }}</span>
+	{{ _notice.pre-text }}{% if _notice.url %}<a href="{{ _notice.url }}" target="_blank">{{ _notice.url-text }}</a>{% else %}{{ _notice.url-text }}{% endif %}{{ _notice.post-text }}
 {% endcapture %}
-{{ _raw_content | replace: '%author%', page.author | replace: '%year-range%', _page_year_range | replace: '%about-author%', site.authors[page.author].about-url }}
+{% assign _author = _data.author %}
+{% capture _about_url %}{% include common/fetch_author_about-url_absolute %}{% endcapture %}
+{{ _raw_content | replace: '%author%', _data.author | replace: '%year-range%', _page_year_range | replace: '%about-author%', _about_url }}
 
-{% assign _page_year_end = null %}{% assign _page_year_start = null %}{% assign _page_year_range = null %}{% assign _seltype = null %}{% assign _type = null %}{% assign _notice = null %}
+{% assign _raw_content = null %}
+
+{% assign _about_url = null %}{% assign _page_year_end = null %}{% assign _page_year_start = null %}{% assign _page_year_range = null %}
+{% assign _data.last-modified = null %}{% assign _data.date = null %}{% assign _data.author = null %}{% assign _data.copyright-notice-type = null %}
+{% assign _seltype = null %}{% assign _type = null %}{% assign _notice = null %}
+{% endcapture %}{{ __raw | replace: '	', '' | strip_newlines }}{% assign __raw = null %}

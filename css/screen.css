@@ -41,8 +41,6 @@ ul {list-style: disc;}
 
 a              {color: #5299CC; text-decoration: none;}
 a:hover        {color: #B3DFFF; text-decoration: underline;}
-/*a:visited      {color: #A099CC;}
-a:visited:hover{color: #E3BBFF;}*/
 
 em {font-style: italic;}
 strong {font-weight: bold;}
@@ -51,7 +49,8 @@ small {font-size: 80%;}
 /* Stylers */
 
 .div-relative {position: relative;}
-.generic-center {text-align: center;}
+.generic-float-right {float: right;}
+.generic-center-text {text-align: center;}
 
 .border-radius-4 {
 	-webkit-border-radius: 4px;
@@ -196,7 +195,6 @@ a.nav-item-active/*, a:hover.nav-item*/ {
 	background-color: #13161A;
 	-webkit-border-radius: 4px;
 	-moz-border-radius: 4px;
-	/*cursor: pointer;*/
 }
 
 .article_list>li:hover {
@@ -221,22 +219,16 @@ a.nav-item-active/*, a:hover.nav-item*/ {
 
 /**/
 
-.services {
-	float: right;
-	margin-right: 10px;
-}
-
-.services .clicky {
-	display: block;
+.personal-site-list .clicky {
+	display: inline-table;
 	height: 24px;
 	width: 24px;
-	overflow: hidden;
-	text-indent: -999em;
-	margin-left: 5px;
 }
 
-.services .twitter {background: url("/images/service/twitter-20.png") no-repeat;}
-.services .github  {background: url("/images/service/github-20.png") no-repeat;}
+.personal-site-list .home    {background: url("/images/icons/home-20.png") no-repeat;}
+.personal-site-list .twitter {background: url("/images/icons/twitter-20.png") no-repeat;}
+.personal-site-list .github  {background: url("/images/icons/github-20.png") no-repeat;}
+.personal-site-list .flattr  {background: url("/images/icons/flattr-20.png") no-repeat;}
 
 /* Article */
 
@@ -269,8 +261,13 @@ a.nav-item-active/*, a:hover.nav-item*/ {
 .sep_header>.pubdate {float: right;}
 
 .sep_footnotes {margin-top: 40px;}
-.inner-copyright-notice {margin-top: 20px;}
 .sep_comments {margin-top: 40px;}
+
+.author-banner {
+	margin-top: 20px;
+	padding: 10px;
+	background-color: #202329;
+}
 
 /* Article header */
 
