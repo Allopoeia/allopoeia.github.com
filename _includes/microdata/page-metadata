@@ -13,6 +13,7 @@
 
 <meta itemprop="name" content="{{ _title }}" />
 <link itemprop="url" href="{% include common/canonical_url %}" />
+<link itemprop="image" href="{{ site.meta.meta-image }}" />
 
 {% if page.layout == "post" %}
 <link itemprop="discussionUrl" href="{% include common/canonical_url %}#comments" />
