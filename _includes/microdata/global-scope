@@ -1,0 +1,13 @@
+{% capture __minify %}
+{% unless page.md-global-disabled %}
+
+{% if page.md-global-type %}
+	{% assign _type = page.md-global-type %}
+{% else %}
+	{% assign _type = "WebPage" %}
+{% endif %}
+
+{% include microdata/tags_scoped %}
+
+{% endunless %}
+{% endcapture %}{% include common/minify_reprint %}

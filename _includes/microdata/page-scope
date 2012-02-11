@@ -1,0 +1,15 @@
+{% capture __minify %}
+{% unless page.md-page-disabled %}
+
+{% assign _prop = null %}
+
+{% if page.md-page-type %}
+	{% assign _type = page.md-page-type %}
+{% else %}
+	{% assign _type = "CreativeWork" %}
+{% endif %}
+
+{% include microdata/tags_scoped %}
+
+{% endunless %}
+{% endcapture %}{% include common/minify_reprint %}

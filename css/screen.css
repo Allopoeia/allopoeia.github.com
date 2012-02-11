@@ -280,6 +280,12 @@ a.nav-item-active/*, a:hover.nav-item*/ {
 	margin: 10px 0px 20px 0px;
 }
 
+#article_header .title {}
+#article_header .subtitle {font-style: normal; font-size: 20px;}
+
+#generic_header .title {}
+#generic_header .subtitle {font-style: normal; font-size: 20px;}
+
 /* Article comments */
 
 #article_comments #disqus_thread #dsq-content #dsq-comments .dsq-comment-message {

@@ -4,7 +4,7 @@ safe: false
 auto: true
 
 markdown: maruku
-pygments: true
+pygments: false
 
 exclude: ["README.md", "CNAME", ".gitignore", "scripts", "debug"]
 

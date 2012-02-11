@@ -3,12 +3,17 @@ layout: default
 article-class: generic
 article-styles: article-font-sans
 
-#disable-header:
+#disable-header: false
 ---
 {% unless page.disable-header %}
-<hgroup class="generic_header">
-	<h1 class="separator">{% if page.h-title %}{{ page.h-title }}{% else %}{{ page.title }}{% endif %}</h1>
-</hgroup>
+<header class="generic_header">
+	<hgroup>
+		<h1 class="title {% unless page.subtitle %}separator{% endunless %}">{% if page.h-title %}{{ page.h-title }}{% else %}{{ page.title }}{% endif %}</h1>
+	{% if page.subtitle %}
+		<h2 class="subtitle separator">{% if page.h-subtitle %}{{ page.h-subtitle }}{% else %}{{ page.subtitle }}{% endif %}</h2>
+	{% endif %}
+	</hgroup>
+</header>
 {% endunless %}
 
 {{ content }}

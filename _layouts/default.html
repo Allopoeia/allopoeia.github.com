@@ -6,25 +6,42 @@ nav-display-items: [
   authoring,
   about
 ]
+#nav-active: null
+
+#md-global-disabled: false
+#md-global-type: "WebPage"
+#md-global-content-prop: "mainContentOfPage"
+#md-global-content-type: "WebPageElement"
+#md-global-metadata-enabled: false
+#md-page-disabled: false
+#md-page-type: "CreativeWork"
+#md-page-metadata-disabled: false
 
 #article-class: null
 #article-styles: null
-#article-element-data: null
 
 #disable-feedburner: false
 #disable-flattr: false
 #disable-plusone: false
-#nav-active: null
 #omega-text: null
+
+#date: null
+#last-modified: null
+#title: null
+#h-title: null
+#subtitle: null
+#h-subtitle: null
+#description: null
 ---
 <!DOCTYPE html>
-<html lang="en" itemscope itemtype="http://schema.org/Thing">
+<html lang="en" {% include microdata/global-scope %}>
 <head>
 	<meta charset="utf-8" />
 
 	<title>{% if page.title and page.title != site.meta.title %}{{ page.title }} - {% endif %}{{ site.meta.title }}</title>
 	<link rel="canonical" href="{% include common/canonical_url %}" />
 
+	<link ref="icon" type="image/png" href="/images/icons/favicon-32.png" />
 	<link rel="shortcut icon" href="/favicon.ico" />
 
 	<link rel="alternate" type="application/atom+xml" title="Atom feed" href="/atom.xml" />
@@ -35,17 +52,14 @@ nav-display-items: [
 	<link rel="stylesheet" href="/css/reset.css" type="text/css" />
 	<link rel="stylesheet" href="/css/screen.css{% unless site.safe %}?{{ site.time | date: '%Y%m%d%H%M%S' }}{% endunless %}" type="text/css" />
 
-	<meta itemprop="name" content="{{ site.meta.title }}" />
-	<link itemprop="url" href="{{ site.meta.perma-url }}" />
-	<link itemprop="image" href="{{ site.meta.meta-image }}" />
-	<meta itemprop="description" content="{{ site.meta.meta-desc }}" />
+	{% include microdata/global-metadata %}
 
 	{% include component/plusone_script %}
 	{% include component/analytics_script %}
 </head>
 <body>
 
-<!-- content start -->
+<!-- body start -->
 <div id="top_container">
 <div id="top_align_center">
 	<div id="top_bar" class="border-radius-4">
@@ -60,12 +74,19 @@ nav-display-items: [
 		</nav>
 	</div>
 
+<span {% include microdata/global-item-main-content %}> <!-- [ main content -->
+
 	<!-- article start -->
-	<article {{ page.article-element-data }} id="article_container" class="{{ page.article-class }} {{ page.article-styles }}" >
+	<article {% include microdata/page-scope %} id="article_container" class="{{ page.article-class }} {{ page.article-styles }}">
+
+{% include microdata/page-metadata %}
 
 {{ content }}
 
 	</article>
+
+</span> <!-- main content ] -->
+
 </div>
 </div>
 
