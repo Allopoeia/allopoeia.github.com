@@ -5,6 +5,9 @@ article-styles: article-font-sans
 
 #disable-header: false
 ---
+
+<div id="_main_content" {% include microdata/generic-main-content %}>
+
 {% unless page.disable-header %}
 <header class="generic_header">
 	<hgroup>
@@ -15,8 +18,6 @@ article-styles: article-font-sans
 	</hgroup>
 </header>
 {% endunless %}
-
-<div id="_actual_content" {% include microdata/generic-main-content %}>
 
 {{ content }}
 

@@ -217,7 +217,12 @@ a.nav-item-active/*, a:hover.nav-item*/ {
 	z-index: 2;
 }
 
-/**/
+/* Archive */
+
+.archive .year h1 {font-size: 26px;}
+.archive .month h1 {font-size: 20px;}
+
+/* Personal site list */
 
 .personal-site-list .clicky {
 	display: inline-table;

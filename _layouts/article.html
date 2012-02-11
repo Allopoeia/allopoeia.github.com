@@ -19,6 +19,8 @@ article-styles: article-font-fancy
 #tags: []
 ---
 
+<div id="_main_content" {% include microdata/article-main-content %}>
+
 <header id="article_header">
 	<hgroup>
 		<h1 class="title">{% include fetch/page/fancy_title %}</h1>
@@ -37,8 +39,6 @@ article-styles: article-font-fancy
 		<br style="clear: left;" />
 	</div>
 </header>
-
-<div id="_actual_content" {% include microdata/article-main-content %}>
 
 {{ content }}
 
