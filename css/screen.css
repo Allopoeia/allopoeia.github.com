@@ -293,7 +293,7 @@ a.nav-item-active/*, a:hover.nav-item*/ {
 
 /* Article comments */
 
-#article_comments #disqus_thread #dsq-content #dsq-comments .dsq-comment-message {
+#comments #disqus_thread #dsq-content #dsq-comments .dsq-comment-message {
 	font-size: 16px !important;
 }
 
