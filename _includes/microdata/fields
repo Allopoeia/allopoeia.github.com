@@ -1,6 +1,6 @@
 {% unless page.md-disabled or page.md-metadata-disabled %}
 
-	<meta itemprop="name" content="{% include fetch/page/title_fallback %}" />
+	<meta itemprop="name" content="{% include fetch/page/window_title %}" />
 	<link itemprop="url" href="{% include common/canonical_url %}" />
 	<link itemprop="image" href="{% if page.image %}{{ page.image }}{% else %}{{ site.meta.image }}{% endif %}" />
 {% if page.description %}
@@ -22,7 +22,7 @@
 	<link itemprop="discussionUrl" href="{% include common/canonical_url %}#comments" />
 {% endif %}
 
-	<meta itemprop="headline" content="{% include fetch/page/window_title %}" />
+	<meta itemprop="headline" content="{% include fetch/page/title_fallback %}" />
 {% if page.subtitle %}
 	<meta itemprop="alternativeHeadline" content="{{ page.subtitle }}" />
 {% endif %}
