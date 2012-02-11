@@ -5,35 +5,34 @@ layout: null
 <feed xmlns="http://www.w3.org/2005/Atom">
 
 <title>Allopoeia</title>
-<link href="{{ site.url }}{{ page.url }}" rel="self" />
-<link href="{{ site.url }}/" />
-<updated>{{ site.time | date_to_xmlschema }}</updated>
-<id>{{ site.url }}/</id>
+<link href="{{ site.meta.perma-url }}{{ page.url }}" rel="self" />
+<link href="{{ site.meta.perma-url }}" />
+<updated>{% include common/machine_datetime %}</updated>
+<id>{{ site.meta.perma-url }}</id>
 <author>
 	<name>Allopoeia</name>
-	<uri>{{ site.url }}{{ site.nav-items.authors.url }}</uri>
+	<uri>{% assign _slug = site.nav-items.authors.url %}{% include common/canonical_url %}</uri>
 </author>
 
 {% for post in site.posts %}
 {% assign _data = post %}
 <entry>
-	<link href="{{ site.url }}{{ post.url }}" />
-	<id>{{ site.url }}{{ post.url }}</id>
+	<link href="{% assign _page = post %}{% include common/canonical_url %}" />
+	<id>{% assign _page = post %}{% include common/canonical_url %}</id>
 
-	{% for cat in post.categories %}
-		<category term="{{ cat }}" label="{{ cat | capitalize }}"/>
-	{% endfor %}
+{% for cat in post.categories %}
+	<category term="{{ cat }}" label="{{ cat | capitalize }}"/>
+{% endfor %}
 
 	<title>{{ post.title }}</title>
 {% if post.subtitle %}<subtitle>{{ post.subtitle }}</subtitle>{% endif %}
 
 	<rights type="html"><![CDATA[{% include article/copyright_notice %}]]></rights>
 
-	<updated>{% if post.last-modified %}{{ post.last-modified | date_to_xmlschema }}{% else %}{{ post.date | date_to_xmlschema }}{% endif %}</updated>
+	<updated>{% assign _page = post %}{% include article/machine_datetime_latest %}</updated>
 	<author>
 		<name>{{ post.author }}</name>
-		{% capture _author %}{{ post.author }}{% endcapture %}
-		<uri>{% include common/fetch_author_about-url_absolute %}</uri>
+		<uri>{% assign _author = post.author %}{% include fetch/author/about-url_absolute %}</uri>
 	</author>
 
 	<content type="html"><![CDATA[

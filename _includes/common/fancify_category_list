@@ -1,13 +1,24 @@
-{% capture __fcl__raw %}
+{% capture __minify %}
+
+{% comment %}
+<!--
+	Parameters:
+		_category_list: the datetime object to format; [default: page.categories]
+		_limit: the maximum number of categories to get; [default: 99]
+-->
+{% endcomment %}
+
 {% unless _category_list %}
 	{% assign _category_list = page.categories %}
 {% endunless %}
-{% unless _fcl_limit %}
-	{% assign _fcl_limit = 38 %}
+{% unless _limit %}
+	{% assign _limit = 99 %}
 {% endunless %}
 
-{% for cat in _category_list limit:_fcl_limit %}
+{% for cat in _category_list limit:_limit %}
 	{{ cat | capitalize }}
 	{% if forloop.last == false %} &raquo; {% endif %}
 {% endfor %}
-{% endcapture %}{{ __fcl__raw | strip_newlines | replace: '	', '' }}{% assign __fcl__raw = null %}{% assign _fcl_limit = null %}{% assign _category_list = null %}
+
+{% assign _limit = null %}{% assign _category_list = null %}
+{% endcapture %}{% include common/minify_reprint %}

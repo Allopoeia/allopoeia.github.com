@@ -1,0 +1,1 @@
+{% capture __minify %}{{ __minify | strip_newlines | replace: '	', '' }}{% endcapture %}

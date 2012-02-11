@@ -15,13 +15,19 @@ meta:
   perma-url: http://allopoeia.komiga.com
   title: Allopoeia
   run-years: "2012"
-  meta-desc: "Allopoeia is an open-authorship journal/blag for everything and anything."
+  meta-desc: "Allopoeia is an open-authorship journal/blag for anything and everything."
   meta-image: http://lh5.googleusercontent.com/-yp12thUC9-E/TzSje2KZIyI/AAAAAAAAAKU/wJx3xHNd5lw/s128/allopoeia-logo.png
   feedburner_id: Allopoeia
   flattr_slug: "/thing/493250/Allopoeia"
   disqus_shortname: komiga
   analytics_id: "UA-6565507-3"
   analytics_domain_name: null
+
+## Style
+
+style:
+  format:
+    ymd: '%d %B %Y'
 
 permalink: /:categories/:year/:month/:title.html
 

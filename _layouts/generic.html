@@ -6,7 +6,9 @@ article-styles: article-font-sans
 #disable-header:
 ---
 {% unless page.disable-header %}
-<h1 class="separator">{% if page.h-title %}{{ page.h-title }}{% else %}{{ page.title }}{% endif %}</h1>
+<hgroup class="generic_header">
+	<h1 class="separator">{% if page.h-title %}{{ page.h-title }}{% else %}{{ page.title }}{% endif %}</h1>
+</hgroup>
 {% endunless %}
 
 {{ content }}

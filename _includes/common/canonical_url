@@ -1,0 +1,22 @@
+{% capture __minify %}
+
+{% comment %}
+<!--
+	Parameters:
+		_page: the page object to use; [default: page]
+		_slug: alternatively, the slug to use (appends it to 'site.url', which does /not/ have a trailing slash); [default: null]
+-->
+{% endcomment %}
+
+{% unless _slug %}
+	{% if _page %}
+		{% assign _slug = _page.url %}
+	{% else %}
+		{% assign _slug = page.url %}
+	{% endif %}
+{% endunless %}
+
+{{ site.url }}{{ _slug }}
+
+{% assign _slug = null %}{% assign _page = null %}
+{% endcapture %}{% include common/minify_reprint %}

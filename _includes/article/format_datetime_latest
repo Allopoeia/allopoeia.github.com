@@ -1,0 +1,13 @@
+{% capture __minify %}
+
+{% comment %}
+<!--
+	Parameters:
+		>> article/format_datetime
+-->
+{% endcomment %}
+
+{% assign _latest = true %}
+{% include article/format_datetime %}
+
+{% endcapture %}{% include common/minify_reprint %}

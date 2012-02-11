@@ -1,0 +1,14 @@
+{% unless page.disable-flattr %}
+{% if site.meta.flattr_slug %}
+	<a href="http://flattr.com{{ site.meta.flattr_slug }}" target="_blank">
+		<img src="/images/icons/flattr-20.png" alt="Flattr {{ site.meta.title }}" title="Flattr {{ site.meta.title }}" />
+	</a>
+{% endif %}
+{% endunless %}
+
+{% comment %}<!-- Dynamic -->
+	<a class="FlattrButton" style="display:none;" rev="flattr;button:compact;" href="{{ site.meta.perma-url }}"></a>
+	<noscript>
+	<!-- Static bit -->
+	</noscript>
+{% endcomment %}

@@ -1,5 +1,0 @@
-{% unless page.disable-flattr %}
-<a href="http://flattr.com{{ site.meta.flattr_slug }}" target="_blank">
-	<img src="/images/icons/flattr-20.png" alt="Flattr {{ site.meta.title }}" title="Flattr {{ site.meta.title }}" />
-</a>
-{% endunless %}

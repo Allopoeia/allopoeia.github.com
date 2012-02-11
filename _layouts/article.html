@@ -8,17 +8,40 @@ nav-active: null
 #disable-inner-plusone: false
 #enable-comments: false
 #copyright-notice-type: site.copyright-notice-type-default
+
+#date: null
 #last-modified: null
+
+#author: null
+#categories: []
+#tags: []
+#title: null
+#h-title: null
+#subtitle: null
+#h-subtitle: null
+#excerpt: null
 ---
 
 <meta itemprop="name" content="{{ page.title }}" />
+<link itemprop="url" href="{% include common/canonical_url %}" />
+<link itemprop="discussionUrl" href="{% include common/canonical_url %}#comments" />
+<meta itemprop="datePublished" content="{% include article/machine_datetime %}" />
+<meta itemprop="dateModified" content="{% include article/machine_datetime_latest %}" />
+<meta itemprop="articleSection" content="{% include article/root_category %}" />
+
+<meta itemprop="headline" content="{{ page.title }}" />
+{% if page.subtitle %}
+<meta itemprop="alternativeHeadline" content="{{ page.subtitle }}" />
+{% endif %}
+
+{% if page.excerpt %}
+<meta itemprop="description" content="{{ page.excerpt }}" />
+{% endif %}
+
 <span itemprop="author" itemscope itemtype="http://schema.org/Person">
 	<meta itemprop="name" content="{{ page.author }}" />
+	<link itemprop="url" href="{% include fetch/author/about-url_absolute %}" />
 </span>
-<meta itemprop="articleSection" content="{{ page.categories | first | capitalize }}" />
-<meta itemprop="datePublished" content="{{ page.date | date_to_xmlschema }}" />
-<meta itemprop="dateModified" content="{% if page.last-modified %}{{ page.last-modified | date_to_xmlschema }}{% else %}{{ page.date | date_to_xmlschema }}{% endif %}" />
-<meta itemprop="discussionUrl" content="{{ site.url }}{{ page.url }}#comments" />
 
 <header id="article_header">
 	<hgroup>
@@ -28,8 +51,13 @@ nav-active: null
 	{% endif %}
 	</hgroup>
 	<div id="header" class="separator sep_header">
-		<span>by <a href="/authors.html#{{ page.author | cgi_escape }}">{{ page.author }}</a> in {% include common/fancify_category_list %}</span>
-		<span class="pubdate" title="{% if page.last-modified > page.date %}Last updated {{ page.last-modified | date: '%d %B %Y' }}{% endif %}"><time pubdate datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%d %B %Y" }}</time></span>
+		by <a href="/authors.html#{{ page.author | replace: ' ', '-' }}">{{ page.author }}</a>
+		in {% include article/root_category %}
+		<span class="pubdate" title="Last updated {% include article/format_datetime_latest %}">
+			<time pubdate datetime="{% include article/machine_datetime %}">
+				{% include article/format_datetime %}
+			</time>
+		</span>
 		<br style="clear: left;" />
 	</div>
 </header>
@@ -45,12 +73,11 @@ nav-active: null
 	<small>{% include article/copyright_notice %}</small>
 </div>
 <div class="generic-center-text">
-	{% assign _site_list = site.authors[page.author].personal-sites %}
+	{% assign _type_list = site.authors[page.author].personal-sites %}
 	{% include common/render_personal_site_list %}
 	{% include article/plusone_inner %}
 </div>
 </div>
-
 
 <h5 id="comments" class="separator sep_comments">Comments<a class="para-ref" href="#comments"></a></h5>
 <div id="article_comments" class="article-font-sans">

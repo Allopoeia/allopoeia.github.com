@@ -21,22 +21,25 @@ title: Archive
 	<ul>
 {% endif %}
 
-{% capture __raw %}
+{% capture __minify %}
 {% assign _category_list = post.categories %}
 <li>
-	<span>
-		<span title="{% if post.last-modified > post.date %}Last updated {{ post.last-modified | date: '%d %B %Y' }}{% endif %}">
-			{{ post.date | date: "%d %B %Y" }} &diams;
-		</span> {% include common/fancify_category_list %} &rArr; <a href="{{ post.url }}">
+	<span title="Last updated {% include article/format_datetime_latest %}">
+		<time pubdate datetime="{% include article/machine_datetime %}">
+			{% include article/format_datetime %} &diams;
+		</time>
+	</span> 
+	{% include common/fancify_category_list %} &rArr; 
+	<a href="{{ post.url }}">
 		{% if post.h-title %}
 			{{ post.h-title }}
 		{% else %}
 			{{ post.title }}
 		{% endif %}
-		</a> by <a href="{% assign _author = post.author %}{% include common/fetch_author_about-url %}">{{ post.author }}</a>
-	</span>
+	</a> 
+	by <a href="{% assign _author = post.author %}{% include fetch/author/about-url %}">{{ post.author }}</a>
 </li>
-{% endcapture %}{{ __raw | strip_newlines | replace: '	', '' }}{% assign __raw = null %}
+{% endcapture %}{% include common/minify_reprint %}
 
 {% if forloop.last %}
 	</ul>

@@ -1,0 +1,27 @@
+{% capture __minify %}
+
+{% comment %}
+<!--
+	Parameters:
+		_datetime: the datetime object to format; [default: site.time]
+		_format: the format string to use; takes 'machine' as an alias for date_to_xmlschema (ISO 8601); [default: site.style.format.ymd]
+-->
+{% endcomment %}
+
+{% unless _datetime %}
+	{% assign _datetime = site.time %}
+{% endunless %}
+
+{% if _datetime %}
+	{% case _format %}
+		{% when "machine" %}
+			{{ _datetime | date_to_xmlschema }}
+		{% when null %}
+			{{ _datetime | date: site.style.format.ymd }}
+		{% else %}
+			{{ _datetime | date: _format }}
+	{% endcase %}
+{% endif %}
+
+{% assign _format = null %}{% assign _datetime = null %}
+{% endcapture %}{% include common/minify_reprint %}

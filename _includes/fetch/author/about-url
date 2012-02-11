@@ -1,0 +1,27 @@
+{% capture __minify %}
+
+{% comment %}
+<!--
+	Parameters:
+		_author: the author ID; [default: page.author]
+		_fetch_absolute: whether to fetch an absolute URL [default: false]
+-->
+{% endcomment %}
+
+{% unless _author %}
+	{% assign _author = page.author %}
+{% endunless %}
+
+{% assign _ao = site.authors[_author] %}
+
+{% if _ao %}
+	{% if _ao.about-relative and _fetch_absolute %}
+		{% assign _slug = _ao.about-url %}
+		{% include common/canonical_url %}
+	{% else %}
+		{{ _ao.about-url }}
+	{% endif %}
+{% endif %}
+
+{% assign _ao = null %}{% assign _author = null %}{% assign _fetch_absolute = null %}
+{% endcapture %}{% include common/minify_reprint %}
