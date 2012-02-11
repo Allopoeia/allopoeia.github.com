@@ -1,0 +1,21 @@
+{% capture __minify %}
+
+{% comment %}
+<!--
+	Parameters:
+		_page: the page object to use; [default: page]
+-->
+{% endcomment %}
+
+{% unless _page %}
+	{% assign _page = page %}
+{% endunless %}
+
+{% if _page.title and _page.title != site.meta.title %}
+	{{ _page.title }} - 
+{% endif %}
+
+{{ site.meta.title }}
+
+{% assign _page = null %}
+{% endcapture %}{% include common/minify_reprint %}

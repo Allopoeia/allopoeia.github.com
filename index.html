@@ -2,10 +2,8 @@
 layout: generic
 nav-active: root
 
-md-global-metadata-enabled: true
-md-page-disabled: true
-
 title: Allopoeia
+description: "Allopoeia is an open-authorship journal/blag for anything and everything."
 ---
 <p>Welcome! <a href="{{ site.nav-items.about.url }}">Allopoeia</a> is a lonely, open-authorship journal/blag for anything and everything. <span title="won't you please">Check out</span> our <a href="{{ site.nav-items.authors.url }}">authors</a>, <a href="{{ site.nav-items.about.url }}#contact">write to us</a>, or peruse our <em>vast</em> <a href="{{ site.nav-items.archive.url }}">archive</a>.</p>
 
@@ -16,23 +14,15 @@ title: Allopoeia
 {% for post in site.posts limit:10 %}
 {% capture __minify %}
 
-{% assign _category_list = post.categories %}
-{% assign _author = post.author %}
 <li>
 <div class="div-relative">
-	<em>{% include article/root_category %}</em> &rArr; 
-	<a href="{{ post.url }}">
-		{% if post.h-title %}
-			{{ post.h-title }}
-		{% else %}
-			{{ post.title }}
-		{% endif %}
-	</a>
-	<span class="above"> by <a href="{% include fetch/author/about-url %}">{{ post.author }}</a></span>
+	<em>{% assign _category_list = post.categories %}{% include article/root_category %}</em> &rArr; 
+	<a href="{{ post.url }}">{% assign _page = post %}{% include fetch/page/fancy_title %}</a>
+	<span class="above"> by <a href="{% assign _author = post.author %}{% include fetch/author/about-url %}">{{ post.author }}</a></span>
 	<div class="right above">
-		<time pubdate datetime="{% include article/machine_datetime %}">
-			<span title="Last updated {% include article/format_datetime_latest %}">
-				{% include article/format_datetime %}
+		<time pubdate datetime="{% assign _page = post %}{% include article/machine_datetime %}">
+			<span title="Last updated {% assign _page = post %}{% include article/format_datetime_latest %}">
+				{% assign _page = post %}{% include article/format_datetime %}
 			</span>
 		</time>
 	</div>

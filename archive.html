@@ -22,20 +22,16 @@ title: Archive
 {% endif %}
 
 {% capture __minify %}
-{% assign _category_list = post.categories %}
 <li>
-	<span title="Last updated {% include article/format_datetime_latest %}">
-		<time pubdate datetime="{% include article/machine_datetime %}">
-			{% include article/format_datetime %} &diams;
+	<span title="Last updated {% assign _page = post %}{% include article/format_datetime_latest %}">
+		<time pubdate datetime="{% assign _page = post %}{% include article/machine_datetime %}">
+			{% assign _page = post %}{% include article/format_datetime %} &diams;
 		</time>
 	</span> 
-	{% include common/fancify_category_list %} &rArr; 
+	{% assign _category_list = post.categories %}{% include common/fancify_category_list %} &rArr; 
 	<a href="{{ post.url }}">
-		{% if post.h-title %}
-			{{ post.h-title }}
-		{% else %}
-			{{ post.title }}
-		{% endif %}
+		{% assign _page = post %}
+		{% include fetch/page/fancy_title %}
 	</a> 
 	by <a href="{% assign _author = post.author %}{% include fetch/author/about-url %}">{{ post.author }}</a>
 </li>

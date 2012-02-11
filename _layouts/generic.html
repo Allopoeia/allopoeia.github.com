@@ -8,13 +8,16 @@ article-styles: article-font-sans
 {% unless page.disable-header %}
 <header class="generic_header">
 	<hgroup>
-		<h1 class="title {% unless page.subtitle %}separator{% endunless %}">{% if page.h-title %}{{ page.h-title }}{% else %}{{ page.title }}{% endif %}</h1>
+		<h1 class="title {% unless page.subtitle %}separator{% endunless %}">{% include fetch/page/fancy_title %}</h1>
 	{% if page.subtitle %}
-		<h2 class="subtitle separator">{% if page.h-subtitle %}{{ page.h-subtitle }}{% else %}{{ page.subtitle }}{% endif %}</h2>
+		<h2 class="subtitle separator">{% include fetch/page/fancy_subtitle %}</h2>
 	{% endif %}
 	</hgroup>
 </header>
 {% endunless %}
 
+<div id="_actual_content" {% include microdata/generic-main-content %}>
+
 {{ content }}
 
+</div>

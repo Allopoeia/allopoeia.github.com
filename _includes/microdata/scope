@@ -1,8 +1,10 @@
 {% capture __minify %}
-{% unless page.md-global-disabled %}
+{% unless page.md-disabled %}
 
-{% if page.md-global-type %}
-	{% assign _type = page.md-global-type %}
+{% assign _prop = null %}
+
+{% if page.md-type %}
+	{% assign _type = page.md-type %}
 {% else %}
 	{% assign _type = "WebPage" %}
 {% endif %}

@@ -2,10 +2,11 @@
 layout: default
 nav-active: null
 
-md-global-disabled: true
-md-global-metadata-enabled: false
+md-type: "Article"
+#md-content-prop: "articleBody"
+#md-content-scoped: false
+#md-content-type: null
 
-md-page-type: "Article"
 article-class: article
 article-styles: article-font-fancy
 
@@ -20,13 +21,13 @@ article-styles: article-font-fancy
 
 <header id="article_header">
 	<hgroup>
-		<h1 class="title">{% if page.h-title %}{{ page.h-title }}{% else %}{{ page.title }}{% endif %}</h1>
+		<h1 class="title">{% include fetch/page/fancy_title %}</h1>
 	{% if page.subtitle %}
-		<h2 class="subtitle">{% if page.h-subtitle %}{{ page.h-subtitle }}{% else %}{{ page.subtitle }}{% endif %}</h2>
+		<h2 class="subtitle">{% include fetch/page/fancy_subtitle %}</h2>
 	{% endif %}
 	</hgroup>
 	<div class="separator sep_header">
-		by <a href="/authors.html#{{ page.author | replace: ' ', '-' }}">{{ page.author }}</a>
+		by <a href="{% include fetch/author/about-url %}">{{ page.author }}</a>
 		in {% include article/root_category %}
 		<span class="pubdate" title="Last updated {% include article/format_datetime_latest %}">
 			<time pubdate datetime="{% include article/machine_datetime %}">
@@ -37,11 +38,11 @@ article-styles: article-font-fancy
 	</div>
 </header>
 
-<span id="_actual_content" propname="articleBody">
+<div id="_actual_content" {% include microdata/article-main-content %}>
 
 {{ content }}
 
-</span>
+</div>
 
 <div class="author-banner border-radius-4">
 <div id="copyright-notice" class="generic-center-text">

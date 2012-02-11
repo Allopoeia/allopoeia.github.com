@@ -1,0 +1,30 @@
+{% unless page.md-disabled or page.md-metadata-disabled %}
+
+	<meta itemprop="name" content="{% include fetch/page/title_fallback %}" />
+	<link itemprop="url" href="{% include common/canonical_url %}" />
+	<link itemprop="image" href="{% if page.image %}{{ page.image }}{% else %}{{ site.meta.image }}{% endif %}" />
+{% if page.description %}
+	<meta itemprop="description" content="{{ page.description }}" />
+{% endif %}
+
+{% if page.md-type == "Article" %}
+	<meta itemprop="datePublished" content="{% include article/machine_datetime %}" />
+	<meta itemprop="dateModified" content="{% include article/machine_datetime_latest %}" />
+	<meta itemprop="articleSection" content="{% include article/root_category %}" />
+	<span itemprop="author" itemscope itemtype="http://schema.org/Person">
+		<meta itemprop="name" content="{{ page.author }}" />
+		<link itemprop="url" href="{% include fetch/author/about-url_absolute %}" />
+	</span>
+{% endif %}
+
+
+{% if page.enable-comments %}
+	<link itemprop="discussionUrl" href="{% include common/canonical_url %}#comments" />
+{% endif %}
+
+	<meta itemprop="headline" content="{% include fetch/page/window_title %}" />
+{% if page.subtitle %}
+	<meta itemprop="alternativeHeadline" content="{{ page.subtitle }}" />
+{% endif %}
+
+{% endunless %}
