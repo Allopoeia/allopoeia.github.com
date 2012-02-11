@@ -74,7 +74,9 @@ nav-display-items: [
 		</nav>
 	</div>
 
+{% comment %}
 <span {% include microdata/global-item-main-content %}> <!-- [ main content -->
+{% endcomment %}
 
 	<!-- article start -->
 	<article {% include microdata/page-scope %} id="article_container" class="{{ page.article-class }} {{ page.article-styles }}">
@@ -85,7 +87,9 @@ nav-display-items: [
 
 	</article>
 
+{% comment %}
 </span> <!-- main content ] -->
+{% endcomment %}
 
 </div>
 </div>
