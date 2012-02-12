@@ -22,14 +22,19 @@ Basically, yeah. Cats are cool; cereal is nice… maybe not that last one.
 
 A tricky business. We'll try to explain it plainly.
 
-Anything in the following directories (basically any template/configuration stuff) is licensed under MIT (which means you can do whatever you want with them) (also which you can find in [`LICENSE.md`](/Allopoeia/allopoeia.github.com/LICENSE.md)):
+The following files/directories (basically scripts/templates/configuration/styles) are licensed under MIT ([`LICENSE.md`](/Allopoeia/allopoeia.github.com/blob/master/LICENSE.md)) (which means you can do whatever you want with them):
 
-* `scripts/`
-* `css/`
-* `_includes/`
-* `_layouts/`
-* `_plugins/`
+```
+css/
+debug/
+scripts/
+_layouts/
+_plugins/
+_includes/
+_config.yml
+sitemap.txt
+```
 
-Posts (anything that starts with `year-month-day` in `_posts/`) are copyright (the author) and/or licensed on an individual level. **Any other page is © 2012 [komiga](http://komiga.com)** under the implicit “it's all mine no touchy or I get out the sledgehammer” license.
+Posts (anything that starts with `year-month-day` in `_posts/` and sub-directories) are copyright (the author) and/or licensed on an individual level. **Any other page is © 2012 [komiga](http://komiga.com)** under the implicit “it's all mine no touchy or I get out the sledgehammer” license.
 
 Simple, right? If you don't agree, [let us have it](mailto:allopoeia+copywhat@komiga.com). Let us have it harder than, uh.. harder than you've ever let anyone have it before!

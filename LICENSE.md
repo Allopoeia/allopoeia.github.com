@@ -1,6 +1,6 @@
 # License
 
-The MIT license. **This only applies to jekyll stuff/styling/etc. (as layed out in [`README.md`](/Allopoeia/allopoeia.github.com/README.md))**.
+The MIT license. **This only applies to jekyll stuff/styling/etc. (as layed out in [`README.md`](/Allopoeia/allopoeia.github.com/blob/master/README.md))**.
 
 ```
 Copyright (c) 2012 Tim Howard
