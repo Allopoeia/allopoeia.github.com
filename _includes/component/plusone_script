@@ -1,5 +1,5 @@
-{% unless page.disable-plusone %}
+{% unless page.disable-plusone or (page.disable-plusone-global and page.disable-plusone-global) %}
 <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
 {% else %}
-<!-- +1 button disabled -->
+<!-- +1 button(s) disabled entirely -->
 {% endunless %}

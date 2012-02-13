@@ -27,9 +27,9 @@ layout: null
 	<title>{{ post.title }}</title>
 {% if post.subtitle %}<subtitle>{{ post.subtitle }}</subtitle>{% endif %}
 
-	<rights type="html"><![CDATA[{% include article/copyright_notice %}]]></rights>
+	<rights type="html"><![CDATA[{% include post/copyright_notice %}]]></rights>
 
-	<updated>{% assign _page = post %}{% include article/machine_datetime_latest %}</updated>
+	<updated>{% assign _page = post %}{% include post/machine_datetime_latest %}</updated>
 	<author>
 		<name>{{ post.author }}</name>
 		<uri>{% assign _author = post.author %}{% include fetch/author/about-url_absolute %}</uri>

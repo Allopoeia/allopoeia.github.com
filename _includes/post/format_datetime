@@ -4,7 +4,7 @@
 <!--
 	Parameters:
 		_page: the page object to inspectify; must contain at least 'date' and should contain 'last-modified'; [default: page]
-		_latest: whether to use the latest date; [default: false] shortcut: article/format_datetime_latest
+		_latest: whether to use the latest date; [default: false] shortcut: post/format_datetime_latest
 		>> common/format_datetime
 -->
 {% endcomment %}

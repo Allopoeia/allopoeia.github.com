@@ -1,4 +1,4 @@
-{% unless page.disable-plusone %}
+{% unless page.disable-plusone or (page.disable-plusone-inner and page.disable-plusone-global) %}
 <script type="text/javascript">
 	window.___gcfg = {
 		lang: "en-US"
@@ -11,5 +11,5 @@
 	})();
 </script>
 {% else %}
-<!-- +1 button disabled -->
+<!-- +1 button(s) disabled entirely -->
 {% endunless %}

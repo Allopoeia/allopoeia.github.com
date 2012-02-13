@@ -1,4 +1,4 @@
-{% unless page.disable-inner-plusone %}
+{% unless page.disable-plusone-inner %}
 {% capture _plusone_url %}{{ site.meta.perma-url }}{{ page.url }}{% endcapture %}
 {% include component/plusone_element %}
 {% endunless %}

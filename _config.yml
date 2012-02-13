@@ -64,7 +64,7 @@ authors: {
 ##
 ## Replacement fields:
 ##    %about-author% - the author's about-url
-##    %year-range% - the article's modification years
+##    %year-range% - the post's modification years
 ##    %author% - the author's moniker
 ##
 copyright-notice-type-default: "preferred"

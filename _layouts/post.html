@@ -7,10 +7,9 @@ md-type: "Article"
 #md-content-scoped: false
 #md-content-type: null
 
-article-class: article
+article-class: post
 article-styles: article-font-fancy
 
-#disable-inner-plusone: false
 #enable-comments: false
 #copyright-notice-type: site.copyright-notice-type-default
 
@@ -19,7 +18,7 @@ article-styles: article-font-fancy
 #tags: []
 ---
 
-<header id="article_header">
+<header id="post_header">
 	<hgroup>
 		<h1 class="title">{% include fetch/page/fancy_title %}</h1>
 	{% if page.subtitle %}
@@ -28,17 +27,17 @@ article-styles: article-font-fancy
 	</hgroup>
 	<div class="separator sep_header">
 		by <a href="{% include fetch/author/about-url %}">{{ page.author }}</a>
-		in {% include article/root_category %}
-		<span class="pubdate" title="Last updated {% include article/format_datetime_latest %}">
-			<time pubdate datetime="{% include article/machine_datetime %}">
-				{% include article/format_datetime %}
+		in {% include post/root_category %}
+		<span class="pubdate" title="Last updated {% include post/format_datetime_latest %}">
+			<time pubdate datetime="{% include post/machine_datetime %}">
+				{% include post/format_datetime %}
 			</time>
 		</span>
 		<br style="clear: left;" />
 	</div>
 </header>
 
-<div id="_main_content" {% include microdata/article-main-content %}>
+<div id="_main_content" {% include microdata/post-main-content %}>
 
 {{ content }}
 
@@ -46,23 +45,23 @@ article-styles: article-font-fancy
 
 <div class="author-banner border-radius-4">
 <div id="copyright-notice" class="generic-center-text">
-	<small>{% include article/copyright_notice %}</small>
+	<small>{% include post/copyright_notice %}</small>
 </div>
 <div class="generic-center-text">
 	{% assign _type_list = site.authors[page.author].personal-sites %}
 	{% include common/render_personal_site_list %}
-	{% include article/plusone_inner %}
+	{% include component/plusone_inner %}
 </div>
 </div>
 
 <div id="comments" class="article-font-sans">
 <header><hgroup><h5 class="separator sep_comments">Comments<a class="para-ref" href="#comments"></a></h5></hgroup></header>
-	{% include article/comments_content %}
+	{% include post/comments_content %}
 </div>
 
 {% comment %}
 <!--
-<footer id="article_footer">
+<footer id="post_footer">
 	<p>Categories:</p>
 	<ul>
 	{% for category in page.categories %}
@@ -73,4 +72,4 @@ article-styles: article-font-fancy
 -->
 {% endcomment %}
 
-{% include article/comments_load %}
+{% include post/comments_load %}

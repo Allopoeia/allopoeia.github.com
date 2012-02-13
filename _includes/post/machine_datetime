@@ -3,11 +3,11 @@
 {% comment %}
 <!--
 	Parameters:
-		>> article/format_datetime
+		>> post/format_datetime
 -->
 {% endcomment %}
 
 {% assign _format = "machine" %}
-{% include article/format_datetime_latest %}
+{% include post/format_datetime %}
 
 {% endcapture %}{% include common/minify_reprint %}

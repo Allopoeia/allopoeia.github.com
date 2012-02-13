@@ -8,9 +8,9 @@
 {% endif %}
 
 {% if page.md-type == "Article" %}
-	<meta itemprop="datePublished" content="{% include article/machine_datetime %}" />
-	<meta itemprop="dateModified" content="{% include article/machine_datetime_latest %}" />
-	<meta itemprop="articleSection" content="{% include article/root_category %}" />
+	<meta itemprop="datePublished" content="{% include post/machine_datetime %}" />
+	<meta itemprop="dateModified" content="{% include post/machine_datetime_latest %}" />
+	<meta itemprop="articleSection" content="{% include post/root_category %}" />
 	<span itemprop="author" itemscope itemtype="http://schema.org/Person">
 		<meta itemprop="name" content="{{ page.author }}" />
 		<link itemprop="url" href="{% include fetch/author/about-url_absolute %}" />

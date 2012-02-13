@@ -27,9 +27,9 @@ title: Archive
 
 {% capture __minify %}
 <li>
-	<span title="Last updated {% assign _page = post %}{% include article/format_datetime_latest %}">
-		<time pubdate datetime="{% assign _page = post %}{% include article/machine_datetime %}">
-			{% assign _page = post %}{% include article/format_datetime %} &diams;
+	<span title="Last updated {% assign _page = post %}{% include post/format_datetime_latest %}">
+		<time pubdate datetime="{% assign _page = post %}{% include post/machine_datetime %}">
+			{% assign _page = post %}{% include post/format_datetime %} &diams;
 		</time>
 	</span> 
 	{% assign _category_list = post.categories %}{% include common/fancify_category_list %} &rArr; 
