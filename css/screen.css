@@ -408,20 +408,16 @@ a.nav-item-active/*, a:hover.nav-item*/ {
 
 /* Headers */
 
-#post_header {
-	margin-top: 10px;
-	margin-bottom: 10px;
-}
-
-#post_header>hgroup {
+#article_container>header {
 	margin: 10px 0px 20px 0px;
 }
 
-#post_header .title {}
-#post_header .subtitle {font-size: 110%;}
+#article_container>header>hgroup {
+	margin-bottom: 10px;
+}
 
-#generic_header .title {}
-#generic_header .subtitle {font-size: 110%;}
+#article_container>header .title {margin: 5px 0px 5px 0px;}
+#article_container>header .subtitle {margin: 5px 0px 5px 0px; font-size: 110%;}
 
 /* Post comments */
 
