@@ -8,7 +8,6 @@ md-type: "Article"
 #md-content-type: null
 
 article-class: post
-article-styles: article-font-fancy
 
 #enable-comments: false
 #copyright-notice-type: site.copyright-notice-type-default
@@ -33,7 +32,6 @@ article-styles: article-font-fancy
 				{% include post/format_datetime %}
 			</time>
 		</span>
-		<br style="clear: left;" />
 	</div>
 </header>
 
@@ -54,8 +52,8 @@ article-styles: article-font-fancy
 </div>
 </div>
 
-<div id="comments" class="article-font-sans">
-<header><hgroup><h5 class="separator sep_comments">Comments<a class="para-ref" href="#comments"></a></h5></hgroup></header>
+<div id="comments">
+<h6 class="separator sep_comments">Comments<a class="para-ref" href="#comments"></a></h6>
 	{% include post/comments_content %}
 </div>
 

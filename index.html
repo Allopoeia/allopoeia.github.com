@@ -8,7 +8,7 @@ description: "Allopoeia is an open-authorship journal/blag for anything and ever
 <p>Welcome! <a href="{{ site.nav-items.about.url }}">Allopoeia</a> is a lonely, open-authorship journal/blag for anything and everything. <span title="won't you please">Check out</span> our <a href="{{ site.nav-items.authors.url }}">authors</a>, <a href="{{ site.nav-items.about.url }}#contact">write to us</a>, or peruse our <em>vast</em> <a href="{{ site.nav-items.archive.url }}">archive</a>.</p>
 
 <section id="recent-posts">
-<header><hgroup><h2 class="separator">Recent posts<a class="para-ref" href="#recent-posts"></a></h2></hgroup></header>
+<h4 class="separator">Recent posts<a class="para-ref" href="#recent-posts"></a></h4>
 
 {% capture _post_count %}{{ site.posts | size }}{% endcapture %}
 {% if _post_count != "0" %}
@@ -17,16 +17,16 @@ description: "Allopoeia is an open-authorship journal/blag for anything and ever
 {% capture __minify %}
 	<li>
 	<div class="div-relative">
+		<span>
 		<em>{% assign _category_list = post.categories %}{% include post/root_category %}</em> &rArr; 
 		<a href="{{ post.url }}">{% assign _page = post %}{% include fetch/page/fancy_title %}</a>
-		<span class="above"> by <a href="{% assign _author = post.author %}{% include fetch/author/about-url %}">{{ post.author }}</a></span>
-		<div class="right above">
+		 by <a class="above" href="{% assign _author = post.author %}{% include fetch/author/about-url %}">{{ post.author }}</a>
+		</span>
+		<span class="right above">
 			<time pubdate datetime="{% assign _page = post %}{% include post/machine_datetime %}">
-				<span title="Last updated {% assign _page = post %}{% include post/format_datetime_latest %}">
-					{% assign _page = post %}{% include post/format_datetime %}
-				</span>
+				<span title="Last updated {% assign _page = post %}{% include post/format_datetime_latest %}"> {% assign _page = post %}{% include post/format_datetime %}</span>
 			</time>
-		</div>
+		</span>
 		<a href="{{ post.url }}" title="Filed under: {% assign _category_list = post.categories %}{% include common/fancify_category_list %}"><span class="fill-span"></span></a>
 	</div>
 	</li>

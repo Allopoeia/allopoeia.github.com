@@ -19,6 +19,7 @@ nav-display-items: [
 
 #article-class: null
 #article-styles: null
+#article-font: "sans"
 
 #disable-feedburner: false
 #disable-flattr: false
@@ -78,7 +79,7 @@ disable-plusone-global: true
 	</div>
 
 	<!-- article start -->
-	<article id="article_container" class="{{ page.article-class }} {{ page.article-styles }}">
+	<article id="article_container" class="{{ page.article-class }} {% include fetch/page/style %}">
 
 	{% include microdata/fields %}
 

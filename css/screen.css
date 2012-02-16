@@ -1,20 +1,121 @@
 
+/* Typography */
+
+/* Serif typeface */
+@font-face {
+	font-family: "Liberation Serif";
+	src:
+		local("LiberationSerif-Regular"),
+		local("Liberation Serif Regular"),
+		local("Liberation Serif"),
+		url("/fonts/liberation-serif-r.woff") format("woff"),
+		url("/fonts/liberation-serif-r.ttf") format("truetype"),
+		url("/fonts/liberation-serif-r.svg#LiberationSerifRegular") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: "Liberation Serif";
+	src:
+		local("LiberationSerif-Italic"),
+		local("Liberation Serif Italic"),
+		local("Liberation Serif"),
+		url("/fonts/liberation-serif-i.woff") format("woff"),
+		url("/fonts/liberation-serif-i.ttf") format("truetype"),
+		url("/fonts/liberation-serif-i.svg#LiberationSerifItalic") format("svg");
+	font-weight: normal;
+	font-style: italic;
+}
+@font-face {
+	font-family: "Liberation Serif";
+	src:
+		local("LiberationSerif-Bold"),
+		local("Liberation Serif Bold"),
+		local("Liberation Serif"),
+		url("/fonts/liberation-serif-b.woff") format("woff"),
+		url("/fonts/liberation-serif-b.ttf") format("truetype"),
+		url("/fonts/liberation-serif-b.svg#LiberationSerifBold") format("svg");
+	font-weight: bold;
+	font-style: normal;
+}
+@font-face {
+	font-family: "Liberation Serif";
+	src:
+		local("LiberationSerif-BoldItalic"),
+		local("Liberation Serif Bold Italic"),
+		local("Liberation Serif"),
+		url("/fonts/liberation-serif-bi.woff") format("woff"),
+		url("/fonts/liberation-serif-bi.ttf") format("truetype"),
+		url("/fonts/liberation-serif-bi.svg#LiberationSerifBoldItalic") format("svg");
+	font-weight: bold;
+	font-style: italic;
+}
+
+/* Sans-serif typeface */
+@font-face {
+	font-family: "Liberation Sans";
+	src:
+		local("LiberationSans-Regular"),
+		local("Liberation Sans Regular"),
+		local("Liberation Sans"),
+		url("/fonts/liberation-sans-r.woff") format("woff"),
+		url("/fonts/liberation-sans-r.ttf") format("truetype"),
+		url("/fonts/liberation-sans-r.svg#LiberationSansRegular") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: "Liberation Sans";
+	src:
+		local("LiberationSans-Italic"),
+		local("Liberation Sans Italic"),
+		local("Liberation Sans"),
+		url("/fonts/liberation-sans-i.woff") format("woff"),
+		url("/fonts/liberation-sans-i.ttf") format("truetype"),
+		url("/fonts/liberation-sans-i.svg#LiberationSansItalic") format("svg");
+	font-weight: normal;
+	font-style: italic;
+}
+@font-face {
+	font-family: "Liberation Sans";
+	src:
+		local("LiberationSans-Bold"),
+		local("Liberation Sans Bold"),
+		local("Liberation Sans"),
+		url("/fonts/liberation-sans-b.woff") format("woff"),
+		url("/fonts/liberation-sans-b.ttf") format("truetype"),
+		url("/fonts/liberation-sans-b.svg#LiberationSansBold") format("svg");
+	font-weight: bold;
+	font-style: normal;
+}
+@font-face {
+	font-family: "Liberation Sans";
+	src:
+		local("LiberationSans-BoldItalic"),
+		local("Liberation Sans Bold Italic"),
+		local("Liberation Sans"),
+		url("/fonts/liberation-sans-bi.woff") format("woff"),
+		url("/fonts/liberation-sans-bi.ttf") format("truetype"),
+		url("/fonts/liberation-sans-bi.svg#LiberationSansBoldItalic") format("svg");
+	font-weight: bold;
+	font-style: italic;
+}
+
 /* Defaults */
 
 html, body {
 	height: 100%;
 	min-width: 480px;
+	-webkit-font-smoothing: antialiased;
 }
 
 body {
 	display: block;
-	font-family: sans-serif, verdana, arial;
-	font-size: 18px;
-	line-height: 1.3em;
-	background-color: #282C34; /*#2A2F33*/
-	color: #D0D6DA; /*#ECEAE8*/
 	padding: 0px;
 	margin: 0px;
+	font: normal normal normal 18px/1.366em "Liberation Sans", "DejaVu Sans", sans-serif !important;
+	background-color: #282C34;
+	color: #D0D6DA;
 }
 
 #__wrapper {
@@ -28,12 +129,12 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight: bold;
 }
 
-h1 {font-size: 28px;}
-h2 {font-size: 26px;}
-h3 {font-size: 24px;}
-h4 {font-size: 22px;}
-h5 {font-size: 20px;}
-h6 {font-size: 18px;}
+h1 {font-size: 180%;}
+h2 {font-size: 160%;}
+h3 {font-size: 140%;}
+h4 {font-size: 131%;} /* WebKit/Chrom(e|ium) fix: +1% to avoid the twitchy sizing when hovering a heading with a para-ref*/
+h5 {font-size: 120%;}
+h6 {font-size: 110%;}
 
 blockquote, q,
 ol, ul,
@@ -45,8 +146,8 @@ p {margin-left: 0px;}
 ol {list-style: decimal;}
 ul {list-style: disc;}
 
-a              {color: #5299CC; text-decoration: none;}
-a:hover        {color: #B3DFFF; text-decoration: underline;}
+a		{color: #5299CC; text-decoration: none;}
+a:hover	{color: #B3DFFF; text-decoration: underline;}
 
 em {font-style: italic;}
 strong {font-weight: bold;}
@@ -54,23 +155,33 @@ small {font-size: 80%;}
 
 /* Stylers */
 
+.clr-norm {color: #D0D6DA;}
+.clr-less {color: #5A6062;}
+
 .div-relative {position: relative;}
 .generic-float-right {float: right;}
 .generic-center-text {text-align: center;}
 
 .border-radius-4 {
+	border-radius: 4px;
 	-webkit-border-radius: 4px;
 	-moz-border-radius: 4px;
+	-o-border-radius: 4px;
 }
 
 .horiz-flip {
 	transform: scale(1, -1);
 	-webkit-transform: scale(1, -1);
 	-moz-transform: scale(1, -1);
+	-o-transform: scale(1, -1);
 }
 
-.article-font-fancy {font-family: Georgia, serif, Times New Roman;}
-.article-font-sans {font-family: sans-serif, verdana, arial;}
+/* NOTE: Liberation Serif doesn't look so great at 18px */
+.f-serif {font-family: "Liberation Serif", Georgia, "Times New Roman", serif;}
+.f-sans {font-family: "Liberation Sans", "DejaVu Sans", sans-serif;}
+.f-style-sc {font-variant: small-caps;}
+.f-sz-norm {font-size: 18px;}
+.f-sz-larg {font-size: 20px;}
 
 .separator {
 	width: 100%;
@@ -79,14 +190,23 @@ small {font-size: 80%;}
 }
 
 .para-ref {
-	float: right;
-	position: relative;
+	display: none;
 	margin: auto 5px auto 5px;
 	padding: 0px 5px 0px 5px;
-	color: #475966;
 }
-.para-ref:hover {color: #5C7F99; text-decoration: none;}
-.para-ref:before {content: "¶";}
+.para-ref:before {content: "#";}
+
+h1:hover>a.para-ref,
+h2:hover>a.para-ref,
+h3:hover>a.para-ref,
+h4:hover>a.para-ref,
+h5:hover>a.para-ref,
+h6:hover>a.para-ref
+{
+	display: inline;
+	font-weight: normal;
+	text-decoration: none;
+}
 
 .fill-span {
 	position: absolute;
@@ -152,7 +272,7 @@ a.nav-item-active/*, a:hover.nav-item*/ {
 }
 
 #top_bar>nav {
-	font: 18px monospace, Bitstream Vera Sans Mono, Consolas, Courier New, sans-serif, verdana, arial;
+	font: 18px "Liberation Sans", "DejaVu Sans", sans-serif;
 }
 
 #top_bar>nav>ul {
@@ -234,8 +354,8 @@ a.nav-item-active/*, a:hover.nav-item*/ {
 
 /* Archive */
 
-.archive .year h1 {font-size: 26px;}
-.archive .month h1 {font-size: 20px;}
+.archive .year h1 {font-size: 160%;}
+.archive .month h1 {font-size: 120%;}
 
 /* Personal site list */
 
@@ -258,11 +378,7 @@ a.nav-item-active/*, a:hover.nav-item*/ {
 	margin-left: 20px;
 }
 
-#article_container.post {
-	font-size: 20px;
-}
-
-#article_container>blockquote:before {
+#article_container blockquote:before {
 	display: block;
 	float: left;
 	width: 20px;
@@ -287,6 +403,7 @@ a.nav-item-active/*, a:hover.nav-item*/ {
 	margin-top: 40px;
 	padding: 10px;
 	background-color: #202329;
+	/*box-shadow: inset 1px 1px #181818, 2px 2px #111;*/
 }
 
 /* Headers */
@@ -301,14 +418,12 @@ a.nav-item-active/*, a:hover.nav-item*/ {
 }
 
 #post_header .title {}
-#post_header .subtitle {font-style: normal; font-size: 20px;}
+#post_header .subtitle {font-size: 110%;}
 
 #generic_header .title {}
-#generic_header .subtitle {font-style: normal; font-size: 20px;}
+#generic_header .subtitle {font-size: 110%;}
 
 /* Post comments */
 
-#comments #disqus_thread #dsq-content #dsq-comments .dsq-comment-message {
-	font-size: 16px !important;
-}
+/*#comments #disqus_thread #dsq-content #dsq-comments .dsq-comment-message {}*/
 

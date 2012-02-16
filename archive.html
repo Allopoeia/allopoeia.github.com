@@ -18,10 +18,10 @@ title: Archive
 
 {% if forloop.first %}
 <section id="{{ this_year }}" class="year">
-<header><hgroup><h1 class="separator">{{ this_year }}<a class="para-ref" href="#{{ this_year }}"></a></h1></hgroup></header>
+<h1 class="separator">{{ this_year }}<a class="para-ref" href="#{{ this_year }}"></a></h1>
 
 <section id="{{ this_year }}-{{ this_month | downcase }}" class="month">
-<header><hgroup><h1>{{ this_month }}</h1></hgroup></header>
+<h1>{{ this_month }}</h1>
 	<ul>
 {% endif %}
 
@@ -29,10 +29,12 @@ title: Archive
 <li>
 	<span title="Last updated {% assign _page = post %}{% include post/format_datetime_latest %}">
 		<time pubdate datetime="{% assign _page = post %}{% include post/machine_datetime %}">
-			{% assign _page = post %}{% include post/format_datetime %} &diams;
+			{% assign _page = post %}{% include post/format_datetime %}
 		</time>
-	</span> 
-	{% assign _category_list = post.categories %}{% include common/fancify_category_list %} &rArr; 
+	</span>
+	 &diams; 
+	<em>{% assign _category_list = post.categories %}{% include common/fancify_category_list %}</em>
+	 &rArr; 
 	<a href="{{ post.url }}">
 		{% assign _page = post %}
 		{% include fetch/page/fancy_title %}
@@ -52,17 +54,17 @@ title: Archive
 </section>
 
 <section id="{{ next_year }}" class="year">
-<header><hgroup><h1 class="separator">{{ next_year }}<a class="para-ref" href="#{{ next_year }}"></a></h1></hgroup></header>
+<h1 class="separator">{{ next_year }}<a class="para-ref" href="#{{ next_year }}"></a></h1>
 
 <section id="{{ next_year }}-{{ next_month | downcase }}" class="month">
-<header><hgroup><h1>{{ next_month }}</h1></hgroup></header>
+<h1>{{ next_month }}</h1>
 		<ul>
 	{% elsif this_month != next_month %}
 	</ul>
 </section>
 
 <section id="{{ this_year }}-{{ next_month | downcase }}" class="month">
-<header><hgroup><h1>{{ next_month }}</h1></hgroup></header>
+<h1>{{ next_month }}</h1>
 	<ul>
 	{% endif %}
 {% endif %}

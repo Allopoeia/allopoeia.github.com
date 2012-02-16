@@ -1,3 +1,4 @@
+<div class="f-sans f-sz-norm">
 {% if site.meta.disqus_shortname == null %}
 	<p><small><em>Comments are disabled site-wide.</em></small></p>
 {% elsif page.enable-comments %}
@@ -7,3 +8,4 @@
 {% else %}
 	<p><small><em>Comments are disabled for this article.</em></small></p>
 {% endif %}
+</div>

@@ -1,0 +1,24 @@
+{% capture __minify %}
+
+{% comment %}
+<!--
+	Parameters:
+		_page: the page object to use; [default: page]
+-->
+{% endcomment %}
+
+{% unless _page %}
+	{% assign _page = page %}
+{% endunless %}
+
+{% unless _page.article-font %}
+	{% comment %}<!-- All default to sans -->{% endcomment %}
+	{% assign _font = "sans" %}
+{% else %}
+	{% assign _font = _page.article-font %}
+{% endunless %}
+
+f-{{ _font }}{% if _page.article-styles %} {{ _page.article-styles }}{% endif %}
+
+{% assign _font = null %}{% assign _page = null %}
+{% endcapture %}{% include common/minify_reprint %}
