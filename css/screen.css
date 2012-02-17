@@ -157,6 +157,8 @@ small {font-size: 80%;}
 
 .clr-norm {color: #D0D6DA;}
 .clr-less {color: #5A6062;}
+.clr-bg-norm {background-color: #282C34;}
+.clr-bg-midl {background-color: #202329;}
 
 .div-relative {position: relative;}
 .generic-float-right {float: right;}
@@ -177,7 +179,7 @@ small {font-size: 80%;}
 }
 
 /* NOTE: Liberation Serif doesn't look so great at 18px */
-.f-serif {font-family: "Liberation Serif", Georgia, "Times New Roman", serif;}
+.f-serif {font-family: "Liberation Serif", Georgia, serif;}
 .f-sans {font-family: "Liberation Sans", "DejaVu Sans", sans-serif;}
 .f-style-sc {font-variant: small-caps;}
 .f-sz-norm {font-size: 18px;}
@@ -219,7 +221,7 @@ h6:hover>a.para-ref
 
 /* Components */
 
-/* Hack for preventing page-expansion with the "Share on Google+" feature in the +1 button */
+/* Hack for preventing page expansion with the "Share on Google+" feature in the +1 button */
 /* .. never mind. Can't select elements *inside* the iframe, so it's pointless (the "add more people" dropmenu gets cut off) */
 /*.bubble_content>iframe {
 	max-height: 450px !important;
@@ -253,6 +255,7 @@ h6:hover>a.para-ref
 	background-color: #13161A;
 	padding: 8px 12px 8px 12px;
 	margin-bottom: 20px;
+	box-shadow: inset 1px 1px #000000, 2px 2px #000000;
 }
 
 a.nav-item {
@@ -325,15 +328,15 @@ a.nav-item-active/*, a:hover.nav-item*/ {
 }
 
 .post_list>li {
-	margin: 4px 0px 4px 0px;
-	padding: 8px 10px 8px 10px;
-	background-color: #13161A;
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
+	margin: 10px 0px 10px 0px;
+	background-color: #1D2024;
+	box-shadow: inset 1px 1px #141414, 2px 2px #111111;
 }
 
+.post_list>li .div-relative {padding: 8px 10px 8px 10px;}
+
 .post_list>li:hover {
-	background-color: #1D2024;
+	background-color: #202329;
 }
 
 .post_list>li>a:hover {
@@ -365,10 +368,18 @@ a.nav-item-active/*, a:hover.nav-item*/ {
 	width: 24px;
 }
 
-.personal-site-list .home    {background: url("/images/icons/home-20.png") no-repeat;}
-.personal-site-list .twitter {background: url("/images/icons/twitter-20.png") no-repeat;}
-.personal-site-list .github  {background: url("/images/icons/github-20.png") no-repeat;}
-.personal-site-list .flattr  {background: url("/images/icons/flattr-20.png") no-repeat;}
+/*.personal-site-list .clicky {-webkit-filter: contrast(0.001) grayscale(1.0);}
+.personal-site-list .clicky:hover {-webkit-filter: none;}*/
+
+.personal-site-list .home    {background: url("/images/icons/globe-20-ds.png") no-repeat;}
+.personal-site-list .twitter {background: url("/images/icons/twitter-20-ds.png") no-repeat;}
+.personal-site-list .github  {background: url("/images/icons/github-20-ds.png") no-repeat;}
+.personal-site-list .flattr  {background: url("/images/icons/flattr-20-ds.png") no-repeat;}
+
+.personal-site-list .home:hover    {background: url("/images/icons/globe-20.png") no-repeat;}
+.personal-site-list .twitter:hover {background: url("/images/icons/twitter-20.png") no-repeat;}
+.personal-site-list .github:hover  {background: url("/images/icons/github-20.png") no-repeat;}
+.personal-site-list .flattr:hover  {background: url("/images/icons/flattr-20.png") no-repeat;}
 
 /* Article */
 
@@ -391,21 +402,6 @@ a.nav-item-active/*, a:hover.nav-item*/ {
 	content: "“";
 }
 
-/* Post sections */
-
-.sep_header {font-style: italic;}
-.sep_header>.pubdate {float: right;}
-
-.sep_footnotes {margin-top: 40px;}
-.sep_comments {margin-top: 40px;}
-
-.author-banner {
-	margin-top: 40px;
-	padding: 10px;
-	background-color: #202329;
-	/*box-shadow: inset 1px 1px #181818, 2px 2px #111;*/
-}
-
 /* Headers */
 
 #article_container>header {
@@ -413,11 +409,34 @@ a.nav-item-active/*, a:hover.nav-item*/ {
 }
 
 #article_container>header>hgroup {
-	margin-bottom: 10px;
+	margin-bottom: 20px;
 }
 
 #article_container>header .title {margin: 5px 0px 5px 0px;}
 #article_container>header .subtitle {margin: 5px 0px 5px 0px; font-size: 110%;}
+
+/* Post sections */
+
+.header-info-banner,
+.author-banner {
+	box-shadow: inset 1px 1px #141414, 2px 2px #111111;
+	background-color: #202329;
+}
+
+.header-info-banner {
+	margin-top: 10px;
+	padding: 5px 10px;
+	font-style: italic;
+}
+.header-info-banner .pubdate {float: right;}
+
+.sep_footnotes {margin-top: 40px;}
+.sep_comments {margin-top: 40px;}
+
+.author-banner {
+	margin-top: 40px;
+	padding: 10px;
+}
 
 /* Post comments */
 
