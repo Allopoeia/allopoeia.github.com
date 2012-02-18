@@ -436,8 +436,11 @@ a.nav-item-active/*, a:hover.nav-item*/ {
 }
 .header-info-banner .pubdate {float: right;}
 
-.sep_footnotes {margin-top: 40px;}
-.sep_comments {margin-top: 40px;}
+.sep_footnotes,
+.sep_comments {
+	margin-top: 40px;
+	font-size: 110%;
+}
 
 .author-banner {
 	margin-top: 40px;
