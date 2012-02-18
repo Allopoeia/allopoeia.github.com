@@ -1,0 +1,6 @@
+	<hgroup>
+		<h1 class="title">{% include fetch/page/fancy_title %}</h1>
+	{% if page.subtitle or page.h-subtitle %}
+		<h2 class="subtitle">{% include fetch/page/fancy_subtitle %}</h2>
+	{% endif %}
+	</hgroup>

@@ -136,12 +136,11 @@ h4 {font-size: 131%;} /* WebKit/Chrom(e|ium) fix: +1% to avoid the twitchy sizin
 h5 {font-size: 120%;}
 h6 {font-size: 110%;}
 
-blockquote, q,
-ol, ul,
-p {
+ol, ul {
 	margin: 20px 0px 20px 40px;
 }
-p {margin-left: 0px;}
+p {margin: 20px 0px;}
+blockquote, q {margin: 20px;}
 
 ol {list-style: decimal;}
 ul {list-style: disc;}
@@ -395,12 +394,19 @@ a.nav-item-active/*, a:hover.nav-item*/ {
 	width: 20px;
 	height: 20px;
 	margin-right: 20px;
-	/*margin-left: -20px;*/
 	margin-top: 20px;
 	font-style: normal;
 	font-size: 60px;
 	content: "“";
 }
+
+#article_container blockquote.excerpt {
+	color: #AAAFB3;
+	border-left: #45484A 2px solid;
+	padding-left: 10px;
+	border-radius: 4px;
+}
+#article_container blockquote.excerpt:before {display: none;}
 
 /* Headers */
 
@@ -412,8 +418,8 @@ a.nav-item-active/*, a:hover.nav-item*/ {
 	margin-bottom: 20px;
 }
 
-#article_container>header .title {margin: 5px 0px 5px 0px;}
-#article_container>header .subtitle {margin: 5px 0px 5px 0px; font-size: 110%;}
+#article_container>header .title {margin: 5px 0px;}
+#article_container>header .subtitle {margin: 5px 0px; font-size: 110%;}
 
 /* Post sections */
 

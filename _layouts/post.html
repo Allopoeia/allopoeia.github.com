@@ -9,6 +9,8 @@ md-type: "Article"
 
 article-class: post
 
+#custom-post-header: false
+
 #enable-comments: false
 #copyright-notice-type: site.copyright-notice-type-default
 
@@ -16,30 +18,20 @@ article-class: post
 #categories: []
 #tags: []
 ---
+{% unless page.custom-post-header %}
 
-<header id="post_header">
-	<hgroup>
-		<h1 class="title">{% include fetch/page/fancy_title %}</h1>
-	{% if page.subtitle %}
-		<h2 class="subtitle">{% include fetch/page/fancy_subtitle %}</h2>
-	{% endif %}
-	</hgroup>
-	<div class="header-info-banner border-radius-4">
-		by <a href="{% include fetch/author/about-url %}">{{ page.author }}</a>
-		in {% include post/root_category %}
-		<span class="pubdate" title="Last updated {% include post/format_datetime_latest %}">
-			<time pubdate datetime="{% include post/machine_datetime %}">
-				{% include post/format_datetime %}
-			</time>
-		</span>
-	</div>
-</header>
+{% include post/header_start %}
+	{% include post/headline %}
+	{% include post/info-banner %}
+{% include post/header_end %}
 
-<div id="_main_content" {% include microdata/post-main-content %}>
+{% include post/CONTENT %}
+
+{% else %}
 
 {{ content }}
 
-</div>
+{% endunless %}
 
 <div class="author-banner border-radius-4">
 <div id="copyright-notice" class="generic-center-text">
@@ -56,18 +48,5 @@ article-class: post
 <h6 class="separator sep_comments">Comments<a class="para-ref" href="#comments"></a></h6>
 	{% include post/comments_content %}
 </div>
-
-{% comment %}
-<!--
-<footer id="post_footer">
-	<p>Categories:</p>
-	<ul>
-	{% for category in page.categories %}
-		<li>{{ category }}</li>
-	{% endfor %}
-	</ul>
-</footer>
--->
-{% endcomment %}
 
 {% include post/comments_load %}

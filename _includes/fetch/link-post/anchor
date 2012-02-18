@@ -1,0 +1,18 @@
+{% capture __minify %}
+
+{% comment %}
+<!--
+	Parameters:
+		_page: the page object to use; [default: page]
+		_with_arrow: whether to add an &rArr; prefix to the anchor text; [default: false]
+-->
+{% endcomment %}
+
+{% unless _page %}
+	{% assign _page = page %}
+{% endunless %}
+
+<a target="_blank" href="{{ _page.lp-url }}">{% if _with_arrow %}&rArr; {% endif %}{{ _page.lp-url-title }}{% if _page.lp-url-author %} &ndash; {{ _page.lp-url-author }}{% endif %}</a>
+
+{% assign _with_arrow = null %}{% assign _page = null %}
+{% endcapture %}{% include common/minify_reprint %}

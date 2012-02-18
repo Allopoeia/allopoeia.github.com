@@ -15,7 +15,6 @@ layout: null
 </author>
 
 {% for post in site.posts %}
-{% assign _data = post %}
 <entry>
 	<link href="{% assign _page = post %}{% include common/canonical_url %}" />
 	<id>{% assign _page = post %}{% include common/canonical_url %}</id>
@@ -25,9 +24,13 @@ layout: null
 {% endfor %}
 
 	<title>{{ post.title }}</title>
-{% if post.subtitle %}<subtitle>{{ post.subtitle }}</subtitle>{% endif %}
+{% if post.subtitle %}
+	<subtitle>{{ post.subtitle }}</subtitle>
+{% elsif post.layout == "link-post" %}
+	<subtitle type="html"><![CDATA[{% assign _page = post %}{% assign _with_arrow = true %}{% include fetch/link-post/anchor %}]]></subtitle>
+{% endif %}
 
-	<rights type="html"><![CDATA[{% include post/copyright_notice %}]]></rights>
+	<rights type="html"><![CDATA[{% assign _data = post %}{% include post/copyright_notice %}]]></rights>
 
 	<updated>{% assign _page = post %}{% include post/machine_datetime_latest %}</updated>
 	<author>

@@ -1,0 +1,5 @@
+<div id="_main_content" {% include microdata/post-main-content %}>
+
+{{ content }}
+
+</div>

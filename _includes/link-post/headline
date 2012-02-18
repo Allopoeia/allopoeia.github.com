@@ -1,0 +1,6 @@
+	<hgroup>
+		<h1 class="title">{% include fetch/page/fancy_title %}</h1>
+	{% if page.lp-url %}
+		<h2 class="subtitle">{% assign _with_arrow = true %}{% include fetch/link-post/anchor %}</h2>
+	{% endif %}
+	</hgroup>
