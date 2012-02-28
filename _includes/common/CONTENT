@@ -1,0 +1,6 @@
+<div id="_main_content" {% if _content_class %}class="{{ _content_class }}"{% endif %} {% include microdata/post-main-content %}>
+
+{{ content }}
+
+</div>
+{% assign _content_class = null %}

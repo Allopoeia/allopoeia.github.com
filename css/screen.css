@@ -161,6 +161,7 @@ small {font-size: 80%;}
 
 .div-relative {position: relative;}
 .generic-float-right {float: right;}
+.generic-center {margin-left: auto; margin-right: auto;}
 .generic-center-text {text-align: center;}
 
 .border-radius-4 {
@@ -407,6 +408,8 @@ a.nav-item-active/*, a:hover.nav-item*/ {
 	border-radius: 4px;
 }
 #article_container blockquote.excerpt:before {display: none;}
+
+#_main_content.post {margin-left: 20px; margin-right: 20px}
 
 /* Headers */
 
