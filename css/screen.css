@@ -152,6 +152,12 @@ em {font-style: italic;}
 strong {font-weight: bold;}
 small {font-size: 80%;}
 
+sup {
+	vertical-align: super;
+	line-height: 12px;
+	font-size: 80%;
+}
+
 /* Stylers */
 
 .clr-norm {color: #D0D6DA;}
