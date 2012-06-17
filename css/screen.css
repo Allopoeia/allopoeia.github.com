@@ -401,8 +401,9 @@ a.nav-item-active/*, a:hover.nav-item*/ {
 	float: left;
 	width: 20px;
 	height: 20px;
-	margin-right: 20px;
-	margin-top: 20px;
+	/*margin-right: 20px;*/
+	margin-top: 10px;
+	margin-left: -30px;
 	font-style: normal;
 	font-size: 60px;
 	content: "“";
@@ -457,7 +458,11 @@ a.nav-item-active/*, a:hover.nav-item*/ {
 	padding: 10px;
 }
 
+footer>ol li, footer>ul li {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
 /* Post comments */
 
 /*#comments #disqus_thread #dsq-content #dsq-comments .dsq-comment-message {}*/
-

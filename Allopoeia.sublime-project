@@ -1,0 +1,33 @@
+{
+	"folders":
+	[
+		{
+			"name": "Root",
+			"path": "./"
+		},
+		{
+			"name": "- Posts",
+			"path": "./_posts/"
+		},
+		{
+			"name": "- CSS",
+			"path": "./css/"
+		},
+		{
+			"name": "- Layouts",
+			"path": "./_layouts/"
+		},
+		{
+			"name": "- Includes",
+			"path": "./_includes/"
+		},
+		{
+			"name": "- Scripts",
+			"path": "./scripts/"
+		}
+	],
+	"settings":
+	{
+		"tab_size": 4
+	}
+}
