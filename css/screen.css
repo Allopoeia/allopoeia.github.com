@@ -141,7 +141,7 @@ ol, ul {
 	margin: 20px 0px 20px 40px;
 }
 p {margin: 20px 0px;}
-blockquote, q {margin: 20px;}
+blockquote, q {margin: 20px; margin-left: 40px;}
 
 ol {list-style: decimal;}
 ul {list-style: disc;}
@@ -165,6 +165,8 @@ sup {
 .clr-less {color: #5A6062;}
 .clr-bg-norm {background-color: #282C34;}
 .clr-bg-midl {background-color: #202329;}
+
+.normal-inset {margin-left: 20px;}
 
 .div-relative {position: relative;}
 .generic-float-right {float: right;}
@@ -403,7 +405,7 @@ a.nav-item-active/*, a:hover.nav-item*/ {
 	height: 20px;
 	/*margin-right: 20px;*/
 	margin-top: 10px;
-	margin-left: -30px;
+	margin-left: -40px;
 	font-style: normal;
 	font-size: 60px;
 	content: "“";
