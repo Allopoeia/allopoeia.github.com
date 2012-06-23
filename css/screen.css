@@ -274,12 +274,12 @@ a.nav-item {
 
 a:hover.nav-item {
 	text-decoration: none;
-	color: #E6E3E1;
+	color: #CCCAC8;
 }
 
-a.nav-item-active/*, a:hover.nav-item*/ {
+a.nav-item-active {
 	text-decoration: none;
-	color: #CCCAC8;
+	color: #E6E3E1;
 	text-shadow: #4D4D4D 0px 0px 4px;
 }
 
@@ -382,12 +382,12 @@ a.nav-item-active/*, a:hover.nav-item*/ {
 
 .personal-site-list .home    {background: url("/images/icons/globe-20-ds.png") no-repeat;}
 .personal-site-list .twitter {background: url("/images/icons/twitter-20-ds.png") no-repeat;}
-.personal-site-list .github  {background: url("/images/icons/github-20-ds.png") no-repeat;}
+.personal-site-list .github  {background: url("/images/icons/octocat-20-ds.png") no-repeat;}
 .personal-site-list .flattr  {background: url("/images/icons/flattr-20-ds.png") no-repeat;}
 
 .personal-site-list .home:hover    {background: url("/images/icons/globe-20.png") no-repeat;}
 .personal-site-list .twitter:hover {background: url("/images/icons/twitter-20.png") no-repeat;}
-.personal-site-list .github:hover  {background: url("/images/icons/github-20.png") no-repeat;}
+.personal-site-list .github:hover  {background: url("/images/icons/octocat-20.png") no-repeat;}
 .personal-site-list .flattr:hover  {background: url("/images/icons/flattr-20.png") no-repeat;}
 
 /* Article */

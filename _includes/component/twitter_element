@@ -1,0 +1,3 @@
+{% unless page.disable-twitter %}
+<a href="http://twitter.com/allopoeia"><img src="/images/icons/twitter-20.png" alt="Twitter feed" title="Twitter feed"></a>
+{% endunless %}
