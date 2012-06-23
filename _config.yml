@@ -6,7 +6,7 @@ auto: true
 markdown: maruku
 pygments: false
 
-exclude: ["README.md", "LICENSE.md", "CNAME", ".gitignore", "scripts", "debug", "*.sublime*"]
+exclude: ["README.md", "LICENSE.md", "CNAME", ".gitignore", "scripts", "debug", "Allopoeia.sublime-project"]
 
 ## Site configuration
 
