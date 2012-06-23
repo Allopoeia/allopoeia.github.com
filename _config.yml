@@ -54,9 +54,9 @@ authors: {
     preferred-copyright: "cc_by-nc-sa-3.0",
     personal-sites: [
       {type: website, slug: "komiga.com"},
+      {type: flattr , slug: "komiga"},
       {type: github , slug: "komiga"},
-      {type: twitter, slug: "komiga"},
-      {type: flattr , slug: "komiga"}
+      {type: twitter, slug: "komiga"}
     ]
   }
 }
