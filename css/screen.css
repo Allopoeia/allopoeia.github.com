@@ -327,7 +327,10 @@ a.nav-item-active {
 #top_footer .right {float: right;}
 
 #top_footer a {color: #336080;}
-#top_footer td {padding-right: 10px;}
+#top_footer td {
+	padding-left: 5px;
+	padding-right: 5px;
+}
 
 /* Other stuff */
 
@@ -373,8 +376,10 @@ a.nav-item-active {
 
 .personal-site-list .clicky {
 	display: inline-table;
-	height: 24px;
-	width: 24px;
+	height: 20px;
+	width: 20px;
+	margin-left: 4px;
+	margin-right: 4px;
 }
 
 /*.personal-site-list .clicky {-webkit-filter: contrast(0.001) grayscale(1.0);}

@@ -42,9 +42,9 @@ nav-items: {
 
 personal-site-types: {
   website: {class: home, text: "Web site", title: "Web site", base-url: "http://"},
+  flattr: {class: flattr, text: "Flattr", title: "Flattr", base-url: "http://flattr.com/profile/"},
   twitter: {class: twitter, text: "Twitter", title: "Twitter", base-url: "http://twitter.com/"},
-  github : {class: github , text: "GitHub" , title: "GitHub", base-url: "https://github.com/"},
-  flattr: {class: flattr, text: "Flattr", title: "Flattr", base-url: "http://flattr.com/profile/"}
+  github : {class: github , text: "GitHub" , title: "GitHub", base-url: "https://github.com/"}
 }
 
 authors: {

@@ -1,3 +1,5 @@
+{% capture __minify %}
+
 {% comment %}
 <!--
 	Parameters:
@@ -16,3 +18,4 @@
 {% endfor %}
 </div>
 {% assign _tpl = null %}{% assign _type_list = null %}{% assign _extra_classes = null %}
+{% endcapture %}{% include common/minify_reprint %}
