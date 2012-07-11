@@ -113,7 +113,7 @@ body {
 	display: block;
 	padding: 0px;
 	margin: 0px;
-	font: normal normal normal 18px/1.366em "Liberation Sans", "DejaVu Sans", sans-serif !important;
+	font: normal normal normal 20px/1.366em "Liberation Sans", "DejaVu Sans", sans-serif !important;
 	background-color: #282C34;
 	color: #D0D6DA;
 }
@@ -133,7 +133,7 @@ h1, h2, h3, h4, h5, h6 {
 h1 {font-size: 180%;}
 h2 {font-size: 160%;}
 h3 {font-size: 140%;}
-h4 {font-size: 131%;} /* WebKit/Chrom(e|ium) fix: +1% to avoid the twitchy sizing when hovering a heading with a para-ref*/
+h4 {font-size: 133%;} /* WebKit/Chrom(e|ium) fix: +3% to avoid the twitchy sizing when hovering a heading with a para-ref (whhhhhhhyyyyy) */
 h5 {font-size: 120%;}
 h6 {font-size: 110%;}
 
@@ -191,8 +191,8 @@ sup {
 .f-serif {font-family: "Liberation Serif", Georgia, serif;}
 .f-sans {font-family: "Liberation Sans", "DejaVu Sans", sans-serif;}
 .f-style-sc {font-variant: small-caps;}
-.f-sz-norm {font-size: 18px;}
-.f-sz-larg {font-size: 20px;}
+.f-sz-norm {font-size: 20px;}
+.f-sz-larg {font-size: 22px;}
 
 .separator {
 	width: 100%;
@@ -204,6 +204,8 @@ sup {
 	display: none;
 	margin: auto 5px auto 5px;
 	padding: 0px 5px 0px 5px;
+	font-weight: normal;
+	text-decoration: none;
 }
 .para-ref:before {content: "#";}
 
@@ -215,8 +217,6 @@ h5:hover>a.para-ref,
 h6:hover>a.para-ref
 {
 	display: inline;
-	font-weight: normal;
-	text-decoration: none;
 }
 
 .fill-span {
@@ -284,7 +284,7 @@ a.nav-item-active {
 }
 
 #top_bar>nav {
-	font: 18px "Liberation Sans", "DejaVu Sans", sans-serif;
+	font: 20px "Liberation Sans", "DejaVu Sans", sans-serif;
 }
 
 #top_bar>nav>ul {
@@ -305,7 +305,7 @@ a.nav-item-active {
 	bottom: 0px;
 	height: 160px;
 	width: 100%;
-	font-size: 16px;
+	font-size: 18px;
 	background-color: #0D1012;
 	border-top: 1px #0D0D0D solid;
 	color: #5A6062;
