@@ -22,12 +22,7 @@ description: "Allopoeia is an open-authorship journal/blag for anything and ever
 		<a href="{{ post.url }}">{% assign _page = post %}{% include fetch/page/fancy_title %}</a>
 		 by <a class="above" href="{% assign _author = post.author %}{% include fetch/author/about-url %}">{{ post.author }}</a>
 		</span>
-		<span class="right above">
-			<time pubdate datetime="{% assign _page = post %}{% include post/machine_datetime %}">
-				<span title="Last updated {% assign _page = post %}{% include post/format_datetime_latest %}"> {% assign _page = post %}{% include post/format_datetime %}</span>
-			</time>
-		</span>
-		<a href="{{ post.url }}" title="Filed under: {% assign _category_list = post.categories %}{% include common/fancify_category_list %}"><span class="fill-span"></span></a>
+		<a href="{{ post.url }}" title="Last updated {% assign _page = post %}{% include post/format_datetime_latest %}; filed under: {% assign _category_list = post.categories %}{% include common/fancify_category_list %}"><span class="fill-span"></span></a>
 	</div>
 	</li>
 {% endcapture %}	{% include common/minify_reprint %}
