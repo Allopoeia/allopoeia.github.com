@@ -1,12 +1,18 @@
 
-server: true
 safe: false
-auto: true
 
 markdown: maruku
 pygments: false
 
-exclude: ["README.md", "LICENSE.md", "CNAME", ".gitignore", "scripts", "debug", "Allopoeia.sublime-project"]
+exclude: [
+  "README.md",
+  "LICENSE.md",
+  "CNAME",
+  ".gitignore",
+  "scripts",
+  "debug",
+  "Allopoeia.sublime-project"
+]
 
 ## Site configuration
 
@@ -15,7 +21,7 @@ meta:
   perma-url: http://allopoeia.komiga.com
   title: Allopoeia
   run-years: "2012-2013"
-  image: http://lh5.googleusercontent.com/-yp12thUC9-E/TzSje2KZIyI/AAAAAAAAAKU/wJx3xHNd5lw/allopoeia-logo.png
+  image: http://lh4.googleusercontent.com/-0cni5iXgy_8/Uf7NKDyANjI/AAAAAAAAALo/ZHUIsfHxxVc/k-inv-256.png
   feedburner_id: Allopoeia
   flattr_slug: "/thing/493250/Allopoeia"
   disqus_shortname: komiga
@@ -33,22 +39,57 @@ permalink: /:categories/:year/:month/:title.html
 ## Static content
 
 nav-items: {
-  root: {text: "Allopoeia", url: "/"},
-  archive: {text: "Archive", url: "/archive.html"},
-  authors: {text: "Authors", url: "/authors.html"},
-  authoring: {text: "Authoring", url: "/authoring.html"},
-  about: {text: "About", url: "/about.html"}
+  root: {
+    text: "Allopoeia",
+    url : "/"
+  },
+  archive: {
+    text: "Archive",
+    url : "/archive.html"
+  },
+  authors: {
+    text: "Authors",
+    url : "/authors.html"
+  },
+  authoring: {
+    text: "Authoring",
+    url : "/authoring.html"
+  },
+  about: {
+    text: "About",
+    url : "/about.html"
+  }
 }
 
 personal-site-types: {
-  website: {class: home, text: "Web site", title: "Web site", base-url: "http://"},
-  flattr: {class: flattr, text: "Flattr", title: "Flattr", base-url: "http://flattr.com/profile/"},
-  twitter: {class: twitter, text: "Twitter", title: "Twitter", base-url: "http://twitter.com/"},
-  github : {class: github , text: "GitHub" , title: "GitHub", base-url: "https://github.com/"}
+  website: {
+    class: home,
+    text : "Web site",
+    title: "Web site",
+    base-url: "http://"
+  },
+  flattr : {
+    class: flattr,
+    text : "Flattr",
+    title: "Flattr",
+    base-url: "http://flattr.com/profile/"
+  },
+  twitter: {
+    class: twitter,
+    text : "Twitter",
+    title: "Twitter",
+    base-url: "http://twitter.com/"
+  },
+  github : {
+    class: github ,
+    text : "GitHub",
+    title: "GitHub",
+    base-url: "https://github.com/"
+  }
 }
 
 authors: {
-  plash: {
+  "plash": {
     about-url: "/authors.html#plash",
     about-relative: true,
     preferred-copyright: "cc_by-nc-sa-3.0",
