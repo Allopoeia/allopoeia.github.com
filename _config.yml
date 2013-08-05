@@ -11,7 +11,8 @@ exclude: [
   ".gitignore",
   "scripts",
   "debug",
-  "Allopoeia.sublime-project"
+  "Allopoeia.sublime-project",
+  "Allopoeia.sublime-workspace"
 ]
 
 ## Site configuration
@@ -123,4 +124,3 @@ copyright-notices: {
     post-text: ""
   }
 }
-
