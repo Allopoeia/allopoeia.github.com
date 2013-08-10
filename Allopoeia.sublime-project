@@ -3,7 +3,15 @@
 	[
 		{
 			"name": "Root",
-			"path": "./"
+			"path": "./",
+			"folder_exclude_patterns": [
+				"_posts",
+				"_layouts",
+				"_includes",
+				"css",
+				"scripts",
+				"_site"
+			]
 		},
 		{
 			"name": "- Posts",
