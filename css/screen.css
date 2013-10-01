@@ -196,8 +196,15 @@ sup {
 
 .separator {
 	width: 100%;
+	border: none;
 	border-bottom: 1px #45484A solid;
 	margin-bottom: 20px;
+}
+
+.separator-inner {
+	width: 40%;
+	border: none;
+	border-bottom: 1px #45484A solid;
 }
 
 .para-ref {
@@ -422,9 +429,14 @@ a.nav-item-active {
 	padding-left: 10px;
 	border-radius: 4px;
 }
-#article_container blockquote.excerpt:before {display: none;}
+#article_container blockquote.excerpt:before {
+	display: none;
+}
 
-#_main_content.post {margin-left: 20px; margin-right: 20px}
+#_main_content.post {
+	margin-left: 20px;
+	margin-right: 20px
+}
 
 /* Headers */
 
@@ -436,8 +448,13 @@ a.nav-item-active {
 	margin-bottom: 20px;
 }
 
-#article_container>header .title {margin: 5px 0px;}
-#article_container>header .subtitle {margin: 5px 0px; font-size: 110%;}
+#article_container>header .title {
+	margin: 5px 0px;
+}
+#article_container>header .subtitle {
+	margin: 5px 0px;
+	font-size: 110%;
+}
 
 /* Post sections */
 
@@ -452,7 +469,9 @@ a.nav-item-active {
 	padding: 5px 10px;
 	font-style: italic;
 }
-.header-info-banner .pubdate {float: right;}
+.header-info-banner .pubdate {
+	float: right;
+}
 
 .sep_footnotes,
 .sep_comments {
