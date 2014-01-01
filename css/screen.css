@@ -152,6 +152,7 @@ a:hover	{color: #B3DFFF; text-decoration: underline;}
 em {font-style: italic;}
 strong {font-weight: bold;}
 small {font-size: 80%;}
+big {font-size: 120%;}
 
 sup {
 	vertical-align: super;
