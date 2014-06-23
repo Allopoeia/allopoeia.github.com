@@ -143,6 +143,10 @@ ol, ul {
 p {margin: 20px 0px;}
 blockquote, q {margin: 20px; margin-left: 40px;}
 
+code {
+	font-family: monospace;
+}
+
 ol {list-style: decimal;}
 ul {list-style: disc;}
 
