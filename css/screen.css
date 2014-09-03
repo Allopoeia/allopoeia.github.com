@@ -440,7 +440,8 @@ a.nav-item-active {
 
 #_main_content.post {
 	margin-left: 20px;
-	margin-right: 20px
+	margin-right: 20px;
+	overflow: hidden;
 }
 
 /* Headers */
