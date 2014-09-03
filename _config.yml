@@ -1,8 +1,8 @@
 
 safe: false
 
-markdown: maruku
-pygments: false
+markdown: kramdown
+highlighter: false
 
 exclude: [
   "README.md",
