@@ -496,6 +496,40 @@ footer>ol li, footer>ul li {
 	margin-bottom: 10px;
 }
 
+.series-post-link-container {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.series-post-link {
+	box-shadow: inset 1px 1px #141414, 1px 1px #111111;
+	background-color: #202329;
+	margin-bottom: 10px;
+	padding: 5px 10px;
+}
+
+.series-post-link>a:hover {
+	text-decoration: none;
+}
+
+/* This really just doesn't work well. */
+/*.series-post-link-center {
+	text-align: center;
+	width: 100%;
+	max-width: 100%;
+	position: absolute;
+	z-index: -1;
+	font-variant: small-caps;
+}*/
+
+.series-post-link-prev {
+	float: left;
+}
+
+.series-post-link-next {
+	float: right;
+}
+
 /* Post comments */
 
 /*#comments #disqus_thread #dsq-content #dsq-comments .dsq-comment-message {}*/
