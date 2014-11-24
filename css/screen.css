@@ -466,6 +466,7 @@ a.nav-item-active {
 
 .header-info-banner,
 .author-banner {
+	clear: both;
 	box-shadow: inset 1px 1px #141414, 2px 2px #111111;
 	background-color: #202329;
 }
