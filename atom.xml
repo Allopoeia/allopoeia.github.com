@@ -32,6 +32,7 @@ layout: null
 
 	<rights type="html"><![CDATA[{% assign _data = post %}{% include post/copyright_notice %}]]></rights>
 
+	<published>{% assign _page = post %}{% include post/machine_datetime %}</published>
 	<updated>{% assign _page = post %}{% include post/machine_datetime_latest %}</updated>
 	<author>
 		<name>{{ post.author }}</name>
