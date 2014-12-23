@@ -3,7 +3,7 @@ layout: post
 enable-comments: true
 
 date: 2014-06-23T17:19:00-04:00
-last-modified: 2014-06-23T17:19:00-04:00
+last-modified: 2014-12-23T03:34:00-05:00
 
 author: plash
 categories: [dev]
@@ -58,9 +58,9 @@ subtitle:
  
 <p>One thing I'm definitely <em>not</em> doing is repeating declarations just so the documentation is in a smaller area. Documentation is best represented outside of code, and editors these days can jump to functions if you really need to look at the code instead of the documentation (and why do you need to see just the documentation <em>in-code</em> if you already have documentation elsewhere?).</p>
 
-<p>I'm very tempted to use the facilities in duct++ for the engine, but I really want to avoid using the stdlib if I can help it (which duct++ uses somewhat significantly). This is pedantic for someone that isn't doing “AAA” games where performance is critical because of all the stupid pixels, but I see it as a way to learn how all of this works. Making a game is the motivation to write the engine, but it has its own values and intrigue that will keep me plenty happy even if I don't get to actually making the game. I'm a system designer, which games have, but first and foremost <em>need</em> before they can be games, so I have plenty of fun in the backend.</p>
+<p>I'm very tempted to use the facilities from duct++ for the engine, but I really want to avoid using the stdlib if I can help it (which duct++ uses somewhat significantly). This is pedantic for someone that isn't doing “AAA” games where performance is critical because of all the stupid pixels, but I see it as a way to learn how all of this works. Making a game is the motivation to write the engine, but it has its own values and intrigue that will keep me plenty happy even if I don't get to actually making the game. I'm a system designer, which games have, but first and foremost <em>need</em> before they can be games, so I have plenty of fun in the backend.</p>
 
-<p>I might end up using a few specific things in duct++, like compiler detection and endian handling, which don't include any (or little) of the stdlib.</p>
+<p>I might end up using a few specific things from duct++, like compiler detection and endian handling, which don't include any (or little) of the stdlib.</p>
 
 <p>Pedantic motivations justified, there are still good reasons to avoid the C++ stdlib. I can have a more intimate understanding of the algorithms and structures I'm using and can tailor them specifically to the needs of the engine. Everything in the engine can be consistent in style and (hopefully) behavior. I'm not forced to deal with the mental and (supposedly minor, now) performance cost of exceptions (which are unnecessary since I want to crash hard) and I have less platform-/implementation-specific junk to deal with (case in point: <a target="_blank" href="https://connect.microsoft.com/VisualStudio/feedback/details/890664/vs-14-ctp-cos-returns-bogus-results-in-64-bit-build">Microsoft broke <code>cos()</code></a>, granted <code>cos()</code> is not something I'm going to write).</p>
 
