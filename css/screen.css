@@ -164,6 +164,11 @@ sup {
 	line-height: 12px;
 	font-size: 80%;
 }
+sub {
+	vertical-align: sub;
+	line-height: 12px;
+	font-size: 80%;
+}
 
 /* Stylers */
 
