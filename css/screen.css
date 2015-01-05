@@ -157,6 +157,7 @@ em {font-style: italic;}
 strong {font-weight: bold;}
 small {font-size: 80%;}
 big {font-size: 120%;}
+.underline {text-decoration: underline;}
 
 sup {
 	vertical-align: super;
