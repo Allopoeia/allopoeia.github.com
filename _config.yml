@@ -2,7 +2,7 @@
 safe: false
 
 markdown: kramdown
-highlighter: false
+highlighter: pygments
 
 exclude: [
   "README.md",
