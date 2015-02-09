@@ -1,0 +1,43 @@
+---
+layout: post
+enable-comments: true
+
+date: 2015-02-09T00:06:00-05:00
+last-modified: 2015-02-09T00:06:00-05:00
+
+author: plash
+categories: [dev]
+tags: []
+title: "Tentuk Journal: Week 1"
+subtitle:
+---
+
+<p>I planned on expanding <a href="https://github.com/komiga/togo" target="_blank">togo</a> for use in remaking <a href="http://komiga.com/#prisma" target="_blank">Prisma</a>, but I decided to make something smaller, without using togo, before I get into <em>that</em> grind. Tentuk is my way of soft-testing the principles of togo. The project is using <a href="https://love2d.org" target="_blank">LÖVE</a>, so it won't quite match the working conditions (i.e., a Lua core instead of a C++ core), but the ideas in togo will still be applied.</p>
+
+<h2 id="origin" class="separator">Origin<a class="para-ref" href="#origin"></a></h2>
+
+<p>The idea for Tentuk came in January only as “hey plash, hey plash, how about a game where all the sound is human voice?”. I blame Kasamatsu Kouji, my vocal folds, and also my brain. I dropped the qualification that <em>all</em> audio must be voice-derived, because that'd take a lot of work that I don't want to spend on a “small” project (oh, who am I kidding&hellip;). The idea mingled a bit with ixili (Nahuatl for "to pierce"), a short-lived project I was co-opted to and spearheaded during the summer of 2013, which held Mesoamerican inspiration. Tentuk takes no immediate real-world cultural inspiration except some Middle Eastern clothing and architectural styles. I don't know how strongly that will come out in the end, and I expect a ton more to seep in that will make no sense.</p>
+
+<p>My vocal experiments of late have leaned towards creatures &mdash; experiments I've wanted to play with and manipulate, but with my pre-occupation on Onsang, I haven't had the time. I should be able to manage a rich soundscape through that and my escapades in SunVox. This will be the first time I've used my voice for a project, and I hope to have voiced dialogue, but I won't commit to that unless I can manipulate my voice to convincingly sound like different people of any gender. I suspect this isn't possible, so I will likely apply spoken language only sparsely. It's possible I'll be able to get away with it through some mechanical means, like the characters of the world not having identifiable genders, and using non-human forms of speech&hellip; or something. I dunno, it's all very <em>theoretical</em> at this point.</p>
+
+<p>I'm trying to avoid direct real-world appropriation, so the language(s) in the game will be constructed. I don't want to talk too much about the story until I've laid the blueprints, but the player character will initially not be able to understand the language of the first people they meet. Analytic players, on the other hand&hellip;</p>
+
+<h2 id="week-1" class="separator">Week 1<a class="para-ref" href="#week-1"></a></h2>
+
+<p>This first week (starting February 2), I explored technical possibilities and made some decisions on the game world. Immediately thereafter, I got swept up in Blender, exploring the feasibility of using it for all of the props and scene layouts. I think I'm firmly in that seat now, whether it turns out to be a detriment or not. The complete script-ability of Blender gives it a lot of potential, and I think I've made an <em>interesting</em> decision, nevertheless.</p>
+
+<p>The majority of this time was spent coding the toolchain, working out the scene configuration, and figuring out how to get what I wanted with the projection. It took a lot of tweaking and prodding to get passable shadows and clean, pixel-perfect axonometric lines. I was undecided on the projection until today: front-facing with Y as depth. This makes the shadowing a little trickier, but makes simple model texturing and shading a lot easier. I have yet to white-box a test scene, so I'm still uncertain whether a slight horizontal rotation (10° or so) is desirable.</p>
+
+<p>To get an idea of what the projection will look like and feel like mechanically, see <a href="http://en.wikipedia.org/wiki/Superbrothers:_Sword_%26_Sworcery_EP" target="_blank">Superbrothers: Sword &amp; Sworcery EP</a>. I guess this sort-of tagged along with ixili, which was straight-up copying the art style of S&amp;S. I don't want to do that with Tentuk, and I learned with ixili that pixel-accurate animation in 3D is really tricky. My initial desire is to use few colors and few shapes for the art style, as that will hopefully be within my poor artistic capacities. Pixel art is probably not a reasonable style for my desired timeline, and it will be easier on my psyche to go rough, even if I end up using a pixel art edge. Scene backdrops will be painted, with background props baked in. The majority of props should be fully capable 3D models so that they can be used in different orientations. It's more work individually, but it'll hopefully pay off through reuse.</p>
+
+<p>As of writing, the toolchain has mocked-up backdrop baking and individual prop rendering, with separation of the backdrop shadow and prop-to-prop shadowing baked in with the prop (I could make better sense of this if I weren't so tired). I've not worked with any scene backdrops yet. That's on the agenda for next week, along with packing prop imagery and rendering a scene in-game. If all goes well, I will have a test scene up and running by the end of the week. If there is time, and I suspect there won't be, I'm going to start playing around with audio.</p>
+
+<h2 id="timelapsing" class="separator">Timelapsing<a class="para-ref" href="#timelapsing"></a></h2>
+
+<p>Starting next week, I will post a dev timelapse with the weekly journal. I had this idea only a few days ago, so there's barely any recorded data, which is why I'm holding off until next week. If I manage to finish the game in 7 weeks (the target deadline, ugh), the recorded data should run about 100,032 frames and weigh around 20GB (half of my initial estimate, woo!), projecting from 52.1 hours this week (yes, very scientific).</p>
+
+<h2 id="scheduling" class="separator">Scheduling<a class="para-ref" href="#scheduling"></a></h2>
+
+<p>It turns out game development is really hard, and really fun. Ever done a gamejam? Perhaps Ludum Dare? This week was like Ludum Dare for me, but a whole 5.3 days long. Just so you understand the gravity of that, I was awake for 37 hours <a href="/dev/2014-09-04-ludum-dare-30-postmortem-onomo.html" target="_blank">last time</a>. I developed a daily schedule during January, and it has proven very difficult to hold this week. I completely lose track of time and am detrimentally affected by deviation from the schedule &mdash; which is meant to keep my diet rigid, exercise consistent, and rhythm flowing.</p>
+
+<p>It proved to be very beneficial during January, when I was working on Hord &amp; Onsang. I think it's because that work always felt like drudgery, even when it was interesting or challenging. I was always aware of time because my mind wasn't engaged or focused. It's so bizarre to see the shift in time perception while my efficiency seems unchanged. I'm still unsure if it's because I'm excited to be trekking new ground, or if it's because I've just been really slow. Maybe I'll have a better idea when I'm not so darn tired.</p>
