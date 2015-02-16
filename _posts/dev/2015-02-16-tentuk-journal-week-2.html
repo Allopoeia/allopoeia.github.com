@@ -1,0 +1,77 @@
+---
+layout: series-post
+enable-comments: true
+
+date: 2015-02-16T02:08:00-05:00
+last-modified: 2015-02-16T02:08:00-05:00
+
+author: plash
+categories: [dev]
+tags: []
+title: "Tentuk Journal: Week 2"
+subtitle:
+
+sp-prev-url: /dev/2015/02/tentuk-journal-week-1.html
+sp-prev-title: "Week 1"
+sp-next-url: null
+sp-next-title: null
+---
+
+<p>Phew. An intense week of mostly <span title=":(">tooling and grunge work</span>. If there's anything I've learned from Tentuk so far, it's that tooling takes a lot of time &amp; attention. And <em>perhaps</em> that I spend too much time on it.</p>
+
+<p>I spent 62.3 hours working on the game this week. That's 10.2 hours greater than last week, with the longest uninterrupted sequence running 4 hours and 21 minutes on February 13 (yowzers).</p>
+
+<h2 id="week-2" class="separator">Week 2<a class="para-ref" href="#week-2"></a></h2>
+
+<p>Here's a quick look at the progress:</p>
+
+<ul>
+	<li>Scene building was reworked to be cleaner (twice) and background props are now baked with background textures.</li>
+	<li>Blender job tooling was generalized to support independent entity rendering (needed for actors and commonly used props with fixed orientations).</li>
+	<li>Scrabbled together a test scene and a few test props with vertex coloring.</li>
+	<li>The game codebase was created (it was all tooling before!), branching from <a target="_blank" href="https://github.com/komiga/love-kernel">love-kernel</a>.</li>
+	<li>Reworked the asset system to be more like togo.</li>
+	<li>Scene rendering in-game! Yay! (Twice, once broken.)</li>
+</ul>
+
+<p>I didn't get to play around with audio. There wasn't enough time with the other goals in the way. I did most of what I wanted to do, but I don't think I spent enough time feeling out the process of making scenes and props. I came to ideas about how it should work from the bit of work on the test scene and extrapolated it from there, which might end up being a detriment. In any case, the Blender tooling is certainly more flexible now. The last major tooling notches to fill in are packing textures over multiple atlases (to avoid massive texture sizes) and entity animation rendering. I have a grave suspicion that the latter one will be very bothersome due to the way Blender handles poses, and it's reasonable to assume upgrading the texture packer will probably give me a decent bundle of trouble.</p>
+
+<p>I'm still unhappy with the lighting, and I want to rework the camera controller to support arbitrary global lights instead of the fixed ones in the scene config. That way all of the global illumination can be directed from the tooling. I could just change the properties of the existing lights, but then their names don't make any sense, and it'd be a jumbley mess debugging it in post. I'm likely going to create light objects instead.</p>
+
+<p>I've already come to dislike rendered 3D. I had a lot of trouble trying to get rendered entity frames to line up properly (because I wasn't thinking, compounded by separation of shadows and geometry), and I <em>nearly</em> threw a fit when I thought LÖVE wouldn't let me render from textures with arbitrarily-oriented texture coordinates. Indeed, it turns out it's not possible with Quad, but, thankfully, Mesh saved the day. I have as much control as I need with Mesh, and I can get into optimization by packing all render data for an entity into a single mesh. Fancy.</p>
+
+<p>Here's what scene rendering looks like in-game (with debug mode enabled):</p>
+
+<div class="generic-center-text" stlye="width: 100%"><a style="display: inline-block;" target="_blank" href="http://i.imgur.com/EaTxwth.png"><img style="display: block;" src="http://i.imgur.com/EaTxwthl.png" alt="scene rendering" title="scene rendering" /></a></div>
+
+<p>It's not very striking, but a lot of work went into it behind the <span title="heh">scene</span>. The frames drawn around the props are based on world space from the Blender data, which doesn't include the shadow. The frame on the "test" prop is incorrect because it's not calculating from the origin. It's a simple fix, and it was initially correct because it was using the pack data, but now all of that is bundled up and discarded at runtime after building meshes.</p>
+
+<p>Using the same axes in Blender as in game space has proved very worthwhile, even when Blender's Y-up is in the opposite direction. Camera manipulation is a bit funky, but it's definitely better than trying to mentally juggle Blender Z -> game Y and so on.</p>
+
+<p>Getting the perspective just right is going to be tricky. If I could make renders and shadows work nicely under rotation, I'd like to just rotate the whole scene a tiny bit along the X axis. It'd make the perspective cohesive instead of disparate (i.e., without rotation, movement and the background (will) suggest terrain depth, but the entities are always front-facing to the screen). These two issues are linked, since entity rendering needs to take into account casting shadows on other entities (which are masked out) and framing invisible-but-not backdrops for casting realistic(-ish) shadows on a terrain that isn't really there.</p>
+
+<p>3D-to-2D is woe.</p>
+
+<p>On the bright side, the asset system is pretty slick. I can reload the manifest at runtime, which automatically reloads existing assets. The build tools automatically rebuild the manifest, so it's only two steps to reloading any changes. Since scenes are assets, and due to the way the scene instance is stored, if the scene is modified, it will reload the definition and (as of soon) keep any runtime state.</p>
+
+<p>The repository is sitting at <span title="what a nice even number">150</span> commits right now. That's actually surprising to me. I didn't think I was committing that much, and it seems like a very rapid growth in comparison with my other projects. There're huge deluges of commits on the game code, though, which is probably running at a faster pace.</p>
+
+<h2 id="time-and-management" class="separator">Time and management<a class="para-ref" href="#time-and-management"></a></h2>
+
+<p>I don't actually plan on working Sunday, nor most of Saturday, but these first two weeks have essentially lead to it. Everything I intended to do is done, but it took until the last hours of Sunday to pull it all off and leave it in a functional state. It takes a lot to put in 8-10 hours every day, and pushing all the way to the end of the week without a break just feeds into repeating the cycle the following week.</p>
+
+<p>I've found that the weekend is naturally less efficient for me, so it's actually wasteful to spend that time working, even if it's to meet a deadline or complete a task list. It should be more beneficial to break during that time, and come back the next week with a refreshed psyche.</p>
+
+<p>Another issue I've noticed is that I will go down rabbit trails or completely avoid rational thinking about a problem until I've hit a sufficiently large wall when trying to make it work the way I want. So, for the weeks that follow, I'm going to start by making the task list and conceptualize/explore all of the tasks before I start working. And when I come up against a sizable problem, I will leave the computer and work it out on paper. When I force myself to consider the problem without fumbling around in the code to make it do what I want, I oftentimes come to better solutions. It is likely that I could have avoided a lot of refactoring time spent on tooling this week if I had preconceived that props &amp; actors would share all of their properties and would be easier to handle as a shared construct.</p>
+
+<p>Live and learn.</p>
+
+<h2 id="timelapse" class="separator">Timelapse<a class="para-ref" href="#timelapse"></a></h2>
+
+<p>This week's <a target="_blank" href="">timelapse</a> includes data from February 6-8 of last week. Unfortunately, I don't think YouTube kept the original video size, so it looks worse than the actual frames.</p>
+
+<iframe class="generic-center" style="display: block;" width="480" height="360" src="https://www.youtube.com/embed/pM11GHxvzrY?rel=0" frameborder="0" allowfullscreen></iframe>
+
+<p>I've settled on recording at 15s/frame, and the video is running at 10 frames/s (i.e., <span title="heh">2.5 min/s</span>). I think it runs a bit fast, but it'd probably be unreasonably long otherwise. I might consider overdubbing later on at a lower render rate, but who knows what'll happen. I can only do so much meta work.</p>
+
+<p>That's it. That's everything. Now I must sleep. I will definitely have a skewed schedule as a result of ending so late.</p>
