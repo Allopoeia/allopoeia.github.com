@@ -1,0 +1,53 @@
+---
+layout: series-post
+enable-comments: true
+
+date: 2015-02-20T23:17:00-05:00
+last-modified: 2015-02-20T23:17:00-05:00
+
+author: plash
+categories: [dev]
+tags: []
+title: "Tentuk Journal: Week 3"
+subtitle:
+
+sp-prev-url: /dev/2015/02/tentuk-journal-week-2.html
+sp-prev-title: "Week 2"
+sp-next-url: null
+sp-next-title: null
+---
+
+<p>There's no comfortable way for me to say this, so here goes:</p>
+
+<p>I can't make this game, and, technically, I haven't been making a game. The vast majority of these three weeks has been spent wrestling with the tool pipeline. That's not what I should be doing. It's not even what will make the game what I want it to be. That's the biggest realization I've come to: I can't make this game the way I want it to be.</p>
+
+<p>Only three weeks? That's a really fast burn rate. Truth is, I took a silly thought and turned it into something it didn't want to be. I'm largely making the same mistake I made with Hord &amp; Onsang &mdash; and so soon! It's a painful realization, but one I should have had from the beginning. I let myself run along without stopping to consider the feasibility of it.</p>
+
+<p>Tentuk won't work as a small game. I'm shoe-horning a perfect circle into a square slot orders of magnitude smaller.</p>
+
+<p>Here's the week up to this <em>bit</em> of rational thinking:</p>
+
+<ul>
+	<li>Handle entries removed from the asset manifest by zeroing the timestamp (they'll reload if they're added back in).</li>
+	<li>Multiple map texture packing (hey, that was easy!)</li>
+	<li>Layer grouping and lighting config for scenes.</li>
+	<li>Removed scene backdrops (scenes will use Real Ground™ now) and rotated the camera by -30° along the X axis.</li>
+</ul>
+
+<p>The last one is where I realized all I was doing was fighting the pipeline. The rotation caused the scene to take two times the space along the Y axis, meaning the ground had to be twice as long along Y, meaning I had to unscale the axis, meaning the complexity rose, in turn causing renders to be unaligned in-game, causing me to be unhappy, causing me to <em>actually start thinking</em>, causing <em>this</em>.</p>
+
+<p>So yeah, a fast burn rate, if you want to call it that. I'm happy, though. There was something unsettling about Tentuk, and this has basically been it. I was almost half-way into the 8 weeks I somehow decided was reasonable (and what the hell was that!?), and <em>all I had been doing was fighting</em>.</p>
+
+<p>I would be far better off to use 3D and apply some shaders to get the look I wanted. It's 2015! I don't need to bake 3D to 2D. Obviously, this means I wouldn't be able to continue using LÖVE. There wouldn't be much loss, <em>because there was hardly anything there in the first place</em>, but that is not something I should have to do when I decide a game is not realizable under the systems I'm using. I should already be using systems that allow me to make that decision and continue using what I've already built.</p>
+
+<p>If I were making this with togo (were it reasonably complete), all of this would be "oh, okay, this is not going to work, let's load the whole scene in from the source instead", and off I would be rolling.</p>
+
+<p>I am reverting to the previous, <em>actually well-thought-out</em> plan: continue working on togo and start <em>designing</em> a game. That word, <em>designing</em>, is very important. In design I am much more flexible to change &amp; explore; there are no systems I am working under that prohibit my choices, there are only the <em>possible</em>. The stage after/during that is where I decide how feasible the design is under the systems I want to use. Design also prevents me from falling into a project I don't actually want or know how to make. Rational thought is more easily found to me when I am not busied by <em>tooling</em>, which I actually like, apparently. I like making systems, but systems are not fruitful unless they are applied, and they inevitably increase the complexity (however little). I can't keep applying systems. At some point I have to put down the arsenal and actually make something tangible.</p>
+
+<p>Then (on Wednesday, this was only Wednesday!), I actually played some games. First, <a target="_blank" href="http://finji.itch.io/lost-constellation">Lost Constellation</a>, followed by <a target="_blank" href="http://rubna.itch.io/lisa">lisa</a>. I realized there's so much in both of them that I loved; so much that I wasn't even thinking about with Tentuk. (I mean, let's be honest, I wasn't even thinking.) Lost Constellation is brilliant. They call it a “supplemental” to Night In The Woods, but it felt like a whole, complete game. I loved it, and I didn't even get to see all of the content! And lisa, wow. It almost feels wrong that we should see &amp; play this game rubna made for their friend. It's a cute little game, with charm beyond what should be reasonably possible. I sat basking in it for a while.</p>
+
+<p>For all I can see, lisa is full-3D, with some clever post-processing for a beautiful pixelated look, which surprisingly has a lot of character. I've no idea how the detail is pulled off, but it's proof to me that my footing was completely wrong. I would never be able to pull off its liveliness by baking 3D to 2D.</p>
+
+<p>I realized these games do things I love; things I want to be able to do. The witty, grasping writing in Lost Constellations, and the mechanics &amp; style &amp; charm of lisa. I'm not saying I'd make a cross between these games if I could (and all signs point to a different kind of inner style). They inspire me, and make me want to do better.</p>
+
+<p>I feel ridiculous. I'm disappointed in myself. I'm sorry, me. I can do better than this.</p>
