@@ -65,8 +65,8 @@ nav-items: {
 personal-site-types: {
   website: {
     class: home,
-    text : "Web site",
-    title: "Web site",
+    text : "Website",
+    title: "Website",
     base-url: "http://"
   },
   flattr : {
