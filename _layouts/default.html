@@ -59,12 +59,12 @@ nav-display-items: [
 <body>
 
 <!-- body start -->
-<div id="__wrapper">
+<div class="__wrapper">
 
 <!-- header and main -->
-<div id="top_container">
-<div id="top_align_center">
-	<div id="top_bar" class="border-radius-4">
+<div class="top_container">
+<div class="top_align_center">
+	<div class="top_bar" class="border-radius-4">
 		<nav>
 			<ul>
 			{% for name in page.nav-display-items %}
@@ -76,7 +76,7 @@ nav-display-items: [
 	</div>
 
 	<!-- article start -->
-	<article id="article_container" class="{{ page.article-class }} {% include fetch/page/style %}">
+	<article class="article_container" class="{{ page.article-class }} {% include fetch/page/style %}">
 
 	{% include microdata/fields %}
 
@@ -88,8 +88,8 @@ nav-display-items: [
 </div>
 
 <!-- footer start -->
-<footer id="top_footer">
-<div id="footer_align_center">
+<footer class="top_footer">
+<div class="footer_align_center">
 	<div class="left">
 		<table>
 		<tr>

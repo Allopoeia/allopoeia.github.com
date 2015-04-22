@@ -118,7 +118,7 @@ body {
 	color: #D0D6DA;
 }
 
-#__wrapper {
+.__wrapper {
 	position: relative;
 	min-height: 100%;
 	margin: 0px auto;
@@ -258,28 +258,15 @@ h6:hover>a.para-ref
 	z-index: 1;
 }
 
-/* Components */
-
-/* Hack for preventing page expansion with the "Share on Google+" feature in the +1 button */
-/* .. never mind. Can't select elements *inside* the iframe, so it's pointless (the "add more people" dropmenu gets cut off) */
-/*.bubble_content>iframe {
-	max-height: 450px !important;
-	height: 100%;
-}
-
-.bubble_content>iframe .e-Nb-ud-hb .g-i-h-H {
-	top: -120px;
-}*/
-
 /* Top-level */
 
-#top_container {
+.top_container {
 	min-height: 100%;
 	margin: 0px 20px 0px 20px;
 	padding-bottom: 240px; /* top_footer.height+80px */
 }
 
-#top_align_center {
+.top_align_center {
 	max-width: 960px;
 	height: 100%;
 	margin: 0px auto 0px auto;
@@ -288,7 +275,7 @@ h6:hover>a.para-ref
 
 /* Navigation bar */
 
-#top_bar {
+.top_bar {
 	display: block;
 	margin: auto;
 	background-color: #13161A;
@@ -313,24 +300,24 @@ a.nav-item-active {
 	text-shadow: #4D4D4D 0px 0px 4px;
 }
 
-#top_bar>nav {
+.top_bar>nav {
 	font: 20px "Liberation Sans", "DejaVu Sans", sans-serif;
 }
 
-#top_bar>nav>ul {
+.top_bar>nav>ul {
 	list-style: none;
 	margin: 0px;
 	padding: 0px 6px 0px 6px;
 }
 
-#top_bar>nav>ul>li {
+.top_bar>nav>ul>li {
 	display: inline;
 	margin: 0px 6px 0px 6px;
 }
 
 /* Footer */
 
-#top_footer {
+.top_footer {
 	position: absolute;
 	bottom: 0px;
 	height: 160px;
@@ -341,23 +328,23 @@ a.nav-item-active {
 	color: #5A6062;
 }
 
-#footer_align_center {
+.footer_align_center {
 	max-width: 960px;
 	padding: 20px 40px 0px 40px;
 	margin: 0px auto 0px auto;
 }
 
-#top_footer .center {
+.top_footer .center {
 	margin: 0px auto 0px auto;
 	text-align: center;
 	clear: both;
 }
 
-#top_footer .left  {float: left;}
-#top_footer .right {float: right;}
+.top_footer .left  {float: left;}
+.top_footer .right {float: right;}
 
-#top_footer a {color: #336080;}
-#top_footer td {
+.top_footer a {color: #336080;}
+.top_footer td {
 	padding-left: 5px;
 	padding-right: 5px;
 }
@@ -427,13 +414,13 @@ a.nav-item-active {
 
 /* Article */
 
-#article_container {
+.article_container {
 	display: block;
 	margin-right: 20px;
 	margin-left: 20px;
 }
 
-#article_container blockquote:before {
+.article_container blockquote:before {
 	display: block;
 	float: left;
 	width: 20px;
@@ -446,17 +433,17 @@ a.nav-item-active {
 	content: "“";
 }
 
-#article_container blockquote.excerpt {
+.article_container blockquote.excerpt {
 	color: #AAAFB3;
 	border-left: #45484A 2px solid;
 	padding-left: 10px;
 	border-radius: 4px;
 }
-#article_container blockquote.excerpt:before {
+.article_container blockquote.excerpt:before {
 	display: none;
 }
 
-#_main_content.post {
+._main_content.post {
 	margin-left: 20px;
 	margin-right: 20px;
 	overflow: hidden;
@@ -464,18 +451,18 @@ a.nav-item-active {
 
 /* Headers */
 
-#article_container>header {
+.article_container>header {
 	margin: 10px 0px 20px 0px;
 }
 
-#article_container>header>hgroup {
+.article_container>header>hgroup {
 	margin-bottom: 20px;
 }
 
-#article_container>header .title {
+.article_container>header .title {
 	margin: 5px 0px;
 }
-#article_container>header .subtitle {
+.article_container>header .subtitle {
 	margin: 5px 0px;
 	font-size: 110%;
 }
@@ -550,4 +537,4 @@ footer>ol li, footer>ul li {
 
 /* Post comments */
 
-/*#comments #disqus_thread #dsq-content #dsq-comments .dsq-comment-message {}*/
+/*.comments #disqus_thread #dsq-content #dsq-comments .dsq-comment-message {}*/
