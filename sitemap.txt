@@ -3,6 +3,6 @@ layout: null
 exclude-from-sitemap: true
 ---
 {% for page in site.pages %}{% unless page.exclude-from-sitemap %}
-{{ site.meta.perma-url }}{{ page.url }}{% endunless %}{% endfor %}
+{{ site.meta.perma-url }}{{ page.url | remove: "index.html" }}{% endunless %}{% endfor %}
 {% for post in site.posts %}{% unless post.exclude-from-sitemap %}
 {{ site.meta.perma-url }}{{ post.url }}{% endunless %}{% endfor %}
