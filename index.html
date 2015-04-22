@@ -18,7 +18,7 @@ description: "Allopoeia is an open-authorship journal/blag for anything and ever
 	<li class="border-radius-4">
 	<div class="div-relative">
 		<span>
-		<em>{% assign _category_list = post.categories %}{% include post/root_category %}</em> &rArr; 
+		<span class="mobile-hidden"><em>{% assign _category_list = post.categories %}{% include post/root_category %}</em> &rArr; </span>
 		<a href="{{ post.url }}">{% assign _page = post %}{% include fetch/page/fancy_title %}</a>
 		 by <a class="above" href="{% assign _author = post.author %}{% include fetch/author/about-url %}">{{ post.author }}</a>
 		</span>
