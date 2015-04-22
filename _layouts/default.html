@@ -24,9 +24,6 @@ nav-display-items: [
 #disable-feedburner: false
 #disable-twitter: false
 #disable-flattr: false
-disable-plusone: true
-disable-plusone-global: true
-#disable-plusone-inner: false
 #omega-text: null
 
 #date: null
@@ -57,7 +54,6 @@ disable-plusone-global: true
 	<link rel="stylesheet" href="/css/reset.css" type="text/css" />
 	<link rel="stylesheet" href="/css/screen.css{% unless site.safe %}?{{ site.time | date: '%Y%m%d%H%M%S' }}{% endunless %}" type="text/css" />
 
-	{% include component/plusone_script %}
 	{% include component/analytics_script %}
 </head>
 <body>
@@ -100,7 +96,6 @@ disable-plusone-global: true
 			<td>{% include component/feedburner_element %}</td>
 			<td>{% include component/flattr_element %}</td>
 			<td>{% include component/twitter_element %}</td>
-			<td>{% include component/plusone_global %}</td>
 		</tr>
 		</table>
 	</div>
@@ -117,8 +112,6 @@ disable-plusone-global: true
 </footer>
 
 </div>
-
-{% include component/plusone_load %}
 
 </body>
 </html>

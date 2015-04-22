@@ -1,4 +1,0 @@
-{% unless page.disable-plusone-global %}
-{% capture _plusone_url %}{{ site.meta.perma-url }}{% endcapture %}
-{% include component/plusone_element %}
-{% endunless %}

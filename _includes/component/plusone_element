@@ -1,3 +1,0 @@
-{% unless page.disable-plusone %}
-<div class="g-plusone" data-href="{% if _plusone_url %}{{ _plusone_url }}{% else %}{{ site.meta.perma-url }}{% endif %}" data-size="{% if _plusone_size %}{{ _plusone_size }}{% else %}medium{% endif %}" data-annotation="none" data-expandto="top"></div>
-{% endunless %}{% assign _plusone_url = null %}{% assign _plusone_size = null %}
