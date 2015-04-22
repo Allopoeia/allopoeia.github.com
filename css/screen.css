@@ -249,6 +249,17 @@ h6:hover>a.para-ref
 	display: inline;
 }
 
+.mobile-hidden {
+	visibility: visible;
+}
+
+@media only screen and (max-width: 801px) {
+	.mobile-hidden {
+		display: none;
+		visibility: hidden;
+	}
+}
+
 .fill-span {
 	position: absolute;
 	width: 100%;
