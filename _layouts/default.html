@@ -63,22 +63,22 @@ nav-display-items: [
 <!-- body start -->
 <div class="__wrapper">
 
+<div class="navbar">
+	<nav>
+		<ul>
+		{% for name in page.nav-display-items %}
+			{% assign _item = site.nav-items[name] %}
+			<li><a class="nav-item{% if page.nav-active == name %} active{% endif %}" href="{{ _item.url }}">{{ _item.text }}</a></li>
+		{% endfor %}
+		</ul>
+	</nav>
+</div>
+
 <!-- header and main -->
 <div class="top_container">
 <div class="top_align_center">
-	<div class="top_bar" class="border-radius-4">
-		<nav>
-			<ul>
-			{% for name in page.nav-display-items %}
-				{% assign _item = site.nav-items[name] %}
-				<li><a class="nav-item{% if page.nav-active == name %}-active{% endif %}" href="{{ _item.url }}">{{ _item.text }}</a></li>
-			{% endfor %}
-			</ul>
-		</nav>
-	</div>
-
 	<!-- article start -->
-	<article class="article_container" class="{{ page.article-class }} {% include fetch/page/style %}">
+	<article class="article_container {{ page.article-class }} {% include fetch/page/style %}">
 
 	{% include microdata/fields %}
 
