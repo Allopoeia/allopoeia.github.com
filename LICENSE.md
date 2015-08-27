@@ -3,7 +3,7 @@
 The MIT license. **This only applies to Jekyll stuff/styling/etc. (as layed out in [`README.md`](/Allopoeia/allopoeia.github.com/blob/master/README.md))**.
 
 ```
-Copyright (c) 2012 Tim Howard
+Copyright (c) 2012-2015 plash <plash@komiga.com>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
