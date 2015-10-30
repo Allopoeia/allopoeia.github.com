@@ -34,9 +34,11 @@ layout: null
 
 	<published>{% assign _page = post %}{% include post/machine_datetime %}</published>
 	<updated>{% assign _page = post %}{% include post/machine_datetime_latest %}</updated>
+
+	{% assign _author = post.author %}
 	<author>
-		<name>{{ post.author }}</name>
-		<uri>{% assign _author = post.author %}{% include fetch/author/about-url_absolute %}</uri>
+		<name>{% include fetch/author/display-name %}</name>
+		<uri>{% include fetch/author/about-url_absolute %}</uri>
 	</author>
 
 	<content type="html"><![CDATA[

@@ -26,6 +26,7 @@ title: Archive
 {% endif %}
 
 {% capture __minify %}
+{% assign _author = post.author %}
 <li>
 	<span title="Last updated {% assign _page = post %}{% include post/format_datetime_latest %}">
 		<time pubdate datetime="{% assign _page = post %}{% include post/machine_datetime %}">
@@ -39,7 +40,7 @@ title: Archive
 		{% assign _page = post %}
 		{% include fetch/page/fancy_title %}
 	</a> 
-	by <a href="{% assign _author = post.author %}{% include fetch/author/about-url %}">{{ post.author }}</a>
+	by <a href="{% include fetch/author/about-url %}">{% include fetch/author/display-name %}</a>
 </li>
 {% endcapture %}{% include common/minify_reprint %}
 

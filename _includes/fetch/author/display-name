@@ -4,7 +4,6 @@
 <!--
 	Parameters:
 		_author: the author ID; [default: page.author]
-		_fetch_absolute: whether to fetch an absolute URL [default: false]
 -->
 {% endcomment %}
 
@@ -15,13 +14,10 @@
 {% assign _ao = site.authors[_author] %}
 
 {% if _ao %}
-	{% if _ao.about-relative and _fetch_absolute %}
-		{% assign _slug = _ao.about-url %}
-		{% include common/canonical_url %}
-	{% else %}
-		{{ _ao.about-url }}
-	{% endif %}
+	{{ _ao.display-name }}
+{% else %}
+	{{ _author }}
 {% endif %}
 
-{% assign _ao = null %}{% assign _fetch_absolute = null %}
+{% assign _ao = null %}
 {% endcapture %}{% include common/minify_reprint %}

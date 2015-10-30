@@ -12,7 +12,7 @@
 	<meta itemprop="dateModified" content="{% include post/machine_datetime_latest %}" />
 	<meta itemprop="articleSection" content="{% include post/root_category %}" />
 	<span itemprop="author" itemscope itemtype="http://schema.org/Person">
-		<meta itemprop="name" content="{{ page.author }}" />
+		<meta itemprop="name" content="{% include fetch/author/display-name %}" />
 		<link itemprop="url" href="{% include fetch/author/about-url_absolute %}" />
 	</span>
 {% endif %}
