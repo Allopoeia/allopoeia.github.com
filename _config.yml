@@ -90,13 +90,13 @@ personal-site-types: {
 }
 
 authors: {
-  "plash": {
-    about-url: "/authors.html#plash",
+  "coranna": {
+    display-name: "Coranna",
+    about-url: "/authors.html#coranna",
     about-relative: true,
     preferred-copyright: "cc_by-nc-sa-3.0",
     personal-sites: [
       {type: website, slug: "komiga.com"},
-      {type: flattr , slug: "komiga"},
       {type: github , slug: "komiga"},
       {type: twitter, slug: "komiga"}
     ]
