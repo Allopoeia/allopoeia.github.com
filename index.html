@@ -1,37 +1,27 @@
 ---
 layout: generic
-nav-active: root
+nav-active: archive
 
-title: Allopoeia
-description: "Allopoeia is an open-authorship journal/blag for anything and everything."
+title: Archive
+description: "Ramblings of a citizen of the universe."
 ---
-<p>Welcome! <a title="about this here thingy" href="{{ site.nav-items.about.url }}">Allopoeia</a> is an open-authorship journal/blag for anything and everything. <span title="won't you please">Check out</span> our <a title="abouts the peoples postin' stuffs" href="{{ site.nav-items.authors.url }}">authors</a>, <a title="emails and other magics" href="{{ site.nav-items.about.url }}#contact">write to us</a>, or peruse our <em>vast</em> <a title="all the words" href="{{ site.nav-items.archive.url }}">archive</a>.</p>
-
-<section id="recent-posts">
-<h4 class="separator">Recent posts<a class="para-ref" href="#recent-posts"></a></h4>
-
 {% capture _post_count %}{{ site.posts | size }}{% endcapture %}
 {% if _post_count != "0" %}
 <ul class="post_list">
-{% for post in site.posts limit:10 %}
+{% for post in site.posts %}
 {% capture __minify %}
 	{% assign _author = post.author %}
 	<li class="border-radius-4">
 	<div class="div-relative">
-		<span>
-		<span class="mobile-hidden"><em>{% assign _category_list = post.categories %}{% include post/root_category %}</em> &rArr; </span>
-		<a href="{{ post.url }}">{% assign _page = post %}{% include fetch/page/fancy_title %}</a>
-		 by <a class="above" href="{% include fetch/author/about-url %}">{% include fetch/author/display-name %}</a>
-		</span>
-		<a href="{{ post.url }}" title="Last updated {% assign _page = post %}{% include post/format_datetime_latest %}; filed under: {% assign _category_list = post.categories %}{% include common/fancify_category_list %}"><span class="fill-span"></span></a>
+		<span class="rp-category-name mobile-hidden"><em>{% assign _category_list = post.categories %}{% include post/root_category %}</em></span><span class="mobile-hidden">&rarr; </span>
+		<span><a href="{{ post.url }}">{% assign _page = post %}{% include fetch/page/fancy_title %}</a></span>
+		<a href="{{ post.url }}" title="Last updated {% assign _page = post %}{% include post/format_datetime_latest %}"><span class="fill-span"></span></a>
 	</div>
 	</li>
-{% endcapture %}	{% include common/minify_reprint %}
+{% endcapture %}{% include common/minify_reprint %}
 {% endfor %}
 </ul>
 {% else %}
-<p><em>No recent posts!</em></p>
+<p>No posts!</p>
 {% endif %}
 {% assign _post_count = null %}
-
-</section>

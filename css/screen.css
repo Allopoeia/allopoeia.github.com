@@ -113,7 +113,7 @@ body {
 	display: block;
 	padding: 0px;
 	margin: 0px;
-	font: normal normal normal 20px/1.366em "Liberation Sans", "DejaVu Sans", sans-serif !important;
+	font: normal normal normal 20px/1.366em "Liberation Sans", "DejaVu Sans", "Droid Sans", sans-serif !important;
 	background-color: #282C34;
 	color: #D0D6DA;
 }
@@ -204,9 +204,8 @@ sub {
 	-o-transform-origin: center center;
 }
 
-/* NOTE: Liberation Serif doesn't look so great at 18px */
-.f-serif {font-family: "Liberation Serif", Georgia, serif;}
-.f-sans {font-family: "Liberation Sans", "DejaVu Sans", sans-serif;}
+.f-serif {font-family: "Liberation Serif", Georgia, "Droid Serif", serif;}
+.f-sans {font-family: "Liberation Sans", "DejaVu Sans", "Droid Sans", sans-serif;}
 .f-style-sc {font-variant: small-caps;}
 .f-sz-norm {font-size: 20px;}
 .f-sz-larg {font-size: 22px;}
@@ -243,6 +242,11 @@ h6:hover>a.para-ref
 	display: inline;
 }
 
+.rp-category-name {
+	width: 90px;
+	display: inline-block;
+}
+
 .mobile-hidden {
 	visibility: visible;
 }
@@ -274,7 +278,7 @@ h6:hover>a.para-ref
 .top_container {
 	min-height: 100%;
 	margin: 0px;
-	padding-bottom: 240px; /* top_footer.height+80px */
+	padding-bottom: 180px; /* top_footer.height+80px */
 }
 
 .top_align_center {
@@ -317,7 +321,7 @@ a.nav-item.active {
 	margin: 0px auto 20px auto;
 	height: 48px;
 	overflow: hidden;
-	font: 20px "Liberation Sans", "DejaVu Sans", sans-serif;
+	font: 20px "Liberation Sans", "DejaVu Sans", "Droid Sans", sans-serif;
 }
 
 @media only screen and (max-width: 801px) {
@@ -346,7 +350,7 @@ a.nav-item.active {
 .top_footer {
 	position: absolute;
 	bottom: 0px;
-	height: 160px;
+	height: 100px;
 	width: 100%;
 	font-size: 18px;
 	background-color: #0D1012;
@@ -409,34 +413,6 @@ a.nav-item.active {
 	position: relative;
 	z-index: 2;
 }
-
-/* Archive */
-
-.archive .year h1 {font-size: 160%;}
-.archive .month h1 {font-size: 120%;}
-
-/* Personal site list */
-
-.personal-site-list .clicky {
-	display: inline-table;
-	height: 20px;
-	width: 20px;
-	margin-left: 4px;
-	margin-right: 4px;
-}
-
-/*.personal-site-list .clicky {-webkit-filter: contrast(0.001) grayscale(1.0);}
-.personal-site-list .clicky:hover {-webkit-filter: none;}*/
-
-.personal-site-list .home    {background: url("/images/icons/globe-20-ds.png") no-repeat;}
-.personal-site-list .twitter {background: url("/images/icons/twitter-20-ds.png") no-repeat;}
-.personal-site-list .github  {background: url("/images/icons/octocat-20-ds.png") no-repeat;}
-.personal-site-list .flattr  {background: url("/images/icons/flattr-20-ds.png") no-repeat;}
-
-.personal-site-list .home:hover    {background: url("/images/icons/globe-20.png") no-repeat;}
-.personal-site-list .twitter:hover {background: url("/images/icons/twitter-20.png") no-repeat;}
-.personal-site-list .github:hover  {background: url("/images/icons/octocat-20.png") no-repeat;}
-.personal-site-list .flattr:hover  {background: url("/images/icons/flattr-20.png") no-repeat;}
 
 /* Article */
 
@@ -519,7 +495,7 @@ a.nav-item.active {
 
 .author-banner {
 	margin-top: 40px;
-	padding: 10px;
+	padding: 5px 10px;
 }
 
 footer>ol li, footer>ul li {

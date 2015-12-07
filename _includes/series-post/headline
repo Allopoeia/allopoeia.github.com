@@ -14,17 +14,17 @@
 
 		<div class="series-post-link-prev series-post-link">
 		{% if page.sp-prev-url %}
-			<a target="_self" href="{{ page.sp-prev-url }}">&lang;&lang; {{ page.sp-prev-title }}</a>
+			<a target="_self" href="{{ page.sp-prev-url }}">&laquo; {{ page.sp-prev-title }}</a>
 		{% else %}
-			<span>&lang;&lang;</span>
+			<span>&laquo;</span>
 		{% endif %}
 		</div>
 
 		<div class="series-post-link-next series-post-link">
 		{% if page.sp-next-url %}
-			<a target="_self" href="{{ page.sp-next-url }}">{{ page.sp-next-title }} &rang;&rang;</a>
+			<a target="_self" href="{{ page.sp-next-url }}">{{ page.sp-next-title }} &raquo;</a>
 		{% else %}
-			<span>&rang;&rang;</span>
+			<span>&raquo;</span>
 		{% endif %}
 		</div>
 		</div>

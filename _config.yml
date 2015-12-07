@@ -23,8 +23,6 @@ meta:
   title: Allopoeia
   run-years: "2012–2015"
   image: http://lh4.googleusercontent.com/-0cni5iXgy_8/Uf7NKDyANjI/AAAAAAAAALo/ZHUIsfHxxVc/k-inv-256.png
-  feedburner_id: Allopoeia
-  flattr_slug: "/thing/493250/Allopoeia"
   disqus_shortname: komiga
   analytics_id: "UA-6565507-3"
   analytics_domain_name: null
@@ -40,66 +38,25 @@ permalink: /:categories/:year/:month/:title.html
 ## Static content
 
 nav-items: {
-  root: {
-    text: "Allopoeia",
-    url : "/"
+  home: {
+    text: "Ascend",
+    url : "//komiga.com"
   },
   archive: {
     text: "Archive",
-    url : "/archive.html"
+    url : "/"
   },
-  authors: {
-    text: "Authors",
-    url : "/authors.html"
-  },
-  authoring: {
-    text: "Authoring",
-    url : "/authoring.html"
-  },
-  about: {
-    text: "About",
-    url : "/about.html"
-  }
-}
-
-personal-site-types: {
-  website: {
-    class: home,
-    text : "Website",
-    title: "Website",
-    base-url: "http://"
-  },
-  flattr : {
-    class: flattr,
-    text : "Flattr",
-    title: "Flattr",
-    base-url: "http://flattr.com/profile/"
-  },
-  twitter: {
-    class: twitter,
-    text : "Twitter",
-    title: "Twitter",
-    base-url: "http://twitter.com/"
-  },
-  github : {
-    class: github ,
-    text : "GitHub",
-    title: "GitHub",
-    base-url: "https://github.com/"
+  feed: {
+    text: "Atom",
+    url : "/atom.xml"
   }
 }
 
 authors: {
   "coranna": {
-    display-name: "Coranna",
-    about-url: "/authors.html#coranna",
-    about-relative: true,
-    preferred-copyright: "cc_by-nc-sa-3.0",
-    personal-sites: [
-      {type: website, slug: "komiga.com"},
-      {type: github , slug: "komiga"},
-      {type: twitter, slug: "komiga"}
-    ]
+    display-name: "Coranna Howard",
+    about-url: "//komiga.com",
+    preferred-copyright: "cc_by-nc-sa-3.0"
   }
 }
 
@@ -108,18 +65,19 @@ authors: {
 ##    %about-author% - the author's about-url
 ##    %year-range% - the post's modification years
 ##    %author% - the author's moniker
+##    %author-linked% - the author's moniker, linking to %about-author%
 ##
 copyright-notice-type-default: "preferred"
 copyright-notices: {
   "simple": {
-    url: "%about-author%",
-    pre-text: "&copy; %year-range% ",
-    url-text: "%author%",
+    url: null,
+    pre-text: "&copy; %year-range% %author-linked%",
+    url-text: "",
     post-text: ""
   },
   "cc_by-nc-sa-3.0": {
     url: "http://creativecommons.org/licenses/by-nc-sa/3.0/",
-    pre-text: "&copy; %year-range% %author%, under license ",
+    pre-text: "&copy; %year-range% %author-linked%, under license ",
     url-text: "Creative Commons BY-NC-SA 3.0",
     post-text: ""
   }

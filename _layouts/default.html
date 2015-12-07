@@ -2,11 +2,9 @@
 #exclude-from-sitemap: false
 
 nav-display-items: [
-  root,
+  home,
   archive,
-  authors,
-  authoring,
-  about
+  feed
 ]
 #nav-active: null
 
@@ -20,11 +18,6 @@ nav-display-items: [
 #article-class: null
 #article-styles: null
 #article-font: "sans"
-
-#disable-feedburner: false
-#disable-twitter: false
-#disable-flattr: false
-#omega-text: null
 
 #date: null
 #last-modified: null
@@ -49,9 +42,6 @@ nav-display-items: [
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
 
 	<link rel="alternate" type="application/atom+xml" title="Atom feed" href="/atom.xml" />
-{% if site.meta.feedburner_id %}
-	<link rel="alternate" type="application/rss+xml" title="Feedburner" href="http://feeds.feedburner.com/{{ site.meta.feedburner_id }}" />
-{% endif %}
 
 	<link rel="stylesheet" href="/css/reset.css" type="text/css" />
 	<link rel="stylesheet" href="/css/screen.css{% unless site.safe %}?{{ site.time | date: '%Y%m%d%H%M%S' }}{% endunless %}" type="text/css" />
@@ -92,23 +82,11 @@ nav-display-items: [
 <!-- footer start -->
 <footer class="top_footer">
 <div class="footer_align_center">
-	<div class="left">
-		<table>
-		<tr>
-			<td>{% include component/feedburner_element %}</td>
-			<td>{% include component/flattr_element %}</td>
-			<td>{% include component/twitter_element %}</td>
-		</tr>
-		</table>
-	</div>
-	<div class="center{% if page.omega-text %} horiz-flip{% endif %}">
-		<span{% if page.omega-text %} title="{{ page.omega-text }}"{% endif %}>&Omega;</span>
+	<div class="center">
+		<span>&Omega;</span>
 	</div>
 	<div class="center">
-		<span title="inner content is likely licensed and/or copyrighted to another entity &mdash; see details below">&copy; {{ site.meta.run-years }} komiga</span>
-	</div>
-	<div class="center">
-		<a href="{{ site.nav-items.about.url }}#copyright-and-license">content copyright and license</a>
+		<span>&copy; {{ site.meta.run-years }} <a href="//komiga.com" target="_blank">komiga</a></span>
 	</div>
 </div>
 </footer>

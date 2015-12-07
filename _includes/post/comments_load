@@ -1,16 +1,37 @@
 {% if page.enable-comments and site.meta.disqus_shortname %}
 <script type="text/javascript">
-{% unless site.safe %}
-	var disqus_developer=1;
-{% endunless %}
-	var disqus_shortname="{{ site.meta.disqus_shortname }}";
-	var disqus_identifier="{{ site.meta.perma-url }}{{ page.url }}";
-	var disqus_title="{{ page.title }}";
-
 	(function() {
-		var dsq=document.createElement("script"); dsq.type="text/javascript"; dsq.async=true;
-		dsq.src="http://"+disqus_shortname+".disqus.com/embed.js";
-		(document.getElementsByTagName("head")[0] || document.getElementsByTagName("body")[0]).appendChild(dsq);
+		var e_comments = document.getElementById("comments");
+		var e_loader = document.createElement("div");
+		e_loader.id = "comment_loader";
+		e_loader.className = "generic-center-text";
+
+		var e_anchor = document.createElement("a");
+		e_anchor.href = "javascript:load_comments()";
+		e_anchor.innerText = "load comments (Disqus)";
+
+		e_loader.appendChild(e_anchor);
+		e_comments.appendChild(e_loader);
 	})();
+
+	var disqus_config = function () {
+		this.page.url = "{{ site.meta.perma-url }}{{ page.url }}";
+	{% if page.disqus_legacy_identifier %}
+		this.page.identifier = "{{ site.meta.perma-url }}{{ page.url }}";
+	{% else %}
+		this.page.identifier = "{{ page.url }}";
+	{% endif %}
+		this.page.title = "{{ page.title }}";
+	};
+
+	var load_comments = function() {
+		var e_loader = document.getElementById("comment_loader");
+		e_loader.parentNode.removeChild(e_loader);
+
+		var s = document.createElement('script');
+		s.src = '//{{ site.meta.disqus_shortname }}.disqus.com/embed.js';
+		s.setAttribute('data-timestamp', +new Date());
+		(document.head || document.body).appendChild(s);
+	};
 </script>
 {% endif %}
