@@ -56,7 +56,7 @@ authors: {
   "coranna": {
     display-name: "Coranna Howard",
     about-url: "//komiga.com",
-    preferred-copyright: "cc_by-nc-sa-3.0"
+    preferred-copyright: "cc_by-nc-sa-4.0"
   }
 }
 
@@ -75,10 +75,10 @@ copyright-notices: {
     url-text: "",
     post-text: ""
   },
-  "cc_by-nc-sa-3.0": {
-    url: "http://creativecommons.org/licenses/by-nc-sa/3.0/",
+  "cc_by-nc-sa-4.0": {
+    url: "http://creativecommons.org/licenses/by-nc-sa/4.0/",
     pre-text: "&copy; %year-range% %author-linked%, under license ",
-    url-text: "Creative Commons BY-NC-SA 3.0",
+    url-text: "Creative Commons BY-NC-SA 4.0",
     post-text: ""
   }
 }
