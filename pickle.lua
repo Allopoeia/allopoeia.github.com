@@ -76,8 +76,9 @@ P.filter("page", Composition.page)
 P.filter("post", Composition.post)
 
 Core.setup_filters()
+P.post_collect(Core.group_post_collect(Site.posts))
+
 P.post_collect(function()
-	Core.group_post_collect(Site.posts)
 	Site.posts_chrono = {}
 	Site.posts_chrono_reverse = {}
 	for _, post in pairs(Site.posts) do
