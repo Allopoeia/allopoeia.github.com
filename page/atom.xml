@@ -12,12 +12,12 @@
 	<uri>{{ Site.url }}</uri>
 </author>
 
-{% for _, post in pairs(Site.posts) do %}
+{% for _, post in ipairs(Site.posts_chrono_reverse) do %}
 <entry>
 	<link href="{{ canonical_url(post) }}" />
 	<id>{{ canonical_url(post) }}</id>
 
-{% for _, cat in pairs(post.categories) do %}
+{% for _, cat in ipairs(post.categories) do %}
 	<category term="{{ cat }}" label="{{ capitalize(cat) }}"/>
 {% end %}
 
@@ -39,7 +39,7 @@
 	</author>
 
 	<content type="html"><![CDATA[
-{! post.content !}
+{! post.bare_content !}
 	]]></content>
 </entry>
 {% end %}
