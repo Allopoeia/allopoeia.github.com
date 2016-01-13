@@ -1,7 +1,7 @@
 layout = "default"
 article_class = "post"
 ---content---
-{% if C.custom_post_header then %}
+{% if not C.custom_post_header then %}
 
 {@ "bits/post/header_start" @}
 	{@ "bits/post/headline" @}
