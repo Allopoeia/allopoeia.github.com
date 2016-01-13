@@ -6,7 +6,7 @@ local year_start = format_time(C.published, "%Y")
 local year_end = format_time(C.updated, "%Y")
 local year_range = year_start
 if year_start ~= year_end then
-	year_range = year_range .. "&mdash" .. year_end
+	year_range = year_range .. "&mdash;" .. year_end
 end
 
 local subs = {
