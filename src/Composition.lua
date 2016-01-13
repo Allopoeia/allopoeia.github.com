@@ -23,6 +23,13 @@ local function parse_time(_, value)
 end
 
 local post_vf = P.ValueFilter("AllopoeiaPost")
+:filter("url", "string", function(_, value)
+	local cat, y, m, title, ext = string.match(value, "^/(.*)/(%d%d%d%d)%-(%d%d)%-%d%d%-(.*)(%.%w*)$")
+	if not y then
+		return nil, string.format("malformed URL: %s", value)
+	end
+	return string.format("/%s/%s/%s/%s%s", cat, y, m, title, ext)
+end)
 :filter("published", "string", parse_time)
 :filter("updated", "string", parse_time)
 :filter("author", "table")
@@ -75,7 +82,7 @@ M.layout = Layout.compose(layout_vf, {
 	article_class = nil,
 	article_styles = nil,
 	article_font = nil,
-	custom_post_header = false,
+	custom_post_header = nil,
 })
 
 return M
