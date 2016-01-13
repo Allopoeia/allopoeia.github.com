@@ -6,7 +6,7 @@ sitemap = false
 <title>Allopoeia</title>
 <link href="{{ Site.url }}{{ C.url }}" rel="self" />
 <link href="{{ Site.url }}" />
-<updated>{#{ format_time_iso(Site.posts[1].last_modified) }#}</updated>
+<updated>{{ format_time_iso(os.time()) }}</updated>
 <id>{{ Site.url }}</id>
 <author>
 	<name>Allopoeia</name>
@@ -29,10 +29,10 @@ sitemap = false
 	<subtitle type="html"><![CDATA[{@ "bits/link-post/anchor", {post = post, with_arrow = true} @}]]></subtitle>
 {% end %}
 
-	<rights type="html"><![CDATA[{@ "post/copyright_notice", post @}]]></rights>
+	<rights type="html"><![CDATA[{@ "bits/post/copyright_notice", post @}]]></rights>
 
-	<published>{{ format_time_iso(post.time_published) }}</published>
-	<updated>{{ format_time_iso(post.time_updated) }}</updated>
+	<published>{{ format_time_iso(post.published) }}</published>
+	<updated>{{ format_time_iso(post.updated) }}</updated>
 
 	<author>
 		<name>{{ post.author.display_name }}</name>

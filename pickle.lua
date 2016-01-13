@@ -3,9 +3,7 @@ local P = require "Pickle"
 local F = require "Pickle.Filter"
 local Core = require "core/Core"
 local Layout = require "core/Layout"
-local Microdata = require "core/Layout"
 local Page = require "core/Page"
-
 local NavItem = require "core/NavItem"
 
 P.configure_default{
@@ -27,9 +25,9 @@ Core.setup_site(function()
 	human_date_format = "%d %B %Y"
 
 	nav = {
-		home = NavItem("Ascend" , nil, "//komiga.com"),
+		home    = NavItem("Ascend" , nil, "//komiga.com"),
 		archive = NavItem("Archive", nil, "/"),
-		atom = NavItem("Atom"   , nil, "/atom.xml"),
+		atom    = NavItem("Atom"   , nil, "/atom.xml"),
 	}
 
 	nav_default = {
@@ -69,13 +67,27 @@ end)
 
 Site.posts = {}
 
+local Composition = require "src/Composition"
+
 P.filter("static", F.copy)
-P.filter("layout", Layout)
-P.filter("page", Page)
+P.filter("layout", Composition.layout)
 P.filter("bits", Core.template_wrapper)
+P.filter("page", Composition.page)
+P.filter("post", Composition.post)
 
 Core.setup_filters()
-P.filter(Core.filter_post_collect(
-	Site.posts
-))
--- TODO: sort posts by date
+P.post_collect(function()
+	Core.group_post_collect(Site.posts)
+	Site.posts_chrono = {}
+	Site.posts_chrono_reverse = {}
+	for _, post in pairs(Site.posts) do
+		table.insert(Site.posts_chrono, post)
+		table.insert(Site.posts_chrono_reverse, post)
+	end
+	table.sort(Site.posts_chrono, function(l, r)
+		return l.published < r.published
+	end)
+	table.sort(Site.posts_chrono_reverse, function(l, r)
+		return l.published > r.published
+	end)
+end)

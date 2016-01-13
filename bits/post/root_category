@@ -1,6 +1,6 @@
 minify = true
 ---content---
-{@ "common/fancify_category_list", {
+{@ "bits/common/fancify_category_list", {
 	categories = C.categories or C,
 	limit = 1,
 } @}

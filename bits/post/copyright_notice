@@ -2,12 +2,11 @@ minify = true
 ---content---
 {%
 local notice = C.copyright_notice or C.author.default_copyright_notice
-U.assert(notice)
-local page_year_start = format_date(C.published, "%Y")
-local page_year_end = format_date(C.updated, "%Y")
-local page_year_range = page_year_start
-if page_year_start ~= page_year_end then
-	page_year_range = page_year_range .. "&mdash" .. page_year_end
+local year_start = format_time(C.published, "%Y")
+local year_end = format_time(C.updated, "%Y")
+local year_range = year_start
+if year_start ~= year_end then
+	year_range = year_range .. "&mdash" .. year_end
 end
 
 local subs = {
@@ -18,7 +17,7 @@ local subs = {
 		C.author.about_url,
 		C.author.display_name
 	),
-	page_year_range = page_year_range,
+	year_range = year_range,
 }
 
 local text = notice.url_text
@@ -27,4 +26,4 @@ if notice.url then
 end
 text = notice.pre_text .. text .. notice.post_text
 %}
-{! string.gsub(text, "%%(%w+)%%", subs) !}
+{! string.gsub(text, "%%([%w_]+)%%", subs) !}
