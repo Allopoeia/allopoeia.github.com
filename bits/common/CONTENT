@@ -1,6 +1,5 @@
-<div id="_main_content" {% if _content_class %}class="{{ _content_class }}"{% endif %} {% include microdata/post-main-content %}>
+<div id="_main_content" {% if C.content_class then %}class="{! C.content_class !}"{% end %} {@ "core/bits/microdata/scope_article" @}>
 
-{{ content }}
+{! C.content !}
 
 </div>
-{% assign _content_class = null %}

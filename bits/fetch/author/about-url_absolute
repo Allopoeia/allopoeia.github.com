@@ -1,1 +1,0 @@
-{% assign _fetch_absolute = true %}{% include fetch/author/about-url %}

@@ -1,40 +1,14 @@
----
-#exclude-from-sitemap: false
-
-nav-display-items: [
-  home,
-  archive,
-  feed
-]
-#nav-active: null
-
-#md-disabled: false
-#md-metadata-disabled: false
-#md-type: "WebPage"
-#md-content-prop: "mainContentOfPage"
-#md-content-scoped: true
-#md-content-type: "WebPageElement"
-
-#article-class: null
-#article-styles: null
-#article-font: "sans"
-
-#date: null
-#last-modified: null
-#title: null
-#h-title: null
-#subtitle: null
-#h-subtitle: null
-#image: site.meta.image
-#description: null
----
+-- article_class = nil
+-- article_styles = nil
+-- article_font = "sans"
+---content---
 <!DOCTYPE html>
-<html lang="en" {% include microdata/scope %}>
+<html lang="en" {@ "core/bits/microdata/scope_html" @}>
 <head>
 	<meta charset="utf-8" />
 
-	<title>{% include fetch/page/window_title %}</title>
-	<link rel="canonical" href="{% include common/canonical_url %}" />
+	<title>{{ page_title(C.title) }}</title>
+	<link rel="canonical" href="{! canonical_url(C.url) !}" />
 
 	<link rel="icon" type="image/png" href="/images/icons/favicon-32.png" />
 	<link rel="shortcut icon" href="/favicon.ico" />
@@ -44,9 +18,9 @@ nav-display-items: [
 	<link rel="alternate" type="application/atom+xml" title="Atom feed" href="/atom.xml" />
 
 	<link rel="stylesheet" href="/css/reset.css" type="text/css" />
-	<link rel="stylesheet" href="/css/screen.css{% unless site.safe %}?{{ site.time | date: '%Y%m%d%H%M%S' }}{% endunless %}" type="text/css" />
+	<link rel="stylesheet" href="/css/screen.css" type="text/css" />
 
-	{% include component/analytics_script %}
+	{@ "core/bits/analytics_script" @}
 </head>
 <body>
 
@@ -56,10 +30,9 @@ nav-display-items: [
 <div class="navbar">
 	<nav>
 		<ul>
-		{% for name in page.nav-display-items %}
-			{% assign _item = site.nav-items[name] %}
-			<li><a class="nav-item{% if page.nav-active == name %} active{% endif %}" href="{{ _item.url }}">{{ _item.text }}</a></li>
-		{% endfor %}
+		{% for _, item in pairs(Site.nav_default) do %}
+			<li><a class="nav-item{% if C.nav_active == item then %} active{% end %}" href="{! item.url !}">{{ item.text }}</a></li>
+		{% end %}
 		</ul>
 	</nav>
 </div>
@@ -68,11 +41,11 @@ nav-display-items: [
 <div class="top_container">
 <div class="top_align_center">
 	<!-- article start -->
-	<article class="article_container {{ page.article-class }} {% include fetch/page/style %}">
+	<article class="article_container {! C.article_class !} {#@ "bits/page/style" @#}">
 
-	{% include microdata/fields %}
+{@ "core/bits/microdata/fields" @}
 
-{{ content }}
+{! C.content !}
 
 	</article>
 
@@ -86,7 +59,7 @@ nav-display-items: [
 		<span>&Omega;</span>
 	</div>
 	<div class="center">
-		<span>&copy; {{ site.meta.run-years }} <a href="//komiga.com" target="_blank">komiga</a></span>
+		<span>&copy; {{ Site.run_years }} <a href="//komiga.com" target="_blank">komiga</a></span>
 	</div>
 </div>
 </footer>

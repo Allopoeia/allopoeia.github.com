@@ -1,19 +1,18 @@
----
-layout: default
-article-class: generic
+layout = "default"
+-- article_class = "generic"
 
-#disable-header: false
----
+-- disable_header = false
+---content---
 
-{% unless page.disable-header %}
+{% if not C.disable_header then %}
 <header class="generic_header">
 	<hgroup>
-		<h1 class="title {% unless page.subtitle %}separator{% endunless %}">{% include fetch/page/fancy_title %}</h1>
-	{% if page.subtitle %}
-		<h2 class="subtitle separator">{% include fetch/page/fancy_subtitle %}</h2>
-	{% endif %}
+		<h1 class="title {% if not C.subtitle then %}separator{% end %}">{{ C.title }}{#@ "bits/page/fancy_title" @#}</h1>
+	{% if C.subtitle then %}
+		<h2 class="subtitle separator">{{ C.subtitle }}{#@ "bits/page/fancy_subtitle" @#}</h2>
+	{% end %}
 	</hgroup>
 </header>
-{% endunless %}
+{% end %}
 
-{% include common/CONTENT %}
+{@ "bits/common/CONTENT" @}

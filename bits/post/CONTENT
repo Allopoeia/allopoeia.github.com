@@ -1,1 +1,4 @@
-{% assign _content_class = "post" %}{% include common/CONTENT %}
+{@ "bits/common/CONTENT", {
+	content_class = "post",
+	content = C.content,
+} @}

@@ -1,51 +1,48 @@
----
-layout: null
----
+sitemap = false
+---content---
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
 <title>Allopoeia</title>
-<link href="{{ site.meta.perma-url }}{{ page.url }}" rel="self" />
-<link href="{{ site.meta.perma-url }}" />
-<updated>{% include common/machine_datetime %}</updated>
-<id>{{ site.meta.perma-url }}</id>
+<link href="{{ Site.url }}{{ C.url }}" rel="self" />
+<link href="{{ Site.url }}" />
+<updated>{#{ format_time_iso(Site.posts[1].last_modified) }#}</updated>
+<id>{{ Site.url }}</id>
 <author>
 	<name>Allopoeia</name>
-	<uri>{% assign _slug = site.nav-items.authors.url %}{% include common/canonical_url %}</uri>
+	<uri>{{ Site.url }}</uri>
 </author>
 
-{% for post in site.posts %}
+{% for _, post in pairs(Site.posts) do %}
 <entry>
-	<link href="{% assign _page = post %}{% include common/canonical_url %}" />
-	<id>{% assign _page = post %}{% include common/canonical_url %}</id>
+	<link href="{{ canonical_url(post) }}" />
+	<id>{{ canonical_url(post) }}</id>
 
-{% for cat in post.categories %}
-	<category term="{{ cat }}" label="{{ cat | capitalize }}"/>
-{% endfor %}
+{% for _, cat in pairs(post.categories) do %}
+	<category term="{{ cat }}" label="{{ capitalize(cat) }}"/>
+{% end %}
 
 	<title>{{ post.title }}</title>
-{% if post.subtitle %}
+{% if post.subtitle then %}
 	<subtitle>{{ post.subtitle }}</subtitle>
-{% elsif post.layout == "link-post" %}
-	<subtitle type="html"><![CDATA[{% assign _page = post %}{% assign _with_arrow = true %}{% include fetch/link-post/anchor %}]]></subtitle>
-{% endif %}
+{% elseif post.layout == "link-post" then %}
+	<subtitle type="html"><![CDATA[{@ "bits/link-post/anchor", {post = post, with_arrow = true} @}]]></subtitle>
+{% end %}
 
-	<rights type="html"><![CDATA[{% assign _data = post %}{% include post/copyright_notice %}]]></rights>
+	<rights type="html"><![CDATA[{@ "post/copyright_notice", post @}]]></rights>
 
-	<published>{% assign _page = post %}{% include post/machine_datetime %}</published>
-	<updated>{% assign _page = post %}{% include post/machine_datetime_latest %}</updated>
+	<published>{{ format_time_iso(post.time_published) }}</published>
+	<updated>{{ format_time_iso(post.time_updated) }}</updated>
 
-	{% assign _author = post.author %}
 	<author>
-		<name>{% include fetch/author/display-name %}</name>
-		<uri>{% include fetch/author/about-url_absolute %}</uri>
+		<name>{{ post.author.display_name }}</name>
+		<uri>{{ post.author.about_url }}</uri>
 	</author>
 
 	<content type="html"><![CDATA[
-{{ post.content }}
+{! post.content !}
 	]]></content>
 </entry>
-{% endfor %}
+{% end %}
 
 </feed>
-{% assign _temp = null %}{% assign _date_updated = null %}{% assign _post_id = null %}

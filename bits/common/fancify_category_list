@@ -1,24 +1,6 @@
-{% capture __minify %}
-
-{% comment %}
-<!--
-	Parameters:
-		_category_list: the datetime object to format; [default: page.categories]
-		_limit: the maximum number of categories to get; [default: 99]
--->
-{% endcomment %}
-
-{% unless _category_list %}
-	{% assign _category_list = page.categories %}
-{% endunless %}
-{% unless _limit %}
-	{% assign _limit = 99 %}
-{% endunless %}
-
-{% for cat in _category_list limit:_limit %}
-	{{ cat | capitalize }}
-	{% if forloop.last == false %} &raquo; {% endif %}
-{% endfor %}
-
-{% assign _limit = null %}{% assign _category_list = null %}
-{% endcapture %}{% include common/minify_reprint %}
+minify = true
+---content---
+{% for i, cat in ipairs(C.categories) do %}
+	{{ capitalize(cat) }}{% if i ~= #C.categories then %} &raquo; {% end %}
+{% if C.limit and i == C.limit then break end
+end %}

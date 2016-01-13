@@ -1,14 +1,13 @@
----
-layout: post
-custom-post-header: true
+layout = "post"
+-- custom_post_header = true
 
-#lp-url: null
-#lp-url-title: null
-#lp-url-author: null
----
-{% include post/header_start %}
-	{% include link-post/headline %}
-	{% include post/info-banner %}
-{% include post/header_end %}
+-- lp_url = nil
+-- lp_url_title = nil
+-- lp_url_author = nil
+---content---
+{@ "bits/post/header_start" @}
+	{@ "bits/link-post/headline" @}
+	{@ "bits/post/info-banner" @}
+{@ "bits/post/header_end" @}
 
-{% include post/CONTENT %}
+{@ "bits/post/CONTENT" @}

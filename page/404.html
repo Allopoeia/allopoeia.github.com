@@ -1,9 +1,7 @@
----
-layout: generic
-exclude-from-sitemap: true
-nav-active: null
+layout = "generic"
+sitemap = false
+-- nav_active = nil
 
-title: "Page not found"
----
-{% assign _author = "coranna" %}
-<p>If you believe you have found a malformed link within Allopoeia, please contact <a target="_blank" href="{% include fetch/author/about-url %}">{% include fetch/author/display-name %}</a>.</p>
+title = "Page not found"
+---content---
+<p>If you believe you have found a malformed link within Allopoeia, please contact <a target="_blank" href="{{ Site.author.coranna.about_url }}">{{ Site.author.coranna.display_name }}</a>.</p>

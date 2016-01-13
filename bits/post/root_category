@@ -1,13 +1,6 @@
-{% capture __minify %}
-
-{% comment %}
-<!--
-	Parameters:
-		>> common/fancify_category_list
--->
-{% endcomment %}
-
-{% assign _limit = 1 %}
-{% include common/fancify_category_list %}
-
-{% endcapture %}{% include common/minify_reprint %}
+minify = true
+---content---
+{@ "common/fancify_category_list", {
+	categories = C.categories or C,
+	limit = 1,
+} @}

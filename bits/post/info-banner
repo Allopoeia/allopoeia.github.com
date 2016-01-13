@@ -1,9 +1,9 @@
 	<div class="header-info-banner border-radius-4">
-		by <a href="{% include fetch/author/about-url %}">{% include fetch/author/display-name %}</a>
-		in {% include post/root_category %}
-		<span class="pubdate" title="Last updated {% include post/format_datetime_latest %}">
-			<time datetime="{% include post/machine_datetime %}">
-				{% include post/format_datetime %}
+		by <a href="{{ C.author.about_url }}">{{ C.author.display_name }}</a>
+		in {@ "bits/post/root_category" @}
+		<span class="pubdate" title="Last updated {{ format_time_human(C.time_updated) }}">
+			<time datetime="{{ format_time_iso(C.time_published) }}">
+				{{ format_time_human(C.time_published) }}
 			</time>
 		</span>
 	</div>

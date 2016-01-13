@@ -1,4 +1,4 @@
-{% if page.enable-comments and site.meta.disqus_shortname %}
+{% if C.enable_comments and Site.disqus_shortname then %}
 <script type="text/javascript">
 	(function() {
 		var e_comments = document.getElementById("comments");
@@ -15,13 +15,13 @@
 	})();
 
 	var disqus_config = function () {
-		this.page.url = "{{ site.meta.perma-url }}{{ page.url }}";
-	{% if page.disqus_legacy_identifier %}
-		this.page.identifier = "{{ site.meta.perma-url }}{{ page.url }}";
+		this.page.url = "{{ Site.url }}{{ C.url }}";
+	{% if C.disqus_legacy_identifier then %}
+		this.page.identifier = "{{ Site.url }}{{ C.url }}";
 	{% else %}
-		this.page.identifier = "{{ page.url }}";
-	{% endif %}
-		this.page.title = "{{ page.title }}";
+		this.page.identifier = "{{ C.url }}";
+	{% end %}
+		this.page.title = "{{ C.title }}";
 	};
 
 	var load_comments = function() {
@@ -29,9 +29,9 @@
 		e_loader.parentNode.removeChild(e_loader);
 
 		var s = document.createElement('script');
-		s.src = '//{{ site.meta.disqus_shortname }}.disqus.com/embed.js';
+		s.src = '//{{ Site.disqus_shortname }}.disqus.com/embed.js';
 		s.setAttribute('data-timestamp', +new Date());
 		(document.head || document.body).appendChild(s);
 	};
 </script>
-{% endif %}
+{% end %}

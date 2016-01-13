@@ -1,0 +1,4 @@
+minify = true
+---content---
+{% local font = C.article_font or "sans" %}
+f-{{ font }}{% if C.article_styles then %} {{ C.article_styles }}{% end %}

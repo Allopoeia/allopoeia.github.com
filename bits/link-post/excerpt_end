@@ -1,2 +1,2 @@
-<p>&mdash; {% include fetch/link-post/anchor %}</p>
+<p>&mdash; {@ "bits/link-post/anchor" @}</p>
 </blockquote>

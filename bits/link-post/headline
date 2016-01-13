@@ -1,4 +1,4 @@
-		<h1 class="title">{% include fetch/page/fancy_title %}</h1>
-	{% if page.lp-url %}
-		<h2 class="subtitle">{% assign _with_arrow = true %}{% include fetch/link-post/anchor %}</h2>
-	{% endif %}
+		<h1 class="title">{@ "bits/page/fancy_title" @}</h1>
+	{% if C.lp_url then %}
+		<h2 class="subtitle">{@ "bits/link-post/anchor", {post = C, with_arrow = true} @}</h2>
+	{% end %}

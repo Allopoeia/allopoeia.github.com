@@ -1,48 +1,46 @@
----
-layout: default
-nav-active: null
+layout = "default"
+-- nav_active = nil
 
-md-type: "Article"
-#md-content-prop: "articleBody"
-#md-content-scoped: false
-#md-content-type: null
+-- article_class = "post"
 
-article-class: post
+-- custom_post_header = false
 
-#custom-post-header: false
+-- enable_comments = false
+-- disqus_legacy_identifier = false
+-- copyright_notice = Site.copyright_notice.XXX
 
-#enable-comments: false
-#disqus_legacy_identifier: false
-#copyright-notice-type: site.copyright-notice-type-default
+-- title = nil
+-- h_title = nil
+-- subtitle = nil
+-- h_subtitle = nil
+-- author = nil
+-- categories = {}
+-- tags = {}
+---content---
+{% if C.custom_post_header then %}
 
-#author: null
-#categories: []
-#tags: []
----
-{% unless page.custom-post-header %}
+{@ "bits/post/header_start" @}
+	{@ "bits/post/headline" @}
+	{@ "bits/post/info-banner" @}
+{@ "bits/post/header_end" @}
 
-{% include post/header_start %}
-	{% include post/headline %}
-	{% include post/info-banner %}
-{% include post/header_end %}
-
-{% include post/CONTENT %}
+{@ "bits/post/CONTENT" @}
 
 {% else %}
 
-{{ content }}
+{! C.content !}
 
-{% endunless %}
+{% end %}
 
 <div class="author-banner border-radius-4">
 <div id="copyright-notice" class="generic-center-text">
-	<small>{% include post/copyright_notice %}</small>
+	<small>{@ "bits/post/copyright_notice" @}</small>
 </div>
 </div>
 
 <div id="comments" class="f-sans f-sz-norm">
 <h4 class="separator sep_comments">Comments<a class="para-ref" href="#comments"></a></h4>
-	{% include post/comments_content %}
+	{@ "bits/post/comments_content" @}
 </div>
 
-{% include post/comments_load %}
+{@ "bits/post/comments_load" @}

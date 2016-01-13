@@ -1,62 +1,30 @@
-{% capture __minify %}
+minify = true
+---content---
+{%
+local notice = C.copyright_notice or C.author.default_copyright_notice
+U.assert(notice)
+local page_year_start = format_date(C.published, "%Y")
+local page_year_end = format_date(C.updated, "%Y")
+local page_year_range = page_year_start
+if page_year_start ~= page_year_end then
+	page_year_range = page_year_range .. "&mdash" .. page_year_end
+end
 
-{% comment %}
-<!--
-	Parameters:
-		_data: the data object; [default: page]
-			The data object should contain the following fields (equivalent to the fields in the article layout):
-				author, copyright-notice-type, date, last-modified (optional)
--->
-{% endcomment %}
+local subs = {
+	about_url = C.author.about_url,
+	display_name = C.author.display_name,
+	author_linked = string.format(
+		[[<a target="_blank" href="%s">%s</a>]],
+		C.author.about_url,
+		C.author.display_name
+	),
+	page_year_range = page_year_range,
+}
 
-{% assign _notice = null %}
-{% assign _type = null %}
-
-{% unless _data %}
-	{% assign _data = page %}
-{% endunless %}
-
-{% assign _seltype = _data.copyright-notice-type %}
-{% unless _seltype %}
-	{% assign _seltype = site.copyright-notice-type-default %}
-{% endunless %}
-
-{% case _seltype %}
-{% when "preferred" %}
-	{% assign _type = site.authors[_data.author].preferred-copyright %}
-	{% assign _notice = site.copyright-notices[_type] %}
-	{% unless _notice %}
-		{% comment %}<!-- Drop to personal copyright if preferred is unset or doesn't exist -->{% endcomment%}
-		{% assign _notice = site.authors[_data.author].personal-copyright %}
-	{% endunless %}
-{% when "personal" %}
-	{% assign _notice = site.authors[_data.author].personal-copyright %}
-{% else %}
-	{% assign _notice = site.copyright-notices[_data.copyright-notice-type] %}
-{% endcase %}
-
-{% unless _notice %}
-	{% assign _notice = site.copyright-notices["simple"] %}
-{% endunless %}
-
-{% capture _page_year_start %}{{ _data.date | date: '%Y' }}{% endcapture %}
-{% capture _page_year_end %}{{ _data.last-modified | date: '%Y' }}{% endcapture %}
-{% capture _page_year_range %}{{ _page_year_start }}{% if _page_year_start != _page_year_end %}&mdash;{{ _page_year_end }}{% endif %}{% endcapture %}
-
-{% capture _raw_content %}
-	{{ _notice.pre-text }}{% if _notice.url %}<a target="_blank" href="{{ _notice.url }}">{{ _notice.url-text }}</a>{% else %}{{ _notice.url-text }}{% endif %}{{ _notice.post-text }}
-{% endcapture %}
-{% assign _author = _data.author %}
-{% capture _about_url %}{% include fetch/author/about-url_absolute %}{% endcapture %}
-{% assign _author = _data.author %}
-{% capture _display_name %}{% include fetch/author/display-name %}{% endcapture %}
-{% capture _author_linked %}<a target="_blank" href="{{ _about_url }}">{{ _display_name }}</a>{% endcapture %}
-
-{{ _raw_content | replace: '%author%', _display_name | replace: '%year-range%', _page_year_range | replace: '%about-author%', _about_url | replace: '%author-linked%', _author_linked }}
-
-{% assign _raw_content = null %}
-
-{% assign _author_linked = null %}{% assign _display_name = null %}{% assign _about_url = null %}{% assign _page_year_end = null %}{% assign _page_year_start = null %}{% assign _page_year_range = null %}
-{% assign _data = null %}
-{% assign _seltype = null %}{% assign _type = null %}{% assign _notice = null %}
-{% endcapture %}{% include common/minify_reprint %}
+local text = notice.url_text
+if notice.url then
+	text = string.format([[<a target="_blank" href="%s">%s</a>]], notice.url, text)
+end
+text = notice.pre_text .. text .. notice.post_text
+%}
+{! string.gsub(text, "%%(%w+)%%", subs) !}

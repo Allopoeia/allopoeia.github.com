@@ -1,84 +1,81 @@
 
-safe: false
+local P = require "Pickle"
+local F = require "Pickle.Filter"
+local Core = require "core/Core"
+local Layout = require "core/Layout"
+local Microdata = require "core/Layout"
+local Page = require "core/Page"
 
-markdown: kramdown
-highlighter: pygments
+local NavItem = require "core/NavItem"
 
-exclude: [
-  "README.md",
-  "LICENSE.md",
-  "CNAME",
-  ".gitignore",
-  "scripts",
-  "debug",
-  "Allopoeia.sublime-project",
-  "Allopoeia.sublime-workspace"
-]
-
-## Site configuration
-
-url: http://allopoeia.komiga.com
-meta:
-  perma-url: http://allopoeia.komiga.com
-  title: Allopoeia
-  run-years: "2012–2015"
-  image: http://lh4.googleusercontent.com/-0cni5iXgy_8/Uf7NKDyANjI/AAAAAAAAALo/ZHUIsfHxxVc/k-inv-256.png
-  disqus_shortname: komiga
-  analytics_id: "UA-6565507-3"
-  analytics_domain_name: null
-
-## Style
-
-style:
-  format:
-    ymd: '%d %B %Y'
-
-permalink: /:categories/:year/:month/:title.html
-
-## Static content
-
-nav-items: {
-  home: {
-    text: "Ascend",
-    url : "//komiga.com"
-  },
-  archive: {
-    text: "Archive",
-    url : "/"
-  },
-  feed: {
-    text: "Atom",
-    url : "/atom.xml"
-  }
+P.configure_default{
+	port = 4001,
+}
+P.configure{
+	build_path = "build/",
 }
 
-authors: {
-  "coranna": {
-    display-name: "Coranna Howard",
-    about-url: "//komiga.com",
-    preferred-copyright: "cc_by-nc-sa-4.0"
-  }
-}
+Core.setup_site(function()
+	title = "Allopoeia"
+	url = "http://allopoeia.komiga.com"
+	run_years = "2012–2016"
+	md_image = "http://lh4.googleusercontent.com/-0cni5iXgy_8/Uf7NKDyANjI/AAAAAAAAALo/ZHUIsfHxxVc/k-inv-256.png"
 
-##
-## Replacement fields:
-##    %about-author% - the author's about-url
-##    %year-range% - the post's modification years
-##    %author% - the author's moniker
-##    %author-linked% - the author's moniker, linking to %about-author%
-##
-copyright-notice-type-default: "preferred"
-copyright-notices: {
-  "simple": {
-    url: null,
-    pre-text: "&copy; %year-range% %author-linked%",
-    url-text: "",
-    post-text: ""
-  },
-  "cc_by-nc-sa-4.0": {
-    url: "http://creativecommons.org/licenses/by-nc-sa/4.0/",
-    pre-text: "&copy; %year-range% %author-linked%, under license ",
-    url-text: "Creative Commons BY-NC-SA 4.0",
-    post-text: ""
-  }
-}
+	disqus_shortname = "komiga"
+	analytics_id = "UA-6565507-3"
+	analytics_domain_name = nil
+	human_date_format = "%d %B %Y"
+
+	nav = {
+		home = NavItem("Ascend" , nil, "//komiga.com"),
+		archive = NavItem("Archive", nil, "/"),
+		atom = NavItem("Atom"   , nil, "/atom.xml"),
+	}
+
+	nav_default = {
+		nav.home,
+		nav.archive,
+		nav.atom,
+	}
+
+	-- Replacement fields:
+	--    %about_author% - the author's about-url
+	--    %year_range% - the post's modification years
+	--    %author% - the author's moniker
+	--    %author_linked% - the author's moniker, linking to %about_author%
+	copyright_notice = {
+		simple = {
+			url = nil,
+			pre_text = "&copy; %year_range% %author_linked%",
+			url_text = "",
+			post_text = "",
+		},
+		cc_by_nc_sa_4_0 = {
+			url = "http://creativecommons.org/licenses/by-nc-sa/4.0/",
+			pre_text = "&copy; %year_range% %author_linked%, under license ",
+			url_text = "Creative Commons BY-NC-SA 4.0",
+			post_text = "",
+		},
+	}
+
+	author = {
+		coranna = {
+			display_name = "Coranna Howard",
+			about_url = "//komiga.com",
+			default_copyright_notice = copyright_notice.cc_by_nc_sa_4_0,
+		},
+	}
+end)
+
+Site.posts = {}
+
+P.filter("static", F.copy)
+P.filter("layout", Layout)
+P.filter("page", Page)
+P.filter("bits", Core.template_wrapper)
+
+Core.setup_filters()
+P.filter(Core.filter_post_collect(
+	Site.posts
+))
+-- TODO: sort posts by date

@@ -1,0 +1,4 @@
+minify = true
+---content---
+{% local post = C.post or C %}
+<a target="_blank" href="{! post.lp_url !}">{% if C.with_arrow then %}&raquo; {% end %}{{ post.lp_url_title }}{% if post.lp_url_author then %} &ndash; {{ post.lp_url_author }}{% end %}</a>

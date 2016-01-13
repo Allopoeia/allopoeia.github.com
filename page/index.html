@@ -1,27 +1,20 @@
----
-layout: generic
-nav-active: archive
+layout = "generic"
+-- nav_active = Site.nav.archive
 
-title: Archive
-description: "Ramblings of a citizen of the universe."
----
-{% capture _post_count %}{{ site.posts | size }}{% endcapture %}
-{% if _post_count != "0" %}
+title = "Archive"
+---content---
+{% if #Site.posts > 0 then %}
 <ul class="post_list">
-{% for post in site.posts %}
-{% capture __minify %}
-	{% assign _author = post.author %}
+{% for _, post in ipairs(Site.posts) do %}
 	<li class="border-radius-4">
 	<div class="div-relative">
-		<span class="rp-category-name mobile-hidden"><em>{% assign _category_list = post.categories %}{% include post/root_category %}</em></span><span class="mobile-hidden">&rarr; </span>
-		<span><a href="{{ post.url }}">{% assign _page = post %}{% include fetch/page/fancy_title %}</a></span>
-		<a href="{{ post.url }}" title="Last updated {% assign _page = post %}{% include post/format_datetime_latest %}"><span class="fill-span"></span></a>
+		<span class="rp-category-name mobile-hidden"><em>{#@ "bits/post/root_category" @#}</em></span><span class="mobile-hidden">&rarr; </span>
+		<span><a href="{{ post.url }}">{#@ "bits/page/fancy_title" @#}</a></span>
+		<a href="{{ post.url }}" title="Last updated {{ format_time_human(post.time_updated) }}"><span class="fill-span"></span></a>
 	</div>
 	</li>
-{% endcapture %}{% include common/minify_reprint %}
-{% endfor %}
+{% end %}
 </ul>
 {% else %}
 <p>No posts!</p>
-{% endif %}
-{% assign _post_count = null %}
+{% end %}

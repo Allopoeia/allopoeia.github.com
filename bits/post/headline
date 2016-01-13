@@ -1,4 +1,4 @@
-		<h1 class="title">{% include fetch/page/fancy_title %}</h1>
-	{% if page.subtitle or page.h-subtitle %}
-		<h2 class="subtitle">{% include fetch/page/fancy_subtitle %}</h2>
-	{% endif %}
+		<h1 class="title">{@ "bits/page/fancy_title" @}</h1>
+	{% if page.subtitle or page.h_subtitle then %}
+		<h2 class="subtitle">{@ "bits/page/fancy_subtitle" @}</h2>
+	{% end %}

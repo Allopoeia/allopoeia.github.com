@@ -1,15 +1,14 @@
----
-layout: post
-custom-post-header: true
+layout = "post"
+-- custom_post_header = true
 
-#sp-prev-url: null
-#sp-prev-title: null
-#sp-next-url: null
-#sp-next-title: null
----
-{% include post/header_start %}
-	{% include series-post/headline %}
-	{% include post/info-banner %}
-{% include post/header_end %}
+-- sp-prev-url = nil
+-- sp-prev-title = nil
+-- sp-next-url = nil
+-- sp-next-title = nil
+---content---
+{@ "bits/post/header_start" @}
+	{@ "bits/series-post/headline" @}
+	{@ "bits/post/info-banner" @}
+{@ "bits/post/header_end" @}
 
-{% include post/CONTENT %}
+{@ "bits/post/CONTENT" @}

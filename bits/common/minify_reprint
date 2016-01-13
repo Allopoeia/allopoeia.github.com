@@ -1,1 +1,0 @@
-{% include common/minify %}{{ __minify }}{% assign __minify = null %}

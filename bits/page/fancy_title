@@ -1,0 +1,3 @@
+minify = true
+---content---
+{{ C.h_title or C.title }}

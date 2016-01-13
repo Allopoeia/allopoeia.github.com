@@ -1,9 +1,9 @@
-{% if site.meta.disqus_shortname == null %}
+{% if not Site.disqus_shortname then %}
 	<p><small><em>Comments are disabled site-wide.</em></small></p>
-{% elsif page.enable-comments %}
+{% elseif C.enable_comments then %}
 	<div id="disqus_thread">
 		<noscript><small><em>Enable JavaScript to view the (<a href="http://disqus.com/?ref_noscript" rel="nofollow">Disqus-powered</a>) comment thread.</em></small></noscript>
 	</div>
 {% else %}
 	<p><small><em>Comments are disabled for this post.</em></small></p>
-{% endif %}
+{% end %}
