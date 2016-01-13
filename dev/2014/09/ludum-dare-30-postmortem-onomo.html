@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+<head>
+	<meta charset="utf-8" />
+
+	<title>Ludum Dare 30 postmortem: Onomo - Allopoeia</title>
+	<link rel="canonical" href="http://allopoeia.komiga.com/dev/2014/09/ludum-dare-30-postmortem-onomo.html" />
+
+	<link rel="icon" type="image/png" href="/images/icons/favicon-32.png" />
+	<link rel="shortcut icon" href="/favicon.ico" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+
+	<link rel="alternate" type="application/atom+xml" title="Atom feed" href="/atom.xml" />
+
+	<link rel="stylesheet" href="/css/reset.css" type="text/css" />
+	<link rel="stylesheet" href="/css/screen.css" type="text/css" />
+
+	<script type="text/javascript">
+	var _gaq=_gaq || [];
+	_gaq.push(["_setAccount", "UA-6565507-3"]);
+		_gaq.push(["_trackPageview"]);
+
+	(function() 
+		var ga=document.createElement("script"); ga.type="text/javascript"; ga.async=true;
+		ga.src=("https:"==document.location.protocol ? "https://ssl" : "http://www")+".google-analytics.com/ga.js";
+		var s=document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+
+</head>
+<body>
+
+<!-- body start -->
+<div class="__wrapper">
+
+<div class="navbar">
+	<nav>
+		<ul>
+					<li><a class="nav-item" href="//komiga.com">Ascend</a></li>
+					<li><a class="nav-item" href="/">Archive</a></li>
+					<li><a class="nav-item" href="/atom.xml">Atom</a></li>
+				</ul>
+	</nav>
+</div>
+
+<!-- header and main -->
+<div class="top_container">
+<div class="top_align_center">
+	<!-- article start -->
+	<article class="article_container  ">
+
+	<meta itemprop="name" content="Ludum Dare 30 postmortem: Onomo - Allopoeia" />
+	<link itemprop="url" href="http://allopoeia.komiga.com/dev/2014/09/ludum-dare-30-postmortem-onomo.html" />
+	<link itemprop="image" href="http://lh4.googleusercontent.com/-0cni5iXgy_8/Uf7NKDyANjI/AAAAAAAAALo/ZHUIsfHxxVc/k-inv-256.png" />
+
+	<meta itemprop="headline" content="Ludum Dare 30 postmortem: Onomo" />
+
+
+
+<header id="post_header">
+
+			<h1 class="title">Ludum Dare 30 postmortem: Onomo</h1>
+	
+		<div class="header-info-banner border-radius-4">
+		by <a href="//komiga.com">Coranna Howard</a>
+		in Dev
+		<span class="pubdate" title="Last updated 04 September 2014">
+			<time datetime="2014-09-04T17:01:00-0400">
+				04 September 2014
+			</time>
+		</span>
+	</div>
+
+</header>
+
+
+<div id="_main_content" class="post" itemprop="articleBody" itemscope itemtype="http://schema.org/Article">
+
+
+<a href="/media/2014-09-04-ld30/onomo-title-screen.png" target="_blank"><img src="/media/2014-09-04-ld30/onomo-title-screen.png" class="generic-center" width="100%" style="display: block;" alt="Onomo title screen which, in post LD sickness retrospect, is TOTALLY OFF CENTER AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAaaaaaa" title="Onomo title screen which, in post LD sickness retrospect, is TOTALLY OFF CENTER AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAaaaaaa" /></a>
+
+<p>I made a&hellip; <em><a href="http://www.ludumdare.com/compo/ludum-dare-30/?action=preview&amp;uid=14542" target="_blank">thing</a></em> in 48 hours for Ludum Dare 30. This thing, named Onomo, resembles a game, but lacks a win state and any effective mechanics.</p>
+
+<p>During development I recorded a <a href="https://youtu.be/xTSZ0Ae18Hg" target="_blank">time-lapse</a> that will hopefully be illustrative to the folk that want to see how jammers operate. There are certainly some hours missing as I forgot to start my script several times, but it's mostly all there.</p>
+
+<p>Herein I go through the timeline of this jam from my perspective and talk about the development of Onomo.</p>
+
+
+<h2 id="pre-jam" class="separator">Pre-jam<a class="para-ref" href="#pre-jam"></a></h2>
+
+<p>I forgot Ludum Dare was happening this August and was only reminded of it by my brother before I flew to California, where I have now been living for a hair over a month.</p>
+
+<p>My plan was to furnish <a href="https://github.com/komiga/togo" target="_blank">togo</a> with enough capability to be usable. This did not happen. I had a pre-existing deficit of willpower and inspiration that prevented progress. Despite this, I managed to fold 69.3 hours of staring into the engine over the two weeks before Ludum Dare, although productivity and system relevance only returned during the second week (considering time alone: 45.1 hours, 65% of the time spent working on the engine over those two weeks).</p>
+
+<p>Realizing that was futile, I shifted to renovating my <a href="https://github.com/komiga/love-kernel" target="_blank">project kernel</a> for <a href="http://love2d.org" target="_blank">LÖVE</a> during the week of Ludum Dare. These 27.5 hours were spent on 71 commits:</p>
+
+<ul>
+	<li>Upgrading to LÖVE 0.9.1.</li>
+	<li>Upending some weird structures and extending existing systems.</li>
+	<li>Moving to a module and system structure that works with automatic reloading.</li>
+	<li>Refactoring utilities and making them more consistent.</li>
+	<li>Adding support for <a href="https://github.com/rxi/lurker" target="_blank">lurker</a> (which was indispensable) and <a href="https://github.com/rxi/lovebird" target="_blank">lovebird</a>.</li>
+</ul>
+
+<p>The previous (and first) time I used LÖVE (and my kernel) was during Ludum Dare 26, which resulted in <a href="http://komiga.com/#prisma" target="_blank">Prisma</a>. LÖVE already proved to be valuable and easy to distribute for the desktop trio of OSes. Automatic module reloading made it extremely powerful and eliminated iteration delay. I don't want to work without automatic code reloading now.</p>
+
+<p>Even if togo were usable, I would've been in porting hell or never even bothered to port (which would've been bad for publicity and unfortunate for fellow Ludum Darians not yet initiated into the dark cult of Linux). This was apparent to me at the time, but I 'spose it just wasn't enough motivation to switch to the kernel immediately. The week before Ludum Dare would've been better spent intimating with my media tools.</p>
+
+<p>LÖVE continues to be a good choice for game jams, and I suspect I will use it for many future jams until togo topples it.</p>
+
+
+<h2 id="development" class="separator">Development<a class="para-ref" href="#development"></a></h2>
+
+<p>I had inceptions for three themes during the final round: <strong>Connected Worlds</strong> (the highest voted among all previous rounds), <strong>Lost in Space</strong> (my personal favorite), and <strong>Isolation</strong>.</p>
+
+<p><strong>Connected Worlds</strong> predictably won, and I ran to catch the 18:07 Millbrae-bound <a href="http://www.bart.gov/" target="_blank">BART</a> train. I worked out the platforming system and explored some mechanics in transit.</p>
+
+<p>I met my brother in the city and we headed off to a meetup hosted by Apportable. There were few groups at the meetup, and we only stayed for 3 hours. In retrospect, as my motivation for visiting was primarily networking, it would've been better to stop by after the Compo had finished (the meetup included the Compo and the Jam, so there would've been 24 hours remaining once I completed my entry). Regardless, I don't work well on solo things around other people or in unfamiliar environments, so it was probably best that I didn't stay for any significant period of time <em>during</em> development.</p>
+
+<p>Once we scuffled home through the crowded subways, I spent a decent while complaining that Lost in Space wasn't the theme. This involved making spacey whale-like sounds in SunVox, shifting through different degrees of slack-jawedness, and possibly some annoyed moaning. (I was <em>very</em> attached to my SPACE SEA idea.) I then (somewhat unintentionally) slept for 7.3 hours. This was the only time I slept throughout the Compo.</p>
+
+<p>After waking, with truly stalwart discipline, I cast aside my attachment to Lost in Space and charged forward into the dark, ominous lands of Onomo.</p>
+
+<p>The premise of Onomo came verbatim from the inception: two parallel universes (in representation), with otherworldly characters that the player can switch between. The characters were the first to be sketched, and the final top character is the closest to the original drawing; only the arms were removed. The original bottom character had four legs and was more like a mouth with appendages rather than a beetle-like thing (the final design).</p>
+
+<p>Preliminary mechanics were very unoriginal: move objects around to effect change in the opposite world. The top character would've been slower and unable to jump, but could climb on top of things (butchered by removing its arms!). The bottom character could jump and move faster. I hadn't decided on using puzzles, but I had many ideas for mood. I thought the puzzles would turn out uninteresting, so I looked for ways to make the game interesting in an exploratory sense.</p>
+
+<p><em>Hmm&hellip;</em> A lot of the changes to each world could be subtle instead of explicit, requiring the player to pay attention and connect non-trivial dots. This was more interesting to me, but I suspected most people would not have the patience. Considering both that Ludum Dare is a short-form game jam and my lack of artistic vigour, the anchor of aesthetic was possibly a misstep. Despite this, everything I did was valuable in that I was breaking new personal ground. It was the first time I built a platforming system, the first time I tried character animation, and the first time I crafted coherent music for a purpose.</p>
+
+<p>I'm unsure when, but eventually I decided the characters would be able to swap positions. That definitely would've been useful for the platforming aspect (e.g., one part of a world would only be traversable by a certain character due to size), but I think I was still viewing that avenue as uninteresting. This feature didn't make it into the game, and it would've required some work on top of the existing monoliths to make the transition clean.</p>
+
+<p>Without having decided what to really do about mechanics, I set about building the platforming system, world editor, and aesthetic. I wasn't granular with my time logging during the jam, so I've no exact numbers on how much time I spent on code vs. media, but the latter took surprisingly little, especially audio (judging by the time-lapse). I think I spent only a few hours in the final day creating the music, and a disproportionate amount of the time on art was spent unconstructively seeing what would happen with the tileset under certain blend modes. It felt like the monoliths (especially the large ones) took forever, but the time-lapse proves otherwise. (P.S. I used an actual script for the monoliths; they're probably legible enough for a linguistic adventurer to decipher.)</p>
+
+<p>Speaking of monoliths,<sup><a href="#fn-monoliths">1</a></sup> they were a late final-day idea that initially had no purpose. I realized the lighting was going to be the driving force for the mood of Onomo, so I spent a lot of time toying with it. The monoliths came from wanting a lit world feature that would draw attention. Glowing glyphs were an obvious choice, and the idea to link them came even later in the day. It was fairly obvious at this point that I was not going to be able to fit in any concrete mechanics, so I just focused on making the world look consistent and slapped on (spoilers!) activation of linked monoliths by triggering their chimes together. That's the only thing you can do in Onomo.</p>
+
+<p>Code-wise, I probably spent the most of my time tweaking the lighting and figuring out how to do character animation, character movement, and platforming (all of which I had never done in this form before). I included in-game world editing from the very beginning because I didn't want to have to convert or read data from a tile editor (which I hadn't scoped out beforehand). The in-game editor proved to be very useful and I think that they are generally a good idea. However, the save function was broken for far too long due to my ill-informed attempt to pre-optimize. I was attempting to avoid outputting rows that were empty, but I neglected that table length in Lua is zero if items are not continuous or have non-integer keys. The optimization was hardly even an optimization, and it wouldn't've mattered in the end since there were only a few rows of tiles in each world. Pre-optimization is the root of evil!</p>
+
+<p>Another large mistake I made was not separating game controls from editor controls clearly enough. I changed the controls for the editor mode on the final day to absolve this issue, but I failed to adapt to them. This is probably the gravest misstep as the sudden change was the largest barrier to world building, which I had already been neglecting. Also, since the monoliths were a late idea, I was only able to place them in code. The biggest takeaway I have from this is that you should plot out the control schemes and don't tangle the two in code.</p>
+
+<p>The name “Onomo” came about in the last few hours. Its origin or inspiration is utterly inexplicable. I spent the last 30 or so minutes building a Windows package and submitting the entry.</p>
+
+<p>All told, I worked on Onomo for 34.7 hours.</p>
+
+
+<h2 id="post-jam" class="separator">Post-jam<a class="para-ref" href="#post-jam"></a></h2>
+
+<p>In the following hour or two after the Compo ended, I built and uploaded Linux and Mac packages. I also managed to play and rate a few entries before the 37 hour mark without sleep, which was curtailed by questions such as “how are you still awake?” and realizing that I was still awake.</p>
+
+<p>After 11.5 delicious hours of sleep and some business in the city, I went on my usual spree of critical analysis, punctuated by asking for Linux-supporting entries on the Ludum Dare IRC channel. There were a few entries that simply blew me away (stay tuned).</p>
+
+<p>Anyhow, I feel it's a bit disingenuous to be critical of others where evermore could be piled on my own work, so I will now offer a critical analysis of it. (I'm too honest for my own good.)</p>
+
+<p>On the surface, there are a few issues of aesthetic and motion:</p>
+
+<ol>
+	<li>The characters feel like they are sliding in motion. A weak link between character velocity and animation.</li>
+
+	<li>The worlds are too empty. There are large swaths where there is no non-uniform backdrop to give the player a sense of motion. This easily breaks immersion; an unfortunate misstep for something with aesthetic as its driving force.</li>
+
+	<li>The world isn't detailed enough, and the majority of the world doesn't give feedback or feel alive. It's very static and unmoving. Even if the large swaths of emptiness were filled in, it wouldn't have any depth to it. I can only walk along a single plane in both worlds!</li>
+</ol>
+
+<p>As for the monoliths, the chimes mostly stand out, but at least two of them blend in too well to the background music. These chimes can be more easily heard during quieter sections of the music, but their corresponding monoliths should perhaps not have been placed so close to the spawn points. Giving the player a reason to stay (alas, this is a jam) in the game world for a longer period of time, to see what it has to offer, should've been more important.</p>
+
+<p>The monolith activation mechanism is unclear and tedious. It practically requires the player to position both characters next to the linked monoliths and move one immediately after the other to ensure the second chime occurs while the first is playing (yes, this is exactly how it works). It would've been better and easier to understand if there was a continuous sound as the player stood in front of the monoliths. That way the player would not have to scramble between worlds and time the chimes.</p>
+
+<p>Obviously this is a jam “game”, and I only worked on it over 48 hours, but these are all valid criticisms. I make these points for all of the entries I rate. My reason for doing so is to help developers improve their skills and hopefully observe things about their work that they may have never considered. Of course a large part of learning in game jams comes from the <em>process</em> of creation, but I think hearing different perspectives is also very important. If more Ludum Darians offered their thoughts, the experience would be all the better.</p>
+
+<p>Onomo has become yet another concept I'd like to expand and explore, just as with my Ludum Dare 26 game, Prisma. I've been building togo not only to learn about data-oriented design and engine structure, but also to have a scaffolding on which I'd feel comfortable placing a proper Prisma (and now a proper Onomo). togo will remain my focus for a long while into the future, and I think Prisma will still be its primary motivator, though I envision other ideas will come along as it matures. No concept is perfect or inherently better than any other, so I'm not worried about this prospect. Every concept can be “better” than another with enough attention and development. When I feel that I can build something <em>complete</em>, I will also have a better picture of my abilities and what ideas are most compelling.</p>
+
+<p>I suspect I will be writing about excellent Ludum Dare entries around the time the ratings are posted. Until then, go forth and critique, fellow Ludum Darians!</p>
+
+
+<footer id="footnotes">
+<h4 class="separator sep_footnotes">Notes<a class="para-ref" href="#footnotes"></a></h4>
+
+<ol>
+	<li id="fn-monoliths">It's more accurate to call them <a href="https://en.wikipedia.org/wiki/Runestone" target="_blank">runestones</a> (which, as happenstance, I had been exploring just before Ludum Dare), but I'll keep using monolith for consistency, even though I decided on the noun in a sleepless stupor.</li>
+</ol>
+</footer>
+
+
+
+</div>
+
+
+<div class="author-banner border-radius-4">
+<div id="copyright-notice" class="generic-center-text">
+	<small>&copy; 2014 <a target="_blank" href="//komiga.com">Coranna Howard</a>, under license <a target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons BY-NC-SA 4.0</a></small>
+</div>
+</div>
+
+<div id="comments" class="f-sans f-sz-norm">
+<h4 class="separator sep_comments">Comments<a class="para-ref" href="#comments"></a></h4>
+		<div id="disqus_thread">
+		<noscript><small><em>Enable JavaScript to view the (<a href="http://disqus.com/?ref_noscript" rel="nofollow">Disqus-powered</a>) comment thread.</em></small></noscript>
+	</div>
+
+</div>
+
+<script type="text/javascript">
+	(function() 
+		var e_comments = document.getElementById("comments");
+		var e_loader = document.createElement("div");
+		e_loader.id = "comment_loader";
+		e_loader.className = "generic-center-text";
+
+		var e_anchor = document.createElement("a");
+		e_anchor.href = "javascript:load_comments()";
+		e_anchor.innerText = "load comments (Disqus)";
+
+		e_loader.appendChild(e_anchor);
+		e_comments.appendChild(e_loader);
+	})();
+
+	var disqus_config = function () 
+		this.page.url = "http://allopoeia.komiga.com/dev/2014/09/ludum-dare-30-postmortem-onomo.html";
+			this.page.identifier = "http://allopoeia.komiga.com/dev/2014/09/ludum-dare-30-postmortem-onomo.html";
+			this.page.title = "Ludum Dare 30 postmortem: Onomo";
+	};
+
+	var load_comments = function() 
+		var e_loader = document.getElementById("comment_loader");
+		e_loader.parentNode.removeChild(e_loader);
+
+		var s = document.createElement('script');
+		s.src = '//komiga.disqus.com/embed.js';
+		s.setAttribute('data-timestamp', +new Date());
+		(document.head || document.body).appendChild(s);
+	};
+</script>
+
+
+
+	</article>
+
+</div>
+</div>
+
+<!-- footer start -->
+<footer class="top_footer">
+<div class="footer_align_center">
+	<div class="center">
+		<span>&Omega;</span>
+	</div>
+	<div class="center">
+		<span>&copy; 2012–2016 <a href="//komiga.com" target="_blank">komiga</a></span>
+	</div>
+</div>
+</footer>
+
+</div>
+
+</body>
+</html>

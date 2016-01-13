@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+<head>
+	<meta charset="utf-8" />
+
+	<title>Data-oriented design for games - Allopoeia</title>
+	<link rel="canonical" href="http://allopoeia.komiga.com/dev/2014/06/data-oriented-design-for-games.html" />
+
+	<link rel="icon" type="image/png" href="/images/icons/favicon-32.png" />
+	<link rel="shortcut icon" href="/favicon.ico" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+
+	<link rel="alternate" type="application/atom+xml" title="Atom feed" href="/atom.xml" />
+
+	<link rel="stylesheet" href="/css/reset.css" type="text/css" />
+	<link rel="stylesheet" href="/css/screen.css" type="text/css" />
+
+	<script type="text/javascript">
+	var _gaq=_gaq || [];
+	_gaq.push(["_setAccount", "UA-6565507-3"]);
+		_gaq.push(["_trackPageview"]);
+
+	(function() 
+		var ga=document.createElement("script"); ga.type="text/javascript"; ga.async=true;
+		ga.src=("https:"==document.location.protocol ? "https://ssl" : "http://www")+".google-analytics.com/ga.js";
+		var s=document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+
+</head>
+<body>
+
+<!-- body start -->
+<div class="__wrapper">
+
+<div class="navbar">
+	<nav>
+		<ul>
+					<li><a class="nav-item" href="//komiga.com">Ascend</a></li>
+					<li><a class="nav-item" href="/">Archive</a></li>
+					<li><a class="nav-item" href="/atom.xml">Atom</a></li>
+				</ul>
+	</nav>
+</div>
+
+<!-- header and main -->
+<div class="top_container">
+<div class="top_align_center">
+	<!-- article start -->
+	<article class="article_container  ">
+
+	<meta itemprop="name" content="Data-oriented design for games - Allopoeia" />
+	<link itemprop="url" href="http://allopoeia.komiga.com/dev/2014/06/data-oriented-design-for-games.html" />
+	<link itemprop="image" href="http://lh4.googleusercontent.com/-0cni5iXgy_8/Uf7NKDyANjI/AAAAAAAAALo/ZHUIsfHxxVc/k-inv-256.png" />
+
+	<meta itemprop="headline" content="Data-oriented design for games" />
+
+
+
+<header id="post_header">
+
+			<h1 class="title">Data-oriented design for games</h1>
+	
+		<div class="header-info-banner border-radius-4">
+		by <a href="//komiga.com">Coranna Howard</a>
+		in Dev
+		<span class="pubdate" title="Last updated 23 December 2014">
+			<time datetime="2014-06-23T18:19:00-0400">
+				23 June 2014
+			</time>
+		</span>
+	</div>
+
+</header>
+
+
+<div id="_main_content" class="post" itemprop="articleBody" itemscope itemtype="http://schema.org/Article">
+
+
+<p>Back in May 2011, I was leading the design of an RPG&hellip; as its only programmer. It was a failure. However! Programming for games is a lot of fun. I love systems, and game systems offer a lot of really neat problems. So I'm going to do it again &mdash; <em>without</em> an RPG involved.</p>
+
+<p>I've been meaning to revisit the engine I wrote for that RPG, and now I have the time to do it. The code is horrific, though, so I'm practically starting over from scratch. It's better that way (no, <em>really</em>). I've also been planning to remake &amp; expand Prisma, so this fits in nicely. I can fuel design patterns by what is needed in Prisma.</p>
+
+<p>Onsang is still going (and hey, it kinda looks like it's actually evolving), but it makes more sense to focus on game system knowledge right now as I'm planning on poking people through July-August in California for employment. I might end up pushing the QA side of things, so who knows what'll happen. Regardless, this is double-fun and good mental exercise.</p>
+
+<p>Even since that scaffold of an RPG, I've been interested in building a rendering system that used command buffers, but not so much about the things that seem to implicitly come along with it (until recently). To achieve maximum speed in such a system, you want to minimize the amount of data you're throwing around, and you <strong>definitely</strong> don't want rampant allocations during a frame. This amounts to using compact data structures and contiguous arrays to minimize cache misses. This approach to systems is often called “data-oriented design” (DOD) or “data-driven design”, where the benefits are not just efficiency, but facilitating task distribution and modularity.</p>
+
+<p>I'm going to take that to heart with the new engine. I've been reading articles of DOD proponents since last weekend, and the patterns make a lot of sense. <a target="_blank" href="http://www.bitsquid.se/">bitsquid</a>, for example, <a target="_blank" href="http://bitsquid.blogspot.com/2011/09/managing-decoupling-part-4-id-lookup.html">decouples</a> systems to encapsulate them and to allow them to manage their storage as optimally as possible. Their “low-level” systems expose IDs instead of pointers so the system is free to store &amp; re-organize its storage as it sees fit. By allowing the system to re-organize its memory, it can (e.g.) ensure its objects are sorted and adjacent, without affecting any IDs to those objects.</p>
+
+<p>This means they can iterate through the objects without wasting CPU time or cache misses on empty slots or memory hopping through distant dynamically-allocated objects (the latter of which you are usually stuck with in something like <code>std::map</code>). For some systems, that might not be necessary, but you still get the benefit of not having dangling pointers, and you have a better guarantee that external systems aren't going to unduly modify the object (because they can't access it without asking for it). In most cases, you don't mutate resource data once it's loaded, so you really don't need mutable access, but if you do, it's O(1) away!</p>
+
+<p>There are downsides, though. It takes some careful thinking to ensure the IDs are unique and cannot be used once the object dies (e.g., when an object is removed, and another added, the new one could have an internal index equal to the index of the removed object). It's not very difficult, and you can usually define a sane upper bound on the number of objects the system will ever possibly use (e.g., do you really need 4 billion sounds?), so you can use a bunch of bits of the ID just for the unique part (e.g., an incrementing counter that wraps around), and leave the rest to store the internal index. An upside to having an upper bound means you can reduce a ton of allocations, and you can form a better understanding of the resources required by a system through its use. I think such deep understanding is going to be extremely valuable.</p>
+
+<p>I'm going to harp on a lot about bitsquid throughout this article, so be prepared.</p>
+
+<p>Another aspect that emerges from DOD is simplicity. Because structures are open and don't prohibit or protect use, whatever wants to use them can do so in the most direct manner. In contrast to OOP, DOD necessitates that anything can do anything to everything that's open. In OOP, you're often hiding data and placing an interface on top to mediate access. Why? Because everything is afraid of being malformed or misused. This might make some sense for software that really, <em>really</em> shouldn't crash and should catch misuse as soon as possible through its design, but in games we just want to run fast and get the code over with. Always having to plaster on a layer of interface &amp; dumb-dumb security slows us down by making things rigid, so why do it? We're not interested in the preemptive assurances that get in our way and slow the game down.</p>
+
+<p>Not having a protective interface over <em>everything</em> doesn't prevent us from crashing hard. We <em>should</em> crash hard when we encounter an error, and we should be vigilant to test for errors, because otherwise they're going to go unnoticed or ignored. It's better to fix the system early before everything depends on its broken behavior. This is, naturally, also <a target="_blank" href="http://bitsquid.blogspot.com/2012/01/sensible-error-handling-part-1.html">something bitsquid does</a>. Instead of removing that “pesky” triggering assertion that's due to malformed input, just fix the malformed input. Is the error too strict? Evaluate it and decide whether it should be removed or turned into a warning instead. For example, we may want to error when we encounter an animation that has a bajillion bones, but it <em>could</em> be totally legitimate, so a warning would be more sane until we have a real reason to prohibit it &mdash; e.g., an upper bound on the animation system's support for bones.</p>
+
+<p>Back to decoupling. How do you share data if everything is disparate and in its own little universe? More data! Low-level systems can have an output stream of events or a way to poll per-frame (whatever makes more sense for the system). To connect low-level systems, you can use a higher-level system that knows about all of the systems involved. For example, the <code>Game</code> might want to connect HIDs to the <code>Player</code>, so it could poll the input system and send off to the player, the binding manager, whatever. By patching things together, we can design the interfaces to only deal with what they know, which reduces their complexity.</p>
+
+<p>You might say that puts a lot of strain on the high-level system to connect things. True, but it's <em>much</em> better than distributing the interface to so many systems that you end up with an unmaintainable spaghetti of references, global objects, and code fluff. It moves the complexity away from the low-level systems and into the high-level systems where we can be more intelligent about the way they are connected. By connecting in a higher-level system, we reduce the complexity of the lower-level systems and increase their modularity. You can take any system out of the equation and replace it with another as long as it's not intrinsically attached to any other system.</p>
+
+<p>What does this mean? We can replace systems at compile time (or even at runtime) to handle specific hardware for optimality, without resorting to expensive virtual calls on interfaces (which is too often only used to facilitate system swapping or so-called extensibility &mdash; booo). The internals could be implemented to avoid such nonsense (i.e., since we expose an event stream or polling, that's most of the interface, and it can differ internally), but still give it the modularity to support different hardware/capabilities efficiently. Most of the time, what you end up removing <em>due</em> to the removal of a system should only be in the high-level system. That will be a good indication that your systems are decoupled.</p>
+
+<p>DOD obviously has a lot of implications for the code. Data is nearly always public, interfaces stay out of structures for POD traits (and really for uniformity when you want to extend the interface for dealing with a type), and abstract classes mostly disappear, but they are still valuable. For example, data streaming is already a costly operation, and we want to be able to use it on-demand from <em>different kinds</em> of storage media. We could hide this behind a little system that takes requests and gives back blobs, but it'd end up being global, since a lot of stuff is going to need data. We could keep it encapsulated and pass along streams from the high-level systems, but it's very roundabout, and adds more interface to our systems. In reality, you're going to have some resource system to fill up those systems, so the low-level storage media access should be disparate even from that. It doesn't fit into our system model. It's much easier to give it an abstract interface and allow different implementations of it for memory/file/whatever access and use it appropriately within the resource system.</p>
+
+<p>Of course, you may only ever need standard filesystem access, so maybe you don't need the abstract interface. That's fine, but its consequences should be considered early on. What if you move to a server-client model (for tooling, the actual game, etc.)? You're probably going to want to stream over the network, or at least into memory <em>for</em> the network system, so your streams are going to then need direct memory support or support for a network buffer. What about platform support? You could handle that by using PIMPL, including different code, or by using a bunch of macros to determine the platform &amp; change the code accordingly, but then you end up with some manner of code spaghetti and have to either switch the type data or duplicate the whole interface for each platform.</p>
+
+<p>If you foresee anything of that nature with something used in many places or heavily dependent on the platform (in this case, storage media access), you probably want a virtual interface. It separates the different implementations and makes the code simpler. You still have to duplicate the interface, but with an abstract class you have a <em>constraint</em> on what the interface is supposed to provide. This helps in maintainability when you change an interface. You don't have to guess whether a change has made it to all of the platform-specific implementations because <em>the compiler tells you</em>.</p>
+
+<p>The core of my engine is going to be modeled around bitsquid's <a target="_blank" href="https://bitbucket.org/bitsquid/foundation">foundation library</a>. Having the interface separate from most types isn't very critical for something I'm authoring, since any extension to the interface I would make would be core and could thus be in-class if the interfaces were designed that way, but I'm going to do it anyways. Style shifts are fun!</p>
+
+<p>It has other benefits, such as moving the recompilation factor to the <em>interface</em> and the code that includes it &mdash; away from the <em>type</em>, which rarely changes. These types have public data to facilitate the built-in functionality (since the interface consists of non-friend free functions), which happens to enable anyone else to add functionality. In addition to reducing recompilation from monolithic headers, code only includes what it uses and doesn't incur extra cost from the stuff that it doesn't need. This means types that <em>only</em> need a type definition (i.e., <em>none</em> of its interface) don't incur the cost of the interface.</p>
+
+<p>Granted, you can design code to work like this without separating the interface from the class, but you still end up with inclusion spaghetti due to dependencies. <em>That's</em> what causes infectious recompilation, especially with class templates, which still costs more time due to the interface being needlessly included. You could move the interface <em>definitions</em> out of the class and still have the problem simply because the <em>declarations</em> are still a part of the class, and you then additionally have the maintenance cost of syncing the declaration and implementation files.</p>
+
+<p>Like the foundation libray, my types are grouped together by &hellip; type. Core types, collection types, math types, etc. Interface headers (obviously) include the required type headers, so you only ever need to include the interface header for a type if you need to use functionality for it. If you need types, you have fewer headers to include since they're grouped. Because types rarely change, the recompilation factor of doing this is minimal. Interfaces change far more often, and it's less work to maintain &amp; include few headers (which, again, are small because there's no interface in the type headers).</p>
+
+<p>A downside I've already noticed is the boilerplate caused with free functions for class templates. The template specification has to be repeated for each function. If I were doing this in my own style, that would be unnecessary because everything for a class template would be declared <em>and</em> defined in-class (which is undesired here for aforementioned reasons). It's not that bad, though. At least I don't have to repeat the <em>entire</em> declaration like you have to do with non-header implementations (or with separate declarations and definitions). It does have a nice side-effect for the objects the functions operate on: data member prefixes/suffixes are not needed because you always have to go through the object to get at its members, and thus there are no name confusions.</p>
+
+<p>I'm again taking bitsquid's cue here by using a single prefix underscore for internal data members, just to indicate that something should only be mutated if you know what you're doing. My motto here is “the user should protect the user from the user”, but I'm still going to furiously flip tables via assertions if they misuse the existing interface. I'm still going to have (free function) accessors for these internal data members, because the data in a type <em>might</em> change (and thus have a significant effect on anything that directly accesses its members), because it's more consistent with accessor-like functions that make small calculations, and finally because writing <code>array._size</code> is kinda bleh. This is in contrast to my usual internal data members with <code>m_</code> as a prefix. Arguments of readability against something like that don't work on me (because I can read it just fine and “m_this m_is_hard m_to m_read” is never a real occurrence in code), but here I'm making an exception just to see how it goes. The rest of the design isn't really in my style either, so why not.</p>
+ 
+<p>One thing I'm definitely <em>not</em> doing is repeating declarations just so the documentation is in a smaller area. Documentation is best represented outside of code, and editors these days can jump to functions if you really need to look at the code instead of the documentation (and why do you need to see just the documentation <em>in-code</em> if you already have documentation elsewhere?).</p>
+
+<p>I'm very tempted to use the facilities from duct++ for the engine, but I really want to avoid using the stdlib if I can help it (which duct++ uses somewhat significantly). This is pedantic for someone that isn't doing “AAA” games where performance is critical because of all the stupid pixels, but I see it as a way to learn how all of this works. Making a game is the motivation to write the engine, but it has its own values and intrigue that will keep me plenty happy even if I don't get to actually making the game. I'm a system designer, which games have, but first and foremost <em>need</em> before they can be games, so I have plenty of fun in the backend.</p>
+
+<p>I might end up using a few specific things from duct++, like compiler detection and endian handling, which don't include any (or little) of the stdlib.</p>
+
+<p>Pedantic motivations justified, there are still good reasons to avoid the C++ stdlib. I can have a more intimate understanding of the algorithms and structures I'm using and can tailor them specifically to the needs of the engine. Everything in the engine can be consistent in style and (hopefully) behavior. I'm not forced to deal with the mental and (supposedly minor, now) performance cost of exceptions (which are unnecessary since I want to crash hard) and I have less platform-/implementation-specific junk to deal with (case in point: <a target="_blank" href="https://connect.microsoft.com/VisualStudio/feedback/details/890664/vs-14-ctp-cos-returns-bogus-results-in-64-bit-build">Microsoft broke <code>cos()</code></a>, granted <code>cos()</code> is not something I'm going to write).</p>
+
+<p>I have yet to seriously dig into the rendering system design, but it's also going to be bitsquid-inspired. Ideally, rendering will be distributed into tasks, merged for sorting, then distributed again to the hardware. Sort keys are really neat, surprisingly simple, and I can't wait to play with them.</p>
+
+<p>I need to stop expounding on this article and get back to the code. Hopefully I'll have something interesting to write about on this topic in the near future. Here's a list of what I've been reading:</p>
+
+<ul>
+	<li><a target="_blank" href="http://bitsquid.blogspot.com">bitsquid blog</a> <p>Very valuable information on how DOD is used in their engine, and a lot of real-world examples in design and methodology.</p></li>
+
+	<li><a target="_blank" href="http://gamesfromwithin.com/data-oriented-design">Data-Oriented Design (Or Why You Might Be Shooting Yourself in The Foot With OOP)</a> <p>A very good article on the essentials, benefits, and drawbacks of DOD. “Where there’s one, there are many.”</p></li>
+
+	<li><a target="_blank" href="http://c0de517e.blogspot.ca/2014/04/how-to-make-rendering-engine.html">How to make a rendering engine</a> <p>A collection of links for existing command-buffer rendering engines and an FAQ on the design of such rendering.</p></li>
+
+	<li><a target="_blank" href="http://realtimecollisiondetection.net/blog/?p=86">Order your graphics draw calls around!</a> <p>Specifically about command buffers and sort keys.</p></li>
+
+	<li><a target="_blank" href="http://www.altdev.co/2011/01/24/growing-ginkgo-pt-1-the-reading-list/">Growing Ginkgo Pt. 1: The Reading List</a> <p>A series on the design of the engine for Secrets of Rætikon (and Chasing Aurora?). This contains some useful links, but they use a typical OOP design, and a lot of virtual inheritance as far as I can see. See <a target="_blank" href="http://www.altdev.co/2011/02/23/ginkgos-game-loop/">Ginkgo's Game Loop</a> for time management in the main loop.</p></li>
+</ul>
+
+
+</div>
+
+
+<div class="author-banner border-radius-4">
+<div id="copyright-notice" class="generic-center-text">
+	<small>&copy; 2014 <a target="_blank" href="//komiga.com">Coranna Howard</a>, under license <a target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons BY-NC-SA 4.0</a></small>
+</div>
+</div>
+
+<div id="comments" class="f-sans f-sz-norm">
+<h4 class="separator sep_comments">Comments<a class="para-ref" href="#comments"></a></h4>
+		<div id="disqus_thread">
+		<noscript><small><em>Enable JavaScript to view the (<a href="http://disqus.com/?ref_noscript" rel="nofollow">Disqus-powered</a>) comment thread.</em></small></noscript>
+	</div>
+
+</div>
+
+<script type="text/javascript">
+	(function() 
+		var e_comments = document.getElementById("comments");
+		var e_loader = document.createElement("div");
+		e_loader.id = "comment_loader";
+		e_loader.className = "generic-center-text";
+
+		var e_anchor = document.createElement("a");
+		e_anchor.href = "javascript:load_comments()";
+		e_anchor.innerText = "load comments (Disqus)";
+
+		e_loader.appendChild(e_anchor);
+		e_comments.appendChild(e_loader);
+	})();
+
+	var disqus_config = function () 
+		this.page.url = "http://allopoeia.komiga.com/dev/2014/06/data-oriented-design-for-games.html";
+			this.page.identifier = "http://allopoeia.komiga.com/dev/2014/06/data-oriented-design-for-games.html";
+			this.page.title = "Data-oriented design for games";
+	};
+
+	var load_comments = function() 
+		var e_loader = document.getElementById("comment_loader");
+		e_loader.parentNode.removeChild(e_loader);
+
+		var s = document.createElement('script');
+		s.src = '//komiga.disqus.com/embed.js';
+		s.setAttribute('data-timestamp', +new Date());
+		(document.head || document.body).appendChild(s);
+	};
+</script>
+
+
+
+	</article>
+
+</div>
+</div>
+
+<!-- footer start -->
+<footer class="top_footer">
+<div class="footer_align_center">
+	<div class="center">
+		<span>&Omega;</span>
+	</div>
+	<div class="center">
+		<span>&copy; 2012–2016 <a href="//komiga.com" target="_blank">komiga</a></span>
+	</div>
+</div>
+</footer>
+
+</div>
+
+</body>
+</html>

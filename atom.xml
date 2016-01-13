@@ -1,0 +1,569 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+<title>Allopoeia</title>
+<link href="http://allopoeia.komiga.com/atom.xml" rel="self" />
+<link href="http://allopoeia.komiga.com" />
+<updated>2016-01-13T06:35:17-0500</updated>
+<id>http://allopoeia.komiga.com</id>
+<author>
+	<name>Allopoeia</name>
+	<uri>http://allopoeia.komiga.com</uri>
+</author>
+
+<entry>
+	<link href="http://allopoeia.komiga.com/opinion/2012/06/education-and-free-mindedness.html" />
+	<id>http://allopoeia.komiga.com/opinion/2012/06/education-and-free-mindedness.html</id>
+
+	<category term="opinion" label="Opinion"/>
+
+	<title>Education and free-mindedness</title>
+
+	<rights type="html"><![CDATA[&copy; 2012&mdash2015 <a target="_blank" href="//komiga.com">Coranna Howard</a>, under license <a target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons BY-NC-SA 4.0</a>]]></rights>
+
+	<published>2012-06-17T20:52:00-0400</published>
+	<updated>2015-12-07T02:21:00-0500</updated>
+
+	<author>
+		<name>Coranna Howard</name>
+		<uri>//komiga.com</uri>
+	</author>
+
+	<content type="html"><![CDATA[
+
+	]]></content>
+</entry>
+<entry>
+	<link href="http://allopoeia.komiga.com/dev/2014/06/data-oriented-design-for-games.html" />
+	<id>http://allopoeia.komiga.com/dev/2014/06/data-oriented-design-for-games.html</id>
+
+	<category term="dev" label="Dev"/>
+
+	<title>Data-oriented design for games</title>
+
+	<rights type="html"><![CDATA[&copy; 2014 <a target="_blank" href="//komiga.com">Coranna Howard</a>, under license <a target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons BY-NC-SA 4.0</a>]]></rights>
+
+	<published>2014-06-23T18:19:00-0400</published>
+	<updated>2014-12-23T03:34:00-0500</updated>
+
+	<author>
+		<name>Coranna Howard</name>
+		<uri>//komiga.com</uri>
+	</author>
+
+	<content type="html"><![CDATA[
+
+	]]></content>
+</entry>
+<entry>
+	<link href="http://allopoeia.komiga.com/links/2012/02/some-mandy-haps.html" />
+	<id>http://allopoeia.komiga.com/links/2012/02/some-mandy-haps.html</id>
+
+	<category term="links" label="Links"/>
+
+	<title>Some mandy haps</title>
+	<subtitle type="html"><![CDATA[<a target="_blank" href="http://www.theatlantic.com/technology/archive/2012/02/the-google-map-of-the-19th-century/253219/">&raquo; The Google Map of the 19th Century &ndash; The Atlantic</a>]]></subtitle>
+
+	<rights type="html"><![CDATA[&copy; 2012&mdash2014 <a target="_blank" href="//komiga.com">Coranna Howard</a>, under license <a target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons BY-NC-SA 4.0</a>]]></rights>
+
+	<published>2012-02-17T20:12:00-0500</published>
+	<updated>2014-11-23T22:40:00-0500</updated>
+
+	<author>
+		<name>Coranna Howard</name>
+		<uri>//komiga.com</uri>
+	</author>
+
+	<content type="html"><![CDATA[
+
+	]]></content>
+</entry>
+<entry>
+	<link href="http://allopoeia.komiga.com/self/2015/10/too.html" />
+	<id>http://allopoeia.komiga.com/self/2015/10/too.html</id>
+
+	<category term="self" label="Self"/>
+
+	<title>too</title>
+
+	<rights type="html"><![CDATA[&copy; 2015 <a target="_blank" href="//komiga.com">Coranna Howard</a>, under license <a target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons BY-NC-SA 4.0</a>]]></rights>
+
+	<published>2015-10-07T02:34:00-0400</published>
+	<updated>2015-10-07T02:34:00-0400</updated>
+
+	<author>
+		<name>Coranna Howard</name>
+		<uri>//komiga.com</uri>
+	</author>
+
+	<content type="html"><![CDATA[
+
+	]]></content>
+</entry>
+<entry>
+	<link href="http://allopoeia.komiga.com/self/2015/01/2014-notes-and-data.html" />
+	<id>http://allopoeia.komiga.com/self/2015/01/2014-notes-and-data.html</id>
+
+	<category term="self" label="Self"/>
+
+	<title>2014 notes and data</title>
+
+	<rights type="html"><![CDATA[&copy; 2015 <a target="_blank" href="//komiga.com">Coranna Howard</a>, under license <a target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons BY-NC-SA 4.0</a>]]></rights>
+
+	<published>2015-01-04T22:42:00-0500</published>
+	<updated>2015-01-29T22:01:00-0500</updated>
+
+	<author>
+		<name>Coranna Howard</name>
+		<uri>//komiga.com</uri>
+	</author>
+
+	<content type="html"><![CDATA[
+
+	]]></content>
+</entry>
+<entry>
+	<link href="http://allopoeia.komiga.com/self/2013/01/aiming-for-the-ground-often-missing.html" />
+	<id>http://allopoeia.komiga.com/self/2013/01/aiming-for-the-ground-often-missing.html</id>
+
+	<category term="self" label="Self"/>
+
+	<title>Aiming for the ground, often missing</title>
+
+	<rights type="html"><![CDATA[&copy; 2013&mdash2014 <a target="_blank" href="//komiga.com">Coranna Howard</a>, under license <a target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons BY-NC-SA 4.0</a>]]></rights>
+
+	<published>2013-01-13T07:43:00-0500</published>
+	<updated>2014-11-23T22:40:00-0500</updated>
+
+	<author>
+		<name>Coranna Howard</name>
+		<uri>//komiga.com</uri>
+	</author>
+
+	<content type="html"><![CDATA[
+
+	]]></content>
+</entry>
+<entry>
+	<link href="http://allopoeia.komiga.com/fiction/2012/06/a-shopping-list.html" />
+	<id>http://allopoeia.komiga.com/fiction/2012/06/a-shopping-list.html</id>
+
+	<category term="fiction" label="Fiction"/>
+
+	<title>A shopping list</title>
+
+	<rights type="html"><![CDATA[&copy; 2012 <a target="_blank" href="//komiga.com">Coranna Howard</a>, under license <a target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons BY-NC-SA 4.0</a>]]></rights>
+
+	<published>2012-06-14T11:07:00-0400</published>
+	<updated>2012-06-14T11:07:00-0400</updated>
+
+	<author>
+		<name>Coranna Howard</name>
+		<uri>//komiga.com</uri>
+	</author>
+
+	<content type="html"><![CDATA[
+
+	]]></content>
+</entry>
+<entry>
+	<link href="http://allopoeia.komiga.com/fiction/2014/11/quiddlopolis-part-2.html" />
+	<id>http://allopoeia.komiga.com/fiction/2014/11/quiddlopolis-part-2.html</id>
+
+	<category term="fiction" label="Fiction"/>
+
+	<title>Quiddlopolis, Part 2</title>
+
+	<rights type="html"><![CDATA[&copy; 2014 <a target="_blank" href="//komiga.com">Coranna Howard</a>, under license <a target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons BY-NC-SA 4.0</a>]]></rights>
+
+	<published>2014-11-23T22:31:00-0500</published>
+	<updated>2014-11-23T22:46:00-0500</updated>
+
+	<author>
+		<name>Coranna Howard</name>
+		<uri>//komiga.com</uri>
+	</author>
+
+	<content type="html"><![CDATA[
+
+	]]></content>
+</entry>
+<entry>
+	<link href="http://allopoeia.komiga.com/fiction/2012/05/the-ascendant-order.html" />
+	<id>http://allopoeia.komiga.com/fiction/2012/05/the-ascendant-order.html</id>
+
+	<category term="fiction" label="Fiction"/>
+
+	<title>The Ascendant Order</title>
+
+	<rights type="html"><![CDATA[&copy; 2012&mdash2014 <a target="_blank" href="//komiga.com">Coranna Howard</a>, under license <a target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons BY-NC-SA 4.0</a>]]></rights>
+
+	<published>2012-05-11T01:34:00-0400</published>
+	<updated>2014-11-23T22:40:00-0500</updated>
+
+	<author>
+		<name>Coranna Howard</name>
+		<uri>//komiga.com</uri>
+	</author>
+
+	<content type="html"><![CDATA[
+
+	]]></content>
+</entry>
+<entry>
+	<link href="http://allopoeia.komiga.com/links/2012/06/podcastery-round-up-education-with-npr-ted-and-tal.html" />
+	<id>http://allopoeia.komiga.com/links/2012/06/podcastery-round-up-education-with-npr-ted-and-tal.html</id>
+
+	<category term="links" label="Links"/>
+
+	<title>Podcastery round-up: education with NPR, TED and This American Life</title>
+	<subtitle type="html"><![CDATA[<a target="_blank" href="http://www.npr.org/2012/06/22/155224654/building-a-better-classroom">&raquo; Building A Better Classroom &ndash; NPR, TED Radio Hour</a>]]></subtitle>
+
+	<rights type="html"><![CDATA[&copy; 2012&mdash2015 <a target="_blank" href="//komiga.com">Coranna Howard</a>, under license <a target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons BY-NC-SA 4.0</a>]]></rights>
+
+	<published>2012-06-22T21:00:00-0400</published>
+	<updated>2015-12-07T02:21:00-0500</updated>
+
+	<author>
+		<name>Coranna Howard</name>
+		<uri>//komiga.com</uri>
+	</author>
+
+	<content type="html"><![CDATA[
+
+	]]></content>
+</entry>
+<entry>
+	<link href="http://allopoeia.komiga.com/game/2013/09/prince-of-qin-a-flawed-wonder.html" />
+	<id>http://allopoeia.komiga.com/game/2013/09/prince-of-qin-a-flawed-wonder.html</id>
+
+	<category term="game" label="Game"/>
+
+	<title>Prince of Qin: a flawed wonder</title>
+
+	<rights type="html"><![CDATA[&copy; 2013&mdash2015 <a target="_blank" href="//komiga.com">Coranna Howard</a>, under license <a target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons BY-NC-SA 4.0</a>]]></rights>
+
+	<published>2013-10-01T00:07:00-0400</published>
+	<updated>2015-10-29T14:34:00-0400</updated>
+
+	<author>
+		<name>Coranna Howard</name>
+		<uri>//komiga.com</uri>
+	</author>
+
+	<content type="html"><![CDATA[
+
+	]]></content>
+</entry>
+<entry>
+	<link href="http://allopoeia.komiga.com/dev/2015/02/tentuk-journal-week-3.html" />
+	<id>http://allopoeia.komiga.com/dev/2015/02/tentuk-journal-week-3.html</id>
+
+	<category term="dev" label="Dev"/>
+
+	<title>Tentuk Journal: Week 3</title>
+
+	<rights type="html"><![CDATA[&copy; 2015 <a target="_blank" href="//komiga.com">Coranna Howard</a>, under license <a target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons BY-NC-SA 4.0</a>]]></rights>
+
+	<published>2015-02-20T23:17:00-0500</published>
+	<updated>2015-02-20T23:17:00-0500</updated>
+
+	<author>
+		<name>Coranna Howard</name>
+		<uri>//komiga.com</uri>
+	</author>
+
+	<content type="html"><![CDATA[
+
+	]]></content>
+</entry>
+<entry>
+	<link href="http://allopoeia.komiga.com/dev/2014/09/ludum-dare-30-postmortem-onomo.html" />
+	<id>http://allopoeia.komiga.com/dev/2014/09/ludum-dare-30-postmortem-onomo.html</id>
+
+	<category term="dev" label="Dev"/>
+
+	<title>Ludum Dare 30 postmortem: Onomo</title>
+
+	<rights type="html"><![CDATA[&copy; 2014 <a target="_blank" href="//komiga.com">Coranna Howard</a>, under license <a target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons BY-NC-SA 4.0</a>]]></rights>
+
+	<published>2014-09-04T17:01:00-0400</published>
+	<updated>2014-09-04T17:01:00-0400</updated>
+
+	<author>
+		<name>Coranna Howard</name>
+		<uri>//komiga.com</uri>
+	</author>
+
+	<content type="html"><![CDATA[
+
+	]]></content>
+</entry>
+<entry>
+	<link href="http://allopoeia.komiga.com/self/2015/12/on-tracking.html" />
+	<id>http://allopoeia.komiga.com/self/2015/12/on-tracking.html</id>
+
+	<category term="self" label="Self"/>
+
+	<title>On tracking</title>
+
+	<rights type="html"><![CDATA[&copy; 2015 <a target="_blank" href="//komiga.com">Coranna Howard</a>, under license <a target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons BY-NC-SA 4.0</a>]]></rights>
+
+	<published>2015-12-08T18:55:00-0500</published>
+	<updated>2015-12-08T18:55:00-0500</updated>
+
+	<author>
+		<name>Coranna Howard</name>
+		<uri>//komiga.com</uri>
+	</author>
+
+	<content type="html"><![CDATA[
+
+	]]></content>
+</entry>
+<entry>
+	<link href="http://allopoeia.komiga.com/self/2014/01/2013-notes-and-data.html" />
+	<id>http://allopoeia.komiga.com/self/2014/01/2013-notes-and-data.html</id>
+
+	<category term="self" label="Self"/>
+
+	<title>2013 notes and data</title>
+
+	<rights type="html"><![CDATA[&copy; 2014 <a target="_blank" href="//komiga.com">Coranna Howard</a>, under license <a target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons BY-NC-SA 4.0</a>]]></rights>
+
+	<published>2014-01-01T04:33:00-0500</published>
+	<updated>2014-01-01T04:33:00-0500</updated>
+
+	<author>
+		<name>Coranna Howard</name>
+		<uri>//komiga.com</uri>
+	</author>
+
+	<content type="html"><![CDATA[
+
+	]]></content>
+</entry>
+<entry>
+	<link href="http://allopoeia.komiga.com/dev/2015/02/tentuk-journal-week-1.html" />
+	<id>http://allopoeia.komiga.com/dev/2015/02/tentuk-journal-week-1.html</id>
+
+	<category term="dev" label="Dev"/>
+
+	<title>Tentuk Journal: Week 1</title>
+
+	<rights type="html"><![CDATA[&copy; 2015 <a target="_blank" href="//komiga.com">Coranna Howard</a>, under license <a target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons BY-NC-SA 4.0</a>]]></rights>
+
+	<published>2015-02-09T00:06:00-0500</published>
+	<updated>2015-02-15T23:23:00-0500</updated>
+
+	<author>
+		<name>Coranna Howard</name>
+		<uri>//komiga.com</uri>
+	</author>
+
+	<content type="html"><![CDATA[
+
+	]]></content>
+</entry>
+<entry>
+	<link href="http://allopoeia.komiga.com/self/2015/12/qqq.html" />
+	<id>http://allopoeia.komiga.com/self/2015/12/qqq.html</id>
+
+	<category term="self" label="Self"/>
+
+	<title>???</title>
+
+	<rights type="html"><![CDATA[&copy; 2015 <a target="_blank" href="//komiga.com">Coranna Howard</a>, under license <a target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons BY-NC-SA 4.0</a>]]></rights>
+
+	<published>2015-12-11T01:24:00-0500</published>
+	<updated>2015-12-11T01:24:00-0500</updated>
+
+	<author>
+		<name>Coranna Howard</name>
+		<uri>//komiga.com</uri>
+	</author>
+
+	<content type="html"><![CDATA[
+
+	]]></content>
+</entry>
+<entry>
+	<link href="http://allopoeia.komiga.com/criticism/2012/02/the-wrongness-of-metadata-on-grooveshark.html" />
+	<id>http://allopoeia.komiga.com/criticism/2012/02/the-wrongness-of-metadata-on-grooveshark.html</id>
+
+	<category term="criticism" label="Criticism"/>
+
+	<title>The wrongness of metadata on Grooveshark</title>
+
+	<rights type="html"><![CDATA[&copy; 2012&mdash2014 <a target="_blank" href="//komiga.com">Coranna Howard</a>, under license <a target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons BY-NC-SA 4.0</a>]]></rights>
+
+	<published>2012-02-09T05:14:00-0500</published>
+	<updated>2014-11-23T22:40:00-0500</updated>
+
+	<author>
+		<name>Coranna Howard</name>
+		<uri>//komiga.com</uri>
+	</author>
+
+	<content type="html"><![CDATA[
+
+	]]></content>
+</entry>
+<entry>
+	<link href="http://allopoeia.komiga.com/dev/2015/02/tentuk-journal-week-2.html" />
+	<id>http://allopoeia.komiga.com/dev/2015/02/tentuk-journal-week-2.html</id>
+
+	<category term="dev" label="Dev"/>
+
+	<title>Tentuk Journal: Week 2</title>
+
+	<rights type="html"><![CDATA[&copy; 2015 <a target="_blank" href="//komiga.com">Coranna Howard</a>, under license <a target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons BY-NC-SA 4.0</a>]]></rights>
+
+	<published>2015-02-16T02:08:00-0500</published>
+	<updated>2015-02-16T02:08:00-0500</updated>
+
+	<author>
+		<name>Coranna Howard</name>
+		<uri>//komiga.com</uri>
+	</author>
+
+	<content type="html"><![CDATA[
+
+	]]></content>
+</entry>
+<entry>
+	<link href="http://allopoeia.komiga.com/fiction/2013/08/quiddlopolis-part-1.html" />
+	<id>http://allopoeia.komiga.com/fiction/2013/08/quiddlopolis-part-1.html</id>
+
+	<category term="fiction" label="Fiction"/>
+
+	<title>Quiddlopolis, Part 1</title>
+
+	<rights type="html"><![CDATA[&copy; 2013&mdash2014 <a target="_blank" href="//komiga.com">Coranna Howard</a>, under license <a target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons BY-NC-SA 4.0</a>]]></rights>
+
+	<published>2013-08-05T02:35:00-0400</published>
+	<updated>2014-11-23T22:46:00-0500</updated>
+
+	<author>
+		<name>Coranna Howard</name>
+		<uri>//komiga.com</uri>
+	</author>
+
+	<content type="html"><![CDATA[
+
+	]]></content>
+</entry>
+<entry>
+	<link href="http://allopoeia.komiga.com/links/2012/03/the-easy-pieces-of-neil-dvorak.html" />
+	<id>http://allopoeia.komiga.com/links/2012/03/the-easy-pieces-of-neil-dvorak.html</id>
+
+	<category term="links" label="Links"/>
+
+	<title>The Easy Pieces of Neil Dvorak</title>
+	<subtitle type="html"><![CDATA[<a target="_blank" href="http://easypiecescomic.com">&raquo; Easy Pieces*</a>]]></subtitle>
+
+	<rights type="html"><![CDATA[&copy; 2012 <a target="_blank" href="//komiga.com">Coranna Howard</a>, under license <a target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons BY-NC-SA 4.0</a>]]></rights>
+
+	<published>2012-03-16T03:32:00-0400</published>
+	<updated>2012-03-16T03:32:00-0400</updated>
+
+	<author>
+		<name>Coranna Howard</name>
+		<uri>//komiga.com</uri>
+	</author>
+
+	<content type="html"><![CDATA[
+
+	]]></content>
+</entry>
+<entry>
+	<link href="http://allopoeia.komiga.com/self/2015/01/my-mistake-of-formalism.html" />
+	<id>http://allopoeia.komiga.com/self/2015/01/my-mistake-of-formalism.html</id>
+
+	<category term="self" label="Self"/>
+
+	<title>My mistake of formalism</title>
+
+	<rights type="html"><![CDATA[&copy; 2015 <a target="_blank" href="//komiga.com">Coranna Howard</a>, under license <a target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons BY-NC-SA 4.0</a>]]></rights>
+
+	<published>2015-01-29T21:59:00-0500</published>
+	<updated>2015-01-30T09:08:00-0500</updated>
+
+	<author>
+		<name>Coranna Howard</name>
+		<uri>//komiga.com</uri>
+	</author>
+
+	<content type="html"><![CDATA[
+
+	]]></content>
+</entry>
+<entry>
+	<link href="http://allopoeia.komiga.com/self/2014/06/who-am-i.html" />
+	<id>http://allopoeia.komiga.com/self/2014/06/who-am-i.html</id>
+
+	<category term="self" label="Self"/>
+
+	<title>Who am I?</title>
+	<subtitle>Welcome to the wall of text. Enjoy your stay.</subtitle>
+
+	<rights type="html"><![CDATA[&copy; 2014&mdash2015 <a target="_blank" href="//komiga.com">Coranna Howard</a>, under license <a target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons BY-NC-SA 4.0</a>]]></rights>
+
+	<published>2014-06-04T14:58:00-0400</published>
+	<updated>2015-11-06T20:32:00-0500</updated>
+
+	<author>
+		<name>Coranna Howard</name>
+		<uri>//komiga.com</uri>
+	</author>
+
+	<content type="html"><![CDATA[
+
+	]]></content>
+</entry>
+<entry>
+	<link href="http://allopoeia.komiga.com/fiction/2012/07/all-out.html" />
+	<id>http://allopoeia.komiga.com/fiction/2012/07/all-out.html</id>
+
+	<category term="fiction" label="Fiction"/>
+
+	<title>All out</title>
+
+	<rights type="html"><![CDATA[&copy; 2012&mdash2014 <a target="_blank" href="//komiga.com">Coranna Howard</a>, under license <a target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons BY-NC-SA 4.0</a>]]></rights>
+
+	<published>2012-07-11T22:30:00-0400</published>
+	<updated>2014-11-23T22:46:00-0500</updated>
+
+	<author>
+		<name>Coranna Howard</name>
+		<uri>//komiga.com</uri>
+	</author>
+
+	<content type="html"><![CDATA[
+
+	]]></content>
+</entry>
+<entry>
+	<link href="http://allopoeia.komiga.com/fiction/2012/02/hackers-disrupt-ops-surveillance.html" />
+	<id>http://allopoeia.komiga.com/fiction/2012/02/hackers-disrupt-ops-surveillance.html</id>
+
+	<category term="fiction" label="Fiction"/>
+
+	<title>Hackers disrupt OPS surveillance third time this quarter</title>
+
+	<rights type="html"><![CDATA[&copy; 2012&mdash2014 <a target="_blank" href="//komiga.com">Coranna Howard</a>, under license <a target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons BY-NC-SA 4.0</a>]]></rights>
+
+	<published>2012-02-28T16:36:00-0500</published>
+	<updated>2014-11-23T22:40:00-0500</updated>
+
+	<author>
+		<name>Coranna Howard</name>
+		<uri>//komiga.com</uri>
+	</author>
+
+	<content type="html"><![CDATA[
+
+	]]></content>
+</entry>
+
+</feed>
