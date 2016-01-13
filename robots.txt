@@ -1,6 +1,0 @@
----
-layout: null
-exclude-from-sitemap: true
----
-User-agent: *
-Disallow: /404.html
