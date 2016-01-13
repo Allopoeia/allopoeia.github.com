@@ -50,7 +50,7 @@ end)
 :filter("enable_comments", "boolean")
 :filter("disqus_legacy_identifier", "boolean")
 
-M.post = Page.compose(post_vf, Site.posts, {
+local post_composition = Page.compose(post_vf, Site.posts, {
 	published = nil,
 	updated = nil,
 	author = nil,
@@ -71,6 +71,12 @@ M.post = Page.compose(post_vf, Site.posts, {
 	enable_comments = false,
 	disqus_legacy_identifier = false,
 })
+
+M.post = function(source, file, destination)
+	local p = post_composition(source, file, destination)
+	p.bare_content = p.template:content(p)
+	return p
+end
 
 local layout_vf = P.ValueFilter("AllopoeiaLayout")
 :filter("article_class", "string")
