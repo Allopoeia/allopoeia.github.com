@@ -72,8 +72,8 @@ local Composition = require "src/Composition"
 P.filter("static", F.copy)
 P.filter("layout", Composition.layout)
 P.filter("bits", Core.template_wrapper)
-P.filter("page", Composition.page)
 P.filter("post", Composition.post)
+P.filter("page", Composition.page)
 
 Core.setup_filters()
 P.post_collect(Core.group_post_collect(Site.posts))
