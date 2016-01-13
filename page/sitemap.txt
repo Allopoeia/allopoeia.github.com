@@ -10,7 +10,7 @@ for _, page in pairs(Site.pages) do
 end %}
 
 {%
-for _, post in pairs(Site.posts) do
+for _, post in ipairs(Site.posts_chrono) do
 	if post.sitemap then
 %}
 {{ canonical_url(post) }}
