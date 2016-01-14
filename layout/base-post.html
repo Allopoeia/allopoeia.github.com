@@ -1,0 +1,19 @@
+layout = "default"
+-- article_class = "post"
+---content---
+{@ "bits/post/microdata_fields" @}
+
+{! C.content !}
+
+<div class="author-banner border-radius-4">
+<div id="copyright-notice" class="generic-center-text">
+	<small>{@ "bits/post/copyright_notice" @}</small>
+</div>
+</div>
+
+<div id="comments" class="f-sans f-sz-norm">
+<h4 class="separator sep_comments">Comments<a class="para-ref" href="#comments"></a></h4>
+	{@ "bits/post/comments_content" @}
+</div>
+
+{@ "bits/post/comments_load" @}

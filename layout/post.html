@@ -1,30 +1,8 @@
-layout = "default"
-article_class = "post"
+layout = "base-post"
 ---content---
-{% if not C.custom_post_header then %}
-
 {@ "bits/post/header_start" @}
 	{@ "bits/post/headline" @}
 	{@ "bits/post/info-banner" @}
 {@ "bits/post/header_end" @}
 
 {@ "bits/post/CONTENT" @}
-
-{% else %}
-
-{! C.content !}
-
-{% end %}
-
-<div class="author-banner border-radius-4">
-<div id="copyright-notice" class="generic-center-text">
-	<small>{@ "bits/post/copyright_notice" @}</small>
-</div>
-</div>
-
-<div id="comments" class="f-sans f-sz-norm">
-<h4 class="separator sep_comments">Comments<a class="para-ref" href="#comments"></a></h4>
-	{@ "bits/post/comments_content" @}
-</div>
-
-{@ "bits/post/comments_load" @}
