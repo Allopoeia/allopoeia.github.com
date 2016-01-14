@@ -1,0 +1,18 @@
+---content---
+{% if not C.md_disabled then %}
+{% if C.subtitle then %}
+	<meta itemprop="alternativeHeadline" content="{! C.subtitle !}" />
+{% end %}
+{% if C.article_class == "post" then %}
+	<meta itemprop="datePublished" content="{! format_time_iso(C.published) !}" />
+	<meta itemprop="dateModified" content="{! format_time_iso(C.updated) !}" />
+	<meta itemprop="articleSection" content="{@ "bits/post/root_category" @}" />
+	<span itemprop="author" itemscope itemtype="http://schema.org/Person">
+		<meta itemprop="name" content="{! C.author.display_name !}" />
+		<link itemprop="url" href="{! C.author.about_url !}" />
+	</span>
+{% end %}
+{% if C.enable_comments then %}
+	<link itemprop="discussionUrl" href="{! canonical_url(C.url) !}#comments" />
+{% end %}
+{% end %}
