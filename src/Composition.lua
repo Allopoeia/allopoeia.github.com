@@ -8,9 +8,18 @@ local NavItem = require "core/NavItem"
 local M = U.module("Composition")
 
 local page_vf = P.ValueFilter("AllopoeiaPage")
+:filter("article_class", "string")
+:filter("article_styles", "string")
+:filter("article_font", "string")
+-- :filter("custom_post_header", "boolean")
 :filter("nav_active", NavItem)
 
 M.page = Page.compose(page_vf, nil, {
+	article_class = "generic",
+	article_styles = nil,
+	article_font = "sans",
+	-- custom_post_header = nil,
+
 	nav_active = nil,
 })
 
@@ -30,6 +39,14 @@ local post_vf = P.ValueFilter("AllopoeiaPost")
 	end
 	return string.format("/%s/%s/%s/%s%s", cat, y, m, title, ext)
 end)
+:filter("article_class", "string")
+:filter("article_styles", "string")
+:filter("article_font", "string")
+-- :filter("custom_post_header", "boolean")
+:filter("nav_active", NavItem)
+:filter("disable_header", "boolean")
+:filter("enable_comments", "boolean")
+:filter("disqus_legacy_identifier", "boolean")
 :filter("published", "string", parse_time)
 :filter("updated", "string", parse_time)
 :filter("author", "table")
@@ -45,12 +62,18 @@ end)
 :filter("sp_prev_title", "string")
 :filter("sp_next_url", "string")
 :filter("sp_next_title", "string")
-:filter("nav_active", NavItem)
-:filter("disable_header", "boolean")
-:filter("enable_comments", "boolean")
-:filter("disqus_legacy_identifier", "boolean")
 
 local post_composition = Page.compose(post_vf, Site.posts, {
+	article_class = "post",
+	article_styles = nil,
+	article_font = "sans",
+	-- custom_post_header = nil,
+
+	nav_active = nil,
+	disable_header = false,
+	enable_comments = false,
+	disqus_legacy_identifier = false,
+
 	published = nil,
 	updated = nil,
 	author = nil,
@@ -59,17 +82,15 @@ local post_composition = Page.compose(post_vf, Site.posts, {
 	h_title = nil,
 	subtitle = nil,
 	h_subtitle = nil,
+
 	lp_url = nil,
 	lp_url_title = nil,
 	lp_url_author = nil,
+
 	sp_prev_url = nil,
 	sp_prev_title = nil,
 	sp_next_url = nil,
 	sp_next_title = nil,
-	nav_active = nil,
-	disable_header = false,
-	enable_comments = false,
-	disqus_legacy_identifier = false,
 })
 
 M.post = function(source, file, destination)
@@ -79,16 +100,8 @@ M.post = function(source, file, destination)
 end
 
 local layout_vf = P.ValueFilter("AllopoeiaLayout")
-:filter("article_class", "string")
-:filter("article_styles", "string")
-:filter("article_font", "string")
-:filter("custom_post_header", "boolean")
 
 M.layout = Layout.compose(layout_vf, {
-	article_class = nil,
-	article_styles = nil,
-	article_font = nil,
-	custom_post_header = nil,
 })
 
 return M
