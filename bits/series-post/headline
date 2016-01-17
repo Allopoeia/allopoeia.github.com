@@ -12,7 +12,7 @@ Oh web.
 
 		<div class="series-post-link-prev series-post-link">
 		{% if C.sp_prev_url then %}
-			<a target="_self" href="{{ C.sp_prev_url }}">&laquo; {{ C.sp_prev_title }}</a>
+			<a target="_self" href="{{ canonical_url(C.sp_prev_url) }}">&laquo; {{ C.sp_prev_title }}</a>
 		{% else %}
 			<span>&laquo;</span>
 		{% end %}
@@ -20,7 +20,7 @@ Oh web.
 
 		<div class="series-post-link-next series-post-link">
 		{% if C.sp_next_url then %}
-			<a target="_self" href="{{ C.sp_next_url }}">{{ C.sp_next_title }} &raquo;</a>
+			<a target="_self" href="{{ canonical_url(C.sp_next_url) }}">{{ C.sp_next_title }} &raquo;</a>
 		{% else %}
 			<span>&raquo;</span>
 		{% end %}
