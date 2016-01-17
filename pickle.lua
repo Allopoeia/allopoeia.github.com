@@ -74,7 +74,9 @@ P.filter("static", F.copy)
 P.filter("layout", Composition.layout)
 P.filter("bits", Core.template_wrapper)
 P.filter("post", Composition.post)
-P.filter("post-staging", Composition.post)
+if P.config.testing_mode then
+	P.filter("post-staging", Composition.post)
+end
 P.filter("page", Composition.page)
 
 Core.setup_filters()
