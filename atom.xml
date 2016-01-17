@@ -4,7 +4,7 @@
 <title>Allopoeia</title>
 <link href="http://allopoeia.komiga.com/atom.xml" rel="self" />
 <link href="http://allopoeia.komiga.com" />
-<updated>2016-01-17T02:30:10-0500</updated>
+<updated>2016-01-17T15:45:24-0500</updated>
 <id>http://allopoeia.komiga.com</id>
 <author>
 	<name>Allopoeia</name>
@@ -2321,10 +2321,10 @@ to touch
 
 	<title>Aiming for the ground, often missing</title>
 
-	<rights type="html"><![CDATA[&copy; 2013&mdash;2014 <a target="_blank" href="//komiga.com">Coranna Howard</a>, under license <a target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons BY-NC-SA 4.0</a>]]></rights>
+	<rights type="html"><![CDATA[&copy; 2013&mdash;2016 <a target="_blank" href="//komiga.com">Coranna Howard</a>, under license <a target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons BY-NC-SA 4.0</a>]]></rights>
 
 	<published>2013-01-13T07:43:00-0500</published>
-	<updated>2014-11-23T22:40:00-0500</updated>
+	<updated>2016-01-17T15:44:00-0500</updated>
 
 	<author>
 		<name>Coranna Howard</name>
@@ -2357,7 +2357,7 @@ to touch
 
 <h2 id="side-b" class="separator">Side B: Goals for 2013<a class="para-ref" href="#side-b"></a></h2>
 
-<p>For one, I want to replace Jekyll, which I loath greatly. I have a very primordial design in the works, but I haven't decided which charming language to use. It will probably be Go. <em>Not</em> Ruby.</p>
+<p>For one, I want to replace Jekyll, which I loathe greatly. I have a very primordial design in the works, but I haven't decided which charming language to use. It will probably be Go. <em>Not</em> Ruby.</p>
 
 <p>Next on the agenda is to rebuild my log keeper, which is currently hobbled together with Gtk♯ (a notably fickle, possibly dead wrapper). There will be two components to this: a core library and a CLI application. At some point I want to introduce a distributed model.</p>
 
