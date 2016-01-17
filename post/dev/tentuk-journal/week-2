@@ -13,10 +13,8 @@ tags = {}
 title = "Tentuk Journal: Week 2"
 subtitle = nil
 
-sp_prev_url = "/dev/tentuk-journal/week-1/"
-sp_prev_title = "Week 1"
-sp_next_url = "/dev/tentuk-journal/week-3/"
-sp_next_title = "Week 3"
+sp_prev = {"/dev/tentuk-journal/week-1", "Week 1"}
+sp_next = {"/dev/tentuk-journal/week-3", "Week 3"}
 ---content---
 
 <p>Phew. An intense week of mostly <span title=":(">tooling and grunge work</span>. If there's anything I've learned from Tentuk so far, it's that tooling takes a lot of time &amp; attention. And <em>perhaps</em> that I spend too much time on it.</p>

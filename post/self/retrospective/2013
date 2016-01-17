@@ -1,4 +1,4 @@
-layout = "post"
+layout = "series-post"
 enable_comments = true
 
 legacy_url = "/self/2014/01/2013-notes-and-data.html"
@@ -12,6 +12,9 @@ categories = {"self"}
 tags = {}
 title = "Retrospective: 2013"
 subtitle = nil
+
+sp_prev = nil
+sp_next = {"/self/retrospective/2014", "2014"}
 ---content---
 
 <p>What a disaster that was.</p>
@@ -32,7 +35,7 @@ subtitle = nil
 
 <h2 id="goal-review" class="separator">Goal review<a class="para-ref" href="#goal-review"></a></h2>
 
-<p>Earlier in the year I <a href="/self/2013/01/aiming-for-the-ground-often-missing.html">sketched out</a> my goals for 2013. Most have not happened, and the rest that "have" are not complete.</p>
+<p>Earlier in the year I <a href="/self/aiming-for-the-ground-often-missing/">sketched out</a> my goals for 2013. Most have not happened, and the rest that "have" are not complete.</p>
 
 <ul>
 	<li><p><strong>Static site generator</strong>. I haven't even touched the design since January. Jekyll has gotten somewhat better (speed-wise) and I <em>know</em> the way my sites are setup is disgusting (yes, that's Jekyll's fault), but I've forgotten precisely why, so I don't feel the urgent desire to replace it. I'd still like to roll my own at some point.</p></li>

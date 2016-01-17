@@ -1,4 +1,4 @@
-layout = "post"
+layout = "series-post"
 enable_comments = true
 
 legacy_url = "/self/2015/01/2014-notes-and-data.html"
@@ -12,6 +12,9 @@ categories = {"self"}
 tags = {}
 title = "Retrospective: 2014"
 subtitle = nil
+
+sp_prev = {"/self/retrospective/2013", "2013"}
+sp_next = nil
 ---content---
 
 <p>I have no words.</p>
@@ -26,7 +29,7 @@ subtitle = nil
 
 <p>That may <em>seem</em> like a lot, but it still doesn't <em>feel</em> like it, even when I write it all out. I was distraught between the high points at best, and rarely determined enough to do anything consistently.</p>
 
-<p>As for the interests jotted out in my <a href="/self/2014/01/2013-notes-and-data.html" target="_blank">post for 2013</a>, none have been thoroughly advanced. I've done very little with SuperCollider, and I didn't learn any music theory. I forget the exact causes, but it's most likely from the lack of motivation and, in the latter case, because I had just begun developing togo.</p>
+<p>As for the interests jotted out in my <a href="/self/retrospective/2013/" target="_blank">post for 2013</a>, none have been thoroughly advanced. I've done very little with SuperCollider, and I didn't learn any music theory. I forget the exact causes, but it's most likely from the lack of motivation and, in the latter case, because I had just begun developing togo.</p>
 
 <p>I feel most of the year was wasted, despite having spent the largest amount of time on projects since 2011. My greatest difficulty is <em>applying</em> what I know about&hellip; well, everything. Design and execution, primarily. Premature optimization, eternal black holes of design, unbridled habits. I know these mechanics on a deep level, but I don't utilize the knowledge to prevent them. At least I now know (quantitatively <em>and</em> practically) where the wasteful hot spots are in the gamut of my behaviors.</p>
 

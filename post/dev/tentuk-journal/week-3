@@ -13,10 +13,8 @@ tags = {}
 title = "Tentuk Journal: Week 3"
 subtitle = nil
 
-sp_prev_url = "/dev/tentuk-journal/week-2/"
-sp_prev_title = "Week 2"
-sp_next_url = nil
-sp_next_title = nil
+sp_prev = {"/dev/tentuk-journal/week-2", "Week 2"}
+sp_next = nil
 ---content---
 
 <p>There's no comfortable way for me to say this, so here goes:</p>

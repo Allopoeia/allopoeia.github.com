@@ -13,10 +13,8 @@ tags = {}
 title = "Tentuk Journal: Week 1"
 subtitle = nil
 
-sp_prev_url = nil
-sp_prev_title = nil
-sp_next_url = "/dev/tentuk-journal/week-2/"
-sp_next_title = "Week 2"
+sp_prev = nil
+sp_next = {"/dev/tentuk-journal/week-2", "Week 2"}
 ---content---
 
 <p>I planned on expanding <a href="https://github.com/komiga/togo" target="_blank">togo</a> for use in remaking <a href="http://komiga.com/#prisma" target="_blank">Prisma</a>, but I decided to make something smaller, without using togo, before I get into <em>that</em> grind. Tentuk is my way of soft-testing the principles of togo. The project is using <a href="https://love2d.org" target="_blank">LÖVE</a>, so it won't quite match the working conditions (i.e., a Lua core instead of a C++ core), but the ideas in togo will still be applied.</p>
@@ -45,6 +43,6 @@ sp_next_title = "Week 2"
 
 <h2 id="scheduling" class="separator">Scheduling<a class="para-ref" href="#scheduling"></a></h2>
 
-<p>It turns out game development is really hard, and really fun. Ever done a gamejam? Perhaps Ludum Dare? This week was like Ludum Dare for me, but a whole 5.3 days long. Just so you understand the gravity of that, I was awake for 37 hours <a href="/dev/2014-09-04-ludum-dare-30-postmortem-onomo.html" target="_blank">last time</a>. I developed a daily schedule during January, and it has proven very difficult to hold this week. I completely lose track of time and am detrimentally affected by deviation from the schedule &mdash; which is meant to keep my diet rigid, exercise consistent, and rhythm flowing.</p>
+<p>It turns out game development is really hard, and really fun. Ever done a gamejam? Perhaps Ludum Dare? This week was like Ludum Dare for me, but a whole 5.3 days long. Just so you understand the gravity of that, I was awake for 37 hours <a href="/dev/ludum-dare-30-postmortem-onomo/" target="_blank">last time</a>. I developed a daily schedule during January, and it has proven very difficult to hold this week. I completely lose track of time and am detrimentally affected by deviation from the schedule &mdash; which is meant to keep my diet rigid, exercise consistent, and rhythm flowing.</p>
 
 <p>It proved to be very beneficial during January, when I was working on Hord &amp; Onsang. I think it's because that work always felt like drudgery, even when it was interesting or challenging. I was always aware of time because my mind wasn't engaged or focused. It's so bizarre to see the shift in time perception while my efficiency seems unchanged. I'm still unsure if it's because I'm excited to be trekking new ground, or if it's because I've just been really slow. Maybe I'll have a better idea when I'm not so darn tired.</p>
