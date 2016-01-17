@@ -32,12 +32,23 @@ local function parse_time(_, value)
 end
 
 local post_vf = P.ValueFilter("AllopoeiaPost")
-:filter("url", "string", function(_, value)
-	local cat, y, m, title, ext = string.match(value, "^/(.*)/(%d%d%d%d)%-(%d%d)%-%d%d%-(.*)(%.%w*)$")
-	if not y then
-		return nil, string.format("malformed URL: %s", value)
+:filter("url", "string", function(post, value)
+	if post.url then
+		return value
 	end
-	return string.format("/%s/%s/%s/%s%s", cat, y, m, title, ext)
+	local path = U.path_dir(value)
+	local file = U.path_file(value)
+	local y, m, title = string.match(file, "^(%d%d%d%d)%-(%d%d)%-%d%d%-(.*)%.html$")
+	if y then
+		if not post.legacy_url then
+			post.legacy_url = string.format("/%s/%s/%s/%s.html", path, y, m, title)
+		end
+		file = string.format("%s", title)
+	end
+	if string.sub(file, -5) ~= ".html" then
+		file = string.format("%s/index.html", file)
+	end
+	return P.path(path, file)
 end)
 :filter("article_class", "string")
 :filter("article_styles", "string")
@@ -47,6 +58,7 @@ end)
 :filter("disable_header", "boolean")
 :filter("enable_comments", "boolean")
 :filter("disqus_legacy_identifier", "boolean")
+:filter("legacy_url", "string")
 :filter("published", "string", parse_time)
 :filter("updated", "string", parse_time)
 :filter("author", "table")
@@ -74,6 +86,7 @@ local post_composition = Page.compose(post_vf, Site.posts, {
 	enable_comments = false,
 	disqus_legacy_identifier = false,
 
+	legacy_url = nil,
 	published = nil,
 	updated = nil,
 	author = nil,
