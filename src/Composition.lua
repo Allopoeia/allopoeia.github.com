@@ -31,6 +31,22 @@ local function parse_time(_, value)
 	return time
 end
 
+local function sp_elem_check(post, value)
+	if #value >= 1 and #value <= 3 then
+		local e1 = value[1]
+		local e2 = #value >= 2 and value[2] or ""
+		local e3 = #value == 3 and value[3] or false
+		if
+			U.is_type(e1, "string") and
+			U.is_type(e2, "string") and
+			U.is_type(e3, "boolean")
+		then
+			return value
+		end
+	end
+	return nil, "malformed: expected table of {file} or {file, title} or {url, title, true}"
+end
+
 local post_vf = P.ValueFilter("AllopoeiaPost")
 :filter("url", "string", function(post, value)
 	if post.url then
@@ -70,10 +86,8 @@ end)
 :filter("lp_url", "string")
 :filter("lp_url_title", "string")
 :filter("lp_url_author", "string")
-:filter("sp_prev_url", "string")
-:filter("sp_prev_title", "string")
-:filter("sp_next_url", "string")
-:filter("sp_next_title", "string")
+:filter("sp_prev", "table", sp_elem_check)
+:filter("sp_next", "table", sp_elem_check)
 
 local post_composition = Page.compose(post_vf, Site.posts, {
 	article_class = "post",
@@ -100,10 +114,8 @@ local post_composition = Page.compose(post_vf, Site.posts, {
 	lp_url_title = nil,
 	lp_url_author = nil,
 
-	sp_prev_url = nil,
-	sp_prev_title = nil,
-	sp_next_url = nil,
-	sp_next_title = nil,
+	sp_prev = nil,
+	sp_next = nil,
 })
 
 M.post = function(source, file, destination)

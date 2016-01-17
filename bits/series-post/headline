@@ -14,17 +14,35 @@ Oh web.
 			<span>[series]</span>
 		</div> -->
 
+{%
+local U = require "togo.utility"
+local function _post_bits(p)
+	if #p == 1 then
+		local post = Site.posts_by_file[p[1]]
+		U.assert(post, "post does not exist: %s", p[1])
+		return canonical_url(post.url), post.title
+	elseif #p == 2 or #p == 3 then
+		return p[3] and p[2] or canonical_url(p[1]), p[2]
+	end
+	U.assert(false, "series post next/prev specified incorrectly")
+end
+%}
+
 		<div class="series-post-link-prev series-post-link">
-		{% if C.sp_prev_url then %}
-			<a target="_self" href="{{ canonical_url(C.sp_prev_url) }}">&laquo; {{ C.sp_prev_title }}</a>
+		{% if C.sp_prev then
+			local url, title = _post_bits(C.sp_prev)
+		%}
+			<a target="_self" href="{{ url }}">&laquo; {{ title }}</a>
 		{% else %}
 			<span>&laquo;</span>
 		{% end %}
 		</div>
 
 		<div class="series-post-link-next series-post-link">
-		{% if C.sp_next_url then %}
-			<a target="_self" href="{{ canonical_url(C.sp_next_url) }}">{{ C.sp_next_title }} &raquo;</a>
+		{% if C.sp_next then
+			local url, title = _post_bits(C.sp_next)
+		%}
+			<a target="_self" href="{{ url }}">{{ title }} &raquo;</a>
 		{% else %}
 			<span>&raquo;</span>
 		{% end %}
