@@ -1,9 +1,20 @@
 # License
 
-The MIT license. **This only applies to Jekyll stuff/styling/etc. (as layed out in [`README.md`](/Allopoeia/allopoeia.github.com/blob/master/README.md))**.
+The following files/directories (basically, the site's source) are licensed under MIT (see legalese below):
 
 ```
-Copyright (c) 2012-2015 Coranna Howard <me@komiga.com>
+static/css/
+layout/
+page/sitemap.txt
+bits/
+src/
+pickle.lua
+```
+
+Posts (`posts/` and sub-directories) are copyright (the author) and/or licensed on an individual level. **Any other page is © [komiga](http://komiga.com)**.
+
+```
+Copyright (c) 2012-2016 Coranna Howard <me@komiga.com>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
