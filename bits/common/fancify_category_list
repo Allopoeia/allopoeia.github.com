@@ -1,6 +1,6 @@
 minify = true
 ---content---
 {% for i, cat in ipairs(C.categories) do %}
-	{{ capitalize(cat) }}{% if i ~= #C.categories then %} &raquo; {% end %}
+	{{ capitalize(cat) }}{% if i ~= #C.categories and i ~= C.limit then %} &raquo; {% end %}
 {% if C.limit and i == C.limit then break end
 end %}
