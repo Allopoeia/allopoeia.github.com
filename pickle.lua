@@ -4,6 +4,7 @@ local F = require "Pickle.Filter"
 local Core = require "core/Core"
 local Layout = require "core/Layout"
 local Page = require "core/Page"
+local Redirect = require "core/Redirect"
 local NavItem = require "core/NavItem"
 
 P.configure_default{
