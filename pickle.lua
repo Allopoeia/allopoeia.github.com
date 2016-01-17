@@ -89,9 +89,11 @@ P.post_collect(function()
 end)
 
 P.post_collect(function()
+	Site.posts_by_file = {}
 	Site.posts_chrono = {}
 	Site.posts_chrono_reverse = {}
 	for _, post in pairs(Site.posts) do
+		Site.posts_by_file[post.file] = post
 		table.insert(Site.posts_chrono, post)
 		table.insert(Site.posts_chrono_reverse, post)
 	end
