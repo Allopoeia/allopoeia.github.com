@@ -26,3 +26,4 @@ http://allopoeia.komiga.com/dev/tentuk-journal/week-3/
 http://allopoeia.komiga.com/self/too/
 http://allopoeia.komiga.com/self/on-tracking/
 http://allopoeia.komiga.com/self/qqq/
+http://allopoeia.komiga.com/dev/pickle-a-static-site-generator/

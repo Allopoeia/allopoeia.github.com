@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+<head>
+	<meta charset="utf-8" />
+
+	<title>Pickle, a static site generator - Allopoeia</title>
+	<link rel="canonical" href="http://allopoeia.komiga.com/dev/pickle-a-static-site-generator/" />
+
+	<link rel="icon" type="image/png" href="/images/icons/favicon-32.png" />
+	<link rel="shortcut icon" href="/favicon.ico" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+
+	<link rel="alternate" type="application/atom+xml" title="Atom feed" href="/atom.xml" />
+
+	<link rel="stylesheet" href="/css/reset.css" type="text/css" />
+	<link rel="stylesheet" href="/css/screen.css" type="text/css" />
+
+	<script type="text/javascript">
+	var _gaq=_gaq || [];
+	_gaq.push(["_setAccount", "UA-6565507-3"]);
+		_gaq.push(["_trackPageview"]);
+
+	(function() {
+		var ga=document.createElement("script"); ga.type="text/javascript"; ga.async=true;
+		ga.src=("https:"==document.location.protocol ? "https://ssl" : "http://www")+".google-analytics.com/ga.js";
+		var s=document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+
+</head>
+<body>
+
+<!-- body start -->
+<div class="__wrapper">
+
+<div class="navbar">
+	<nav>
+		<ul>
+					<li><a class="nav-item" href="//komiga.com">Ascend</a></li>
+					<li><a class="nav-item" href="/">Archive</a></li>
+					<li><a class="nav-item" href="/atom.xml">Atom</a></li>
+				</ul>
+	</nav>
+</div>
+
+<!-- header and main -->
+<div class="top_container">
+<div class="top_align_center">
+	<!-- article start -->
+	<article class="article_container post f-sans">
+
+	<meta itemprop="name" content="Pickle, a static site generator - Allopoeia" />
+	<link itemprop="url" href="http://allopoeia.komiga.com/dev/pickle-a-static-site-generator/" />
+	<link itemprop="image" href="http://lh4.googleusercontent.com/-0cni5iXgy_8/Uf7NKDyANjI/AAAAAAAAALo/ZHUIsfHxxVc/k-inv-256.png" />
+
+	<meta itemprop="headline" content="Pickle, a static site generator" />
+
+
+	<meta itemprop="datePublished" content="2016-01-17T17:15:00-0500" />
+	<meta itemprop="dateModified" content="2016-01-17T17:15:00-0500" />
+	<meta itemprop="articleSection" content="Dev" />
+	<span itemprop="author" itemscope itemtype="http://schema.org/Person">
+		<meta itemprop="name" content="Coranna Howard" />
+		<link itemprop="url" href="//komiga.com" />
+	</span>
+	<link itemprop="discussionUrl" href="http://allopoeia.komiga.com/dev/pickle-a-static-site-generator/#comments" />
+
+
+<header id="post_header">
+
+			<h1 class="title">Pickle, a static site generator</h1>
+	
+		<div class="header-info-banner border-radius-4">
+		by <a href="//komiga.com">Coranna Howard</a>
+		in Dev
+		<span class="pubdate" title="Last updated 17 January 2016">
+			<time datetime="2016-01-17T17:15:00-0500">
+				17 January 2016
+			</time>
+		</span>
+	</div>
+
+</header>
+
+
+<div id="_main_content" class="post" itemprop="articleBody" itemscope itemtype="http://schema.org/Article">
+
+
+<p><a href="http://allopoeia.komiga.com/self/aiming-for-the-ground-often-missing/">Three years</a> after deciding I wanted to make my own site generator, I have finally done so. The breaking point was <a target="_blank" href="http://jekyllrb.com">Jekyll</a> 3.0 ceasing to <a target="_blank" href="http://jekyllrb.com/docs/upgrading/2-to-3/#layout-metadata">layer</a> layout and content metadata.</p>
+
+<p>Working around this with the design of Allopoeia and my homesite would have been very annoying, as I supplied configuration defaults within layout metadata for pages, to say nothing of dealing with Jekyll again. So, instead, I started looking around for an alternative system. Surely, by now, there would be a site generator without crippled templating!</p>
+
+<p>After struggling with <a target="_blank" href="http://gohugo.io">Hugo</a> and its atrocious templating via Go's <a target="_blank" href="https://golang.org/pkg/text/template/">text/template</a> package, I gave up, and decided it would be far more worthwhile to make my own system.</p>
+
+<p>The result is <a target="_blank" href="https://github.com/komiga/pickle">Pickle</a> (the same name I came up with years ago), which took just under two weeks of focus before it was functional enough to start refactoring my websites. It uses <a target="_blank" href="https://github.com/komiga/togo">togo</a> and the tiny <a target="_blank" href="https://github.com/vurtun/mmx">mmx</a> web server library for the internals, but the majority of it is written in Lua.</p>
+
+<p>The distribution of language sits at 1,216<sub>loc</sub> of Lua &amp; 711<sub>loc</sub> of C++, just under 2,000<sub>loc</sub> total. That's rather slim for a site generator, I'd imagine. Of course, this doesn't say how much is saved by using external libraries, but it's no different from the situation with Jekyll and Hugo, which make extensive use of their language ecosystems.</p>
+
+<p>togo had yet to see Lua integration, and was lacking on the filesystem interface, so significant upstart work was needed alongside Pickle, accounting for the span of time before Pickle was functional. In fact, more code was touched in togo: 2,559<sub>loc</sub> across 58 files.</p>
+
+<p>Some of the discovery work for Lua integration was already done with Quanta (forthcoming), but was rudimentary. Taking the time to do it right within togo has improved the situation greatly.</p>
+
+<p>The templating in Pickle is straight-up Lua, the syntax of which is inspired in part by <a target="_blank" href="https://github.com/bungle/lua-resty-template">lua-resty-template</a>, which itself is similar to <a target="_blank" href="https://mustache.github.io">Mustache</a> and is inspired by yet others, I'm sure. The parser is a meager 221<sub>loc</sub> of C++, and the whole Lua interface is only 185<sub>loc</sub>.</p>
+
+<p>Lovely, but not the greatest implementation. Layering like I was with Jekyll isn't really possible. Ironically, I didn't even design my system with the very feature that I left Jekyll for removing.</p>
+
+<p>If you have a metatable on a Lua chunk redirecting top-level indexes to the provided template context, you only ever see the first branch. From <code>x.y.z</code>, you supply <code>context[x]</code> and never hear if the terminating index resulted in a <code>nil</code>. This is fine, that's just how Lua works.</p>
+
+<p>I imagined using a proxy all the way until it terminated could be possible, but there are immediate red flags at the suggestion. There's no metamethod for "evaluate", so there'd be no way to tell when it terminates. At the last access, the call site would just receive the proxy, leaving no option to try alternative paths from the root.</p>
+
+<p>The other obvious route is rewriting the indexes during template transformation, but that frankly sounds like too much hassle &amp; too much complexity for a feature that isn't really necessary.</p>
+
+<p>Instead, in refactoring my websites, I just split out layouts that were layering and supplied the defaults directly in the content constructors during filtering. This makes much more sense, and centralizes the properties of a page. This was not even possible in vanilla Jekyll (as far as I'm aware), so I still have the upper hand despite lacking its 2.0-style layering.</p>
+
+<p>There are other benefits, as well. With Jekyll, I had to create "includes" for basic often-used functionality: in essence, plain old functions. This was an absolute mess. With Pickle, I can write all of that in pure Lua, if I wanted to, though the unbridled power of Lua right in templates means I don't <em>have</em> to.</p>
+
+<p>Liquid, Jekyll's template language, was simply too restricted to be useful. It results in verbose and ugly code.</p>
+
+<p>Once the disgust for Jekyll was out of the way, I finally did some much-needed maintenance on my websites. My homesite is now more cohesive, and Allopoeia is less janky. Overall, I only shaved off maybe 200-300 lines from the combined changes to the websites, but the quality is greater.</p>
+
+<p>Pickle takes a different approach from most static site generators I've seen. It gives you the basic functionality, the fundamentals, but makes the user build the scaffolding. Stuff that would be considered core functionality in other systems is nowhere to be seen. There is no concept of a "layout" or even a "page". It has filters, which produce outputs, and that's it. In this way, it's not really a "site generator" in the true, it's just a complicated data transformation system that happens to have a web server attached.</p>
+
+<p>I've already thought of other uses for it outside of websites. I often write emails in Markdown on local storage, with an informal metadata syntax that lives only in my head. I usually don't send emails in HTML, but it could be useful for transformation of other properties (and statistics &amp; analysis, which I love).</p>
+
+<p>Back to websites, though, this means you have to write some code upfront, specific to the structure of your site. Mine is a meager core at 307<sub>loc</sub>, shared between my homesite and Allopoeia. Not much baggage, and I don't have to wade around the mire of instituted structure by the generator itself. If something isn't working for the website, I can change the structure without disrupting anything else that uses Pickle.</p>
+
+<p>All in all, a good adventure, not just for my websites, but for togo as well. Pickle has some sore spots left to mend, but it is a much welcome reprise over the previous state of affairs.</p>
+
+
+</div>
+
+<div class="author-banner border-radius-4">
+<div id="copyright-notice" class="generic-center-text">
+	<small>&copy; 2016 <a target="_blank" href="//komiga.com">Coranna Howard</a>, under license <a target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons BY-NC-SA 4.0</a></small>
+</div>
+</div>
+
+<div id="comments" class="f-sans f-sz-norm">
+<h4 class="separator sep_comments">Comments<a class="para-ref" href="#comments"></a></h4>
+		<div id="disqus_thread">
+		<noscript><small><em>Enable JavaScript to view the (<a href="http://disqus.com/?ref_noscript" rel="nofollow">Disqus-powered</a>) comment thread.</em></small></noscript>
+	</div>
+
+</div>
+
+<script type="text/javascript">
+	(function() {
+		var e_comments = document.getElementById("comments");
+		var e_loader = document.createElement("div");
+		e_loader.id = "comment_loader";
+		e_loader.className = "generic-center-text";
+
+		var e_anchor = document.createElement("a");
+		e_anchor.href = "javascript:load_comments()";
+		e_anchor.innerText = "load comments (Disqus)";
+
+		e_loader.appendChild(e_anchor);
+		e_comments.appendChild(e_loader);
+	})();
+
+	var disqus_config = function () {
+		this.page.url = "http://allopoeia.komiga.com/dev/pickle-a-static-site-generator/";
+		this.page.identifier = "dev/pickle-a-static-site-generator/";
+		this.page.title = "Pickle, a static site generator";
+	};
+
+	var load_comments = function() {
+		var e_loader = document.getElementById("comment_loader");
+		e_loader.parentNode.removeChild(e_loader);
+
+		var s = document.createElement('script');
+		s.src = '//komiga.disqus.com/embed.js';
+		s.setAttribute('data-timestamp', +new Date());
+		(document.head || document.body).appendChild(s);
+	};
+</script>
+
+
+	</article>
+
+</div>
+</div>
+
+<!-- footer start -->
+<footer class="top_footer">
+<div class="footer_align_center">
+	<div class="center">
+		<span>&Omega;</span>
+	</div>
+	<div class="center">
+		<span>&copy; 2012–2016 <a href="//komiga.com" target="_blank">komiga</a></span>
+	</div>
+</div>
+</footer>
+
+</div>
+
+</body>
+</html>
