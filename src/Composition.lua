@@ -89,7 +89,7 @@ end)
 :filter("sp_prev", "table", sp_elem_check)
 :filter("sp_next", "table", sp_elem_check)
 
-local post_composition = Page.compose(post_vf, Site.posts, {
+M.post = Page.compose(post_vf, Site.posts, {
 	article_class = "post",
 	article_styles = nil,
 	article_font = "sans",
@@ -117,12 +117,6 @@ local post_composition = Page.compose(post_vf, Site.posts, {
 	sp_prev = nil,
 	sp_next = nil,
 })
-
-M.post = function(source, file, destination)
-	local p = post_composition(source, file, destination)
-	p.bare_content = p.template:content(p)
-	return p
-end
 
 local layout_vf = P.ValueFilter("AllopoeiaLayout")
 

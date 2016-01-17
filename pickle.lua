@@ -83,15 +83,6 @@ Core.setup_filters()
 P.post_collect(Core.group_post_collect(Site.posts))
 
 P.post_collect(function()
-	for _, post in pairs(Site.posts) do
-		if post.legacy_url then
-			local r = Redirect(post.legacy_url, canonical_url(post.url))
-			P.output(nil, post.legacy_url, r, r)
-		end
-	end
-end)
-
-P.post_collect(function()
 	Site.posts_by_file = {}
 	Site.posts_chrono = {}
 	Site.posts_chrono_reverse = {}
@@ -106,4 +97,17 @@ P.post_collect(function()
 	table.sort(Site.posts_chrono_reverse, function(l, r)
 		return l.published > r.published
 	end)
+end)
+
+P.post_collect(function()
+	for _, post in pairs(Site.posts) do
+		local layout = post.template.layout
+		post.template.layout = nil
+		post.bare_content = post.template:content(post)
+		post.template.layout = layout
+		if post.legacy_url then
+			local r = Redirect(post.legacy_url, canonical_url(post.url))
+			P.output(nil, post.legacy_url, r, r)
+		end
+	end
 end)
