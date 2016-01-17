@@ -1,6 +1,7 @@
 layout = "series-post"
 enable_comments = true
 
+legacy_url = "/dev/2015/02/tentuk-journal-week-3.html"
 published = "2015-02-20T23:17:00-0500"
 updated = "2015-02-20T23:17:00-0500"
 
@@ -12,7 +13,7 @@ tags = {}
 title = "Tentuk Journal: Week 3"
 subtitle = nil
 
-sp_prev_url = "/dev/2015/02/tentuk-journal-week-2.html"
+sp_prev_url = "/dev/tentuk-journal/week-2/"
 sp_prev_title = "Week 2"
 sp_next_url = nil
 sp_next_title = nil
