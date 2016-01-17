@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+<head>
+	<meta charset="utf-8" />
+
+	<title>Tentuk Journal: Week 3 - Allopoeia</title>
+	<link rel="canonical" href="http://allopoeia.komiga.com/dev/tentuk-journal/week-3/" />
+
+	<link rel="icon" type="image/png" href="/images/icons/favicon-32.png" />
+	<link rel="shortcut icon" href="/favicon.ico" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+
+	<link rel="alternate" type="application/atom+xml" title="Atom feed" href="/atom.xml" />
+
+	<link rel="stylesheet" href="/css/reset.css" type="text/css" />
+	<link rel="stylesheet" href="/css/screen.css" type="text/css" />
+
+	<script type="text/javascript">
+	var _gaq=_gaq || [];
+	_gaq.push(["_setAccount", "UA-6565507-3"]);
+		_gaq.push(["_trackPageview"]);
+
+	(function() {
+		var ga=document.createElement("script"); ga.type="text/javascript"; ga.async=true;
+		ga.src=("https:"==document.location.protocol ? "https://ssl" : "http://www")+".google-analytics.com/ga.js";
+		var s=document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+
+</head>
+<body>
+
+<!-- body start -->
+<div class="__wrapper">
+
+<div class="navbar">
+	<nav>
+		<ul>
+					<li><a class="nav-item" href="//komiga.com">Ascend</a></li>
+					<li><a class="nav-item" href="/">Archive</a></li>
+					<li><a class="nav-item" href="/atom.xml">Atom</a></li>
+				</ul>
+	</nav>
+</div>
+
+<!-- header and main -->
+<div class="top_container">
+<div class="top_align_center">
+	<!-- article start -->
+	<article class="article_container post f-sans">
+
+	<meta itemprop="name" content="Tentuk Journal: Week 3 - Allopoeia" />
+	<link itemprop="url" href="http://allopoeia.komiga.com/dev/tentuk-journal/week-3/" />
+	<link itemprop="image" href="http://lh4.googleusercontent.com/-0cni5iXgy_8/Uf7NKDyANjI/AAAAAAAAALo/ZHUIsfHxxVc/k-inv-256.png" />
+
+	<meta itemprop="headline" content="Tentuk Journal: Week 3" />
+
+
+	<meta itemprop="datePublished" content="2015-02-20T23:17:00-0500" />
+	<meta itemprop="dateModified" content="2015-02-20T23:17:00-0500" />
+	<meta itemprop="articleSection" content="Dev" />
+	<span itemprop="author" itemscope itemtype="http://schema.org/Person">
+		<meta itemprop="name" content="Coranna Howard" />
+		<link itemprop="url" href="//komiga.com" />
+	</span>
+	<link itemprop="discussionUrl" href="http://allopoeia.komiga.com/dev/tentuk-journal/week-3/#comments" />
+
+
+<header id="post_header">
+
+	
+		<h1 class="title">Tentuk Journal: Week 3</h1>
+	
+		<div class="series-post-link-container">
+		<!-- <div class="series-post-link-center">
+			<span>[series]</span>
+		</div> -->
+
+
+		<div class="series-post-link-prev series-post-link">
+					<a target="_self" href="http://allopoeia.komiga.com/dev/tentuk-journal/week-2">&laquo; Week 2</a>
+				</div>
+
+		<div class="series-post-link-next series-post-link">
+					<span>&raquo;</span>
+				</div>
+		</div>
+
+		<div class="header-info-banner border-radius-4">
+		by <a href="//komiga.com">Coranna Howard</a>
+		in Dev
+		<span class="pubdate" title="Last updated 20 February 2015">
+			<time datetime="2015-02-20T23:17:00-0500">
+				20 February 2015
+			</time>
+		</span>
+	</div>
+
+</header>
+
+
+<div id="_main_content" class="post" itemprop="articleBody" itemscope itemtype="http://schema.org/Article">
+
+
+<p>There's no comfortable way for me to say this, so here goes:</p>
+
+<p>I can't make this game, and, technically, I haven't been making a game. The vast majority of these three weeks has been spent wrestling with the tool pipeline. That's not what I should be doing. It's not even what will make the game what I want it to be. That's the biggest realization I've come to: I can't make this game the way I want it to be.</p>
+
+<p>Only three weeks? That's a really fast burn rate. Truth is, I took a silly thought and turned it into something it didn't want to be. I'm largely making the same mistake I made with Hord &amp; Onsang &mdash; and so soon! It's a painful realization, but one I should have had from the beginning. I let myself run along without stopping to consider the feasibility of it.</p>
+
+<p>Tentuk won't work as a small game. I'm shoe-horning a perfect circle into a square slot orders of magnitude smaller.</p>
+
+<p>Here's the week up to this <em>bit</em> of rational thinking:</p>
+
+<ul>
+	<li>Handle entries removed from the asset manifest by zeroing the timestamp (they'll reload if they're added back in).</li>
+	<li>Multiple map texture packing (hey, that was easy!)</li>
+	<li>Layer grouping and lighting config for scenes.</li>
+	<li>Removed scene backdrops (scenes will use Real Ground™ now) and rotated the camera by -30° along the X axis.</li>
+</ul>
+
+<p>The last one is where I realized all I was doing was fighting the pipeline. The rotation caused the scene to take two times the space along the Y axis, meaning the ground had to be twice as long along Y, meaning I had to unscale the axis, meaning the complexity rose, in turn causing renders to be unaligned in-game, causing me to be unhappy, causing me to <em>actually start thinking</em>, causing <em>this</em>.</p>
+
+<p>So yeah, a fast burn rate, if you want to call it that. I'm happy, though. There was something unsettling about Tentuk, and this has basically been it. I was almost half-way into the 8 weeks I somehow decided was reasonable (and what the hell was that!?), and <em>all I had been doing was fighting</em>.</p>
+
+<p>I would be far better off to use 3D and apply some shaders to get the look I wanted. It's 2015! I don't need to bake 3D to 2D. Obviously, this means I wouldn't be able to continue using LÖVE. There wouldn't be much loss, <em>because there was hardly anything there in the first place</em>, but that is not something I should have to do when I decide a game is not realizable under the systems I'm using. I should already be using systems that allow me to make that decision and continue using what I've already built.</p>
+
+<p>If I were making this with togo (were it reasonably complete), all of this would be "oh, okay, this is not going to work, let's load the whole scene in from the source instead", and off I would be rolling.</p>
+
+<p>I am reverting to the previous, <em>actually well-thought-out</em> plan: continue working on togo and start <em>designing</em> a game. That word, <em>designing</em>, is very important. In design I am much more flexible to change &amp; explore; there are no systems I am working under that prohibit my choices, there are only the <em>possible</em>. The stage after/during that is where I decide how feasible the design is under the systems I want to use. Design also prevents me from falling into a project I don't actually want or know how to make. Rational thought is more easily found to me when I am not busied by <em>tooling</em>, which I actually like, apparently. I like making systems, but systems are not fruitful unless they are applied, and they inevitably increase the complexity (however little). I can't keep applying systems. At some point I have to put down the arsenal and actually make something tangible.</p>
+
+<p>Then (on Wednesday, this was only Wednesday!), I actually played some games. First, <a target="_blank" href="http://finji.itch.io/lost-constellation">Lost Constellation</a>, followed by <a target="_blank" href="http://rubna.itch.io/lisa">lisa</a>. I realized there's so much in both of them that I loved; so much that I wasn't even thinking about with Tentuk. (I mean, let's be honest, I wasn't even thinking.) Lost Constellation is brilliant. They call it a “supplemental” to Night In The Woods, but it felt like a whole, complete game. I loved it, and I didn't even get to see all of the content! And lisa, wow. It almost feels wrong that we should see &amp; play this game rubna made for their friend. It's a cute little game, with charm beyond what should be reasonably possible. I sat basking in it for a while.</p>
+
+<p>For all I can see, lisa is full-3D, with some clever post-processing for a beautiful pixelated look, which surprisingly has a lot of character. I've no idea how the detail is pulled off, but it's proof to me that my footing was completely wrong. I would never be able to pull off its liveliness by baking 3D to 2D.</p>
+
+<p>I realized these games do things I love; things I want to be able to do. The witty, grasping writing in Lost Constellations, and the mechanics &amp; style &amp; charm of lisa. I'm not saying I'd make a cross between these games if I could (and all signs point to a different kind of inner style). They inspire me, and make me want to do better.</p>
+
+<p>I feel ridiculous. I'm disappointed in myself. I'm sorry, me. I can do better than this.</p>
+
+
+</div>
+
+<div class="author-banner border-radius-4">
+<div id="copyright-notice" class="generic-center-text">
+	<small>&copy; 2015 <a target="_blank" href="//komiga.com">Coranna Howard</a>, under license <a target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons BY-NC-SA 4.0</a></small>
+</div>
+</div>
+
+<div id="comments" class="f-sans f-sz-norm">
+<h4 class="separator sep_comments">Comments<a class="para-ref" href="#comments"></a></h4>
+		<div id="disqus_thread">
+		<noscript><small><em>Enable JavaScript to view the (<a href="http://disqus.com/?ref_noscript" rel="nofollow">Disqus-powered</a>) comment thread.</em></small></noscript>
+	</div>
+
+</div>
+
+<script type="text/javascript">
+	(function() {
+		var e_comments = document.getElementById("comments");
+		var e_loader = document.createElement("div");
+		e_loader.id = "comment_loader";
+		e_loader.className = "generic-center-text";
+
+		var e_anchor = document.createElement("a");
+		e_anchor.href = "javascript:load_comments()";
+		e_anchor.innerText = "load comments (Disqus)";
+
+		e_loader.appendChild(e_anchor);
+		e_comments.appendChild(e_loader);
+	})();
+
+	var disqus_config = function () {
+		this.page.url = "http://allopoeia.komiga.com/dev/tentuk-journal/week-3/";
+		this.page.identifier = "http://allopoeia.komiga.com/dev/2015/02/tentuk-journal-week-3.html";
+		this.page.title = "Tentuk Journal: Week 3";
+	};
+
+	var load_comments = function() {
+		var e_loader = document.getElementById("comment_loader");
+		e_loader.parentNode.removeChild(e_loader);
+
+		var s = document.createElement('script');
+		s.src = '//komiga.disqus.com/embed.js';
+		s.setAttribute('data-timestamp', +new Date());
+		(document.head || document.body).appendChild(s);
+	};
+</script>
+
+
+	</article>
+
+</div>
+</div>
+
+<!-- footer start -->
+<footer class="top_footer">
+<div class="footer_align_center">
+	<div class="center">
+		<span>&Omega;</span>
+	</div>
+	<div class="center">
+		<span>&copy; 2012–2016 <a href="//komiga.com" target="_blank">komiga</a></span>
+	</div>
+</div>
+</footer>
+
+</div>
+
+</body>
+</html>

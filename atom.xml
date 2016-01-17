@@ -4,7 +4,7 @@
 <title>Allopoeia</title>
 <link href="http://allopoeia.komiga.com/atom.xml" rel="self" />
 <link href="http://allopoeia.komiga.com" />
-<updated>2016-01-14T00:14:06-0500</updated>
+<updated>2016-01-17T02:30:10-0500</updated>
 <id>http://allopoeia.komiga.com</id>
 <author>
 	<name>Allopoeia</name>
@@ -12,8 +12,8 @@
 </author>
 
 <entry>
-	<link href="http://allopoeia.komiga.com/self/2015/12/qqq.html" />
-	<id>http://allopoeia.komiga.com/self/2015/12/qqq.html</id>
+	<link href="http://allopoeia.komiga.com/self/qqq/" />
+	<id>http://allopoeia.komiga.com/self/qqq/</id>
 
 	<category term="self" label="Self"/>
 
@@ -150,8 +150,8 @@
 	]]></content>
 </entry>
 <entry>
-	<link href="http://allopoeia.komiga.com/self/2015/12/on-tracking.html" />
-	<id>http://allopoeia.komiga.com/self/2015/12/on-tracking.html</id>
+	<link href="http://allopoeia.komiga.com/self/on-tracking/" />
+	<id>http://allopoeia.komiga.com/self/on-tracking/</id>
 
 	<category term="self" label="Self"/>
 
@@ -195,7 +195,7 @@
 
 <p>I abstracted the interfaces and systems to a degree that made it hard to work with them. I was fed up with the design of every UI stack, and somehow decided to start building the frontend, <a target="_blank" href="https://github.com/komiga/Onsang">Onsang</a>, with a terminal-based UI in late 2013. Abominable, yes, but I still consider that a better route than, say, the haven of bloat that is Qt (depending on the application).</p>
 
-<p>Onsang was poisoned by the design thought I was mired in at the time and thus, by extension, Hord. Onsang <a href="/self/2015/01/my-mistake-of-formalism.html">was barely functional</a> by 2015. I was initially focusing on the data model and replacing my spreadsheet application, but it was barely capable of replacing it by that point. The idea was that I could build tracking systems on top of the flexible data model, which was effectively no different from a relational database. I considered using SQLite for storage, but I was unhappy with its data model. I wanted exact, optimal storage of records, which SQLite didn't exactly provide. This was the biggest premature optimization I made, and one that was wholly unnecessary.</p>
+<p>Onsang was poisoned by the design thought I was mired in at the time and thus, by extension, Hord. Onsang <a target="_blank" href="/self/my-mistake-of-formalism/">was barely functional</a> by 2015. I was initially focusing on the data model and replacing my spreadsheet application, but it was barely capable of replacing it by that point. The idea was that I could build tracking systems on top of the flexible data model, which was effectively no different from a relational database. I considered using SQLite for storage, but I was unhappy with its data model. I wanted exact, optimal storage of records, which SQLite didn't exactly provide. This was the biggest premature optimization I made, and one that was wholly unnecessary.</p>
 
 <p>At the end of my sprint on Onsang's functionality in January 2015, I finally concluded Hord &amp; Onsang were a toxic duo that weren't going anywhere good. I threw them away.</p>
 
@@ -225,13 +225,13 @@
 
 <p>It looks like the majority of Quanta will be written in Lua, with C++ backing it for efficiency. So far the object interface and hobbled-together parser are in C++, and not much else. This is a promising approach. I think the model of the analysis tool will be common; I have other domains of data that I also track, which I could pull into Quanta and expand the toolset further.</p>
 
-<p>I am excited to see what I can do with it. The yearly “notes and data” posts I've been doing (<a target="_blank" href="/self/2014/01/2013-notes-and-data.html">2013</a>, <a target="_blank" href="/self/2015/01/2014-notes-and-data.html">2014</a>) are interesting looks at how I've spent my mortal time on this planet &mdash; to me, at least. They haven't been granular enough to satisfy my whims, but with Quanta I'll be able to go beyond what I hoped to do. I probably won't be doing statistics for my tracking this year, but there's plenty to say otherwise.</p>
+<p>I am excited to see what I can do with it. The yearly “notes and data” posts I've been doing (<a target="_blank" href="/self/retrospective/2013/">2013</a>, <a target="_blank" href="/self/retrospective/2014/">2014</a>) are interesting looks at how I've spent my mortal time on this planet &mdash; to me, at least. They haven't been granular enough to satisfy my whims, but with Quanta I'll be able to go beyond what I hoped to do. I probably won't be doing statistics for my tracking this year, but there's plenty to say otherwise.</p>
 
 	]]></content>
 </entry>
 <entry>
-	<link href="http://allopoeia.komiga.com/self/2015/10/too.html" />
-	<id>http://allopoeia.komiga.com/self/2015/10/too.html</id>
+	<link href="http://allopoeia.komiga.com/self/too/" />
+	<id>http://allopoeia.komiga.com/self/too/</id>
 
 	<category term="self" label="Self"/>
 
@@ -285,8 +285,8 @@ to touch
 	]]></content>
 </entry>
 <entry>
-	<link href="http://allopoeia.komiga.com/dev/2015/02/tentuk-journal-week-3.html" />
-	<id>http://allopoeia.komiga.com/dev/2015/02/tentuk-journal-week-3.html</id>
+	<link href="http://allopoeia.komiga.com/dev/tentuk-journal/week-3/" />
+	<id>http://allopoeia.komiga.com/dev/tentuk-journal/week-3/</id>
 
 	<category term="dev" label="Dev"/>
 
@@ -342,8 +342,8 @@ to touch
 	]]></content>
 </entry>
 <entry>
-	<link href="http://allopoeia.komiga.com/dev/2015/02/tentuk-journal-week-2.html" />
-	<id>http://allopoeia.komiga.com/dev/2015/02/tentuk-journal-week-2.html</id>
+	<link href="http://allopoeia.komiga.com/dev/tentuk-journal/week-2/" />
+	<id>http://allopoeia.komiga.com/dev/tentuk-journal/week-2/</id>
 
 	<category term="dev" label="Dev"/>
 
@@ -423,8 +423,8 @@ to touch
 	]]></content>
 </entry>
 <entry>
-	<link href="http://allopoeia.komiga.com/dev/2015/02/tentuk-journal-week-1.html" />
-	<id>http://allopoeia.komiga.com/dev/2015/02/tentuk-journal-week-1.html</id>
+	<link href="http://allopoeia.komiga.com/dev/tentuk-journal/week-1/" />
+	<id>http://allopoeia.komiga.com/dev/tentuk-journal/week-1/</id>
 
 	<category term="dev" label="Dev"/>
 
@@ -468,15 +468,15 @@ to touch
 
 <h2 id="scheduling" class="separator">Scheduling<a class="para-ref" href="#scheduling"></a></h2>
 
-<p>It turns out game development is really hard, and really fun. Ever done a gamejam? Perhaps Ludum Dare? This week was like Ludum Dare for me, but a whole 5.3 days long. Just so you understand the gravity of that, I was awake for 37 hours <a href="/dev/2014-09-04-ludum-dare-30-postmortem-onomo.html" target="_blank">last time</a>. I developed a daily schedule during January, and it has proven very difficult to hold this week. I completely lose track of time and am detrimentally affected by deviation from the schedule &mdash; which is meant to keep my diet rigid, exercise consistent, and rhythm flowing.</p>
+<p>It turns out game development is really hard, and really fun. Ever done a gamejam? Perhaps Ludum Dare? This week was like Ludum Dare for me, but a whole 5.3 days long. Just so you understand the gravity of that, I was awake for 37 hours <a href="/dev/ludum-dare-30-postmortem-onomo/" target="_blank">last time</a>. I developed a daily schedule during January, and it has proven very difficult to hold this week. I completely lose track of time and am detrimentally affected by deviation from the schedule &mdash; which is meant to keep my diet rigid, exercise consistent, and rhythm flowing.</p>
 
 <p>It proved to be very beneficial during January, when I was working on Hord &amp; Onsang. I think it's because that work always felt like drudgery, even when it was interesting or challenging. I was always aware of time because my mind wasn't engaged or focused. It's so bizarre to see the shift in time perception while my efficiency seems unchanged. I'm still unsure if it's because I'm excited to be trekking new ground, or if it's because I've just been really slow. Maybe I'll have a better idea when I'm not so darn tired.</p>
 
 	]]></content>
 </entry>
 <entry>
-	<link href="http://allopoeia.komiga.com/self/2015/01/my-mistake-of-formalism.html" />
-	<id>http://allopoeia.komiga.com/self/2015/01/my-mistake-of-formalism.html</id>
+	<link href="http://allopoeia.komiga.com/self/my-mistake-of-formalism/" />
+	<id>http://allopoeia.komiga.com/self/my-mistake-of-formalism/</id>
 
 	<category term="self" label="Self"/>
 
@@ -514,7 +514,7 @@ to touch
 
 <p>I don't think I ever fully articulated or understood why, but now I know: it's simply because Hord is the worst thing I have created ever since I started programming. I mean that sincerely. Even with all of the issues I could find in my ancient projects and their poor (finger quotes) quality, almost nothing comes to mind that has inflicted more damage than Hord to my psyche and my growth as a programmer, as a creative person, and as a human.</p>
 
-<p>So I'm done. I'm throwing them away. Hord and Onsang will forever remind me that mistakes are costly and that my foresight is (or hopefully was) unreasonable. In three days, as I decided <a href="/self/2015/01/2014-notes-and-data.html" target="_blank">earlier this month</a>, I will go back to game development. I will make a short game using my voice for sound effects and continue development on togo. I'd like the game to be done by the end of March at the latest, and I'm going to shift my education slot from French to drawing, which has been delayed for far too long.</p>
+<p>So I'm done. I'm throwing them away. Hord and Onsang will forever remind me that mistakes are costly and that my foresight is (or hopefully was) unreasonable. In three days, as I decided <a target="_blank" href="/self/retrospective/2014/">earlier this month</a>, I will go back to game development. I will make a short game using my voice for sound effects and continue development on togo. I'd like the game to be done by the end of March at the latest, and I'm going to shift my education slot from French to drawing, which has been delayed for far too long.</p>
 
 <p>The original plan was to sideline Onsang and only work on it as needed, with game projects being primary. I'm almost happy with where it came and even the thesis that it presents in functionality, but not with the crap I had to put up with to get it there, and the crap I still have to put up with to expand it. When I inevitably re-approach Onsang, it will be to tear it down and start anew. The gravest justification for the mistake of formalism was that it mattered to others, or that it had more value as a result, when in reality I was (and am) the only person who would ever use the software. I designed Hord for outsiders <em>who never existed</em>, and latched onto it as a way of teaching myself new avenues, when it only crippled the software. It should be directed by <em>functionality</em>, not formalism, and it should be designed <em>for itself</em>, not for some ulterior purpose. This is what I take away from the biggest mistake I have made &amp; remade &amp; remade &amp; remade since 2013.</p>
 
@@ -523,12 +523,12 @@ to touch
 	]]></content>
 </entry>
 <entry>
-	<link href="http://allopoeia.komiga.com/self/2015/01/2014-notes-and-data.html" />
-	<id>http://allopoeia.komiga.com/self/2015/01/2014-notes-and-data.html</id>
+	<link href="http://allopoeia.komiga.com/self/retrospective/2014/" />
+	<id>http://allopoeia.komiga.com/self/retrospective/2014/</id>
 
 	<category term="self" label="Self"/>
 
-	<title>2014 notes and data</title>
+	<title>Retrospective: 2014</title>
 
 	<rights type="html"><![CDATA[&copy; 2015 <a target="_blank" href="//komiga.com">Coranna Howard</a>, under license <a target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons BY-NC-SA 4.0</a>]]></rights>
 
@@ -554,7 +554,7 @@ to touch
 
 <p>That may <em>seem</em> like a lot, but it still doesn't <em>feel</em> like it, even when I write it all out. I was distraught between the high points at best, and rarely determined enough to do anything consistently.</p>
 
-<p>As for the interests jotted out in my <a href="/self/2014/01/2013-notes-and-data.html" target="_blank">post for 2013</a>, none have been thoroughly advanced. I've done very little with SuperCollider, and I didn't learn any music theory. I forget the exact causes, but it's most likely from the lack of motivation and, in the latter case, because I had just begun developing togo.</p>
+<p>As for the interests jotted out in my <a href="/self/retrospective/2013/" target="_blank">post for 2013</a>, none have been thoroughly advanced. I've done very little with SuperCollider, and I didn't learn any music theory. I forget the exact causes, but it's most likely from the lack of motivation and, in the latter case, because I had just begun developing togo.</p>
 
 <p>I feel most of the year was wasted, despite having spent the largest amount of time on projects since 2011. My greatest difficulty is <em>applying</em> what I know about&hellip; well, everything. Design and execution, primarily. Premature optimization, eternal black holes of design, unbridled habits. I know these mechanics on a deep level, but I don't utilize the knowledge to prevent them. At least I now know (quantitatively <em>and</em> practically) where the wasteful hot spots are in the gamut of my behaviors.</p>
 
@@ -648,8 +648,8 @@ to touch
 	]]></content>
 </entry>
 <entry>
-	<link href="http://allopoeia.komiga.com/fiction/2014/11/quiddlopolis-part-2.html" />
-	<id>http://allopoeia.komiga.com/fiction/2014/11/quiddlopolis-part-2.html</id>
+	<link href="http://allopoeia.komiga.com/fiction/quiddlopolis-part-2/" />
+	<id>http://allopoeia.komiga.com/fiction/quiddlopolis-part-2/</id>
 
 	<category term="fiction" label="Fiction"/>
 
@@ -1147,8 +1147,8 @@ to touch
 	]]></content>
 </entry>
 <entry>
-	<link href="http://allopoeia.komiga.com/dev/2014/09/ludum-dare-30-postmortem-onomo.html" />
-	<id>http://allopoeia.komiga.com/dev/2014/09/ludum-dare-30-postmortem-onomo.html</id>
+	<link href="http://allopoeia.komiga.com/dev/ludum-dare-30-postmortem-onomo/" />
+	<id>http://allopoeia.komiga.com/dev/ludum-dare-30-postmortem-onomo/</id>
 
 	<category term="dev" label="Dev"/>
 
@@ -1272,8 +1272,8 @@ to touch
 	]]></content>
 </entry>
 <entry>
-	<link href="http://allopoeia.komiga.com/dev/2014/06/data-oriented-design-for-games.html" />
-	<id>http://allopoeia.komiga.com/dev/2014/06/data-oriented-design-for-games.html</id>
+	<link href="http://allopoeia.komiga.com/dev/data-oriented-design-for-games/" />
+	<id>http://allopoeia.komiga.com/dev/data-oriented-design-for-games/</id>
 
 	<category term="dev" label="Dev"/>
 
@@ -1362,8 +1362,8 @@ to touch
 	]]></content>
 </entry>
 <entry>
-	<link href="http://allopoeia.komiga.com/self/2014/06/who-am-i.html" />
-	<id>http://allopoeia.komiga.com/self/2014/06/who-am-i.html</id>
+	<link href="http://allopoeia.komiga.com/self/who-am-i/" />
+	<id>http://allopoeia.komiga.com/self/who-am-i/</id>
 
 	<category term="self" label="Self"/>
 
@@ -1453,12 +1453,12 @@ to touch
 	]]></content>
 </entry>
 <entry>
-	<link href="http://allopoeia.komiga.com/self/2014/01/2013-notes-and-data.html" />
-	<id>http://allopoeia.komiga.com/self/2014/01/2013-notes-and-data.html</id>
+	<link href="http://allopoeia.komiga.com/self/retrospective/2013/" />
+	<id>http://allopoeia.komiga.com/self/retrospective/2013/</id>
 
 	<category term="self" label="Self"/>
 
-	<title>2013 notes and data</title>
+	<title>Retrospective: 2013</title>
 
 	<rights type="html"><![CDATA[&copy; 2014 <a target="_blank" href="//komiga.com">Coranna Howard</a>, under license <a target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons BY-NC-SA 4.0</a>]]></rights>
 
@@ -1490,7 +1490,7 @@ to touch
 
 <h2 id="goal-review" class="separator">Goal review<a class="para-ref" href="#goal-review"></a></h2>
 
-<p>Earlier in the year I <a href="/self/2013/01/aiming-for-the-ground-often-missing.html">sketched out</a> my goals for 2013. Most have not happened, and the rest that "have" are not complete.</p>
+<p>Earlier in the year I <a href="/self/aiming-for-the-ground-often-missing/">sketched out</a> my goals for 2013. Most have not happened, and the rest that "have" are not complete.</p>
 
 <ul>
 	<li><p><strong>Static site generator</strong>. I haven't even touched the design since January. Jekyll has gotten somewhat better (speed-wise) and I <em>know</em> the way my sites are setup is disgusting (yes, that's Jekyll's fault), but I've forgotten precisely why, so I don't feel the urgent desire to replace it. I'd still like to roll my own at some point.</p></li>
@@ -1607,8 +1607,8 @@ to touch
 	]]></content>
 </entry>
 <entry>
-	<link href="http://allopoeia.komiga.com/game/2013/09/prince-of-qin-a-flawed-wonder.html" />
-	<id>http://allopoeia.komiga.com/game/2013/09/prince-of-qin-a-flawed-wonder.html</id>
+	<link href="http://allopoeia.komiga.com/game/prince-of-qin-a-flawed-wonder/" />
+	<id>http://allopoeia.komiga.com/game/prince-of-qin-a-flawed-wonder/</id>
 
 	<category term="game" label="Game"/>
 
@@ -2110,8 +2110,8 @@ to touch
 	]]></content>
 </entry>
 <entry>
-	<link href="http://allopoeia.komiga.com/fiction/2013/08/quiddlopolis-part-1.html" />
-	<id>http://allopoeia.komiga.com/fiction/2013/08/quiddlopolis-part-1.html</id>
+	<link href="http://allopoeia.komiga.com/fiction/quiddlopolis-part-1/" />
+	<id>http://allopoeia.komiga.com/fiction/quiddlopolis-part-1/</id>
 
 	<category term="fiction" label="Fiction"/>
 
@@ -2314,8 +2314,8 @@ to touch
 	]]></content>
 </entry>
 <entry>
-	<link href="http://allopoeia.komiga.com/self/2013/01/aiming-for-the-ground-often-missing.html" />
-	<id>http://allopoeia.komiga.com/self/2013/01/aiming-for-the-ground-often-missing.html</id>
+	<link href="http://allopoeia.komiga.com/self/aiming-for-the-ground-often-missing/" />
+	<id>http://allopoeia.komiga.com/self/aiming-for-the-ground-often-missing/</id>
 
 	<category term="self" label="Self"/>
 
@@ -2382,8 +2382,8 @@ to touch
 	]]></content>
 </entry>
 <entry>
-	<link href="http://allopoeia.komiga.com/fiction/2012/07/all-out.html" />
-	<id>http://allopoeia.komiga.com/fiction/2012/07/all-out.html</id>
+	<link href="http://allopoeia.komiga.com/fiction/all-out/" />
+	<id>http://allopoeia.komiga.com/fiction/all-out/</id>
 
 	<category term="fiction" label="Fiction"/>
 
@@ -2604,8 +2604,8 @@ a park bench</em></p>
 	]]></content>
 </entry>
 <entry>
-	<link href="http://allopoeia.komiga.com/links/2012/06/podcastery-round-up-education-with-npr-ted-and-tal.html" />
-	<id>http://allopoeia.komiga.com/links/2012/06/podcastery-round-up-education-with-npr-ted-and-tal.html</id>
+	<link href="http://allopoeia.komiga.com/links/podcastery-round-up-education-with-npr-ted-and-tal/" />
+	<id>http://allopoeia.komiga.com/links/podcastery-round-up-education-with-npr-ted-and-tal/</id>
 
 	<category term="links" label="Links"/>
 
@@ -2677,8 +2677,8 @@ Tread softly because you tread on my dreams.</em><sup><a href="#fn-yeats-poem">4
 	]]></content>
 </entry>
 <entry>
-	<link href="http://allopoeia.komiga.com/opinion/2012/06/education-and-free-mindedness.html" />
-	<id>http://allopoeia.komiga.com/opinion/2012/06/education-and-free-mindedness.html</id>
+	<link href="http://allopoeia.komiga.com/opinion/education-and-free-mindedness/" />
+	<id>http://allopoeia.komiga.com/opinion/education-and-free-mindedness/</id>
 
 	<category term="opinion" label="Opinion"/>
 
@@ -2859,8 +2859,8 @@ Tread softly because you tread on my dreams.</em><sup><a href="#fn-yeats-poem">4
 	]]></content>
 </entry>
 <entry>
-	<link href="http://allopoeia.komiga.com/fiction/2012/06/a-shopping-list.html" />
-	<id>http://allopoeia.komiga.com/fiction/2012/06/a-shopping-list.html</id>
+	<link href="http://allopoeia.komiga.com/fiction/a-shopping-list/" />
+	<id>http://allopoeia.komiga.com/fiction/a-shopping-list/</id>
 
 	<category term="fiction" label="Fiction"/>
 
@@ -2898,8 +2898,8 @@ Tread softly because you tread on my dreams.</em><sup><a href="#fn-yeats-poem">4
 	]]></content>
 </entry>
 <entry>
-	<link href="http://allopoeia.komiga.com/fiction/2012/05/the-ascendant-order.html" />
-	<id>http://allopoeia.komiga.com/fiction/2012/05/the-ascendant-order.html</id>
+	<link href="http://allopoeia.komiga.com/fiction/the-ascendant-order/" />
+	<id>http://allopoeia.komiga.com/fiction/the-ascendant-order/</id>
 
 	<category term="fiction" label="Fiction"/>
 
@@ -2969,8 +2969,8 @@ Tread softly because you tread on my dreams.</em><sup><a href="#fn-yeats-poem">4
 	]]></content>
 </entry>
 <entry>
-	<link href="http://allopoeia.komiga.com/links/2012/03/the-easy-pieces-of-neil-dvorak.html" />
-	<id>http://allopoeia.komiga.com/links/2012/03/the-easy-pieces-of-neil-dvorak.html</id>
+	<link href="http://allopoeia.komiga.com/links/the-easy-pieces-of-neil-dvorak/" />
+	<id>http://allopoeia.komiga.com/links/the-easy-pieces-of-neil-dvorak/</id>
 
 	<category term="links" label="Links"/>
 
@@ -3022,8 +3022,8 @@ Tread softly because you tread on my dreams.</em><sup><a href="#fn-yeats-poem">4
 	]]></content>
 </entry>
 <entry>
-	<link href="http://allopoeia.komiga.com/fiction/2012/02/hackers-disrupt-ops-surveillance.html" />
-	<id>http://allopoeia.komiga.com/fiction/2012/02/hackers-disrupt-ops-surveillance.html</id>
+	<link href="http://allopoeia.komiga.com/fiction/hackers-disrupt-ops-surveillance/" />
+	<id>http://allopoeia.komiga.com/fiction/hackers-disrupt-ops-surveillance/</id>
 
 	<category term="fiction" label="Fiction"/>
 
@@ -3070,8 +3070,8 @@ Tread softly because you tread on my dreams.</em><sup><a href="#fn-yeats-poem">4
 	]]></content>
 </entry>
 <entry>
-	<link href="http://allopoeia.komiga.com/links/2012/02/some-mandy-haps.html" />
-	<id>http://allopoeia.komiga.com/links/2012/02/some-mandy-haps.html</id>
+	<link href="http://allopoeia.komiga.com/links/some-mandy-haps/" />
+	<id>http://allopoeia.komiga.com/links/some-mandy-haps/</id>
 
 	<category term="links" label="Links"/>
 
@@ -3112,8 +3112,8 @@ Tread softly because you tread on my dreams.</em><sup><a href="#fn-yeats-poem">4
 	]]></content>
 </entry>
 <entry>
-	<link href="http://allopoeia.komiga.com/criticism/2012/02/the-wrongness-of-metadata-on-grooveshark.html" />
-	<id>http://allopoeia.komiga.com/criticism/2012/02/the-wrongness-of-metadata-on-grooveshark.html</id>
+	<link href="http://allopoeia.komiga.com/criticism/the-wrongness-of-metadata-on-grooveshark/" />
+	<id>http://allopoeia.komiga.com/criticism/the-wrongness-of-metadata-on-grooveshark/</id>
 
 	<category term="criticism" label="Criticism"/>
 
