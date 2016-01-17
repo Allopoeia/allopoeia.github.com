@@ -15,11 +15,11 @@
 	})();
 
 	var disqus_config = function () {
-		this.page.url = "{! Site.url !}{! C.url !}";
+		this.page.url = "{! canonical_url(C, true) !}";
 {% if C.disqus_legacy_identifier then %}
-		this.page.identifier = "{! Site.url !}{! C.url !}";
+		this.page.identifier = "{! canonical_url(C.legacy_url or C.url, true) !}";
 {% else %}
-		this.page.identifier = "{! C.url !}";
+		this.page.identifier = "{! C.legacy_url or C.url !}";
 {% end %}
 		this.page.title = "{! C.title !}";
 	};
