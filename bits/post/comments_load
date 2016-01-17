@@ -19,7 +19,7 @@
 {% if C.disqus_legacy_identifier then %}
 		this.page.identifier = "{! canonical_url(C.legacy_url or C.url, true) !}";
 {% else %}
-		this.page.identifier = "{! C.legacy_url or C.url !}";
+		this.page.identifier = "{! C.legacy_url or trim_index(C.url) !}";
 {% end %}
 		this.page.title = "{! C.title !}";
 	};
