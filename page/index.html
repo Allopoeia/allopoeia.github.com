@@ -9,8 +9,8 @@ title = "Archive"
 	<li class="border-radius-4">
 	<div class="div-relative">
 		<span class="rp-category-name mobile-hidden"><em>{@ "bits/post/root_category", post @}</em></span><span class="mobile-hidden">&rarr; </span>
-		<span><a href="{{ post.url }}">{@ "bits/page/fancy_title", post @}</a></span>
-		<a href="{{ post.url }}" title="Last updated {{ format_time_human(post.updated) }}"><span class="fill-span"></span></a>
+		<span><a href="{{ canonical_url(post) }}">{@ "bits/page/fancy_title", post @}</a></span>
+		<a href="{{ canonical_url(post) }}" title="Last updated {{ format_time_human(post.updated) }}"><span class="fill-span"></span></a>
 	</div>
 	</li>
 {% end %}
