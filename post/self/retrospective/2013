@@ -1,6 +1,7 @@
 layout = "post"
 enable_comments = true
 
+legacy_url = "/self/2014/01/2013-notes-and-data.html"
 published = "2014-01-01T04:33:00-0500"
 updated = "2014-01-01T04:33:00-0500"
 
@@ -9,7 +10,7 @@ disqus_legacy_identifier = true
 author = Site.author.coranna
 categories = {"self"}
 tags = {}
-title = "2013 notes and data"
+title = "Retrospective: 2013"
 subtitle = nil
 ---content---
 

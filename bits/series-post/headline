@@ -4,7 +4,11 @@ The container div has no size if this occurs, which screws up the layout around 
 The spans are provided in both non-provided cases to ensure the div has a size.
 Oh web.
 #}
-		<h1 class="title">{#@ "bits/page/fancy_title" @#}</h1>
+		<h1 class="title">{@ "bits/page/fancy_title" @}</h1>
+	{% if C.subtitle or C.h_subtitle then %}
+		<h2 class="subtitle">{@ "bits/page/fancy_subtitle" @}</h2>
+	{% end %}
+
 		<div class="series-post-link-container">
 		<!-- <div class="series-post-link-center">
 			<span>[series]</span>
