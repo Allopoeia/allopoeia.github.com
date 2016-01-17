@@ -5,33 +5,8 @@
 			"name": "Root",
 			"path": "./",
 			"folder_exclude_patterns": [
-				"_posts",
-				"_layouts",
-				"_includes",
-				"css",
-				"scripts",
-				"_site"
+				"build"
 			]
-		},
-		{
-			"name": "- Posts",
-			"path": "./_posts/"
-		},
-		{
-			"name": "- CSS",
-			"path": "./css/"
-		},
-		{
-			"name": "- Layouts",
-			"path": "./_layouts/"
-		},
-		{
-			"name": "- Includes",
-			"path": "./_includes/"
-		},
-		{
-			"name": "- Scripts",
-			"path": "./scripts/"
 		}
 	],
 	"settings":
