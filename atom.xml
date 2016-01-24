@@ -4,13 +4,51 @@
 <title>Allopoeia</title>
 <link href="http://allopoeia.komiga.com/atom.xml" rel="self" />
 <link href="http://allopoeia.komiga.com" />
-<updated>2016-01-17T17:16:11-0500</updated>
+<updated>2016-01-24T15:39:42-0500</updated>
 <id>http://allopoeia.komiga.com</id>
 <author>
 	<name>Allopoeia</name>
 	<uri>http://allopoeia.komiga.com</uri>
 </author>
 
+<entry>
+	<link href="http://allopoeia.komiga.com/margins/2016/01/24-so-it-begins/" />
+	<id>http://allopoeia.komiga.com/margins/2016/01/24-so-it-begins/</id>
+
+	<category term="margins" label="Margins"/>
+
+	<title>So it begins</title>
+
+	<rights type="html"><![CDATA[&copy; 2016 <a target="_blank" href="//komiga.com">Coranna Howard</a>, under license <a target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons BY-NC-SA 4.0</a>]]></rights>
+
+	<published>2016-01-24T15:39:00-0500</published>
+	<updated>2016-01-24T15:39:00-0500</updated>
+
+	<author>
+		<name>Coranna Howard</name>
+		<uri>//komiga.com</uri>
+	</author>
+
+	<content type="html"><![CDATA[
+
+<p>In reading Rami's <a target="_blank" href="http://ramiismail.com/type/aside/">Asides</a> and eevee's <a target="_blank" href="http://eev.ee/everything/tags/status/">weekly roundups</a>, I was reminded that I have been very bare with my writing over the past year.</p>
+
+<p>Way back in 2013, I had a vague idea that I'd improve my writing with micro-fiction (e.g., like <a target="_blank" href="http://www.ommatidia.org/">Ommatidia</a>), but I never forced myself to get into a routine. A lot of my time in writing tends to be spent on revision &amp; nitpicking, so it wouldn't consume a lot of my time to write fiction in that format.</p>
+
+<p>However, I think my personal voice is more lacking than my story voice. I have similar problems with both, but I think the former will be more valuable in the immediate future.</p>
+
+<p>I'll probably do both, eventually, but for now, this short-form space will be used to unpack &amp; process thoughts and opinions. I'm not committing to a specific schedule to avoid waisting time wondering what to write (as I often do with fiction). Instead, I'll use the slow spaces in the day to capture my persistent thoughts and examine them.</p>
+
+<p>I suspect there's going to be a bit of a turmoil over whether to promote a post to another category, but that will just be a helpful signal that the subject might need more time &amp; attention than I'm giving it.</p>
+
+<p>Perhaps in doing this I'll overcome my persistent fear of entering discussions in the games space and voicing my opinions about the goings-on in society and culture.</p>
+
+<p>I rarely voice myself on Twitter due to its absolutely atrocious threading and severely limited communication space. It so often breeds misunderstanding, and it becomes a tangled mess of attrition beyond the most trivial of dialogues.</p>
+
+<p>This is the kind of thing that should be its own post!</p>
+
+	]]></content>
+</entry>
 <entry>
 	<link href="http://allopoeia.komiga.com/dev/pickle-a-static-site-generator/" />
 	<id>http://allopoeia.komiga.com/dev/pickle-a-static-site-generator/</id>
