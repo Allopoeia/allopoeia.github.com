@@ -4,13 +4,79 @@
 <title>Allopoeia</title>
 <link href="http://allopoeia.komiga.com/atom.xml" rel="self" />
 <link href="http://allopoeia.komiga.com" />
-<updated>2016-01-24T15:39:42-0500</updated>
+<updated>2016-01-25T19:30:08-0500</updated>
 <id>http://allopoeia.komiga.com</id>
 <author>
 	<name>Allopoeia</name>
 	<uri>http://allopoeia.komiga.com</uri>
 </author>
 
+<entry>
+	<link href="http://allopoeia.komiga.com/margins/2016/01/25-public-infrastructure/" />
+	<id>http://allopoeia.komiga.com/margins/2016/01/25-public-infrastructure/</id>
+
+	<category term="margins" label="Margins"/>
+
+	<title>Public infrastructure</title>
+
+	<rights type="html"><![CDATA[&copy; 2016 <a target="_blank" href="//komiga.com">Coranna Howard</a>, under license <a target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons BY-NC-SA 4.0</a>]]></rights>
+
+	<published>2016-01-25T19:29:00-0500</published>
+	<updated>2016-01-25T19:29:00-0500</updated>
+
+	<author>
+		<name>Coranna Howard</name>
+		<uri>//komiga.com</uri>
+	</author>
+
+	<content type="html"><![CDATA[
+
+<p><a target="_blank" href="http://sfist.com/2016/01/25/app_promises_faster_oakland_police.php">Blue Light</a> is a largely trivial service that sends a caller's location to emergency service dispatchers. This is already standard for landlines, I believe, but cellphones are admittedly a bit trickier.</p>
+
+<p>First off, it's really evident individuals won't pay for this. The cost-to-benefit ratio here is terrible. Most people don't use 911 everyday, surely. It's not an insurance on your life, it just saves you a minute or two from explaining your location. In other words, Startup 101: token convenience.</p>
+
+<p>But more importantly, the fact that our public emergency service doesn't have this capability is a simple, blatant example of our crumbling infrastructure. I come back to this line of thought whenever I have to interact with a government office or website. Many public service websites for Ohio are early-to-mid 2000s tech, and are usually broken in some way or another.</p>
+
+<p>I am afraid of how many web standards they break.</p>
+
+<p>&hellip;</p>
+
+<p>I've heard several surprised remarks about our orange-cone mass art project by non-Ohioans when they drive into the state, referring to the persistent maintenance of Ohio's roadways. It's not by chance. This is everywhere. After seeing areas under work for <em>years</em>, uninterrupted, I am left wondering if we're:</p>
+
+<ol>
+	<li><p>extremely slow at construction work,</p></li>
+	<li><p>did or are doing something wrong (thus causing need for constant repair), or</p></li>
+	<li><p>just exerting tremendous stress on an infrastructure that's as good as it can be (considering the basic need for <em>working</em> infrastructure).</p></li>
+</ol>
+
+<p>It's likely a combination of all three. When it comes to physical infrastructure, at least, that's as far as I can go before I give up hope.</p>
+
+<p>While we are only preventing complete disrepair through our constant maintenance on <em>physical</em> infrastructure, our <em>virtual</em> infrastructure largely lies untouched.</p>
+
+<p>To get back to Blue Light, there are a few reasonable arguments against implementing this capability. The most obvious being the potential for surveillance. The NSA can probably already do this to their satisfaction, but we shouldn't encourage them. Of course, this potential depends on the implementation. We wouldn't want our phones to constantly record and relay our location, granted they probably already do that too.</p>
+
+<p>The next is also obvious: is it even necessary? No, likely not for the majority of emergencies, but it would absolutely help with situations where the caller is in too much distress to coherently explain their location, or in a dangerous position to talk.</p>
+
+<p>And what about the cost? This is a big one. We all know the government is terrible with money. Contracts are frequently given to the lowest bidder, who then implement a hackjob and doom the situation to something more akin to our physical infrastructure. Proprietary systems lock us into a particular vendor, and the more we hire them to do maintenance on it, the less we are able to escape the lock-in.</p>
+
+<p>Now I am reminded of the lobbying that cripples public Internet service.</p>
+
+<p>I often envisage an empowered public sector that joins forces with OSS, keeping what's funded by the public, the property of the public. This is an untenable vision under our concoction of capitalism, conservatism, and left-but-not-really liberalism.</p>
+
+<p>The government certainly isn't equipped to combat capitalism.</p>
+
+<p>If we want to improve our public infrastructure, our social wellbeing, we're going to need tremendous upheaval of the systems that prevent the public from owning its investments.</p>
+
+<p>I am hopeful we will get there within my lifespan. I would be among the first to line up to work for the public sector were it committed to civic investment spanning our entire infrastructure.</p>
+
+<p>What Blue Light is doing would be a trivial outcome. Much, much more would be possible if the public interwove its efforts and was empowered to counteract corporate interests.</p>
+
+<p>&hellip;</p>
+
+<p>Incidentally, I just tried to verify my phone number with my bank. It has been 30 minutes, and I have yet to receive the verification code. Corporations are often just as bad as our government when it comes to <em>doing their job</em>.</p>
+
+	]]></content>
+</entry>
 <entry>
 	<link href="http://allopoeia.komiga.com/margins/2016/01/24-so-it-begins/" />
 	<id>http://allopoeia.komiga.com/margins/2016/01/24-so-it-begins/</id>
