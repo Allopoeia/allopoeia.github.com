@@ -1,12 +1,12 @@
 
 local P = require "Pickle"
 local F = require "Pickle.Filter"
-local Core = require "core/Core"
+local Core = require "src/Core"
 local Layout = require "core/Layout"
 local Page = require "core/Page"
 local Redirect = require "core/Redirect"
 local NavItem = require "core/NavItem"
-require "src/Support"
+local Section = require "src/Section"
 
 P.configure_default{
 	port = 4001,
