@@ -1,0 +1,11 @@
+
+local U = require "togo.utility"
+local M = require "core/Section"
+
+M.tpl_content = [[<h%d class="separator">%s%s</h%d>]]
+
+function M.sub(name, url, id, level)
+	return M.make(nil, name, name, nil, id, level or 2)
+end
+
+return M
