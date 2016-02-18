@@ -224,22 +224,25 @@ sub {
 }
 
 .para-ref {
-	display: none;
+	display: inline;
+	visibility: hidden;
+}
+.para-ref>a {
 	margin: auto 5px auto 5px;
 	padding: 0px 5px 0px 5px;
 	font-weight: normal;
 	text-decoration: none;
 }
-.para-ref:before {content: "#";}
+.para-ref>a:before {content: "#";}
 
-h1:hover>a.para-ref,
-h2:hover>a.para-ref,
-h3:hover>a.para-ref,
-h4:hover>a.para-ref,
-h5:hover>a.para-ref,
-h6:hover>a.para-ref
+h1:hover>.para-ref,
+h2:hover>.para-ref,
+h3:hover>.para-ref,
+h4:hover>.para-ref,
+h5:hover>.para-ref,
+h6:hover>.para-ref
 {
-	display: inline;
+	visibility: visible;
 }
 
 .rp-category-name {
