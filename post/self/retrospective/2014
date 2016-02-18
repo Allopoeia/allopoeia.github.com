@@ -39,7 +39,7 @@ sp_next = nil
 
 <p>So I will.</p>
 
-<h2 id="data" class="separator">Data<a class="para-ref" href="#data"></a></h2>
+{! Section.sub("Data") !}
 
 <p>I tracked a total of 8753.3 hours in 2014 with 16177 entries (1827 greater than in 2013). 6.7 hours were (probably) gobbled up by micro discontinuities and weird software. On a bright note, that's only half the time lost during 2013!</p>
 

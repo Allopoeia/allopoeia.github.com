@@ -21,7 +21,7 @@ sp_next = {"/dev/tentuk-journal/week-3", "Week 3"}
 
 <p>I spent 62.3 hours working on the game this week. That's 10.2 hours greater than last week, with the longest uninterrupted sequence running 4 hours and 21 minutes on February 13 (yowzers).</p>
 
-<h2 id="week-2" class="separator">Week 2<a class="para-ref" href="#week-2"></a></h2>
+{! Section.sub("Week 2") !}
 
 <p>Here's a quick look at the progress:</p>
 
@@ -56,7 +56,7 @@ sp_next = {"/dev/tentuk-journal/week-3", "Week 3"}
 
 <p>The repository is sitting at <span title="what a nice even number">150</span> commits right now. That's actually surprising to me. I didn't think I was committing that much, and it seems like a very rapid growth in comparison with my other projects. There're huge deluges of commits on the game code, though, which is probably running at a faster pace.</p>
 
-<h2 id="time-and-management" class="separator">Time and management<a class="para-ref" href="#time-and-management"></a></h2>
+{! Section.sub("Time and management") !}
 
 <p>I don't actually plan on working Sunday, nor most of Saturday, but these first two weeks have essentially lead to it. Everything I intended to do is done, but it took until the last hours of Sunday to pull it all off and leave it in a functional state. It takes a lot to put in 8-10 hours every day, and pushing all the way to the end of the week without a break just feeds into repeating the cycle the following week.</p>
 
@@ -66,7 +66,7 @@ sp_next = {"/dev/tentuk-journal/week-3", "Week 3"}
 
 <p>Live and learn.</p>
 
-<h2 id="timelapse" class="separator">Timelapse<a class="para-ref" href="#timelapse"></a></h2>
+{! Section.sub("Timelapse") !}
 
 <p>This week's <a target="_blank" href="https://youtu.be/pM11GHxvzrY">timelapse</a> includes data from February 6-8 of last week. Unfortunately, I don't think YouTube kept the original video size, so it looks worse than the actual frames.</p>
 
