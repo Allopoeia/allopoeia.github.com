@@ -4,7 +4,7 @@
 <title>Allopoeia</title>
 <link href="http://allopoeia.komiga.com/atom.xml" rel="self" />
 <link href="http://allopoeia.komiga.com" />
-<updated>2016-04-26T14:02:18-0400</updated>
+<updated>2016-09-03T09:21:10+0000</updated>
 <id>http://allopoeia.komiga.com</id>
 <author>
 	<name>Allopoeia</name>
@@ -21,8 +21,8 @@
 
 	<rights type="html"><![CDATA[&copy; 2016 <a target="_blank" href="//komiga.com">Coranna Howard</a>, under license <a target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons BY-NC-SA 4.0</a>]]></rights>
 
-	<published>2016-04-26T15:01:00-0400</published>
-	<updated>2016-04-26T15:01:00-0400</updated>
+	<published>2016-04-26T14:01:00-0400</published>
+	<updated>2016-04-26T14:01:00-0400</updated>
 
 	<author>
 		<name>Coranna Howard</name>
@@ -531,8 +531,8 @@
 
 	<rights type="html"><![CDATA[&copy; 2015 <a target="_blank" href="//komiga.com">Coranna Howard</a>, under license <a target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons BY-NC-SA 4.0</a>]]></rights>
 
-	<published>2015-10-07T02:34:00-0400</published>
-	<updated>2015-10-07T02:34:00-0400</updated>
+	<published>2015-10-07T01:34:00-0400</published>
+	<updated>2015-10-07T01:34:00-0400</updated>
 
 	<author>
 		<name>Coranna Howard</name>
@@ -1448,8 +1448,8 @@ to touch
 
 	<rights type="html"><![CDATA[&copy; 2014 <a target="_blank" href="//komiga.com">Coranna Howard</a>, under license <a target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons BY-NC-SA 4.0</a>]]></rights>
 
-	<published>2014-09-04T17:01:00-0400</published>
-	<updated>2014-09-04T17:01:00-0400</updated>
+	<published>2014-09-04T16:01:00-0700</published>
+	<updated>2014-09-04T16:01:00-0700</updated>
 
 	<author>
 		<name>Coranna Howard</name>
@@ -1573,7 +1573,7 @@ to touch
 
 	<rights type="html"><![CDATA[&copy; 2014 <a target="_blank" href="//komiga.com">Coranna Howard</a>, under license <a target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons BY-NC-SA 4.0</a>]]></rights>
 
-	<published>2014-06-23T18:19:00-0400</published>
+	<published>2014-06-23T17:19:00-0400</published>
 	<updated>2014-12-23T03:34:00-0500</updated>
 
 	<author>
@@ -1664,7 +1664,7 @@ to touch
 
 	<rights type="html"><![CDATA[&copy; 2014&mdash;2015 <a target="_blank" href="//komiga.com">Coranna Howard</a>, under license <a target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons BY-NC-SA 4.0</a>]]></rights>
 
-	<published>2014-06-04T14:58:00-0400</published>
+	<published>2014-06-04T13:58:00-0400</published>
 	<updated>2015-11-06T20:32:00-0500</updated>
 
 	<author>
@@ -1908,8 +1908,8 @@ to touch
 
 	<rights type="html"><![CDATA[&copy; 2013&mdash;2015 <a target="_blank" href="//komiga.com">Coranna Howard</a>, under license <a target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons BY-NC-SA 4.0</a>]]></rights>
 
-	<published>2013-10-01T00:07:00-0400</published>
-	<updated>2015-10-29T14:34:00-0400</updated>
+	<published>2013-09-30T23:07:00-0400</published>
+	<updated>2015-10-29T13:34:00-0400</updated>
 
 	<author>
 		<name>Coranna Howard</name>
@@ -2411,7 +2411,7 @@ to touch
 
 	<rights type="html"><![CDATA[&copy; 2013&mdash;2014 <a target="_blank" href="//komiga.com">Coranna Howard</a>, under license <a target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons BY-NC-SA 4.0</a>]]></rights>
 
-	<published>2013-08-05T02:35:00-0400</published>
+	<published>2013-08-05T01:35:00-0400</published>
 	<updated>2014-11-23T22:46:00-0500</updated>
 
 	<author>
@@ -2683,7 +2683,7 @@ to touch
 
 	<rights type="html"><![CDATA[&copy; 2012&mdash;2014 <a target="_blank" href="//komiga.com">Coranna Howard</a>, under license <a target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons BY-NC-SA 4.0</a>]]></rights>
 
-	<published>2012-07-11T22:30:00-0400</published>
+	<published>2012-07-11T21:30:00-0400</published>
 	<updated>2014-11-23T22:46:00-0500</updated>
 
 	<author>
@@ -2896,17 +2896,17 @@ a park bench</em></p>
 	]]></content>
 </entry>
 <entry>
-	<link href="http://allopoeia.komiga.com/links/podcastery-round-up-education-with-npr-ted-and-tal/" />
-	<id>http://allopoeia.komiga.com/links/podcastery-round-up-education-with-npr-ted-and-tal/</id>
+	<link href="http://allopoeia.komiga.com/links/podcast-round-up-education-with-npr-ted-and-tal/" />
+	<id>http://allopoeia.komiga.com/links/podcast-round-up-education-with-npr-ted-and-tal/</id>
 
 	<category term="links" label="Links"/>
 
-	<title>Podcastery round-up: education with NPR, TED and This American Life</title>
+	<title>Podcast round-up: education with NPR, TED and TAL</title>
 	<subtitle type="html"><![CDATA[<a target="_blank" href="http://www.npr.org/2012/06/22/155224654/building-a-better-classroom">&raquo; Building A Better Classroom &ndash; NPR, TED Radio Hour</a>]]></subtitle>
 
 	<rights type="html"><![CDATA[&copy; 2012&mdash;2015 <a target="_blank" href="//komiga.com">Coranna Howard</a>, under license <a target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons BY-NC-SA 4.0</a>]]></rights>
 
-	<published>2012-06-22T21:00:00-0400</published>
+	<published>2012-06-22T20:00:00-0400</published>
 	<updated>2015-12-07T02:21:00-0500</updated>
 
 	<author>
@@ -2978,7 +2978,7 @@ Tread softly because you tread on my dreams.</em><sup><a href="#fn-yeats-poem">4
 
 	<rights type="html"><![CDATA[&copy; 2012&mdash;2015 <a target="_blank" href="//komiga.com">Coranna Howard</a>, under license <a target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons BY-NC-SA 4.0</a>]]></rights>
 
-	<published>2012-06-17T20:52:00-0400</published>
+	<published>2012-06-17T19:52:00-0400</published>
 	<updated>2015-12-07T02:21:00-0500</updated>
 
 	<author>
@@ -3160,8 +3160,8 @@ Tread softly because you tread on my dreams.</em><sup><a href="#fn-yeats-poem">4
 
 	<rights type="html"><![CDATA[&copy; 2012 <a target="_blank" href="//komiga.com">Coranna Howard</a>, under license <a target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons BY-NC-SA 4.0</a>]]></rights>
 
-	<published>2012-06-14T11:07:00-0400</published>
-	<updated>2012-06-14T11:07:00-0400</updated>
+	<published>2012-06-14T10:07:00-0400</published>
+	<updated>2012-06-14T10:07:00-0400</updated>
 
 	<author>
 		<name>Coranna Howard</name>
@@ -3199,7 +3199,7 @@ Tread softly because you tread on my dreams.</em><sup><a href="#fn-yeats-poem">4
 
 	<rights type="html"><![CDATA[&copy; 2012&mdash;2014 <a target="_blank" href="//komiga.com">Coranna Howard</a>, under license <a target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons BY-NC-SA 4.0</a>]]></rights>
 
-	<published>2012-05-11T01:34:00-0400</published>
+	<published>2012-05-11T00:34:00-0400</published>
 	<updated>2014-11-23T22:40:00-0500</updated>
 
 	<author>
@@ -3271,8 +3271,8 @@ Tread softly because you tread on my dreams.</em><sup><a href="#fn-yeats-poem">4
 
 	<rights type="html"><![CDATA[&copy; 2012 <a target="_blank" href="//komiga.com">Coranna Howard</a>, under license <a target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons BY-NC-SA 4.0</a>]]></rights>
 
-	<published>2012-03-16T03:32:00-0400</published>
-	<updated>2012-03-16T03:32:00-0400</updated>
+	<published>2012-03-16T02:32:00-0400</published>
+	<updated>2012-03-16T02:32:00-0400</updated>
 
 	<author>
 		<name>Coranna Howard</name>
