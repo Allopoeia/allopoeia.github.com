@@ -57,7 +57,7 @@ local post_vf = P.ValueFilter("AllopoeiaPost")
 	local y, m, title = string.match(file, "^(%d%d%d%d)%-(%d%d)%-%d%d%-(.*)%.html$")
 	if y then
 		if not post.legacy_url then
-			post.legacy_url = string.format("/%s/%s/%s/%s.html", path, y, m, title)
+			post.legacy_url = U.trim_leading_slashes(string.format("%s/%s/%s/%s.html", path, y, m, title))
 		end
 		file = string.format("%s", title)
 	end
@@ -74,7 +74,9 @@ end)
 :filter("disable_header", "boolean")
 :filter("enable_comments", "boolean")
 :filter("disqus_legacy_identifier", "boolean")
-:filter("legacy_url", "string")
+:filter("legacy_url", "string", function(post, value)
+	return U.trim_leading_slashes(value)
+end)
 :filter("published", "string", parse_time)
 :filter("updated", "string", parse_time)
 :filter("author", "table")
