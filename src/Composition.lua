@@ -23,14 +23,6 @@ M.page = Page.compose(page_vf, nil, {
 	nav_active = nil,
 })
 
-local function parse_time(_, value)
-	local time = P.parse_time(value, Core.time_formats.iso)
-	if not time then
-		return nil, string.format("failed to parse time: %s", value)
-	end
-	return time
-end
-
 local function sp_elem_check(post, value)
 	if #value >= 1 and #value <= 3 then
 		local e1 = value[1]
@@ -45,6 +37,17 @@ local function sp_elem_check(post, value)
 		end
 	end
 	return nil, "malformed: expected table of {file} or {file, title} or {url, title, true}"
+end
+
+local function parse_time(_, value)
+	if type(value) == "table" then
+		return value
+	end
+	local time = P.parse_time(value, Core.time_formats.iso)
+	if not time then
+		return nil, string.format("failed to parse time: %s", value)
+	end
+	return time
 end
 
 local post_vf = P.ValueFilter("AllopoeiaPost")

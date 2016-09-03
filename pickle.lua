@@ -94,10 +94,10 @@ P.post_collect(function()
 		table.insert(Site.posts_chrono_reverse, post)
 	end
 	table.sort(Site.posts_chrono, function(l, r)
-		return l.published < r.published
+		return l.published.secs < r.published.secs
 	end)
 	table.sort(Site.posts_chrono_reverse, function(l, r)
-		return l.published > r.published
+		return l.published.secs > r.published.secs
 	end)
 end)
 
