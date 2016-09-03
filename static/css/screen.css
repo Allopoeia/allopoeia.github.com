@@ -114,8 +114,8 @@ body {
 	padding: 0px;
 	margin: 0px;
 	font: normal normal normal 20px/1.366em "Liberation Sans", "DejaVu Sans", "Droid Sans", sans-serif !important;
-	background-color: #282C34;
-	color: #D0D6DA;
+	background-color: #1E2329;
+	color: #d0d6da;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -144,8 +144,8 @@ code {
 ol {list-style: decimal;}
 ul {list-style: disc;}
 
-a		{color: #5299CC; text-decoration: none;}
-a:hover	{color: #B3DFFF; text-decoration: underline;}
+a		{color: #5299cc; text-decoration: none;}
+a:hover	{color: #b3dfff; text-decoration: underline;}
 
 em {font-style: italic;}
 strong {font-weight: bold;}
@@ -166,31 +166,12 @@ sub {
 
 /* Stylers */
 
-.clr-norm {color: #D0D6DA;}
-.clr-less {color: #5A6062;}
-.clr-bg-norm {background-color: #282C34;}
-.clr-bg-midl {background-color: #202329;}
-
 .normal-inset {margin-left: 20px;}
 
 .div-relative {position: relative;}
 .generic-float-right {float: right;}
 .generic-center {margin-left: auto; margin-right: auto;}
 .generic-center-text {text-align: center;}
-
-.border-radius-4 {
-	border-radius: 4px;
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
-	-o-border-radius: 4px;
-}
-
-.horiz-flip {
-	transform: scale(1, -1);
-	-webkit-transform: scale(1, -1);
-	-moz-transform: scale(1, -1);
-	-o-transform: scale(1, -1);
-}
 
 .rotate-90 {
 	transform: rotate(90deg);
@@ -213,14 +194,14 @@ sub {
 .separator {
 	width: 100%;
 	border: none;
-	border-bottom: 1px #45484A solid;
+	border-bottom: 1px #45484a solid;
 	margin-bottom: 20px;
 }
 
 .separator-inner {
 	width: 40%;
 	border: none;
-	border-bottom: 1px #45484A solid;
+	border-bottom: 1px #45484a solid;
 }
 
 .para-ref {
@@ -245,19 +226,14 @@ h6:hover>.para-ref
 	visibility: visible;
 }
 
-.rp-category-name {
-	width: 90px;
-	display: inline-block;
-}
-
 .mobile-hidden {
 	visibility: visible;
 }
 
 @media only screen and (max-width: 801px) {
 	.mobile-hidden {
-		display: none;
-		visibility: hidden;
+		display: none !important;
+		visibility: hidden !important;
 	}
 }
 
@@ -297,7 +273,7 @@ h6:hover>.para-ref
 	width: 100%;
 	height: 48px;
 	white-space: nowrap;
-	background-color: #13161A;
+	background-color: #000000;
 	margin-bottom: 20px;
 }
 
@@ -305,18 +281,13 @@ a.nav-item {
 	height: 48px;
 	line-height: 48px;
 	text-decoration: none;
-	color: #AAAFB0;
+	color: #aaaaaa;
 }
 
-a:hover.nav-item {
-	text-decoration: none;
-	color: #CCCAC8;
-}
-
+a:hover.nav-item,
 a.nav-item.active {
 	text-decoration: none;
-	color: #E6E3E1;
-	text-shadow: #4D4D4D 0px 0px 4px;
+	color: #ffffff;
 }
 
 .navbar>nav {
@@ -356,9 +327,9 @@ a.nav-item.active {
 	height: 100px;
 	width: 100%;
 	font-size: 18px;
-	background-color: #0D1012;
-	border-top: 1px #0D0D0D solid;
-	color: #5A6062;
+	background-color: #000000;
+	border-top: 1px #0f0f0f solid;
+	color: #5a6062;
 }
 
 .footer_align_center {
@@ -385,36 +356,32 @@ a.nav-item.active {
 /* Other stuff */
 
 .post_list {
-	margin-left: 0px;
 	list-style: none;
+	margin: 0;
 }
 
-.post_list>li {
-	margin: 10px 0px 10px 0px;
-	background-color: #1D2024;
-	box-shadow: inset 1px 1px #141414, 2px 2px #111111;
+.post_list>li {}
+
+.post_list>li>div {
+	padding: 10px 16px 10px 16px;
 }
 
-.post_list>li .div-relative {padding: 8px 10px 8px 10px;}
+.post_category {
+	min-width: 80px;
+	display: inline-block;
+	text-align: right;
+}
+
+.post_part_separator {
+	padding-left: 8px;
+	padding-right: 8px;
+	display: inline-block;
+}
 
 .post_list>li:hover {
-	background-color: #202329;
-}
-
-.post_list>li>a:hover {
 	text-decoration: none;
-}
-
-.post_list .right {
-	float: right;
-	margin-left: 10px;
-	font-style: italic;
-	color: #D0D6DA;
-}
-
-.post_list .above {
-	position: relative;
-	z-index: 2;
+	background-color: #16161d;
+	color: #ffffff;
 }
 
 /* Article */
@@ -439,10 +406,9 @@ a.nav-item.active {
 }
 
 .article_container blockquote.excerpt {
-	color: #AAAFB3;
-	border-left: #45484A 2px solid;
+	color: #aaafb3;
+	border-left: #45484a 2px solid;
 	padding-left: 10px;
-	border-radius: 4px;
 }
 .article_container blockquote.excerpt:before {
 	display: none;
@@ -477,8 +443,7 @@ a.nav-item.active {
 .header-info-banner,
 .author-banner {
 	clear: both;
-	box-shadow: inset 1px 1px #141414, 2px 2px #111111;
-	background-color: #202329;
+	background-color: #16161d;
 }
 
 .header-info-banner {
@@ -512,8 +477,7 @@ footer>ol li, footer>ul li {
 }
 
 .series-post-link {
-	box-shadow: inset 1px 1px #141414, 1px 1px #111111;
-	background-color: #202329;
+	background-color: #16161d;
 	margin-bottom: 10px;
 	padding: 5px 10px;
 }
