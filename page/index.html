@@ -6,11 +6,14 @@ title = "Archive"
 {% if #Site.posts_chrono_reverse > 0 then %}
 <ul class="post_list">
 {% for _, post in ipairs(Site.posts_chrono_reverse) do %}
-	<li class="border-radius-4">
+	<li>
 	<div class="div-relative">
-		<span class="rp-category-name mobile-hidden"><em>{@ "bits/post/root_category", post @}</em></span><span class="mobile-hidden">&rarr; </span>
-		<span><a href="{{ canonical_url(post) }}">{@ "bits/page/fancy_title", post @}</a></span>
-		<a href="{{ canonical_url(post) }}" title="Last updated {{ format_time_human(post.updated) }}"><span class="fill-span"></span></a>
+		<span class="mobile-hidden">{{ format_time(post.published, "%Y-%m-%d") }}</span>
+		<span class="post_part_separator mobile-hidden">//</span>
+		<span class="post_category mobile-hidden"><em>{@ "bits/post/root_category", post @}</em></span>
+		<span class="post_part_separator mobile-hidden">//</span>
+		<span>{@ "bits/page/fancy_title", post @}</span>
+		<a class="post_title" href="{{ canonical_url(post) }}" title="Last updated {{ format_time_human(post.updated) }}"><span class="fill-span"></span></a>
 	</div>
 	</li>
 {% end %}
