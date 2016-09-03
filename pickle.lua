@@ -1,4 +1,5 @@
 
+local U = require "togo.utility"
 local P = require "Pickle"
 local F = require "Pickle.Filter"
 local Core = require "src/Core"
@@ -107,6 +108,10 @@ P.post_collect(function()
 		post.bare_content = post.template:content(post)
 		post.template.layout = layout
 		if post.legacy_url then
+			U.assert(
+				post.legacy_url ~= post.url,
+				"source and destination should differ (the redirect output would clobber the real one!)"
+			)
 			local r = Redirect(post.legacy_url, canonical_url(post.url))
 			P.output(nil, post.legacy_url, r, r)
 		end
