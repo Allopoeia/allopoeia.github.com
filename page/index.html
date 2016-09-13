@@ -12,8 +12,7 @@ title = "Archive"
 		<span class="post_part_separator mobile-hidden">//</span>
 		<span class="post_category mobile-hidden"><em>{@ "bits/post/root_category", post @}</em></span>
 		<span class="post_part_separator mobile-hidden">//</span>
-		<span>{@ "bits/page/fancy_title", post @}</span>
-		<a class="post_title" href="{{ canonical_url(post) }}" title="Last updated {{ format_time_human(post.updated) }}"><span class="fill-span"></span></a>
+		<a class="post_title" href="{{ canonical_url(post) }}" title="Last updated {{ format_time_human(post.updated) }}">{@ "bits/page/fancy_title", post @}<span class="fill-span"></span></a>
 	</div>
 	</li>
 {% end %}
