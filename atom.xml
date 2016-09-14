@@ -4,7 +4,7 @@
 <title>Allopoeia</title>
 <link href="http://allopoeia.komiga.com/atom.xml" rel="self" />
 <link href="http://allopoeia.komiga.com" />
-<updated>2016-09-03T09:21:10+0000</updated>
+<updated>2016-09-14T05:08:43+0000</updated>
 <id>http://allopoeia.komiga.com</id>
 <author>
 	<name>Allopoeia</name>
@@ -517,62 +517,7 @@
 
 <p>It looks like the majority of Quanta will be written in Lua, with C++ backing it for efficiency. So far the object interface and hobbled-together parser are in C++, and not much else. This is a promising approach. I think the model of the analysis tool will be common; I have other domains of data that I also track, which I could pull into Quanta and expand the toolset further.</p>
 
-<p>I am excited to see what I can do with it. The yearly “notes and data” posts I've been doing (<a target="_blank" href="/self/retrospective/2013/">2013</a>, <a target="_blank" href="/self/retrospective/2014/">2014</a>) are interesting looks at how I've spent my mortal time on this planet &mdash; to me, at least. They haven't been granular enough to satisfy my whims, but with Quanta I'll be able to go beyond what I hoped to do. I probably won't be doing statistics for my tracking this year, but there's plenty to say otherwise.</p>
-
-	]]></content>
-</entry>
-<entry>
-	<link href="http://allopoeia.komiga.com/self/too/" />
-	<id>http://allopoeia.komiga.com/self/too/</id>
-
-	<category term="self" label="Self"/>
-
-	<title>too</title>
-
-	<rights type="html"><![CDATA[&copy; 2015 <a target="_blank" href="//komiga.com">Coranna Howard</a>, under license <a target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons BY-NC-SA 4.0</a>]]></rights>
-
-	<published>2015-10-07T01:34:00-0400</published>
-	<updated>2015-10-07T01:34:00-0400</updated>
-
-	<author>
-		<name>Coranna Howard</name>
-		<uri>//komiga.com</uri>
-	</author>
-
-	<content type="html"><![CDATA[
-
-<p>
-too broken<br>
-too inadequate<br>
-too undeserving<br>
-too afraid
-</p>
-
-<p>
-to fail<br>
-to accept<br>
-to challenge<br>
-to understand<br>
-to grow<br>
-to create
-</p>
-
-<p>
-to hear<br>
-to empathize<br>
-to respect<br>
-to free<br>
-to care<br>
-to touch
-</p>
-
-<p>to feel</p>
-
-<p>to feel</p>
-
-<p>to feel</p>
-
-<p>real</p>
+<p>I am excited to see what I can do with it. The yearly retrospective posts I've been doing (<a target="_blank" href="/self/retrospective/2013/">2013</a>, <a target="_blank" href="/self/retrospective/2014/">2014</a>) are interesting looks at how I've spent my mortal time on this planet &mdash; to me, at least. They haven't been granular enough to satisfy my whims, but with Quanta I'll be able to go beyond what I hoped to do. I probably won't be doing statistics for my tracking this year, but there's plenty to say otherwise.</p>
 
 	]]></content>
 </entry>
@@ -1730,7 +1675,7 @@ to touch
 
 <p>I used to have an unrelenting zeal to make <em>stuff</em> (or so I tell myself). Now I'd be lucky to feel that. Now I just hope to make a multi-year, stupidly complex software project functional and complete selfish writings like this, deluding myself that anything I do improves my worth. I used to be able ignore everything by hanging out with <span title="S I N G U L A R">a friend</span>, to which it wouldn't've mattered if they knew everything, even though we rarely interacted at that level. Now I just sit in regret that I was never able to “connect”. I don't think I ever really considered that I could tell those kinds of people things. I was just happy to be with them, even though what we were doing was sub-social and non-normative (in stark contrast to what they'd do when interacting with any of their other friends).</p>
 
-<p>I often feel detached from my physical form and my given identity. <em>Oh, this is my body. So I look like that.</em> It's probably mostly my fault for donning indifference and sealing things up. I don't identify with my birth name, and now the processing of someone calling my name is somewhat slower than it should be, if it even registers. <em>“Should I call you Timothy or?”  “Oh, uh, Tim is fine.”</em> I have to prepare that identity so that I don't fall short of the false personage.</p>
+<p>I often feel detached from my physical form and my given identity. <em>Oh, this is my body. So I look like that.</em> It's probably mostly my fault for donning indifference and sealing things up. I don't identify with my birth name, and now the processing of someone calling my name is somewhat slower than it should be, if it even registers. I have to prepare that identity so that I don't fall short of the false personage.</p>
 
 <p>Sometimes I think I have gender dysphoria &ndash; that my behaviors and feelings are more “feminine” than not &ndash; but honestly it's just a desperate solace to justify why I'm broken, even if some of it <em>is</em> true. I'm so heterogametic that the mere suggestion is insulting to my body.</p>
 
@@ -3151,45 +3096,6 @@ Tread softly because you tread on my dreams.</em><sup><a href="#fn-yeats-poem">4
 	]]></content>
 </entry>
 <entry>
-	<link href="http://allopoeia.komiga.com/fiction/a-shopping-list/" />
-	<id>http://allopoeia.komiga.com/fiction/a-shopping-list/</id>
-
-	<category term="fiction" label="Fiction"/>
-
-	<title>A shopping list</title>
-
-	<rights type="html"><![CDATA[&copy; 2012 <a target="_blank" href="//komiga.com">Coranna Howard</a>, under license <a target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons BY-NC-SA 4.0</a>]]></rights>
-
-	<published>2012-06-14T10:07:00-0400</published>
-	<updated>2012-06-14T10:07:00-0400</updated>
-
-	<author>
-		<name>Coranna Howard</name>
-		<uri>//komiga.com</uri>
-	</author>
-
-	<content type="html"><![CDATA[
-
-<ul>
-	<li>Spaghetti noodles</li>
-	<li>Lemons</li>
-	<li>Large cucumber</li>
-	<li>Red wine</li>
-	<li>Heavy-duty plastic bags</li>
-	<li>Yarn</li>
-	<li>Sulfuric acid (2 liters)</li>
-	<li>Nails</li>
-	<li>Thick plywood (four 1m-square sheets)</li>
-	<li>Large glass bowl</li>
-	<li>Oven mitts</li>
-	<li>Cat</li>
-	<li>Catnip</li>
-	<li>Cheese puffs</li>
-</ul>
-
-	]]></content>
-</entry>
-<entry>
 	<link href="http://allopoeia.komiga.com/fiction/the-ascendant-order/" />
 	<id>http://allopoeia.komiga.com/fiction/the-ascendant-order/</id>
 
@@ -3357,114 +3263,6 @@ Tread softly because you tread on my dreams.</em><sup><a href="#fn-yeats-poem">4
 </ul>
 </footer>
 
-
-
-	]]></content>
-</entry>
-<entry>
-	<link href="http://allopoeia.komiga.com/links/some-mandy-haps/" />
-	<id>http://allopoeia.komiga.com/links/some-mandy-haps/</id>
-
-	<category term="links" label="Links"/>
-
-	<title>Some mandy haps</title>
-	<subtitle type="html"><![CDATA[<a target="_blank" href="http://www.theatlantic.com/technology/archive/2012/02/the-google-map-of-the-19th-century/253219/">&raquo; The Google Map of the 19th Century &ndash; The Atlantic</a>]]></subtitle>
-
-	<rights type="html"><![CDATA[&copy; 2012&mdash;2014 <a target="_blank" href="//komiga.com">Coranna Howard</a>, under license <a target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons BY-NC-SA 4.0</a>]]></rights>
-
-	<published>2012-02-17T20:12:00-0500</published>
-	<updated>2014-11-23T22:40:00-0500</updated>
-
-	<author>
-		<name>Coranna Howard</name>
-		<uri>//komiga.com</uri>
-	</author>
-
-	<content type="html"><![CDATA[
-
-<p>Sooo, this is pretty interesting. I wonder why they never took off. I know people in this day and age &ndash; such as myself &ndash; that can't even go without GPS outside of their familiar zone. Perhaps there was once a time when transit was less complex&hellip;</p>
-
-<p>At least we get to have some fun with wordplay: <em>The map that's always at hand! Shock your friends as you reason your place from the very lines on the palm of your hand!</em></p>
-
-<p>Ever-crafty <a target="_blank" href="http://jteeuwen.nl">Teeuwen</a> has given this remark: <span title="HAHAHAHAHA. Ha. Haaah. Okay; okay. I'm done.">“those are some handy maps AHAHAHAHA.”</span></p>
-
-<p>And on that bombshell I make my exit.</p>
-
-<blockquote class="excerpt">
-
-
-<p>It seems like the quintessentially contemporary phenomenon: the pedestrian, walking along, distracted from his surroundings by the glow of the map in his smartphone.</p>
-
-<p>But there have been some oblivious palm-gazers, it turns out, since long before Steve Jobs came along&hellip;</p>
-
-<p>&mdash; <a target="_blank" href="http://www.theatlantic.com/technology/archive/2012/02/the-google-map-of-the-19th-century/253219/">The Google Map of the 19th Century &ndash; The Atlantic</a></p>
-</blockquote>
-
-
-	]]></content>
-</entry>
-<entry>
-	<link href="http://allopoeia.komiga.com/criticism/the-wrongness-of-metadata-on-grooveshark/" />
-	<id>http://allopoeia.komiga.com/criticism/the-wrongness-of-metadata-on-grooveshark/</id>
-
-	<category term="criticism" label="Criticism"/>
-
-	<title>The wrongness of metadata on Grooveshark</title>
-
-	<rights type="html"><![CDATA[&copy; 2012&mdash;2014 <a target="_blank" href="//komiga.com">Coranna Howard</a>, under license <a target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons BY-NC-SA 4.0</a>]]></rights>
-
-	<published>2012-02-09T05:14:00-0500</published>
-	<updated>2014-11-23T22:40:00-0500</updated>
-
-	<author>
-		<name>Coranna Howard</name>
-		<uri>//komiga.com</uri>
-	</author>
-
-	<content type="html"><![CDATA[
-
-<p>Most people are unwittingly terrible at handling music metadata. They also seemingly take great measures to run said music through a grate, lightly toast it and, finally, smother with a strange, sticky substance. These sticky musics somehow found their way into <a href="http://blog.grooveshark.com" target="_blank">Grooveshark</a>, a service that apparently enjoys suffering.</p>
-
-<p><span title="I mean, when I have to. Quite frankly, I barely use the site anymore.">And I can hardly stand it</span>.</p>
-
-<p>When your users have to manually search through duplicate &ndash; sometimes <em>triplicate</em> or moreplicate &ndash; tracks from the same album or artist just to build a chronologically-ordered playlist, you are doing something wrong. Since users push-started Grooveshark with upbloated content (you should already know where I'm going with this), what Grooveshark ended up consisting of, succinctly, is this: a myriad of collections with metadata in every possible form of <strong>wrong</strong>. Though, artists can actually edit their own uploaded music's metadata, so they are less of an issue &mdash; but an issue nonetheless. The majority probably don't know what any of this “metadata” mumbo jumbo even means.</p>
-
-<p>Anywho, have a look-see at <a href="http://listen.grooveshark.com/#!/search?q=flcl" target="_blank">this search for FLCL</a>. It illustrates the following <strong>wrongs</strong>:</p>
-
-<ul>
-	<li>incorrectly translated data;</li>
-	<li>incorrectly placed data (half of the damned tracks have “Anime” as the artist!);</li>
-	<li>incorrectly cased data (all too often);</li>
-	<li>incorrectly encoded data;</li>
-	<li>partial data;</li>
-	<li>etc. etc.</li>
-</ul>
-
-<p>This <strong>wrongery</strong> isn't limited just to foreign, less-popular artists. You can find plenty examples of these wrongs all over Grooveshark &mdash; go ahead and look around if you're not convinced. <a href="http://grooveshark.com/#!/search?q=Explosions+in+the+Sky" target="_blank">Explosions in the Sky</a> is as good a pick as any other.</p>
-
-<h2 class="separator">Suggesticus<span class="para-ref" id="suggesticus"><a href="#suggesticus"></a></span></h2>
-
-<p>Now that I have illustrated my illustrations and listed a list, I shall make a series of suggestions to Grooveshark. First, users should be asked the following (quite reasonable) questions before they can upload music:</p>
-<ul>
-	<li>“Do we already have this collection?” (gently offering the user a giant search bar, enticing them to be sure); and</li>
-	<li>“Did you use a flamethrower on the metadata?” (if so they should be immediately ostracized).</li>
-</ul>
-
-<p>Second (and I'm surprised this isn't already a part of the service &mdash; it truly boggles the mind), Grooveshark should fix tags automagically. They could assumedly easily utilize <a href="http://musicbrainz.org" target="_blank">MusicBrainz</a> to fix a majority of the partially- and incorrectly-tagged collections.</p>
-
-<p>If a user attempts to upload a collection that has already been uploaded, theirs should be rejected; or if the uploaded collection completes a matching <em>partial</em> collection, the two should be merged. Collections that were not found in the MusicBrainz database should either be rejected (this will happen when the tags are mostly incorrect or wholly nonexistent, though PUIDs could potentially be used to alleviate this in some cases) or marked as ‘uncertain’ (see below).</p>
-
-<p>Finally, users should be able to edit tags. I'm aware of the difficulties and possible downsides in such a prospect, but it can be done and Grooveshark and their users will benefit greatly from such a feature. As I mentioned above, unrecognized collections could be marked as ‘uncertain’, the idea being that users can tell apart properly and unproperly tagged collections and correct them where necessary. There should at least be a rating or reporting system so that trolls can be punished, or banished entirely from changing tags.</p>
-
-<p>This <strong>wrongery</strong> is nearly my own complaint with Grooveshark &mdash; and it is admittedly a very big one. I find them otherwise to be an excellent music streaming service. They're also surprisingly good at dodging litigation in an age where publishers have aged ideals &mdash; they are in the rich kid's sandbox, and the rich kid is dangerously powerful.</p>
-
-<footer id="footnotes">
-<h4 class="separator sep_footnotes">Notes<span class="para-ref"><a href="#footnotes"></a></span></h4>
-
-<ul>
-	<li id="fn-original-links">This article originally had a list of links to similar petitions; the sites they were hosted on have since been discontinued by Grooveshark.</li>
-</ul>
-</footer>
 
 
 	]]></content>

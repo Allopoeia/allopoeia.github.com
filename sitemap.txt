@@ -1,12 +1,9 @@
 http://allopoeia.komiga.com/
 http://allopoeia.komiga.com/atom.xml
 
-http://allopoeia.komiga.com/criticism/the-wrongness-of-metadata-on-grooveshark/
-http://allopoeia.komiga.com/links/some-mandy-haps/
 http://allopoeia.komiga.com/fiction/hackers-disrupt-ops-surveillance/
 http://allopoeia.komiga.com/links/the-easy-pieces-of-neil-dvorak/
 http://allopoeia.komiga.com/fiction/the-ascendant-order/
-http://allopoeia.komiga.com/fiction/a-shopping-list/
 http://allopoeia.komiga.com/opinion/education-and-free-mindedness/
 http://allopoeia.komiga.com/links/podcast-round-up-education-with-npr-ted-and-tal/
 http://allopoeia.komiga.com/fiction/all-out/
@@ -23,7 +20,6 @@ http://allopoeia.komiga.com/self/my-mistake-of-formalism/
 http://allopoeia.komiga.com/dev/tentuk-journal/week-1/
 http://allopoeia.komiga.com/dev/tentuk-journal/week-2/
 http://allopoeia.komiga.com/dev/tentuk-journal/week-3/
-http://allopoeia.komiga.com/self/too/
 http://allopoeia.komiga.com/self/on-tracking/
 http://allopoeia.komiga.com/self/qqq/
 http://allopoeia.komiga.com/dev/pickle-a-static-site-generator/
