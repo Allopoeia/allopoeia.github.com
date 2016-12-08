@@ -26,3 +26,4 @@ http://allopoeia.komiga.com/dev/pickle-a-static-site-generator/
 http://allopoeia.komiga.com/margins/2016/01/24-so-it-begins/
 http://allopoeia.komiga.com/margins/2016/01/25-public-infrastructure/
 http://allopoeia.komiga.com/margins/2016/04/26-the-jokester-brigade/
+http://allopoeia.komiga.com/self/valleys/

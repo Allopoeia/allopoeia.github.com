@@ -4,13 +4,71 @@
 <title>Allopoeia</title>
 <link href="http://allopoeia.komiga.com/atom.xml" rel="self" />
 <link href="http://allopoeia.komiga.com" />
-<updated>2016-09-14T05:08:43+0000</updated>
+<updated>2016-12-08T01:54:46+0000</updated>
 <id>http://allopoeia.komiga.com</id>
 <author>
 	<name>Allopoeia</name>
 	<uri>http://allopoeia.komiga.com</uri>
 </author>
 
+<entry>
+	<link href="http://allopoeia.komiga.com/self/valleys/" />
+	<id>http://allopoeia.komiga.com/self/valleys/</id>
+
+	<category term="self" label="Self"/>
+
+	<title>Valleys</title>
+
+	<rights type="html"><![CDATA[&copy; 2016 <a target="_blank" href="//komiga.com">Coranna Howard</a>, under license <a target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons BY-NC-SA 4.0</a>]]></rights>
+
+	<published>2016-12-08T01:49:00+0000</published>
+	<updated>2016-12-08T01:49:00+0000</updated>
+
+	<author>
+		<name>Coranna Howard</name>
+		<uri>//komiga.com</uri>
+	</author>
+
+	<content type="html"><![CDATA[
+
+<p>I've always felt unsettled pushing on the margins of my survivability. That's more true now than ever, as I spent nearly everything I had moving to Washington. It feels as if I grew up in a lower socioeconomic class than I did (my family was low-to-middle class, for the record), or it at least feels that way when I look at my psychology. I've always felt money was scarce and that it could vanish at any moment.</p>
+
+<p>Since seriously starting to search &amp; apply for work in software &amp; game development in 2014, I haven't had a single interview. I've met almost entirely with radio silence &mdash; if not, then rejection. Tailoring my application letters didn't help &mdash; given the rate of no communication, it was a waste of time &amp; effort.</p>
+
+<p>On the other hand, I've made the most ground talking directly to people beyond the HR/recruiting wall, though, of course, those attempts never went anywhere either. (They have just as little power as I.) I've been <em>considered</em> in scant few instances, but never passed muster &mdash; I was always less-qualified than someone else, even though I've applied only to the positions I could ever hope to get on paper (entry-level).</p>
+
+<p>The vast, <em>vast</em> majority of companies I see have few entry-level positions, if any at all. When they do have them, they're almost always for graduates or interns, neither of which I would ever qualify for. (I can't afford university and I am chronically debt-averse.) Considering how flooded the tech industry already is, I would likely face just as much difficulty finding work even if I had gone to university. This is no consolation. I am 25 and I have yet to work a single day in the industries I am most qualified for, not counting IT, which I despised so much I left for good.</p>
+
+<p>No matter the strides I make on my own, nothing seems to be adequate. This is especially shattering as the majority of what I hear from people I talk with (<em>very</em> few, mind) is that I'm <em>more</em> qualified than most people who enter the tech industry, that I have more practical experience and more technical knowledge. I believed that idea even before I spoke to anyone, even before I tried to find work, but now I see that either there's a vast difference between what people see when they speak to me and what they see on paper &mdash; or everyone is just humoring me.</p>
+
+<p>And believe me, I know how much getting to work in the tech industry is driven by social networks. I had only one or two close friends growing up (none otherwise, and none at all now), and I never had a personal relationship with anyone who held the interests I had in programming &amp; information. I tried very hard to branch out after I quit (often going <em>far</em> outside my comfort zone), talking to indie devs I encountered, joining jams and conversations on the net, going to meetups in the Bay area during my stay there, tailoring my job applications, working on open source projects, etc. &mdash; none of it led anywhere. At the time, I could have afforded the next GDC or any of the other developer conferences, but after my experience thus far in 2014, I didn't think I could do any better in those environments. It's flooded anyways; how could I ever hope to get ahead of the crowd with no degree or professional experience? I didn't (and don't) know anyone going to GDC anyways, so it would also have been a lonely experience.</p>
+
+<p>I can't underline enough the damage that this does to my self-worth and willpower. I made huge efforts after quitting, working hard on projects, sticking to schedules, cutting out distractions, etc. After each failure, however, it became harder and harder to get anything done. I was already enduring a lot, and this just made it worse &amp; worse. I've been stuck there ever since, and I become more withdrawn every time I try to find work. At the depths of it, which is where I am most often, I do <em>nothing</em> all day. I am muted and blank. I reach my stress peak a few hours after waking. I'm always tense. I find myself holding my breath.</p>
+
+<p>I don't know what keeps me anchored. By all measures I can make, I shouldn't have made it this far. Perhaps a partial explanation is that I've been living with stress &amp; isolation since my mid-to-late teen years, so much so that I've become desensitized, that most of the time I can't recognize that I am acutely stressed &mdash; it's gone on for so long that it's the normal state of being. When I don't get to feel sadness or despair, I feel nothing at all; my head is an empty, colorless void. This has been my reality for a long time, and it's invisible to everyone, except when I joke about drinking bleach.</p>
+
+<p>To top it off, the United States of America, my birthplace and lifelong home, has just turned back the clock on progress by <em>at least</em> 50 years. (I suppose it's (morbidly) fitting that neo-liberalism goes out with a neo-fascist bang&hellip;)</p>
+
+<p>I was already afraid to go outside and confront reality. Now I am terrified. I'm getting half or less of my normal sleep cycle, I have to hold back from crying when I let anything into my head, and my paranoia of my neighborhood is only increasing. I feel like I'm the only one I know who is rationally concerned about the future, but I'm too paralyzed to do anything about it. If I were able, I wouldn't even know what to do.</p>
+
+<p>My moral compass aches for me to fight back and help others, so I also feel like I'm failing everyone, myself most of all. I want to teach what I can to people worse off than me, but how could I? I can't even progress on my own projects. I'm so far down in my pit that I consistently struggle to find words when I speak. I want to do something I enjoy, something useful, but no one has given me a chance. I want to have my purposes fulfilled, but at every step, they are further cut and crushed.</p>
+
+<p>&hellip;</p>
+
+<p>It feels as though I'm stuck in a valley that no one visits. For most people, the valley is cradled by a thick fog &mdash; everything is so stacked against me that I might as well not exist. The rest recognize it as the pit they crawled out of to prove their worth, their existence, often by strength &amp; willpower alone. I have neither. I once had a modicum, but it eroded as I tried to climb out, stopped by mudslides &amp; avalanches at every attempt.</p>
+
+<p>But when they look back at me in the valley, all they have to say is "<em>sad face</em> I know how it feels, I was there once" and "don't give up! there's always a way out!". It seems there's no way for them to look into the valley without offering useless platitudes to the poor souls still trapped there.</p>
+
+<p>The few who extend a hand, who let me catch a glimpse of the space surrounding the valley, don't quite understand how I'm stuck there. "You should have no trouble!", they say. For them, getting out of the valley was a weekend hike &mdash; one of many. They had the support of family, decent education, friends to lean on and cherish, valuable experience to prove their ability &amp; worth, the good fortune to conform or sufficiently fake it. They were a bright flame in the fog, readily spotted from above. "That one is destined for greatness", the onlookers would say. I, on the other hand, am a dull ember, barely warm to the touch after so long in this gloomy place.</p>
+
+<p>But what I see outside the valley is, at a close look, familiar. When people drop their walls (<em>if</em> they can), what I hear &amp; see is of a multiplicity of valleys, all uniquely &amp; variably oppressive &amp; dehumanizing. It turns out they climbed out of an entirely different place than the one I am in.</p>
+
+<p>Their individual valley sets the limits of possibility. They simultaneously live in a space that many others occupy, but they all experience vastly different realities. The biases of others form the oppressions and privileges that shape their valley &mdash; their reality. Sometimes they manage to climb out of their valley, to reshape their reality. For example, they move into a new space occupied by better people. But some can't climb out. There is a limit to how much a valley can rise to the space surrounding it. Some find themselves back where they started &mdash; others in a place deeper and more invisible than any before it.</p>
+
+<p>That is where I feel I am: that I'll never be able to climb out, that I'll never be able to reshape my reality. I moved into a new physical space, but my valley has only become deeper.</p>
+
+	]]></content>
+</entry>
 <entry>
 	<link href="http://allopoeia.komiga.com/margins/2016/04/26-the-jokester-brigade/" />
 	<id>http://allopoeia.komiga.com/margins/2016/04/26-the-jokester-brigade/</id>
