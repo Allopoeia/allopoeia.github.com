@@ -4,13 +4,53 @@
 <title>Allopoeia</title>
 <link href="http://allopoeia.komiga.com/atom.xml" rel="self" />
 <link href="http://allopoeia.komiga.com" />
-<updated>2016-12-08T01:54:46+0000</updated>
+<updated>2017-01-25T23:32:37+0000</updated>
 <id>http://allopoeia.komiga.com</id>
 <author>
 	<name>Allopoeia</name>
 	<uri>http://allopoeia.komiga.com</uri>
 </author>
 
+<entry>
+	<link href="http://allopoeia.komiga.com/art/what-is-resistance/" />
+	<id>http://allopoeia.komiga.com/art/what-is-resistance/</id>
+
+	<category term="art" label="Art"/>
+
+	<title>What is resistance?</title>
+
+	<rights type="html"><![CDATA[&copy; 2017 <a target="_blank" href="//komiga.com">Coranna Howard</a>, under license <a target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons BY-NC-SA 4.0</a>]]></rights>
+
+	<published>2017-01-25T23:31:00+0000</published>
+	<updated>2017-01-25T23:31:00+0000</updated>
+
+	<author>
+		<name>Coranna Howard</name>
+		<uri>//komiga.com</uri>
+	</author>
+
+	<content type="html"><![CDATA[
+
+<p>What is resistance?<br />
+when the highest terror reigns here?<br />
+and simulacra threaten all nations?</p>
+
+<p>Before the fall,<br />
+as camps swell,<br />
+as walls rise,<br />
+as wars rage,</p>
+
+<p>Will we fight?<br />
+against bombs, bullets, &amp; batons?<br />
+when all that's left are bricks &amp; bones?</p>
+
+<p>Will we still yield?<br />
+our rights?<br />
+our principles?<br />
+our beating hearts?</p>
+
+	]]></content>
+</entry>
 <entry>
 	<link href="http://allopoeia.komiga.com/self/valleys/" />
 	<id>http://allopoeia.komiga.com/self/valleys/</id>
