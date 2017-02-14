@@ -1,3 +1,4 @@
 ## Copyright and license
 
-See `LICENSE.md` for licence details.
+This project carries the MIT license, which can be found in the `LICENSE.md` file.
+
