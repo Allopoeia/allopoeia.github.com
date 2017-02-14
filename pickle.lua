@@ -19,7 +19,7 @@ P.configure{
 Core.setup_site(function()
 	title = "Allopoeia"
 	url = "http://allopoeia.komiga.com"
-	run_years = "2012–2016"
+	run_years = "2012–2017"
 	md_image = "http://lh4.googleusercontent.com/-0cni5iXgy_8/Uf7NKDyANjI/AAAAAAAAALo/ZHUIsfHxxVc/k-inv-256.png"
 
 	disqus_shortname = "komiga"
