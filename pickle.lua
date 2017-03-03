@@ -16,7 +16,7 @@ P.configure{
 	build_path = "build/",
 }
 
-Core.setup_site(function()
+Core.setup_site(function(_ENV)
 	title = "Allopoeia"
 	url = "http://allopoeia.komiga.com"
 	run_years = "2012–2017"
