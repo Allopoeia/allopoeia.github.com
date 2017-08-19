@@ -39,17 +39,6 @@ local function sp_elem_check(post, value)
 	return nil, "malformed: expected table of {file} or {file, title} or {url, title, true}"
 end
 
-local function parse_time(_, value)
-	if type(value) == "table" then
-		return value
-	end
-	local time = P.parse_time(value, Core.time_formats.iso)
-	if not time then
-		return nil, string.format("failed to parse time: %s", value)
-	end
-	return time
-end
-
 local post_vf = P.ValueFilter("AllopoeiaPost")
 :filter("url", "string", function(post, value)
 	if post.url then
@@ -80,8 +69,8 @@ end)
 :filter("legacy_url", "string", function(post, value)
 	return U.trim_leading_slashes(value)
 end)
-:filter("published", "string", parse_time)
-:filter("updated", "string", parse_time)
+:filter("published", "string", Core.parse_time_vf_iso)
+:filter("updated", "string", Core.parse_time_vf_iso)
 :filter("author", "table")
 :filter("categories", "table")
 :filter("tags", "table")
