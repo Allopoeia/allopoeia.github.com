@@ -11,7 +11,7 @@ title = "Pickle, a static site generator"
 subtitle = nil
 ---content---
 
-<p>{! anchor_post("/self/2013-01-13-aiming-for-the-ground-often-missing.html", "Three years") !} after deciding I wanted to make my own site generator, I have finally done so. The breaking point was {! anchor_ext("http://jekyllrb.com", "Jekyll") !} 3.0 ceasing to {! anchor_ext("http://jekyllrb.com/docs/upgrading/2-to-3/#layout-metadata", "layer") !} layout and content metadata.</p>
+<p>Three years after deciding I wanted to make my own site generator, I have finally done so. The breaking point was {! anchor_ext("http://jekyllrb.com", "Jekyll") !} 3.0 ceasing to {! anchor_ext("http://jekyllrb.com/docs/upgrading/2-to-3/#layout-metadata", "layer") !} layout and content metadata.</p>
 
 <p>Working around this with the design of Allopoeia and my homesite would have been very annoying, as I supplied configuration defaults within layout metadata for pages, to say nothing of dealing with Jekyll again. So, instead, I started looking around for an alternative system. Surely, by now, there would be a site generator without crippled templating!</p>
 
